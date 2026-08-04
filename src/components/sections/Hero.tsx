@@ -1,4 +1,4 @@
-import { CanvasRoot } from '../scene/CanvasRoot'
+import { ParticleField } from '../scene/ParticleField'
 import { useReveal } from '../../hooks/useReveal'
 import { useScrollProgress } from '../../hooks/useScrollProgress'
 
@@ -18,13 +18,13 @@ export function Hero() {
         style={{
           top: '50%',
           left: '50%',
-          width: '45vw',
-          height: '65vh',
-          maxWidth: 480,
-          maxHeight: 720,
+          width: '60vw',
+          height: '60vw',
+          maxWidth: 700,
+          maxHeight: 700,
           transform: 'translate(-50%, -50%)',
           background:
-            'radial-gradient(ellipse, rgba(217,161,92,0.16), rgba(124,111,168,0.08) 55%, transparent 75%)',
+            'radial-gradient(circle, rgba(217,161,92,0.16), rgba(124,111,168,0.08) 55%, transparent 75%)',
         }}
       />
 
@@ -40,18 +40,12 @@ export function Hero() {
         </p>
 
         <div
-          className="relative h-[46vh] w-full max-w-[280px] cursor-grab active:cursor-grabbing sm:h-[54vh]"
+          className="relative h-[36vh] w-full max-w-xl sm:h-[42vh]"
           style={{
             transform: `translateY(${progress * -50}px) scale(${1 - progress * 0.18})`,
-            // The canvas's own edge can read as a faint rectangle against the page (the
-            // WebGL scene's clear color never quite tone-maps to the exact same pixel as
-            // the CSS background). Masking the box's own edges to transparent dissolves
-            // that boundary regardless, rather than chasing a pixel-perfect color match.
-            maskImage: 'radial-gradient(ellipse at center, black 55%, transparent 82%)',
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black 55%, transparent 82%)',
           }}
         >
-          <CanvasRoot />
+          <ParticleField />
         </div>
 
         <h1
