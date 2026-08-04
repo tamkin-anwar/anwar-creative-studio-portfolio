@@ -1,4 +1,4 @@
-# Anwar Creative Studio Portfolio 💎
+# Anwar Creative Studio Portfolio
 
 The studio site for Anwar Creative Studio: a drifting particle constellation for a hero, rendered live on Canvas 2D, with ambient motion and depth that responds to scroll.
 

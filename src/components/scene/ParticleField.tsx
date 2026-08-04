@@ -51,14 +51,7 @@ export function ParticleField() {
     let particles: Particle[] = []
     const mouse = { x: -9999, y: -9999, active: false, opacity: 0, angle: 0 }
 
-    const resize = () => {
-      const rect = canvas.getBoundingClientRect()
-      width = rect.width
-      height = rect.height
-      canvas.width = width * dpr
-      canvas.height = height * dpr
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-    }
+    let hasSized = false
 
     const makeParticles = () => {
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
@@ -74,12 +67,25 @@ export function ParticleField() {
       }))
     }
 
-    resize()
-    makeParticles()
+    // resize whenever the canvas's own box size changes, not just on window
+    // resize: on first mount the flex layout (and webfont-driven reflow) can
+    // settle after this effect runs, so a window-resize-only listener would
+    // miss it and leave particles seeded into a stale, near-zero-size rect
+    const resizeObserver = new ResizeObserver(() => {
+      const rect = canvas.getBoundingClientRect()
+      if (rect.width === 0 || rect.height === 0) return
+      width = rect.width
+      height = rect.height
+      canvas.width = width * dpr
+      canvas.height = height * dpr
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      if (!hasSized) {
+        makeParticles()
+        hasSized = true
+      }
+    })
+    resizeObserver.observe(canvas)
 
-    const onResize = () => {
-      resize()
-    }
     const onPointerMove = (e: PointerEvent) => {
       const rect = canvas.getBoundingClientRect()
       mouse.x = e.clientX - rect.left
@@ -90,7 +96,6 @@ export function ParticleField() {
       mouse.active = false
     }
 
-    window.addEventListener('resize', onResize)
     canvas.addEventListener('pointermove', onPointerMove)
     canvas.addEventListener('pointerleave', onPointerLeave)
 
@@ -227,7 +232,7 @@ export function ParticleField() {
 
     return () => {
       cancelAnimationFrame(raf)
-      window.removeEventListener('resize', onResize)
+      resizeObserver.disconnect()
       canvas.removeEventListener('pointermove', onPointerMove)
       canvas.removeEventListener('pointerleave', onPointerLeave)
     }

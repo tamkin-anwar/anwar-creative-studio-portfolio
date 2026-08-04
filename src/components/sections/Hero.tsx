@@ -57,6 +57,20 @@ export function Hero() {
           A design lab for ideas that want to exist.
         </h1>
       </div>
+
+      <div
+        aria-hidden
+        className="absolute bottom-[var(--space-5)] left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-[var(--space-1)]"
+        style={{ opacity: Math.max(0, 1 - progress * 5) }}
+      >
+        <span className="eyebrow" style={{ color: 'var(--ink-faint)' }}>
+          Scroll
+        </span>
+        <div
+          className="h-10 w-px"
+          style={{ background: 'linear-gradient(to bottom, var(--accent-warm), transparent)' }}
+        />
+      </div>
     </section>
   )
 }
