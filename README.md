@@ -1,8 +1,8 @@
-# Ratna 💎
+# Anwar Creative Studio Portfolio 💎
 
 The studio site for Anwar Creative Studio — a faceted glass crystal rendered live in WebGL, with drag physics, ambient particles, and depth that responds to scroll.
 
-Ratna is Sanskrit for "gem." It's the front door to the studio: what it is, what it's shipped (Doorsong, Artha), and what's next.
+It's the front door to the studio: what it is, what it's shipped (Doorsong, Artha), and what's next.
 
 ## What's here
 
