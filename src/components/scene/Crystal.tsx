@@ -52,9 +52,13 @@ export function Crystal() {
     [handleMove, handleUp],
   )
 
-  useFrame((_, delta) => {
+  useFrame((_, rawDelta) => {
     const group = groupRef.current
     if (!group || dragging.current) return
+
+    // Backgrounded/inactive tabs throttle rAF, so the next delta after regaining focus
+    // can be seconds long — clamp it so rotation doesn't jump wildly on return.
+    const delta = Math.min(rawDelta, 1 / 30)
 
     velocity.current.x *= MOMENTUM_DECAY
     velocity.current.y *= MOMENTUM_DECAY
@@ -95,7 +99,6 @@ export function Crystal() {
             anisotropicBlur={0.1}
             distortion={0.08}
             distortionScale={0.3}
-            temporalDistortion={0.03}
             clearcoat={1}
             clearcoatRoughness={0.1}
             iridescence={0.6}
