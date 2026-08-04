@@ -1,0 +1,46 @@
+import { CanvasRoot } from '../scene/CanvasRoot'
+import { useReveal } from '../../hooks/useReveal'
+import { useScrollProgress } from '../../hooks/useScrollProgress'
+
+export function Hero() {
+  const ref = useReveal<HTMLElement>()
+  const progress = useScrollProgress(ref)
+
+  return (
+    <section
+      id="hero"
+      ref={ref}
+      className="relative flex min-h-[100svh] flex-col items-center justify-center gap-[var(--space-2)] overflow-hidden px-[var(--space-3)] text-center"
+    >
+      <div
+        className="flex flex-col items-center gap-[var(--space-2)]"
+        style={{
+          transform: `translateY(${progress * 40}px)`,
+          opacity: 1 - progress * 1.3,
+        }}
+      >
+        <p data-reveal className="eyebrow">
+          Anwar Creative Studio
+        </p>
+
+        <div
+          className="relative h-[36vh] w-full max-w-lg cursor-grab active:cursor-grabbing sm:h-[42vh]"
+          style={{
+            transform: `translateY(${progress * -50}px) scale(${1 - progress * 0.18})`,
+          }}
+        >
+          <CanvasRoot />
+        </div>
+
+        <h1
+          data-reveal
+          data-reveal-mask
+          className="max-w-3xl leading-[1.05]"
+          style={{ fontSize: 'var(--text-display)' }}
+        >
+          A design lab for ideas that want to exist.
+        </h1>
+      </div>
+    </section>
+  )
+}

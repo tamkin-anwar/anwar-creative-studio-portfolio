@@ -1,0 +1,41 @@
+:root {
+  /* palette — dark field, warm gem accent, cool violet depth */
+  --bg: #0a0a0d;
+  --ink: #f2ede2;
+  --ink-dim: rgba(242, 237, 226, 0.6);
+  --ink-faint: rgba(242, 237, 226, 0.38);
+  --accent-warm: #d9a15c;
+  --accent-cool: #7c6fa8;
+  --line: rgba(242, 237, 226, 0.12);
+  --line-strong: rgba(242, 237, 226, 0.22);
+
+  /* type */
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --text-display: clamp(2.5rem, 6vw, 5rem);
+  --text-heading: clamp(1.5rem, 3vw, 2.25rem);
+  --text-body: clamp(1rem, 1.2vw, 1.125rem);
+  --text-label: 0.75rem;
+  --text-caption: 0.8125rem;
+
+  /* spacing — 8px base scale */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+
+  /* motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast: 0.3s;
+  --duration-base: 0.6s;
+  --duration-slow: 0.9s;
+}
