@@ -1,13 +1,15 @@
 # Anwar Creative Studio Portfolio
 
-The studio site for Anwar Creative Studio: a drifting particle constellation for a hero, rendered live on Canvas 2D, with ambient motion and depth that responds to scroll.
+The portfolio site for Anwar Creative Studio: the front door to the studio, and home for everything it ships, from Doorsong and Artha to what's next.
 
-It's the front door to the studio: what it is, what it's shipped (Doorsong, Artha), and what's next.
+The hero is a drifting particle constellation rendered live on Canvas 2D, with ambient motion and depth that responds to scroll.
+
+[Live site →](https://tamkin-anwar.github.io/anwar-creative-studio-portfolio/)
 
 ## What's here
 
 - A hero built from a network of drifting particles connected by fine lines, with simple vanilla Canvas 2D physics (no WebGL, no material pipeline)
-- Particles push away from the cursor on hover, then settle back into their ambient drift
+- Particles swirl around the cursor and nearby links brighten like a circuit lighting up, with a rotating HUD reticle tracking the pointer
 - A sitewide ambient particle field drifting behind every section, not just the hero, built with React Three Fiber and drei's `Sparkles`
 - Scroll-linked parallax: the hero and headline drift apart at different depths as you scroll past
 - Project cards that tilt in 3D toward the cursor with a glow that follows it
