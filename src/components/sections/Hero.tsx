@@ -40,7 +40,7 @@ export function Hero() {
         </p>
 
         <div
-          className="relative h-[36vh] w-full max-w-xl sm:h-[42vh]"
+          className="relative h-[40vh] w-full max-w-2xl sm:h-[48vh]"
           style={{
             transform: `translateY(${progress * -50}px) scale(${1 - progress * 0.18})`,
           }}
