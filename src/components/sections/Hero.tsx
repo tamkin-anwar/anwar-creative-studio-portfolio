@@ -13,7 +13,23 @@ export function Hero() {
       className="relative flex min-h-[100svh] flex-col items-center justify-center gap-[var(--space-2)] overflow-hidden px-[var(--space-3)] text-center"
     >
       <div
-        className="flex flex-col items-center gap-[var(--space-2)]"
+        aria-hidden
+        className="ambient-glow"
+        style={{
+          top: '50%',
+          left: '50%',
+          width: '60vw',
+          height: '60vw',
+          maxWidth: 700,
+          maxHeight: 700,
+          transform: 'translate(-50%, -50%)',
+          background:
+            'radial-gradient(circle, rgba(217,161,92,0.16), rgba(124,111,168,0.08) 55%, transparent 75%)',
+        }}
+      />
+
+      <div
+        className="relative z-10 flex flex-col items-center gap-[var(--space-2)]"
         style={{
           transform: `translateY(${progress * 40}px)`,
           opacity: 1 - progress * 1.3,

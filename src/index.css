@@ -60,6 +60,16 @@ a {
   color: var(--bg);
 }
 
+/* soft ambient glow blobs — used sparingly, one per section, to keep the dark field
+   from reading as flat/empty without competing with the crystal's own bloom */
+.ambient-glow {
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--text-label);

@@ -1,7 +1,7 @@
-import { useCallback, useRef } from 'react'
+import { useCallback, useMemo, useRef } from 'react'
 import { useFrame, useThree, type ThreeEvent } from '@react-three/fiber'
 import { Float, MeshTransmissionMaterial, Sparkles } from '@react-three/drei'
-import type { Group } from 'three'
+import { Color, type Group } from 'three'
 
 const ROTATION_SPEED = (Math.PI * 2) / 50 // one full turn ~50s
 const TILT_STRENGTH = 0.18
@@ -13,6 +13,10 @@ const IDLE_RESUME_MS = 1200
 export function Crystal() {
   const groupRef = useRef<Group>(null)
   const pointer = useThree((state) => state.pointer)
+  // MeshTransmissionMaterial samples whatever is directly behind the mesh; without a
+  // fallback it transmits straight through to the canvas's black clear color, which is
+  // what made the crystal go solid black at some rotations. This gives it a floor color.
+  const transmissionBackground = useMemo(() => new Color('#2b1c10'), [])
   const dragging = useRef(false)
   const last = useRef({ x: 0, y: 0 })
   const velocity = useRef({ x: 0, y: 0 })
@@ -81,20 +85,25 @@ export function Crystal() {
         <mesh>
           <icosahedronGeometry args={[1, 0]} />
           <MeshTransmissionMaterial
+            background={transmissionBackground}
             color="#f4ede0"
-            thickness={1.3}
-            roughness={0.04}
+            thickness={1.1}
+            roughness={0.06}
+            transmission={0.88}
             ior={1.5}
-            chromaticAberration={0.4}
-            anisotropicBlur={0.15}
-            distortion={0.12}
-            distortionScale={0.4}
-            temporalDistortion={0.05}
-            clearcoat={0.6}
-            clearcoatRoughness={0.15}
+            chromaticAberration={0.25}
+            anisotropicBlur={0.1}
+            distortion={0.08}
+            distortionScale={0.3}
+            temporalDistortion={0.03}
+            clearcoat={1}
+            clearcoatRoughness={0.1}
+            iridescence={0.6}
+            iridescenceIOR={1.3}
+            iridescenceThicknessRange={[100, 400]}
             attenuationColor="#d9a15c"
-            attenuationDistance={0.6}
-            envMapIntensity={1.6}
+            attenuationDistance={0.5}
+            envMapIntensity={2.2}
             samples={6}
             resolution={512}
           />

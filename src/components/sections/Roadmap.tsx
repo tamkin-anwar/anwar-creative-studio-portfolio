@@ -5,12 +5,30 @@ export function Roadmap() {
   const ref = useReveal<HTMLElement>()
 
   return (
-    <section id="roadmap" ref={ref} className="mx-auto max-w-3xl px-[var(--space-3)] py-[var(--space-7)]">
-      <p data-reveal className="eyebrow mb-[var(--space-4)]">
+    <section
+      id="roadmap"
+      ref={ref}
+      className="relative mx-auto max-w-3xl px-[var(--space-3)] py-[var(--space-7)]"
+    >
+      <div
+        aria-hidden
+        className="ambient-glow"
+        style={{
+          top: '20%',
+          left: '-10%',
+          width: '28vw',
+          height: '28vw',
+          maxWidth: 380,
+          maxHeight: 380,
+          background: 'radial-gradient(circle, rgba(124,111,168,0.14), transparent 70%)',
+        }}
+      />
+
+      <p data-reveal className="eyebrow relative z-10 mb-[var(--space-4)]">
         What&rsquo;s next
       </p>
 
-      <ul className="flex flex-col" style={{ borderTop: '1px solid var(--line)' }}>
+      <ul className="relative z-10 flex flex-col" style={{ borderTop: '1px solid var(--line)' }}>
         {roadmap.map((entry) => (
           <li
             key={entry.name}
