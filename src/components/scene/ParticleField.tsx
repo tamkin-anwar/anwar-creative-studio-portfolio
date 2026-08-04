@@ -8,11 +8,11 @@ const COLORS = ['#d9a15c', '#7c6fa8']
 type Particle = {
   x: number
   y: number
-  // constant ambient drift — never damped, only reflects off the edges, so
+  // constant ambient drift: never damped, only reflects off the edges, so
   // the field keeps moving forever rather than gradually settling to a stop
   vx: number
   vy: number
-  // temporary velocity added by the mouse — this is what decays
+  // temporary velocity added by the mouse, this is what decays
   ix: number
   iy: number
   r: number
@@ -20,7 +20,7 @@ type Particle = {
 }
 
 /**
- * A network of drifting, softly-linked particles — vanilla Canvas 2D with
+ * A network of drifting, softly-linked particles: vanilla Canvas 2D with
  * simple physics, the same proven approach as Doorsong's strands. No WebGL,
  * no material pipeline, nothing that renders differently depending on
  * viewing angle or tone mapping. Every "bug" on the previous crystal and
@@ -96,7 +96,7 @@ export function ParticleField() {
           p.x += p.vx + p.ix
           p.y += p.vy + p.iy
 
-          // only the constant ambient drift reflects off the edges — the
+          // only the constant ambient drift reflects off the edges, the
           // mouse impulse is left alone and just decays wherever it is
           if (p.x < 0 || p.x > width) p.vx *= -1
           if (p.y < 0 || p.y > height) p.vy *= -1
@@ -112,7 +112,7 @@ export function ParticleField() {
             }
           }
 
-          // decay only the mouse-driven impulse — vx/vy (the ambient drift)
+          // decay only the mouse-driven impulse; vx/vy (the ambient drift)
           // is never damped, so the field keeps drifting indefinitely
           p.ix *= 0.94
           p.iy *= 0.94

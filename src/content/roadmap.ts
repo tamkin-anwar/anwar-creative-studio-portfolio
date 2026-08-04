@@ -10,7 +10,7 @@ export const roadmap: RoadmapEntry[] = [
   {
     name: 'Gardens',
     status: 'in progress',
-    blurb: 'A slower, plant-tending kind of app — early days.',
+    blurb: 'A slower, plant-tending kind of app, early days.',
   },
   {
     name: 'Looms',
@@ -20,6 +20,6 @@ export const roadmap: RoadmapEntry[] = [
   {
     name: 'Unnamed',
     status: 'exploring',
-    blurb: 'Something new — not ready to name yet.',
+    blurb: 'Something new, not ready to name yet.',
   },
 ]

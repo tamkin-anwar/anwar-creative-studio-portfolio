@@ -3,11 +3,11 @@ import { useProgress } from '@react-three/drei'
 
 const MIN_VISIBLE_MS = 900
 // Real three.js loading progress only ever fires if something is actually
-// queued in the loading manager. The crystal's environment is fully
-// procedural (no textures to fetch), so most of the time nothing loads at
-// all — this simulated ramp is what the counter follows in that case. If a
-// future asset (a texture, a model) does take a while, real progress below
-// the simulated curve takes over instead, so the preloader still waits for it.
+// queued in the loading manager. The sitewide sparkle field has no textures
+// to fetch, so most of the time nothing loads at all: this simulated ramp is
+// what the counter follows in that case. If a future asset (a texture, a
+// model) does take a while, real progress below the simulated curve takes
+// over instead, so the preloader still waits for it.
 const SIM_DURATION_MS = 1200
 
 function easeOutExpo(t: number) {

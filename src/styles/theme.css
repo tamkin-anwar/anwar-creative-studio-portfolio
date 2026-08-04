@@ -1,5 +1,5 @@
 :root {
-  /* palette — dark field, warm gem accent, cool violet depth */
+  /* palette: dark field, warm gem accent, cool violet depth */
   --bg: #0a0a0d;
   --ink: #f2ede2;
   --ink-dim: rgba(242, 237, 226, 0.6);
@@ -20,7 +20,7 @@
   --text-label: 0.75rem;
   --text-caption: 0.8125rem;
 
-  /* spacing — 8px base scale */
+  /* spacing: 8px base scale */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;

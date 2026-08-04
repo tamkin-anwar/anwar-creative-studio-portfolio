@@ -60,8 +60,8 @@ a {
   color: var(--bg);
 }
 
-/* soft ambient glow blobs — used sparingly, one per section, to keep the dark field
-   from reading as flat/empty without competing with the crystal's own bloom */
+/* soft ambient glow blobs: used sparingly, one per section, to keep the dark field
+   from reading as flat or empty without competing with the hero's own particles */
 .ambient-glow {
   position: absolute;
   z-index: 0;
