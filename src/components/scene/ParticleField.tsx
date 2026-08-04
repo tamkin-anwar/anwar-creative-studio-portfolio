@@ -6,6 +6,12 @@ const MOUSE_RADIUS = 150
 const COLORS = ['#d9a15c', '#7c6fa8']
 const HIGHLIGHT = '#f6f1e7'
 const RETICLE_COLOR = '#d9a15c'
+// keeps every particle's position (and its widest possible bloom halo, well
+// under this) inside a safe interior box, so no glow ever reaches the
+// canvas's own raster edge in the first place: a CSS mask can only fade
+// pixels that were drawn, it can't recover a bloom that got clipped because
+// the particle itself was too close to the boundary
+const EDGE_MARGIN = 32
 
 type Particle = {
   x: number
@@ -53,10 +59,17 @@ export function ParticleField() {
 
     let hasSized = false
 
+    // clamp the margin so it never eats more than a third of a very small
+    // canvas, while still keeping particles well clear of the edge normally
+    const marginX = () => Math.min(EDGE_MARGIN, width / 3)
+    const marginY = () => Math.min(EDGE_MARGIN, height / 3)
+
     const makeParticles = () => {
+      const mx = marginX()
+      const my = marginY()
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
+        x: mx + Math.random() * Math.max(0, width - mx * 2),
+        y: my + Math.random() * Math.max(0, height - my * 2),
         vx: (Math.random() - 0.5) * 0.15,
         vy: (Math.random() - 0.5) * 0.15,
         ix: 0,
@@ -112,14 +125,18 @@ export function ParticleField() {
       if (!reduceMotion) mouse.angle += 0.012
 
       if (!reduceMotion) {
+        const mx = marginX()
+        const my = marginY()
         for (const p of particles) {
           p.x += p.vx + p.ix
           p.y += p.vy + p.iy
 
           // only the constant ambient drift reflects off the edges, the
-          // mouse impulse is left alone and just decays wherever it is
-          if (p.x < 0 || p.x > width) p.vx *= -1
-          if (p.y < 0 || p.y > height) p.vy *= -1
+          // mouse impulse is left alone and just decays wherever it is;
+          // bounce at the inset margin, not the raw canvas bounds, so
+          // particles (and their bloom) never reach the true edge
+          if (p.x < mx || p.x > width - mx) p.vx *= -1
+          if (p.y < my || p.y > height - my) p.vy *= -1
 
           if (mouse.active) {
             const dx = p.x - mouse.x
@@ -144,6 +161,12 @@ export function ParticleField() {
           // is never damped, so the field keeps drifting indefinitely
           p.ix *= 0.94
           p.iy *= 0.94
+
+          // hard-clamp position too: the mouse-driven swirl/push above isn't
+          // covered by the wall-bounce check, so without this a particle
+          // pushed by the cursor near the edge could still cross the margin
+          p.x = Math.min(Math.max(p.x, mx), width - mx)
+          p.y = Math.min(Math.max(p.y, my), height - my)
         }
       }
 
@@ -200,14 +223,19 @@ export function ParticleField() {
       ctx.shadowBlur = 0
 
       if (mouse.opacity > 0.01) {
+        const ringR = 26
+        // keep the reticle itself fully on-canvas too, independent of the
+        // interaction radius (which should still track the real cursor)
+        const reticleX = Math.min(Math.max(mouse.x, ringR + 2), width - ringR - 2)
+        const reticleY = Math.min(Math.max(mouse.y, ringR + 2), height - ringR - 2)
+
         ctx.save()
-        ctx.translate(mouse.x, mouse.y)
+        ctx.translate(reticleX, reticleY)
         ctx.globalAlpha = mouse.opacity * 0.55
         ctx.strokeStyle = RETICLE_COLOR
         ctx.lineWidth = 1
 
         ctx.rotate(mouse.angle)
-        const ringR = 26
         for (let s = 0; s < 4; s++) {
           const start = (s / 4) * Math.PI * 2
           ctx.beginPath()
