@@ -69,8 +69,12 @@ export function Cursor() {
   return (
     <div
       ref={dotRef}
-      className="pointer-events-none fixed left-0 top-0 z-[60] h-3 w-3 rounded-full bg-[var(--accent-warm)] mix-blend-difference"
-      style={{ transition: 'transform 0.15s var(--ease-out-expo)' }}
+      className="pointer-events-none fixed left-0 top-0 z-[60] h-3 w-3 rounded-full"
+      style={{
+        background: 'var(--accent-warm)',
+        boxShadow: '0 0 0 1px rgba(10,10,13,0.4), 0 0 12px rgba(217,161,92,0.7)',
+        transition: 'transform 0.15s var(--ease-out-expo)',
+      }}
     />
   )
 }

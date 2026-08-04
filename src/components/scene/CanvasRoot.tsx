@@ -11,6 +11,12 @@ export function CanvasRoot() {
       gl={{ alpha: true, antialias: true }}
       dpr={[1, 2]}
     >
+      {/* Post-processing (Vignette/Noise) can quietly opt the canvas out of transparency,
+          which turns "invisible" background pixels into a visible rectangle where the
+          canvas box meets the page. Giving the scene the page's own bg color means that
+          edge is never visible even if the canvas stops being transparent. */}
+      <color attach="background" args={['#0a0a0d']} />
+
       <ambientLight intensity={0.25} />
       <directionalLight position={[3, 2, 4]} intensity={2.4} color="#d9a15c" />
       <directionalLight position={[-4, -1, -2]} intensity={0.9} color="#7c6fa8" />

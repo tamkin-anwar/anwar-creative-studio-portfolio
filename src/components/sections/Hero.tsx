@@ -43,6 +43,12 @@ export function Hero() {
           className="relative h-[36vh] w-full max-w-lg cursor-grab active:cursor-grabbing sm:h-[42vh]"
           style={{
             transform: `translateY(${progress * -50}px) scale(${1 - progress * 0.18})`,
+            // The canvas's own edge can read as a faint rectangle against the page (the
+            // WebGL scene's clear color never quite tone-maps to the exact same pixel as
+            // the CSS background). Masking the box's own edges to transparent dissolves
+            // that boundary regardless, rather than chasing a pixel-perfect color match.
+            maskImage: 'radial-gradient(ellipse at center, black 55%, transparent 82%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 55%, transparent 82%)',
           }}
         >
           <CanvasRoot />
