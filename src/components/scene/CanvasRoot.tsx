@@ -2,12 +2,12 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, Lightformer } from '@react-three/drei'
 import { EffectComposer, Bloom, Vignette, Noise, ChromaticAberration } from '@react-three/postprocessing'
 import { BlendFunction } from 'postprocessing'
-import { Crystal } from './Crystal'
+import { LavaLamp } from './LavaLamp'
 
 export function CanvasRoot() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 4.2], fov: 32 }}
+      camera={{ position: [0, 0, 5.2], fov: 36 }}
       gl={{ alpha: true, antialias: true }}
       dpr={[1, 2]}
     >
@@ -21,11 +21,11 @@ export function CanvasRoot() {
       <directionalLight position={[3, 2, 4]} intensity={2.4} color="#d9a15c" />
       <directionalLight position={[-4, -1, -2]} intensity={0.9} color="#7c6fa8" />
 
-      <Crystal />
+      <LavaLamp />
 
-      {/* procedural environment — no network fetch, so the crystal never blocks on a remote HDR.
-          Lightformers surround the crystal on every side so it always catches a highlight,
-          no matter how it's been dragged — a single side-lit pair went fully dark on rotation. */}
+      {/* procedural environment — no network fetch, so nothing ever blocks on a remote HDR.
+          Lightformers surround the lamp on every side so the wax always catches a highlight
+          as the blobs drift through it. */}
       <Environment resolution={256} environmentIntensity={1.1}>
         <Lightformer
           form="rect"
