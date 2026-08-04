@@ -1,32 +1,34 @@
-# React + TypeScript + Vite
+# Ratna 💎
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The studio site for Anwar Creative Studio — a faceted glass crystal rendered live in WebGL, with drag physics, ambient particles, and depth that responds to scroll.
 
-Currently, two official plugins are available:
+Ratna is Sanskrit for "gem." It's the front door to the studio: what it is, what it's shipped (Doorsong, Artha), and what's next.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What's here
 
-## React Compiler
+- A hand-tuned crystal — a faceted icosahedron with real glass transmission (chromatic aberration, distortion, an inner glowing core), built with React Three Fiber and drei's `MeshTransmissionMaterial`
+- Drag it and it spins with momentum; leave it alone and it drifts back to an idle rotation
+- A sitewide ambient particle field drifting behind every section, not just the hero
+- Scroll-linked parallax: the crystal and headline drift apart at different depths as you scroll past
+- Project cards that tilt in 3D toward the cursor with a glow that follows it
+- A custom lerped cursor with magnetic pull on links and buttons
+- No build-blocking network calls — the environment lighting is fully procedural, so the preloader never stalls on a remote asset
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the Oxlint configuration
+- React + TypeScript + Vite
+- React Three Fiber, drei, and `@react-three/postprocessing` (bloom, grain, vignette, chromatic aberration) for the 3D layer
+- Tailwind v4 for layout, with the type scale, spacing scale, and motion easing driven by CSS custom properties
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Running locally
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open `http://localhost:5173`. `npm run build` produces a static `dist/` — no backend, no server.
+
+## Credits
+
+Design language carried forward from Doorsong and Artha. Built by **Anwar Creative Studio**.
