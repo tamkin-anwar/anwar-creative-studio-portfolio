@@ -79,10 +79,12 @@ export function Crystal() {
   return (
     <Float speed={1.4} rotationIntensity={0} floatIntensity={0.6} floatingRange={[-0.08, 0.08]}>
       <group ref={groupRef} onPointerDown={onPointerDown}>
-        {/* inner glowing core, visible through the glass shell */}
-        <mesh scale={0.5}>
-          <icosahedronGeometry args={[1, 0]} />
-          <meshBasicMaterial color="#d9a15c" transparent opacity={0.6} toneMapped={false} />
+        {/* inner glowing core, visible through the glass shell. A smooth sphere rather
+            than a low-poly shape — flat facet gaps here read as dark voids through the
+            transmissive shell, especially combined with the shell's own iridescence. */}
+        <mesh scale={0.48}>
+          <sphereGeometry args={[1, 24, 24]} />
+          <meshBasicMaterial color="#d9a15c" transparent opacity={0.55} toneMapped={false} />
         </mesh>
 
         {/* outer faceted glass shell */}
@@ -101,9 +103,9 @@ export function Crystal() {
             distortionScale={0.3}
             clearcoat={1}
             clearcoatRoughness={0.1}
-            iridescence={0.6}
+            iridescence={0.15}
             iridescenceIOR={1.3}
-            iridescenceThicknessRange={[100, 400]}
+            iridescenceThicknessRange={[200, 380]}
             attenuationColor="#d9a15c"
             attenuationDistance={0.5}
             envMapIntensity={2.2}
