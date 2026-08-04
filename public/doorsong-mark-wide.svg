@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img">
+<title>Doorsong</title>
+<desc>A glowing sphere fading from warm bronze at its highlight to deep red at its rim, centered in a widescreen frame with a broad warm ambient glow filling the width, and a thin lintel arc suggesting a doorway.</desc>
+<defs>
+<radialGradient id="glow" cx="42%" cy="45%" r="60%">
+<stop offset="0%" stop-color="#e2a05a" stop-opacity="0.32"/>
+<stop offset="55%" stop-color="#c96a3e" stop-opacity="0.12"/>
+<stop offset="100%" stop-color="#c96a3e" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="sphere" cx="40%" cy="35%" r="70%">
+<stop offset="0%" stop-color="#fff3d9"/>
+<stop offset="18%" stop-color="#f0b56c"/>
+<stop offset="42%" stop-color="#c96a3e"/>
+<stop offset="70%" stop-color="#7a2a2a"/>
+<stop offset="100%" stop-color="#170a0c"/>
+</radialGradient>
+</defs>
+<rect x="0" y="0" width="1200" height="675" fill="#0a0a0d"/>
+<ellipse cx="600" cy="340" rx="610" ry="325" fill="url(#glow)"/>
+<circle cx="600" cy="340" r="290" fill="none" stroke="#e2a05a" stroke-opacity="0.10" stroke-width="1"/>
+<circle cx="600" cy="340" r="320" fill="none" stroke="#e2a05a" stroke-opacity="0.06" stroke-width="1"/>
+<circle cx="600" cy="340" r="260" fill="url(#sphere)"/>
+<path d="M 425 241 Q 600 183 775 241" fill="none" stroke="#0a0a0d" stroke-opacity="0.55" stroke-width="12" stroke-linecap="round"/>
+<line x1="457" y1="258" x2="457" y2="292" stroke="#0a0a0d" stroke-opacity="0.4" stroke-width="9" stroke-linecap="round"/>
+<line x1="743" y1="258" x2="743" y2="292" stroke="#0a0a0d" stroke-opacity="0.4" stroke-width="9" stroke-linecap="round"/>
+</svg>

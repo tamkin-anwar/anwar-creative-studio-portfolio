@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description:
       'A living title card built with physics-driven strands and ambient sound, the first shipped project from the studio.',
     url: links.doorsong,
-    previewImage: `${import.meta.env.BASE_URL}doorsong-mark.svg`,
+    previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.svg`,
   },
   {
     name: 'Artha',
