@@ -43,6 +43,11 @@ export function Hero() {
           className="relative h-[40vh] w-full max-w-2xl sm:h-[48vh]"
           style={{
             transform: `translateY(${progress * -50}px) scale(${1 - progress * 0.18})`,
+            // fade the canvas out before its own raster edge, so a glowing
+            // particle's bloom near the boundary fades away instead of
+            // getting hard-clipped by the canvas's own rectangular bounds
+            maskImage: 'radial-gradient(ellipse at center, black 68%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 68%, transparent 100%)',
           }}
         >
           <ParticleField />
