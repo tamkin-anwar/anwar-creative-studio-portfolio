@@ -5,7 +5,6 @@ const LINK_DISTANCE = 130
 const MOUSE_RADIUS = 150
 const COLORS = ['#d9a15c', '#7c6fa8']
 const HIGHLIGHT = '#f6f1e7'
-const RETICLE_COLOR = '#d9a15c'
 // keeps every particle's position (and its widest possible bloom halo, well
 // under this) inside a safe interior box, so no glow ever reaches the
 // canvas's own raster edge in the first place: a CSS mask can only fade
@@ -55,7 +54,7 @@ export function ParticleField() {
     let height = 0
     const dpr = Math.min(window.devicePixelRatio || 1, 3)
     let particles: Particle[] = []
-    const mouse = { x: -9999, y: -9999, active: false, opacity: 0, angle: 0 }
+    const mouse = { x: -9999, y: -9999, active: false, opacity: 0 }
 
     let hasSized = false
 
@@ -119,10 +118,9 @@ export function ParticleField() {
       frame++
       ctx.clearRect(0, 0, width, height)
 
-      // smoothly fade the HUD reticle and highlight strength in and out,
-      // rather than snapping the instant the pointer enters or leaves
+      // smoothly fade the near-cursor highlight in and out, rather than
+      // snapping the instant the pointer enters or leaves
       mouse.opacity += ((mouse.active ? 1 : 0) - mouse.opacity) * 0.08
-      if (!reduceMotion) mouse.angle += 0.012
 
       if (!reduceMotion) {
         const mx = marginX()
@@ -221,37 +219,6 @@ export function ParticleField() {
         ctx.fill()
       }
       ctx.shadowBlur = 0
-
-      if (mouse.opacity > 0.01) {
-        const ringR = 26
-        // keep the reticle itself fully on-canvas too, independent of the
-        // interaction radius (which should still track the real cursor)
-        const reticleX = Math.min(Math.max(mouse.x, ringR + 2), width - ringR - 2)
-        const reticleY = Math.min(Math.max(mouse.y, ringR + 2), height - ringR - 2)
-
-        ctx.save()
-        ctx.translate(reticleX, reticleY)
-        ctx.globalAlpha = mouse.opacity * 0.55
-        ctx.strokeStyle = RETICLE_COLOR
-        ctx.lineWidth = 1
-
-        ctx.rotate(mouse.angle)
-        for (let s = 0; s < 4; s++) {
-          const start = (s / 4) * Math.PI * 2
-          ctx.beginPath()
-          ctx.arc(0, 0, ringR, start, start + Math.PI * 2 * 0.18)
-          ctx.stroke()
-        }
-
-        ctx.rotate(-mouse.angle * 2)
-        ctx.beginPath()
-        ctx.moveTo(-4, 0)
-        ctx.lineTo(4, 0)
-        ctx.moveTo(0, -4)
-        ctx.lineTo(0, 4)
-        ctx.stroke()
-        ctx.restore()
-      }
 
       raf = requestAnimationFrame(tick)
     }
