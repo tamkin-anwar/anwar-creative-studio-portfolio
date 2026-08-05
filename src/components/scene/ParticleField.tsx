@@ -27,6 +27,15 @@ type Particle = {
   pulseSeed: number
 }
 
+// a signal traveling along a link between two particles, like a thought
+// firing across a synapse; a and b are indices into the particles array
+type Signal = {
+  a: number
+  b: number
+  t: number
+  speed: number
+}
+
 /**
  * A network of drifting, softly-linked particles: vanilla Canvas 2D with
  * simple physics, the same proven approach as Doorsong's strands. No WebGL,
@@ -55,6 +64,13 @@ export function ParticleField() {
     const dpr = Math.min(window.devicePixelRatio || 1, 3)
     let particles: Particle[] = []
     const mouse = { x: -9999, y: -9999, active: false, opacity: 0 }
+
+    // rare, ambient synapse firings: at most a couple in flight at once, a
+    // long random gap between them, so the field reads as quietly thinking
+    // rather than constantly sparking
+    let signals: Signal[] = []
+    let framesUntilNextSignal = 90 + Math.random() * 120
+    const MAX_SIGNALS = 2
 
     let hasSized = false
 
@@ -168,6 +184,11 @@ export function ParticleField() {
         }
       }
 
+      // links currently short enough to draw, and so eligible for a signal
+      // to fire along them; gathered here since we're already computing
+      // every pair's distance for the line draw below
+      const candidateEdges: [number, number][] = []
+
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const a = particles[i]
@@ -176,6 +197,7 @@ export function ParticleField() {
           const dy = a.y - b.y
           const dist = Math.hypot(dx, dy)
           if (dist >= LINK_DISTANCE) continue
+          candidateEdges.push([i, j])
 
           const midX = (a.x + b.x) / 2
           const midY = (a.y + b.y) / 2
@@ -195,6 +217,56 @@ export function ParticleField() {
           ctx.lineTo(b.x, b.y)
           ctx.stroke()
         }
+      }
+
+      if (!reduceMotion) {
+        framesUntilNextSignal--
+        if (framesUntilNextSignal <= 0 && signals.length < MAX_SIGNALS && candidateEdges.length > 0) {
+          const [i, j] = candidateEdges[Math.floor(Math.random() * candidateEdges.length)]
+          const flip = Math.random() < 0.5
+          signals.push({
+            a: flip ? j : i,
+            b: flip ? i : j,
+            t: 0,
+            speed: 0.012 + Math.random() * 0.012,
+          })
+          framesUntilNextSignal = 90 + Math.random() * 120
+        }
+
+        for (let k = signals.length - 1; k >= 0; k--) {
+          const s = signals[k]
+          const a = particles[s.a]
+          const b = particles[s.b]
+          // a synapse that's stretched too far apart no longer reads as a
+          // single connection, so let the signal fade out rather than
+          // travel across open space
+          if (Math.hypot(a.x - b.x, a.y - b.y) > LINK_DISTANCE * 1.4) {
+            signals.splice(k, 1)
+            continue
+          }
+          s.t += s.speed
+          if (s.t >= 1) signals.splice(k, 1)
+        }
+      }
+
+      for (const s of signals) {
+        const a = particles[s.a]
+        const b = particles[s.b]
+        const x = a.x + (b.x - a.x) * s.t
+        const y = a.y + (b.y - a.y) * s.t
+        // ease in and out over the trip, rather than popping in at full
+        // brightness and cutting off abruptly on arrival
+        const glow = Math.sin(Math.min(s.t, 1) * Math.PI)
+
+        ctx.beginPath()
+        ctx.fillStyle = HIGHLIGHT
+        ctx.shadowColor = HIGHLIGHT
+        ctx.shadowBlur = 8 * glow
+        ctx.globalAlpha = glow
+        ctx.arc(x, y, 1.8, 0, Math.PI * 2)
+        ctx.fill()
+        ctx.globalAlpha = 1
+        ctx.shadowBlur = 0
       }
 
       for (const p of particles) {
