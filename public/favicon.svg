@@ -1,12 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img">
 <title>Anwar Creative Studio</title>
-<desc>A bold four-point gold sparkle, filling the icon frame.</desc>
+<desc>A bold four-point gold sparkle with a soft glow, filling the icon frame.</desc>
 <defs>
 <radialGradient id="g" cx="50%" cy="50%" r="65%">
 <stop offset="0%" stop-color="#f8ecd6"/>
 <stop offset="55%" stop-color="#e3ab5f"/>
 <stop offset="100%" stop-color="#c9853f"/>
 </radialGradient>
+<radialGradient id="halo" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#e3ab5f" stop-opacity="0.55"/>
+<stop offset="100%" stop-color="#e3ab5f" stop-opacity="0"/>
+</radialGradient>
 </defs>
-<path d="M50 2 Q58 42 98 50 Q58 58 50 98 Q42 58 2 50 Q42 42 50 2 Z" fill="url(#g)"/>
+<circle cx="50" cy="50" r="49" fill="url(#halo)"/>
+<path d="M50 1 Q60 40 99 50 Q60 60 50 99 Q40 60 1 50 Q40 40 50 1 Z" fill="url(#g)"/>
 </svg>
