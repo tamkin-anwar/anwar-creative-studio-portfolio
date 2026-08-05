@@ -1,8 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <rect width="48" height="48" rx="10" fill="#0a0a0d"/>
-  <path d="M24 8 L36 18 L24 40 L12 18 Z" fill="none" stroke="#d9a15c" stroke-width="1.6" stroke-linejoin="round"/>
-  <path d="M24 8 L36 18 L24 24 Z" fill="#d9a15c" fill-opacity="0.55"/>
-  <path d="M12 18 L24 24 L24 8 Z" fill="#d9a15c" fill-opacity="0.3"/>
-  <path d="M24 24 L36 18 L24 40 Z" fill="#7c6fa8" fill-opacity="0.35"/>
-  <path d="M12 18 L24 24 L24 40 Z" fill="#7c6fa8" fill-opacity="0.2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img">
+<title>Anwar Creative Studio</title>
+<desc>A bold four-point gold sparkle, filling the icon frame.</desc>
+<defs>
+<radialGradient id="g" cx="50%" cy="50%" r="65%">
+<stop offset="0%" stop-color="#f8ecd6"/>
+<stop offset="55%" stop-color="#e3ab5f"/>
+<stop offset="100%" stop-color="#c9853f"/>
+</radialGradient>
+</defs>
+<path d="M50 2 Q50 50 98 50 Q50 50 50 98 Q50 50 2 50 Q50 50 50 2 Z" fill="url(#g)"/>
 </svg>
