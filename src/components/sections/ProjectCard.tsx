@@ -65,6 +65,12 @@ export function ProjectCard({ project }: { project: Project }) {
             src={project.previewImage}
             alt=""
             className="h-full w-full object-cover"
+            style={{
+              // fade the photo's own edge out before it meets the card's
+              // border, so the two don't read as a double frame
+              maskImage: 'radial-gradient(ellipse at center, black 78%, transparent 100%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, black 78%, transparent 100%)',
+            }}
           />
         ) : (
           <span
