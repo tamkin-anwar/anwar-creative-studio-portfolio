@@ -61,11 +61,21 @@ export function ProjectCard({ project }: { project: Project }) {
         }}
       >
         {project.previewImage ? (
-          <img
-            src={project.previewImage}
-            alt=""
-            className="h-full w-full object-cover"
-          />
+          <>
+            <img
+              src={project.previewImage}
+              alt=""
+              className="h-full w-full object-cover"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-xl"
+              style={{
+                boxShadow:
+                  'inset 0 0 0 1px rgba(10,10,13,0.35), inset 0 0 40px 14px var(--bg)',
+              }}
+            />
+          </>
         ) : (
           <span
             className="font-mono tracking-[0.1em]"
