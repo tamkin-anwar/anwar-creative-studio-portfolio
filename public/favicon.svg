@@ -8,5 +8,5 @@
 <stop offset="100%" stop-color="#c9853f"/>
 </radialGradient>
 </defs>
-<path d="M50 2 Q50 50 98 50 Q50 50 50 98 Q50 50 2 50 Q50 50 50 2 Z" fill="url(#g)"/>
+<path d="M50 2 Q58 42 98 50 Q58 58 50 98 Q42 58 2 50 Q42 42 50 2 Z" fill="url(#g)"/>
 </svg>
