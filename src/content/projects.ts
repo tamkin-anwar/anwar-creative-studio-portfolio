@@ -23,5 +23,6 @@ export const projects: Project[] = [
     description:
       'Your numbers stay yours: nothing leaves the box it runs on, no analytics, no accounts sold to anyone.',
     url: links.artha,
+    previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.png`,
   },
 ]
