@@ -11,7 +11,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'Doorsong',
-    tagline: 'An ambient audio-visual instrument, played by scroll and touch.',
+    tagline: 'Six cultural doorways, each with its own hand-built instrument.',
     description:
       'A living title card built with physics-driven strands and ambient sound, the first shipped project from the studio.',
     url: links.doorsong,
