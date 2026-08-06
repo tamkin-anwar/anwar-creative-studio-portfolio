@@ -1,13 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { useProgress } from '@react-three/drei'
 
 const MIN_VISIBLE_MS = 900
-// Real three.js loading progress only ever fires if something is actually
-// queued in the loading manager. The sitewide sparkle field has no textures
-// to fetch, so most of the time nothing loads at all: this simulated ramp is
-// what the counter follows in that case. If a future asset (a texture, a
-// model) does take a while, real progress below the simulated curve takes
-// over instead, so the preloader still waits for it.
+// There's no real loading-manager progress to follow (no textures, no
+// models, nothing queued): the counter is purely this simulated ease, timed
+// to feel like it's tracking something rather than just a fixed delay.
 const SIM_DURATION_MS = 1200
 
 function easeOutExpo(t: number) {
@@ -15,24 +11,15 @@ function easeOutExpo(t: number) {
 }
 
 export function Preloader({ onComplete }: { onComplete: () => void }) {
-  const { progress, active } = useProgress()
   const [display, setDisplay] = useState(0)
   const [exiting, setExiting] = useState(false)
   const startRef = useRef(performance.now())
-  const progressRef = useRef(0)
-  const hasRealLoad = useRef(false)
-
-  useEffect(() => {
-    progressRef.current = progress
-    if (active) hasRealLoad.current = true
-  }, [progress, active])
 
   useEffect(() => {
     let raf: number
     const tick = () => {
       const elapsed = performance.now() - startRef.current
-      const simulated = easeOutExpo(Math.min(1, elapsed / SIM_DURATION_MS)) * 100
-      const target = hasRealLoad.current ? Math.min(simulated, progressRef.current) : simulated
+      const target = easeOutExpo(Math.min(1, elapsed / SIM_DURATION_MS)) * 100
 
       setDisplay((d) => {
         const diff = target - d

@@ -64,6 +64,10 @@ export function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.previewImage}
             alt=""
+            width={1200}
+            height={675}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover"
           />
         ) : (

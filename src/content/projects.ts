@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description:
       'A living title card built with physics-driven strands and ambient sound, the first shipped project from the studio.',
     url: links.doorsong,
-    previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.png`,
+    previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
   },
   {
     name: 'Artha',
@@ -23,6 +23,6 @@ export const projects: Project[] = [
     description:
       'Your numbers stay yours: nothing leaves the box it runs on, no analytics, no accounts sold to anyone.',
     url: links.artha,
-    previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.png`,
+    previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
   },
 ]
