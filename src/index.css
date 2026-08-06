@@ -5,9 +5,15 @@
   box-sizing: border-box;
 }
 
+/* iOS Safari bounces/rubber-bands the <html> element itself, not <body>, so
+   overflow-x needs to be hidden on both or the page can still be dragged
+   sideways there; overscroll-behavior-x kills the horizontal chaining too
+   while leaving iOS's native vertical momentum scroll untouched */
 html {
   background: var(--bg);
   color-scheme: dark;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -21,6 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 #root {
