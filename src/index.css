@@ -35,6 +35,15 @@ body {
   position: relative;
 }
 
+/* canvases never hold real text, but iOS Safari doesn't know that: a
+   touch-drag meant to play with the particle field gets read as a text
+   selection gesture, popping the Copy/Look Up callout mid-interaction */
+canvas {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* sitewide film grain, fixed so it stays constant while content scrolls beneath it */
 #root::after {
   content: '';
