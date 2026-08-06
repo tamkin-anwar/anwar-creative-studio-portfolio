@@ -111,6 +111,30 @@ export function ParticleField() {
     canvas.addEventListener('pointermove', onPointerMove)
     canvas.addEventListener('pointerleave', onPointerLeave)
 
+    // iOS Safari fires pointercancel the moment it commits a touch to a
+    // native scroll, which cuts pointermove off mid-gesture on most drags:
+    // the interaction "sometimes works" only when the drag stays ambiguous
+    // long enough not to trigger that. Raw touch events don't get cancelled
+    // that way, so track them separately, purely additive to the pointer
+    // handling above. Always passive (no preventDefault) so a touch here
+    // never blocks the page from scrolling underneath it.
+    const onTouch = (e: TouchEvent) => {
+      const touch = e.touches[0]
+      if (!touch) return
+      const rect = canvas.getBoundingClientRect()
+      mouse.x = touch.clientX - rect.left
+      mouse.y = touch.clientY - rect.top
+      mouse.active = true
+    }
+    const onTouchEnd = () => {
+      mouse.active = false
+    }
+
+    canvas.addEventListener('touchstart', onTouch, { passive: true })
+    canvas.addEventListener('touchmove', onTouch, { passive: true })
+    canvas.addEventListener('touchend', onTouchEnd, { passive: true })
+    canvas.addEventListener('touchcancel', onTouchEnd, { passive: true })
+
     let raf: number
     let frame = 0
 
@@ -230,6 +254,10 @@ export function ParticleField() {
       resizeObserver.disconnect()
       canvas.removeEventListener('pointermove', onPointerMove)
       canvas.removeEventListener('pointerleave', onPointerLeave)
+      canvas.removeEventListener('touchstart', onTouch)
+      canvas.removeEventListener('touchmove', onTouch)
+      canvas.removeEventListener('touchend', onTouchEnd)
+      canvas.removeEventListener('touchcancel', onTouchEnd)
     }
   }, [])
 
