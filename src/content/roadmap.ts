@@ -8,9 +8,9 @@ export type RoadmapEntry = {
 
 export const roadmap: RoadmapEntry[] = [
   {
-    name: 'Gardens',
+    name: 'Susurrus',
     status: 'in progress',
-    blurb: 'A slower, plant-tending kind of app, early days.',
+    blurb: 'Six ambient gardens, the quieter sibling to Doorsong.',
   },
   {
     name: 'Looms',
