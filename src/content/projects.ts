@@ -31,5 +31,6 @@ export const projects: Project[] = [
     description:
       'A Chrome extension that keeps Netflix, Hulu, and Disney+ in sync between two people, anywhere, plus shared notes and chat. In review on the Chrome Web Store.',
     url: links.tether,
+    previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp`,
   },
 ]
