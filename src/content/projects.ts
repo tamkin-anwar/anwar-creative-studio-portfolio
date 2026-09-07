@@ -25,4 +25,11 @@ export const projects: Project[] = [
     url: links.artha,
     previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
   },
+  {
+    name: 'Tether',
+    tagline: "Watch together, even when you can't be.",
+    description:
+      'A Chrome extension that keeps Netflix, Hulu, and Disney+ in sync between two people, anywhere, plus shared notes and chat. In review on the Chrome Web Store.',
+    url: links.tether,
+  },
 ]

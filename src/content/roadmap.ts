@@ -8,11 +8,6 @@ export type RoadmapEntry = {
 
 export const roadmap: RoadmapEntry[] = [
   {
-    name: 'Susurrus',
-    status: 'in progress',
-    blurb: 'Six ambient gardens, the quieter sibling to Doorsong.',
-  },
-  {
     name: 'Looms',
     status: 'planned',
     blurb: 'Pattern-making tools, still taking shape.',
