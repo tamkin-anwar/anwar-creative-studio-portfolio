@@ -35,4 +35,12 @@ export const projects: Project[] = [
     // time the asset changes so browsers don't serve a stale cached image
     previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
   },
+  {
+    name: 'Stub',
+    tagline: "Everything you've watched, rated together.",
+    description:
+      "Log films and shows as you watch, rate them next to someone else's score, and see IMDb, Rotten Tomatoes, and Metacritic on every title. Pair up for a shared list, or keep your own.",
+    url: links.stub,
+    previewImage: `${import.meta.env.BASE_URL}stub-mark-wide.webp`,
+  },
 ]
