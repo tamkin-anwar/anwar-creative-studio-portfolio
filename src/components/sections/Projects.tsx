@@ -25,9 +25,9 @@ export function Projects() {
         }}
       />
 
-      <p data-reveal className="eyebrow relative z-10 mb-[var(--space-4)]">
+      <h2 data-reveal className="eyebrow relative z-10 mb-[var(--space-4)]">
         Shipped
-      </p>
+      </h2>
       <div className="relative z-10 grid gap-[var(--space-4)] sm:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />

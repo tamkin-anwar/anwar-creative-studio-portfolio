@@ -56,15 +56,21 @@ canvas {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  margin: 0;
-  color: var(--ink);
-}
+/* base-level element resets live in Tailwind's own cascade layer: unlayered
+   CSS always beats layered CSS regardless of specificity, so without this
+   these rules would silently override any Tailwind margin utility (mb-*,
+   mt-*) applied to a heading or paragraph anywhere on the site */
+@layer base {
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    margin: 0;
+    color: var(--ink);
+  }
 
-p {
-  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
 a {

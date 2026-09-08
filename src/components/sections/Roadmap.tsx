@@ -24,9 +24,9 @@ export function Roadmap() {
         }}
       />
 
-      <p data-reveal className="eyebrow relative z-10 mb-[var(--space-4)]">
+      <h2 data-reveal className="eyebrow relative z-10 mb-[var(--space-4)]">
         What&rsquo;s next
-      </p>
+      </h2>
 
       <ul className="relative z-10 flex flex-col" style={{ borderTop: '1px solid var(--line)' }}>
         {roadmap.map((entry) => (

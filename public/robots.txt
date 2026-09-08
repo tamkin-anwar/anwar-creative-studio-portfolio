@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tamkin-anwar.github.io/anwar-creative-studio-portfolio/sitemap.xml
