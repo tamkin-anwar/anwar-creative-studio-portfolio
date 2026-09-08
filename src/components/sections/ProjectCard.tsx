@@ -56,8 +56,15 @@ export function ProjectCard({ project }: { project: Project }) {
       <div
         className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl"
         style={{
-          background:
-            'linear-gradient(135deg, rgba(217,161,92,0.12), rgba(124,111,168,0.12))',
+          // this gradient is only ever meant to be seen behind the "PREVIEW"
+          // placeholder text; with a real image on top, a sliver of it can
+          // still peek through at the rounded-corner clip edge (browser
+          // antialiasing), which read as a visible ring wherever the image's
+          // own corner tone didn't happen to match it. Match the card's
+          // actual background instead so there's nothing to peek through.
+          background: project.previewImage
+            ? 'var(--bg)'
+            : 'linear-gradient(135deg, rgba(217,161,92,0.12), rgba(124,111,168,0.12))',
         }}
       >
         {project.previewImage ? (
