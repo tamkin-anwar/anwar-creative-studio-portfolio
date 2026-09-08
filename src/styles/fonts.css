@@ -1,0 +1,28 @@
+/* self-hosted, latin-subset, weight 400 only: the only weight/style either
+   family is ever actually set to anywhere in this codebase. Self-hosting
+   drops the fonts.googleapis.com round trip (extra DNS + TCP + a
+   render-blocking CSS request) that was sitting in front of first paint. */
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/fraunces-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-400.woff2') format('woff2');
+}

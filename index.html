@@ -27,12 +27,11 @@
     <meta name="twitter:description" content="A design lab for ideas that want to exist." />
     <meta name="twitter:image" content="https://tamkin-anwar.github.io/anwar-creative-studio-portfolio/og-image.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400..600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- self-hosted, see src/styles/fonts.css: no third-party font request
+         to wait on before first paint -->
+    <link rel="preload" href="/fonts/fraunces-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin />
     <title>Anwar Creative Studio Portfolio</title>
 
     <script type="application/ld+json">
