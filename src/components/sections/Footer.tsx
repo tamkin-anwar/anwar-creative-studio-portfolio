@@ -4,6 +4,7 @@ import { useReveal } from '../../hooks/useReveal'
 const footerLinks = [
   { label: 'Doorsong', href: links.doorsong },
   { label: 'Artha', href: links.artha },
+  { label: 'Tether', href: links.tether },
   { label: 'GitHub', href: links.github },
   { label: 'LinkedIn', href: links.linkedin },
 ].filter((link) => link.href)
