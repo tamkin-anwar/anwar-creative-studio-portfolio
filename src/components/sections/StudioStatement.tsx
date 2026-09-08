@@ -35,8 +35,7 @@ export function StudioStatement() {
       >
         Anwar Creative Studio is the software arm of Anwar Ventures, alongside
         Anwar Capital, Anwar Autowerks, and Anwar Logistics, building interactive
-        experiences, financial software, and browser extensions, then keeping
-        them running.
+        experiences, financial software, and browser extensions.
       </p>
     </section>
   )
