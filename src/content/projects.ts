@@ -19,9 +19,9 @@ export const projects: Project[] = [
   },
   {
     name: 'Artha',
-    tagline: 'A self-hosted personal finance dashboard, with no tracking.',
+    tagline: 'Your money, actually organized.',
     description:
-      'Your numbers stay yours: nothing leaves the box it runs on, no analytics, no accounts sold to anyone.',
+      'Transactions, budgets, notes, and your calendar, all in one place. Ask, and the AI Assistant adds it for you.',
     url: links.artha,
     previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
   },
