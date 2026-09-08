@@ -8,9 +8,9 @@ export type RoadmapEntry = {
 
 export const roadmap: RoadmapEntry[] = [
   {
-    name: 'Looms',
+    name: 'Ranna',
     status: 'planned',
-    blurb: 'Pattern-making tools, still taking shape.',
+    blurb: "Digitizing the recipes that only live in mom's handwriting.",
   },
   {
     name: 'Unnamed',
