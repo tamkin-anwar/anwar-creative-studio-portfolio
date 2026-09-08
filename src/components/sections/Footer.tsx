@@ -5,6 +5,7 @@ const footerLinks = [
   { label: 'Doorsong', href: links.doorsong },
   { label: 'Artha', href: links.artha },
   { label: 'Tether', href: links.tether },
+  { label: 'Stub', href: links.stub },
   { label: 'GitHub', href: links.github },
   { label: 'LinkedIn', href: links.linkedin },
 ].filter((link) => link.href)
