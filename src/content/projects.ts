@@ -33,6 +33,6 @@ export const projects: Project[] = [
     url: links.tether,
     // versioned: this one's still being iterated on, bump the number each
     // time the asset changes so browsers don't serve a stale cached image
-    previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=2`,
+    previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
   },
 ]
