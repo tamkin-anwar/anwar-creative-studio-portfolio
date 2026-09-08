@@ -13,7 +13,7 @@ export const projects: Project[] = [
     name: 'Doorsong',
     tagline: 'Six cultural doorways, each with its own hand-built instrument.',
     description:
-      'A living title card built with physics-driven strands and ambient sound, the first shipped project from the studio.',
+      'Hover or touch the strands and they swing and ring, tuned to how the real instrument actually sounds, a bell, an oud, an ektara, a marimba, not just synth presets.',
     url: links.doorsong,
     previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
   },
