@@ -37,9 +37,9 @@ export const projects: Project[] = [
   },
   {
     name: 'Stub',
-    tagline: "Everything you've watched, rated together.",
+    tagline: "Everything you've watched, and what you made of it.",
     description:
-      "Log films and shows as you watch, rate them next to someone else's score, and see IMDb, Rotten Tomatoes, and Metacritic on every title. Pair up for a shared list, or keep your own.",
+      "Every film and show you've seen, with your own rating and notes and the IMDb, Rotten Tomatoes and Metacritic scores. One list stays yours; the other you share with the person you watch with.",
     url: links.stub,
     previewImage: `${import.meta.env.BASE_URL}stub-mark-wide.webp?v=3`,
   },
