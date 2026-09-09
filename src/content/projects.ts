@@ -29,7 +29,7 @@ export const projects: Project[] = [
     name: 'Tether',
     tagline: "Watch together, even when you can't be.",
     description:
-      'A Chrome extension that keeps Netflix, Hulu, and Disney+ in sync between two people, anywhere, plus shared notes and chat. In review on the Chrome Web Store.',
+      'A Chrome extension that keeps Netflix, Hulu, Disney+, Crunchyroll, and Max in sync between two people, anywhere, plus a shared notes pad and chat.',
     url: links.tether,
     // versioned: this one's still being iterated on, bump the number each
     // time the asset changes so browsers don't serve a stale cached image
