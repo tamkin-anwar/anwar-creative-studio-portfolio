@@ -12,9 +12,9 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'Doorsong',
-    tagline: 'Six cultural doorways, each with its own hand-built instrument.',
+    tagline: 'Six doorways, each tuned to a different place.',
     description:
-      'Hover or touch the strands and they swing and ring, tuned to how the real instrument actually sounds, a bell, an oud, an ektara, a marimba, not just synth presets.',
+      'Move the hanging strands and they swing and ring like temple bells, wind chimes, an ektara, bamboo, an oud, and a marimba. Every sound is synthesized live.',
     url: links.doorsong,
     previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
   },
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     name: 'Jotfield',
     tagline: 'A place for every thought.',
     description:
-      'A private, local-first notebook with fast capture, rich writing, tasks, backlinks, daily notes, and optional encrypted sync across your devices.',
+      'Open it and start writing. Organize later with spaces, tags, tasks, and daily notes. Everything stays on your device unless you turn on encrypted sync.',
     url: links.jotfield,
     previewImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.gif?v=1`,
     reducedMotionImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.webp?v=1`,
