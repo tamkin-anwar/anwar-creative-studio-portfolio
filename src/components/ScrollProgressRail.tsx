@@ -4,7 +4,7 @@ const SECTIONS = [
   { id: 'hero', label: 'Top' },
   { id: 'about', label: 'Studio' },
   { id: 'work', label: 'Work' },
-  { id: 'roadmap', label: 'Roadmap' },
+  { id: 'roadmap', label: 'Now building' },
   { id: 'contact', label: 'Contact' },
 ]
 

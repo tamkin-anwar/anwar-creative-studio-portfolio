@@ -33,9 +33,8 @@ export function StudioStatement() {
           color: 'var(--ink-dim)',
         }}
       >
-        Anwar Creative Studio is the software arm of Anwar Ventures, alongside
-        Anwar Capital, Anwar Autowerks, and Anwar Logistics, building interactive
-        experiences, financial software, and browser extensions.
+        Anwar Creative Studio is where Tamkin Anwar designs and builds independent software. It is
+        part of Anwar Ventures, alongside Anwar Capital, Anwar Autowerks, and Anwar Logistics.
       </p>
     </section>
   )
