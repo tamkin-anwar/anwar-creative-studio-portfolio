@@ -47,9 +47,9 @@ export const projects: Project[] = [
   },
   {
     name: 'Stub',
-    tagline: "Everything you've watched, and what you made of it.",
+    tagline: 'What we watched, and what we thought.',
     description:
-      "Every film and show you've seen, with your own rating and notes and the IMDb, Rotten Tomatoes and Metacritic scores. One list stays yours; the other you share with the person you watch with.",
+      'Keep your own film and TV list, make one with a friend, and rate everything separately. See what you agree on and choose what to watch next.',
     url: links.stub,
     previewImage: `${import.meta.env.BASE_URL}stub-mark-wide.webp?v=3`,
   },
