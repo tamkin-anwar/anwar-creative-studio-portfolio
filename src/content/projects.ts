@@ -6,6 +6,7 @@ export type Project = {
   description: string
   url: string
   previewImage?: string
+  reducedMotionImage?: string
 }
 
 export const projects: Project[] = [
@@ -34,6 +35,15 @@ export const projects: Project[] = [
     // versioned: this one's still being iterated on, bump the number each
     // time the asset changes so browsers don't serve a stale cached image
     previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
+  },
+  {
+    name: 'Jotfield',
+    tagline: 'A place for every thought.',
+    description:
+      'A private, local-first notebook with fast capture, rich writing, tasks, backlinks, daily notes, and optional encrypted sync across your devices.',
+    url: links.jotfield,
+    previewImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.gif?v=1`,
+    reducedMotionImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.webp?v=1`,
   },
   {
     name: 'Stub',

@@ -5,6 +5,7 @@ export const links = {
   // "Add to Chrome" once the Web Store review clears, no copy change needed
   tether: 'https://tamkin-anwar.github.io/tether/',
   stub: 'https://stub-jade.vercel.app',
+  jotfield: 'https://tamkin-anwar.github.io/jotfield/',
   github: 'https://github.com/tamkin-anwar',
   linkedin: '', // fill in later
 }

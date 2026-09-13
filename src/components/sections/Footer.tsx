@@ -6,6 +6,7 @@ const footerLinks = [
   { label: 'Artha', href: links.artha },
   { label: 'Tether', href: links.tether },
   { label: 'Stub', href: links.stub },
+  { label: 'Jotfield', href: links.jotfield },
   { label: 'GitHub', href: links.github },
   { label: 'LinkedIn', href: links.linkedin },
 ].filter((link) => link.href)

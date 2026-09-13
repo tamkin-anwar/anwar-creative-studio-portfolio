@@ -1,6 +1,6 @@
 # Anwar Creative Studio Portfolio
 
-The portfolio site for Anwar Creative Studio: the front door to the studio, and home for everything it ships, from Doorsong and Artha to what's next.
+The portfolio site for Anwar Creative Studio: the front door to the studio, and home for everything it ships, from Doorsong and Artha to Jotfield and what comes next.
 
 The hero is a drifting particle constellation rendered live on Canvas 2D, with ambient motion and depth that responds to scroll.
 

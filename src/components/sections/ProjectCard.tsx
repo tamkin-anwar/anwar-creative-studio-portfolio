@@ -68,15 +68,20 @@ export function ProjectCard({ project }: { project: Project }) {
         }}
       >
         {project.previewImage ? (
-          <img
-            src={project.previewImage}
-            alt=""
-            width={1200}
-            height={675}
-            loading="lazy"
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
+          <picture className="h-full w-full">
+            {project.reducedMotionImage ? (
+              <source media="(prefers-reduced-motion: reduce)" srcSet={project.reducedMotionImage} />
+            ) : null}
+            <img
+              src={project.previewImage}
+              alt=""
+              width={1200}
+              height={675}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover"
+            />
+          </picture>
         ) : (
           <span
             className="font-mono tracking-[0.1em]"
