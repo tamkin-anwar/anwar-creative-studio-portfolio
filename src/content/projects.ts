@@ -20,9 +20,9 @@ export const projects: Project[] = [
   },
   {
     name: 'Artha',
-    tagline: 'Your money, actually organized.',
+    tagline: 'Understand your money. Plan what comes next.',
     description:
-      'Transactions, budgets, notes, and your calendar, all in one place. Ask, and the AI Assistant adds it for you.',
+      'Track spending, budgets, bills, notes, and your calendar in one private workspace. Import statements, model major decisions, and approve actions from a built-in assistant.',
     url: links.artha,
     previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
   },
