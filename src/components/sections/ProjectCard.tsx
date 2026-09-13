@@ -102,6 +102,18 @@ export function ProjectCard({ project }: { project: Project }) {
         {project.description}
       </p>
 
+      <p
+        className="relative mt-auto flex items-center gap-2 pt-[var(--space-2)] font-mono tracking-[0.06em]"
+        style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
+      >
+        <span
+          aria-hidden
+          className="inline-block size-1.5 rounded-full"
+          style={{ background: 'var(--accent-warm)', boxShadow: '0 0 10px rgba(217,161,92,0.5)' }}
+        />
+        {project.evidence}
+      </p>
+
       <a
         href={project.url}
         target="_blank"
