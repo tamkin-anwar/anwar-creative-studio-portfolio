@@ -54,6 +54,9 @@ export function ProjectCard({ project }: { project: Project }) {
     card.style.setProperty('--glow-opacity', '0')
   }
 
+  const previewSource =
+    active && project.previewAnimationImage ? project.previewAnimationImage : project.previewImage
+
   return (
     <article
       ref={cardRef}
@@ -85,15 +88,21 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="project-preview relative flex aspect-video items-center justify-center overflow-hidden rounded-xl">
         {project.previewImage ? (
           <>
-            <img
-              src={project.previewImage}
-              alt=""
-              width={1200}
-              height={675}
-              loading="lazy"
-              decoding="async"
-              className="project-preview-image absolute inset-0 h-full w-full object-cover"
-            />
+            <picture>
+              <source
+                media="(prefers-reduced-motion: reduce)"
+                srcSet={project.reducedMotionImage ?? project.previewImage}
+              />
+              <img
+                src={previewSource}
+                alt=""
+                width={1200}
+                height={675}
+                loading="lazy"
+                decoding="async"
+                className={`project-preview-image absolute inset-0 h-full w-full object-cover${project.previewAnimationImage ? ' authored-motion' : ''}`}
+              />
+            </picture>
             {project.previewVideoWebm ? (
               <video
                 ref={videoRef}
@@ -115,7 +124,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 {project.previewVideoMp4 ? <source src={project.previewVideoMp4} type="video/mp4" /> : null}
               </video>
             ) : null}
-            {!project.previewVideoWebm ? (
+            {!project.previewVideoWebm && !project.previewAnimationImage ? (
               <>
                 <div aria-hidden className="project-motion-layer" />
                 <div aria-hidden className="project-motion-glint" />
