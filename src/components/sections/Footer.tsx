@@ -2,16 +2,19 @@ import { links } from '../../content/links'
 import { useReveal } from '../../hooks/useReveal'
 
 const footerLinks = [
-  { label: 'Doorsong', href: links.doorsong, external: true },
-  { label: 'Artha', href: links.artha, external: true },
-  { label: 'Tether', href: links.tether, external: true },
-  { label: 'Stub', href: links.stub, external: true },
-  { label: 'Jotfield', href: links.jotfield, external: true },
-  { label: 'Now', href: `${import.meta.env.BASE_URL}now/`, external: false },
-  { label: 'Colophon', href: `${import.meta.env.BASE_URL}colophon/`, external: false },
-  { label: 'GitHub', href: links.github, external: true },
-  { label: 'LinkedIn', href: links.linkedin, external: true },
+  { label: 'Doorsong', href: links.doorsong },
+  { label: 'Artha', href: links.artha },
+  { label: 'Tether', href: links.tether },
+  { label: 'Stub', href: links.stub },
+  { label: 'Jotfield', href: links.jotfield },
+  { label: 'GitHub', href: links.github },
+  { label: 'LinkedIn', href: links.linkedin },
 ].filter((link) => link.href)
+
+const metaLinks = [
+  { label: 'Now', href: `${import.meta.env.BASE_URL}now/` },
+  { label: 'Colophon', href: `${import.meta.env.BASE_URL}colophon/` },
+]
 
 export function Footer() {
   const ref = useReveal<HTMLElement>()
@@ -44,14 +47,34 @@ export function Footer() {
             <a
               key={link.label}
               href={link.href}
-              target={link.external ? '_blank' : undefined}
-              rel={link.external ? 'noreferrer' : undefined}
+              target="_blank"
+              rel="noreferrer"
               data-magnetic
               className="font-mono tracking-[0.06em]"
               style={{ fontSize: 'var(--text-label)', color: 'var(--ink-dim)' }}
             >
               {link.label}
             </a>
+          ))}
+        </nav>
+
+        <nav className="flex flex-wrap items-center justify-center gap-[var(--space-2)]">
+          {metaLinks.map((link, index) => (
+            <span key={link.label} className="flex items-center gap-[var(--space-2)]">
+              {index > 0 ? (
+                <span aria-hidden style={{ color: 'var(--ink-faint)' }}>
+                  &middot;
+                </span>
+              ) : null}
+              <a
+                href={link.href}
+                data-magnetic
+                className="font-mono tracking-[0.06em]"
+                style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
+              >
+                {link.label}
+              </a>
+            </span>
           ))}
         </nav>
       </div>
