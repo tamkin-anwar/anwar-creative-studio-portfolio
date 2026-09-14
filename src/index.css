@@ -198,7 +198,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgba(70, 43, 24, 0.92);
+  color: rgba(46, 27, 15, 0.92);
   font-family: Georgia, 'Songti SC', serif;
   font-size: clamp(6px, 0.56vw, 8px);
   font-weight: 400;
@@ -217,7 +217,7 @@ a {
   width: 1px;
   height: 5px;
   flex: 0 0 5px;
-  background: rgba(70, 43, 24, 0.46);
+  background: rgba(46, 27, 15, 0.56);
 }
 
 .doorsong-strand i {
