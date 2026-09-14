@@ -17,8 +17,7 @@ export function NowPage() {
         </p>
         <p>
           Jotfield shipped most recently. Doorsong, Artha, Tether, and Stub are all live, and I&rsquo;m
-          still actively building on them: new features, fixes, and whatever feedback the people using
-          them actually send me.
+          still building on them: new features, fixes, and feedback from the people using them.
         </p>
       </div>
 
