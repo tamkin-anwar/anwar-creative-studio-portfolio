@@ -143,7 +143,7 @@ export function ProjectCard({ project }: { project: Project }) {
                         key={`doorsong-strand-${index}`}
                         style={{
                           left: `${20 + index * 2.6}%`,
-                          top: `${60.5 + (index % 4) * 0.4}%`,
+                          top: `${63 + (index % 4) * 0.4}%`,
                           animationDelay: `${-1 * (index * 173)}ms`,
                           animationDirection: index % 2 === 0 ? 'normal' : 'reverse',
                           animationDuration: `${3.8 + (index % 5) * 0.32}s`,
