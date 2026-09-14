@@ -127,8 +127,25 @@ export function ProjectCard({ project }: { project: Project }) {
                 <div aria-hidden className="project-motion-glint" />
                 {project.motion === 'doorsong' ? (
                   <div aria-hidden className="doorsong-character-strings">
-                    {['铃声远客梦', '风竹静山路', '远客云水声', '山路月影归', '月影琴心远', '琴声春雾静', '春雾竹门声'].map((letters, index) => (
-                      <span key={letters} style={{ animationDelay: `${index * 70}ms` } as CSSProperties}>
+                    {[
+                      '心念春铃影心静雾远梦光', '雾影途归春雾远水静山路',
+                      '光心途静铃念遥竹客月水影', '竹客月水影梦路影归笛远心',
+                      '路影归笛远心琴声月风念客', '琴声月风念客梦路静梦灯远',
+                      '梦路静梦灯远客梦云水竹远', '远客梦云水竹远山影遥铃声',
+                      '竹远山影遥铃声影归声月风', '铃声影归声月风途客春静雨',
+                      '月风途客春静雨路梦远笛心', '静雨路梦远笛心雾影山光',
+                      '笛心雾影山光心念远水声', '山光心念远水声春梦竹门',
+                      '水声春梦竹门静铃声归途', '竹门静铃声春路远梦',
+                    ].map((letters, index) => (
+                      <span
+                        key={`${letters}-${index}`}
+                        style={{
+                          left: `${24 + index * 3.55}%`,
+                          top: `${52 + (index % 4) * 1.15}%`,
+                          animationDelay: `${index * 55}ms`,
+                          animationDuration: `${5.4 + (index % 3) * 0.45}s`,
+                        } as CSSProperties}
+                      >
                         {letters}
                       </span>
                     ))}
