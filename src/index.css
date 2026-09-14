@@ -403,48 +403,12 @@ a {
 .stub-ticket-left::before { left: -7%; }
 .stub-ticket-right::before { right: -7%; }
 
-.stub-rating {
-  position: absolute;
-  top: 50%;
-  color: #57212a;
-  font-family: var(--font-mono);
-  font-size: clamp(7px, 0.82vw, 12px);
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  opacity: 0;
-}
-
-.stub-ticket-left .stub-rating { left: 28%; transform: translate3d(-30%, -30%, 0); }
-.stub-ticket-right .stub-rating { right: 28%; transform: translate3d(30%, -30%, 0); }
-
-.stub-match {
-  position: absolute;
-  top: 116%;
-  left: 50%;
-  color: rgba(255, 236, 205, 0.92);
-  font-family: var(--font-mono);
-  font-size: clamp(5px, 0.5vw, 8px);
-  letter-spacing: 0.16em;
-  opacity: 0;
-  transform: translate3d(-50%, 5px, 0);
-  white-space: nowrap;
-}
-
 [data-motion='stub'][data-motion-active='true'] .stub-ticket-left {
   animation: stub-left 6.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 [data-motion='stub'][data-motion-active='true'] .stub-ticket-right {
   animation: stub-right 6.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-[data-motion='stub'][data-motion-active='true'] .stub-rating {
-  animation: stub-rating 6.4s ease-in-out infinite;
-}
-
-[data-motion='stub'][data-motion-active='true'] .stub-match {
-  animation: stub-match 6.4s ease-in-out infinite;
 }
 
 @keyframes doorsong-characters {
@@ -525,16 +489,6 @@ a {
   0%, 14%, 88%, 100% { transform: translate3d(0, 0, 0) rotate(0); }
   31%, 68% { transform: translate3d(22%, 7%, 0) rotate(7deg); }
   78% { transform: translate3d(3%, 0, 0) rotate(1deg); }
-}
-
-@keyframes stub-rating {
-  0%, 22%, 76%, 100% { opacity: 0; }
-  34%, 66% { opacity: 1; }
-}
-
-@keyframes stub-match {
-  0%, 42%, 88%, 100% { opacity: 0; transform: translate3d(-50%, 5px, 0); }
-  52%, 76% { opacity: 1; transform: translate3d(-50%, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {

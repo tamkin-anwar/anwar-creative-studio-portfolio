@@ -171,13 +171,8 @@ export function ProjectCard({ project }: { project: Project }) {
                 ) : null}
                 {project.motion === 'stub' ? (
                   <div aria-hidden className="stub-ticket-demo">
-                    <span className="stub-ticket-half stub-ticket-left">
-                      <i className="stub-rating">YOURS&nbsp;★</i>
-                    </span>
-                    <span className="stub-ticket-half stub-ticket-right">
-                      <i className="stub-rating">THEIRS&nbsp;★</i>
-                    </span>
-                    <span className="stub-match">MATCH</span>
+                    <span className="stub-ticket-half stub-ticket-left" />
+                    <span className="stub-ticket-half stub-ticket-right" />
                   </div>
                 ) : null}
               </>
