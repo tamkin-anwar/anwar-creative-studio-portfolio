@@ -1,15 +1,39 @@
-import { useRef, type MouseEvent } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import type { Project } from '../../content/projects'
 
 const TILT_MAX_DEG = 7
 
 export function ProjectCard({ project }: { project: Project }) {
   const cardRef = useRef<HTMLElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [active, setActive] = useState(false)
+
+  useEffect(() => {
+    const card = cardRef.current
+    if (!card) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setActive(entry.isIntersecting),
+      { threshold: 0.55 },
+    )
+    observer.observe(card)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (active && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      void video.play().catch(() => undefined)
+    } else {
+      video.pause()
+    }
+  }, [active])
 
   const handleMove = (e: MouseEvent<HTMLElement>) => {
     const card = cardRef.current
     if (!card || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
-
     const rect = card.getBoundingClientRect()
     const px = (e.clientX - rect.left) / rect.width
     const py = (e.clientY - rect.top) / rect.height
@@ -32,10 +56,14 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article
       ref={cardRef}
+      data-project-card
+      data-motion={project.motion}
+      data-motion-active={active ? 'true' : 'false'}
       data-reveal
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
-      className="relative flex flex-col gap-[var(--space-2)] overflow-hidden rounded-2xl border p-[var(--space-4)]"
+      onFocusCapture={() => setActive(true)}
+      className="project-card relative flex flex-col gap-[var(--space-2)] overflow-hidden rounded-2xl border p-[var(--space-4)]"
       style={{
         borderColor: 'var(--line)',
         transition: 'transform 0.4s var(--ease-out-expo), border-color 0.4s var(--ease-out-expo)',
@@ -53,25 +81,9 @@ export function ProjectCard({ project }: { project: Project }) {
         }}
       />
 
-      <div
-        className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl"
-        style={{
-          // this gradient is only ever meant to be seen behind the "PREVIEW"
-          // placeholder text; with a real image on top, a sliver of it can
-          // still peek through at the rounded-corner clip edge (browser
-          // antialiasing), which read as a visible ring wherever the image's
-          // own corner tone didn't happen to match it. Match the card's
-          // actual background instead so there's nothing to peek through.
-          background: project.previewImage
-            ? 'var(--bg)'
-            : 'linear-gradient(135deg, rgba(217,161,92,0.12), rgba(124,111,168,0.12))',
-        }}
-      >
+      <div className="project-preview relative flex aspect-video items-center justify-center overflow-hidden rounded-xl">
         {project.previewImage ? (
-          <picture className="h-full w-full">
-            {project.reducedMotionImage ? (
-              <source media="(prefers-reduced-motion: reduce)" srcSet={project.reducedMotionImage} />
-            ) : null}
+          <>
             <img
               src={project.previewImage}
               alt=""
@@ -79,9 +91,26 @@ export function ProjectCard({ project }: { project: Project }) {
               height={675}
               loading="lazy"
               decoding="async"
-              className="h-full w-full object-cover"
+              className="project-preview-image absolute inset-0 h-full w-full object-cover"
             />
-          </picture>
+            {project.previewVideoWebm ? (
+              <video
+                ref={videoRef}
+                className="project-preview-video absolute inset-0 h-full w-full object-cover"
+                muted
+                loop
+                playsInline
+                preload="none"
+                poster={project.reducedMotionImage ?? project.previewImage}
+                aria-hidden="true"
+              >
+                <source src={project.previewVideoWebm} type="video/webm" />
+                {project.previewVideoMp4 ? <source src={project.previewVideoMp4} type="video/mp4" /> : null}
+              </video>
+            ) : null}
+            <div aria-hidden className="project-motion-layer" />
+            <div aria-hidden className="project-motion-glint" />
+          </>
         ) : (
           <span
             className="font-mono tracking-[0.1em]"

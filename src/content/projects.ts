@@ -1,6 +1,7 @@
 import { links } from './links'
 
 export type Project = {
+  motion: 'doorsong' | 'artha' | 'tether' | 'jotfield' | 'stub'
   name: string
   tagline: string
   description: string
@@ -8,10 +9,13 @@ export type Project = {
   url: string
   previewImage?: string
   reducedMotionImage?: string
+  previewVideoWebm?: string
+  previewVideoMp4?: string
 }
 
 export const projects: Project[] = [
   {
+    motion: 'doorsong',
     name: 'Doorsong',
     tagline: 'Six doorways, each tuned to a different place.',
     description:
@@ -21,6 +25,7 @@ export const projects: Project[] = [
     previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
   },
   {
+    motion: 'artha',
     name: 'Artha',
     tagline: 'Understand your money. Plan what comes next.',
     description:
@@ -30,6 +35,7 @@ export const projects: Project[] = [
     previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
   },
   {
+    motion: 'tether',
     name: 'Tether',
     tagline: 'The same scene, at the same second.',
     description:
@@ -41,16 +47,20 @@ export const projects: Project[] = [
     previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
   },
   {
+    motion: 'jotfield',
     name: 'Jotfield',
     tagline: 'A place for every thought.',
     description:
       'Open it and start writing. Organize later with spaces, tags, tasks, and daily notes. Everything stays on your device unless you turn on encrypted sync.',
     evidence: 'End-to-end encrypted sync',
     url: links.jotfield,
-    previewImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.gif?v=1`,
+    previewImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.webp?v=2`,
     reducedMotionImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.webp?v=1`,
+    previewVideoWebm: `${import.meta.env.BASE_URL}jotfield-mark-wide.webm?v=2`,
+    previewVideoMp4: `${import.meta.env.BASE_URL}jotfield-mark-wide.mp4?v=2`,
   },
   {
+    motion: 'stub',
     name: 'Stub',
     tagline: 'What we watched, and what we thought.',
     description:
