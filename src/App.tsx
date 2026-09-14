@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Preloader } from './components/Preloader'
-import { Cursor } from './components/Cursor'
 import { AmbientField } from './components/scene/AmbientField'
 import { ScrollProgressRail } from './components/ScrollProgressRail'
 import { Hero } from './components/sections/Hero'
@@ -17,7 +16,6 @@ function App() {
       {!loaded && <Preloader onComplete={() => setLoaded(true)} />}
       <AmbientField />
       <ScrollProgressRail />
-      <Cursor />
       <Hero />
       <StudioStatement />
       <Projects />

@@ -49,8 +49,6 @@ export function Footer() {
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              data-magnetic
-              data-cursor="Visit"
               className="font-mono tracking-[0.06em]"
               style={{ fontSize: 'var(--text-label)', color: 'var(--ink-dim)' }}
             >
@@ -69,8 +67,6 @@ export function Footer() {
               ) : null}
               <a
                 href={link.href}
-                data-magnetic
-                data-cursor="Open"
                 className="font-mono tracking-[0.06em]"
                 style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
               >

@@ -45,7 +45,6 @@ export function ScrollProgressRail() {
           <li key={s.id} className="relative z-10">
             <a
               href={`#${s.id}`}
-              data-magnetic
               aria-label={s.label}
               className="block rounded-full transition-all"
               style={{
