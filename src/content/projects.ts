@@ -8,7 +8,6 @@ export type Project = {
   evidence: string
   url: string
   previewImage?: string
-  previewAnimationImage?: string
   reducedMotionImage?: string
   previewVideoWebm?: string
   previewVideoMp4?: string
@@ -24,7 +23,6 @@ export const projects: Project[] = [
     evidence: '6 instruments synthesized live',
     url: links.doorsong,
     previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
-    previewAnimationImage: `${import.meta.env.BASE_URL}doorsong-mark-motion.webp?v=2`,
     reducedMotionImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
   },
   {
@@ -36,7 +34,6 @@ export const projects: Project[] = [
     evidence: '353 automated tests',
     url: links.artha,
     previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
-    previewAnimationImage: `${import.meta.env.BASE_URL}artha-mark-motion.webp?v=2`,
     reducedMotionImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
   },
   {
@@ -50,7 +47,6 @@ export const projects: Project[] = [
     // versioned: this one's still being iterated on, bump the number each
     // time the asset changes so browsers don't serve a stale cached image
     previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
-    previewAnimationImage: `${import.meta.env.BASE_URL}tether-mark-motion.webp?v=2`,
     reducedMotionImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
   },
   {
@@ -75,7 +71,6 @@ export const projects: Project[] = [
     evidence: 'Separate ratings on shared lists',
     url: links.stub,
     previewImage: `${import.meta.env.BASE_URL}stub-mark-wide.webp?v=3`,
-    previewAnimationImage: `${import.meta.env.BASE_URL}stub-mark-motion.webp?v=2`,
     reducedMotionImage: `${import.meta.env.BASE_URL}stub-mark-wide.webp?v=3`,
   },
 ]

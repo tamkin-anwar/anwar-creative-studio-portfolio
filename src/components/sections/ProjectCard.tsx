@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type MouseEvent } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
 import type { Project } from '../../content/projects'
 
 const TILT_MAX_DEG = 7
@@ -54,9 +54,6 @@ export function ProjectCard({ project }: { project: Project }) {
     card.style.setProperty('--glow-opacity', '0')
   }
 
-  const previewSource =
-    active && project.previewAnimationImage ? project.previewAnimationImage : project.previewImage
-
   return (
     <article
       ref={cardRef}
@@ -94,13 +91,13 @@ export function ProjectCard({ project }: { project: Project }) {
                 srcSet={project.reducedMotionImage ?? project.previewImage}
               />
               <img
-                src={previewSource}
+                src={project.previewImage}
                 alt=""
                 width={1200}
                 height={675}
                 loading="lazy"
                 decoding="async"
-                className={`project-preview-image absolute inset-0 h-full w-full object-cover${project.previewAnimationImage ? ' authored-motion' : ''}`}
+                className="project-preview-image absolute inset-0 h-full w-full object-cover"
               />
             </picture>
             {project.previewVideoWebm ? (
@@ -124,10 +121,19 @@ export function ProjectCard({ project }: { project: Project }) {
                 {project.previewVideoMp4 ? <source src={project.previewVideoMp4} type="video/mp4" /> : null}
               </video>
             ) : null}
-            {!project.previewVideoWebm && !project.previewAnimationImage ? (
+            {!project.previewVideoWebm ? (
               <>
                 <div aria-hidden className="project-motion-layer" />
                 <div aria-hidden className="project-motion-glint" />
+                {project.motion === 'doorsong' ? (
+                  <div aria-hidden className="doorsong-character-strings">
+                    {['铃声远客梦', '风竹静山路', '远客云水声', '山路月影归', '月影琴心远', '琴声春雾静', '春雾竹门声'].map((letters, index) => (
+                      <span key={letters} style={{ animationDelay: `${index * 70}ms` } as CSSProperties}>
+                        {letters}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
               </>
             ) : null}
           </>
