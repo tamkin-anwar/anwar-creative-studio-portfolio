@@ -3,7 +3,8 @@ import type { Project } from '../../content/projects'
 
 const TILT_MAX_DEG = 7
 const DOORSONG_GLYPHS = '心念春铃影静雾远梦光途归水山路竹客月笛琴声风云门雨'
-const DOORSONG_STRANDS = Array.from({ length: 24 }, (_, strandIndex) => {
+const DOORSONG_STRANDS = Array.from({ length: 18 }, (_, visibleIndex) => {
+  const strandIndex = visibleIndex + 3
   const distanceFromCenter = Math.abs(strandIndex - 11.5) / 11.5
   const length = Math.round(15 - distanceFromCenter * 6 + ((strandIndex * 7) % 3))
 
@@ -142,7 +143,7 @@ export function ProjectCard({ project }: { project: Project }) {
                         className="doorsong-strand"
                         key={`doorsong-strand-${index}`}
                         style={{
-                          left: `${20 + index * 2.6}%`,
+                          left: `${27.8 + index * 2.6}%`,
                           top: `${63 + (index % 4) * 0.4}%`,
                           animationDelay: `${-1 * (index * 173)}ms`,
                           animationDirection: index % 2 === 0 ? 'normal' : 'reverse',
