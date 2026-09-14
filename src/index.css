@@ -151,7 +151,7 @@ a {
   opacity: 0;
 }
 
-[data-motion='jotfield'][data-motion-active='true'] .project-preview-video {
+[data-motion-active='true'] .project-preview-video {
   opacity: 1;
 }
 

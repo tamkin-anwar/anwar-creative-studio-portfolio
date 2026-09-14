@@ -14,7 +14,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
     const observer = new IntersectionObserver(
       ([entry]) => setActive(entry.isIntersecting),
-      { threshold: 0.55 },
+      { threshold: 0.12, rootMargin: '-8% 0px -8% 0px' },
     )
     observer.observe(card)
     return () => observer.disconnect()
@@ -25,6 +25,7 @@ export function ProjectCard({ project }: { project: Project }) {
     if (!video) return
 
     if (active && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      video.load()
       void video.play().catch(() => undefined)
     } else {
       video.pause()
@@ -97,19 +98,29 @@ export function ProjectCard({ project }: { project: Project }) {
               <video
                 ref={videoRef}
                 className="project-preview-video absolute inset-0 h-full w-full object-cover"
+                autoPlay={active}
                 muted
                 loop
                 playsInline
                 preload="none"
                 poster={project.reducedMotionImage ?? project.previewImage}
                 aria-hidden="true"
+                onCanPlay={() => {
+                  if (active && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    void videoRef.current?.play().catch(() => undefined)
+                  }
+                }}
               >
                 <source src={project.previewVideoWebm} type="video/webm" />
                 {project.previewVideoMp4 ? <source src={project.previewVideoMp4} type="video/mp4" /> : null}
               </video>
             ) : null}
-            <div aria-hidden className="project-motion-layer" />
-            <div aria-hidden className="project-motion-glint" />
+            {!project.previewVideoWebm ? (
+              <>
+                <div aria-hidden className="project-motion-layer" />
+                <div aria-hidden className="project-motion-glint" />
+              </>
+            ) : null}
           </>
         ) : (
           <span
