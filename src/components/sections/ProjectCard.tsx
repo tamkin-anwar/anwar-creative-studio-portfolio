@@ -208,6 +208,7 @@ export function ProjectCard({ project }: { project: Project }) {
         target="_blank"
         rel="noreferrer"
         data-magnetic
+        data-cursor="View"
         className="relative mt-[var(--space-1)] inline-flex w-fit items-center gap-[var(--space-1)] font-mono tracking-[0.08em]"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink)' }}
       >

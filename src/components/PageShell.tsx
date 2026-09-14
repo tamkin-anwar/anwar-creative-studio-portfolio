@@ -11,6 +11,7 @@ export function PageShell({ eyebrow, children }: { eyebrow: string; children: Re
         <a
           href="../"
           data-magnetic
+          data-cursor="Back"
           className="font-mono inline-flex w-fit items-center gap-[var(--space-1)] tracking-[0.06em]"
           style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
         >
