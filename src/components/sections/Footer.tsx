@@ -2,13 +2,15 @@ import { links } from '../../content/links'
 import { useReveal } from '../../hooks/useReveal'
 
 const footerLinks = [
-  { label: 'Doorsong', href: links.doorsong },
-  { label: 'Artha', href: links.artha },
-  { label: 'Tether', href: links.tether },
-  { label: 'Stub', href: links.stub },
-  { label: 'Jotfield', href: links.jotfield },
-  { label: 'GitHub', href: links.github },
-  { label: 'LinkedIn', href: links.linkedin },
+  { label: 'Doorsong', href: links.doorsong, external: true },
+  { label: 'Artha', href: links.artha, external: true },
+  { label: 'Tether', href: links.tether, external: true },
+  { label: 'Stub', href: links.stub, external: true },
+  { label: 'Jotfield', href: links.jotfield, external: true },
+  { label: 'Now', href: `${import.meta.env.BASE_URL}now/`, external: false },
+  { label: 'Colophon', href: `${import.meta.env.BASE_URL}colophon/`, external: false },
+  { label: 'GitHub', href: links.github, external: true },
+  { label: 'LinkedIn', href: links.linkedin, external: true },
 ].filter((link) => link.href)
 
 export function Footer() {
@@ -42,8 +44,8 @@ export function Footer() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noreferrer"
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noreferrer' : undefined}
               data-magnetic
               className="font-mono tracking-[0.06em]"
               style={{ fontSize: 'var(--text-label)', color: 'var(--ink-dim)' }}
