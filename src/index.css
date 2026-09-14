@@ -211,15 +211,6 @@ a {
   will-change: transform;
 }
 
-.doorsong-strand::before {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 5px;
-  flex: 0 0 5px;
-  background: rgba(46, 27, 15, 0.56);
-}
-
 .doorsong-strand i {
   display: block;
   font-style: normal;
