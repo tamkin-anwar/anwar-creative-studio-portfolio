@@ -141,14 +141,6 @@ export function ProjectCard({ project }: { project: Project }) {
                     <span className="tether-partner tether-partner-right" />
                   </div>
                 ) : null}
-                {project.motion === 'stub' ? (
-                  <div aria-hidden className="stub-ticket-demo">
-                    <span className="stub-ticket-half stub-ticket-left" />
-                    <span className="stub-ticket-half stub-ticket-right" />
-                    <i className="stub-ticket-perforation" />
-                    <i className="stub-ticket-sheen" />
-                  </div>
-                ) : null}
               </>
             ) : null}
           </>

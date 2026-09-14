@@ -299,8 +299,8 @@ a {
   position: absolute;
   top: 47%;
   left: 50%;
-  width: 37%;
-  height: 14%;
+  width: 46%;
+  height: 15%;
   border-radius: 999px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(12, 73, 156, 0.2);
@@ -319,19 +319,19 @@ a {
 }
 
 [data-motion='tether'][data-motion-active='true'] .tether-sync-demo {
-  animation: tether-tile 4.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: tether-tile 5.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 [data-motion='tether'][data-motion-active='true'] .tether-partner-left {
-  animation: tether-left-lock 4.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: tether-left-lock 5.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 [data-motion='tether'][data-motion-active='true'] .tether-partner-right {
-  animation: tether-right-lock 4.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: tether-right-lock 5.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 [data-motion='tether'][data-motion-active='true'] .tether-sync-ring {
-  animation: tether-confirm 4.2s ease-out infinite;
+  animation: tether-confirm 5.8s ease-out infinite;
 }
 
 [data-motion='stub'] .project-motion-glint {
@@ -353,96 +353,6 @@ a {
 [data-motion='stub'][data-motion-active='true'] .project-motion-glint {
   animation: stub-glint 4.4s ease-in-out infinite;
   opacity: 1;
-}
-
-.stub-ticket-demo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 3;
-  width: 38%;
-  height: 39%;
-  border-radius: 22%;
-  background: radial-gradient(ellipse, rgba(67, 20, 27, 0.94) 0%, rgba(44, 13, 20, 0.82) 58%, transparent 76%);
-  transform: translate3d(-50%, -50%, 0);
-}
-
-.stub-ticket-half {
-  position: absolute;
-  top: 22%;
-  width: 50%;
-  height: 56%;
-  background: linear-gradient(145deg, #fffaf0, #eadbc4);
-  box-shadow: 0 8px 20px rgba(17, 3, 7, 0.22);
-}
-
-.stub-ticket-left { left: 0; border-radius: 13px 0 0 13px; }
-.stub-ticket-right { right: 0; border-radius: 0 13px 13px 0; }
-
-.stub-ticket-left::before,
-.stub-ticket-right::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #3d111a;
-  transform: translateY(-50%);
-}
-
-.stub-ticket-left::before { left: -8px; }
-.stub-ticket-right::after { right: -8px; }
-
-.stub-ticket-left::after {
-  content: '';
-  position: absolute;
-  top: 25%;
-  left: 29%;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #4a1520;
-}
-
-.stub-ticket-perforation {
-  position: absolute;
-  top: 27%;
-  bottom: 27%;
-  left: 50%;
-  z-index: 2;
-  width: 1px;
-  background: repeating-linear-gradient(to bottom, rgba(113, 83, 62, 0.54) 0 3px, transparent 3px 7px);
-  opacity: 0;
-}
-
-.stub-ticket-sheen {
-  position: absolute;
-  top: 20%;
-  bottom: 20%;
-  left: 17%;
-  z-index: 3;
-  width: 12%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-  filter: blur(2px);
-  opacity: 0;
-  transform: skewX(-17deg);
-}
-
-[data-motion='stub'][data-motion-active='true'] .stub-ticket-left {
-  animation: stub-left-join 4.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-[data-motion='stub'][data-motion-active='true'] .stub-ticket-right {
-  animation: stub-right-join 4.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-[data-motion='stub'][data-motion-active='true'] .stub-ticket-perforation {
-  animation: stub-perforation 4.5s ease-out infinite;
-}
-
-[data-motion='stub'][data-motion-active='true'] .stub-ticket-sheen {
-  animation: stub-ticket-sheen 4.5s ease-in-out infinite;
 }
 
 @keyframes doorsong-awaken {
@@ -492,27 +402,28 @@ a {
 }
 
 @keyframes tether-tile {
-  0%, 9%, 100% { transform: translate3d(-50%, -50%, 0) scale(0.82); opacity: 0.45; }
-  24% { transform: translate3d(-50%, -50%, 0) scale(1.04); opacity: 1; }
-  34%, 82% { transform: translate3d(-50%, -50%, 0) scale(1); opacity: 1; }
+  0%, 7%, 100% { transform: translate3d(-50%, -50%, 0) scale(0.86); opacity: 0; }
+  20% { transform: translate3d(-50%, -50%, 0) scale(1.04); opacity: 1; }
+  28%, 88% { transform: translate3d(-50%, -50%, 0) scale(1); opacity: 1; }
+  97% { transform: translate3d(-50%, -50%, 0) scale(0.96); opacity: 0; }
 }
 
 @keyframes tether-left-lock {
-  0%, 9% { transform: translate3d(-245%, -170%, 0) rotate(-47deg); opacity: 0; }
-  27%, 82% { transform: translate3d(-100%, -50%, 0) rotate(-47deg); opacity: 1; }
-  100% { opacity: 0; }
+  0%, 7% { transform: translate3d(-245%, -170%, 0) rotate(-47deg); opacity: 0; }
+  23%, 88% { transform: translate3d(-100%, -50%, 0) rotate(-47deg); opacity: 1; }
+  97%, 100% { transform: translate3d(-118%, -65%, 0) rotate(-47deg); opacity: 0; }
 }
 
 @keyframes tether-right-lock {
-  0%, 9% { transform: translate3d(145%, 190%, 0) rotate(-47deg); opacity: 0; }
-  27%, 82% { transform: translate3d(0%, 70%, 0) rotate(-47deg); opacity: 1; }
-  100% { opacity: 0; }
+  0%, 7% { transform: translate3d(145%, 190%, 0) rotate(-47deg); opacity: 0; }
+  23%, 88% { transform: translate3d(0%, 70%, 0) rotate(-47deg); opacity: 1; }
+  97%, 100% { transform: translate3d(18%, 85%, 0) rotate(-47deg); opacity: 0; }
 }
 
 @keyframes tether-confirm {
-  0%, 28%, 100% { transform: scale(0.78); opacity: 0; }
-  38% { opacity: 0.88; }
-  62% { transform: scale(1.25); opacity: 0; }
+  0%, 23%, 100% { transform: scale(0.78); opacity: 0; }
+  31% { opacity: 0.88; }
+  48% { transform: scale(1.25); opacity: 0; }
 }
 
 @keyframes stub-awaken {
@@ -526,29 +437,6 @@ a {
   0%, 14% { transform: translateX(-110%); opacity: 0; }
   28% { opacity: 1; }
   60%, 100% { transform: translateX(110%); opacity: 0; }
-}
-
-@keyframes stub-left-join {
-  0%, 9%, 100% { transform: translate3d(-72%, 12%, 0) rotate(-8deg); opacity: 0; }
-  29% { transform: translate3d(3%, 0, 0) rotate(1deg); opacity: 1; }
-  37%, 84% { transform: translate3d(0, 0, 0) rotate(0); opacity: 1; }
-}
-
-@keyframes stub-right-join {
-  0%, 9%, 100% { transform: translate3d(72%, -12%, 0) rotate(8deg); opacity: 0; }
-  29% { transform: translate3d(-3%, 0, 0) rotate(-1deg); opacity: 1; }
-  37%, 84% { transform: translate3d(0, 0, 0) rotate(0); opacity: 1; }
-}
-
-@keyframes stub-perforation {
-  0%, 34%, 100% { opacity: 0; transform: scaleY(0); }
-  45%, 84% { opacity: 1; transform: scaleY(1); }
-}
-
-@keyframes stub-ticket-sheen {
-  0%, 47%, 100% { transform: translateX(0) skewX(-17deg); opacity: 0; }
-  57% { opacity: 0.9; }
-  73% { transform: translateX(430%) skewX(-17deg); opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -580,8 +468,7 @@ a {
     display: none;
   }
 
-  .tether-sync-demo,
-  .stub-ticket-demo {
+  .tether-sync-demo {
     display: none;
   }
 }
