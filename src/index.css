@@ -347,12 +347,104 @@ a {
 }
 
 [data-motion='stub'][data-motion-active='true'] .project-preview-image:not(.authored-motion) {
-  animation: stub-awaken 4.4s var(--ease-out-expo) infinite;
+  animation: stub-backdrop 6.4s ease-in-out infinite;
 }
 
 [data-motion='stub'][data-motion-active='true'] .project-motion-glint {
-  animation: stub-glint 4.4s ease-in-out infinite;
-  opacity: 1;
+  display: none;
+}
+
+.stub-ticket-demo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 38%;
+  height: 32%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.stub-ticket-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(145deg, #fffdf6, #eadfce);
+  box-shadow: 0 10px 26px rgba(30, 3, 8, 0.28), inset 0 1px rgba(255, 255, 255, 0.9);
+  will-change: transform;
+}
+
+.stub-ticket-left {
+  left: 0;
+  border-radius: 13% 0 0 13%;
+  transform-origin: right center;
+}
+
+.stub-ticket-right {
+  right: 0;
+  border-left: 1px dashed rgba(83, 27, 34, 0.28);
+  border-radius: 0 13% 13% 0;
+  transform-origin: left center;
+}
+
+.stub-ticket-half::before,
+.stub-ticket-half::after {
+  content: '';
+  position: absolute;
+  top: 43%;
+  width: 14%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #3a0b13;
+}
+
+.stub-ticket-half::after { display: none; }
+.stub-ticket-left::before { left: -7%; }
+.stub-ticket-right::before { right: -7%; }
+
+.stub-rating {
+  position: absolute;
+  top: 50%;
+  color: #57212a;
+  font-family: var(--font-mono);
+  font-size: clamp(7px, 0.82vw, 12px);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0;
+}
+
+.stub-ticket-left .stub-rating { left: 28%; transform: translate3d(-30%, -30%, 0); }
+.stub-ticket-right .stub-rating { right: 28%; transform: translate3d(30%, -30%, 0); }
+
+.stub-match {
+  position: absolute;
+  top: 116%;
+  left: 50%;
+  color: rgba(255, 236, 205, 0.92);
+  font-family: var(--font-mono);
+  font-size: clamp(5px, 0.5vw, 8px);
+  letter-spacing: 0.16em;
+  opacity: 0;
+  transform: translate3d(-50%, 5px, 0);
+  white-space: nowrap;
+}
+
+[data-motion='stub'][data-motion-active='true'] .stub-ticket-left {
+  animation: stub-left 6.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+[data-motion='stub'][data-motion-active='true'] .stub-ticket-right {
+  animation: stub-right 6.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+[data-motion='stub'][data-motion-active='true'] .stub-rating {
+  animation: stub-rating 6.4s ease-in-out infinite;
+}
+
+[data-motion='stub'][data-motion-active='true'] .stub-match {
+  animation: stub-match 6.4s ease-in-out infinite;
 }
 
 @keyframes doorsong-characters {
@@ -418,17 +510,31 @@ a {
   48% { transform: scale(1.25); opacity: 0; }
 }
 
-@keyframes stub-awaken {
-  0%, 12%, 100% { transform: scale(1.001) translate3d(0, 0, 0) rotate(0); filter: brightness(1); }
-  31% { transform: scale(1.06) translate3d(0, -1.8%, 0) rotate(-0.8deg); filter: brightness(1.12); }
-  48% { transform: scale(1.045) translate3d(0.8%, -0.8%, 0) rotate(0.5deg); }
-  66%, 86% { transform: scale(1.022) translate3d(0, -0.25%, 0) rotate(0); filter: brightness(1.04); }
+@keyframes stub-backdrop {
+  0%, 12%, 88%, 100% { transform: scale(1.001); opacity: 1; filter: brightness(1); }
+  24%, 78% { transform: scale(1.035); opacity: 0.18; filter: brightness(0.78); }
 }
 
-@keyframes stub-glint {
-  0%, 14% { transform: translateX(-110%); opacity: 0; }
-  28% { opacity: 1; }
-  60%, 100% { transform: translateX(110%); opacity: 0; }
+@keyframes stub-left {
+  0%, 14%, 88%, 100% { transform: translate3d(0, 0, 0) rotate(0); }
+  31%, 68% { transform: translate3d(-22%, -7%, 0) rotate(-7deg); }
+  78% { transform: translate3d(-3%, 0, 0) rotate(-1deg); }
+}
+
+@keyframes stub-right {
+  0%, 14%, 88%, 100% { transform: translate3d(0, 0, 0) rotate(0); }
+  31%, 68% { transform: translate3d(22%, 7%, 0) rotate(7deg); }
+  78% { transform: translate3d(3%, 0, 0) rotate(1deg); }
+}
+
+@keyframes stub-rating {
+  0%, 22%, 76%, 100% { opacity: 0; }
+  34%, 66% { opacity: 1; }
+}
+
+@keyframes stub-match {
+  0%, 42%, 88%, 100% { opacity: 0; transform: translate3d(-50%, 5px, 0); }
+  52%, 76% { opacity: 1; transform: translate3d(-50%, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -461,6 +567,10 @@ a {
   }
 
   .tether-sync-demo {
+    display: none;
+  }
+
+  .stub-ticket-demo {
     display: none;
   }
 }
