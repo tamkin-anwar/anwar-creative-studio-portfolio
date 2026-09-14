@@ -2,6 +2,16 @@ import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from
 import type { Project } from '../../content/projects'
 
 const TILT_MAX_DEG = 7
+const DOORSONG_GLYPHS = '心念春铃影静雾远梦光途归水山路竹客月笛琴声风云门雨'
+const DOORSONG_STRANDS = Array.from({ length: 24 }, (_, strandIndex) => {
+  const distanceFromCenter = Math.abs(strandIndex - 11.5) / 11.5
+  const length = Math.round(15 - distanceFromCenter * 6 + ((strandIndex * 7) % 3))
+
+  return Array.from(
+    { length },
+    (_, characterIndex) => DOORSONG_GLYPHS[(strandIndex * 5 + characterIndex * 3) % DOORSONG_GLYPHS.length],
+  )
+})
 
 export function ProjectCard({ project }: { project: Project }) {
   const cardRef = useRef<HTMLElement>(null)
@@ -127,26 +137,26 @@ export function ProjectCard({ project }: { project: Project }) {
                 <div aria-hidden className="project-motion-glint" />
                 {project.motion === 'doorsong' ? (
                   <div aria-hidden className="doorsong-character-strings">
-                    {[
-                      '心念春铃影心静雾远梦光', '雾影途归春雾远水静山路',
-                      '光心途静铃念遥竹客月水影', '竹客月水影梦路影归笛远心',
-                      '路影归笛远心琴声月风念客', '琴声月风念客梦路静梦灯远',
-                      '梦路静梦灯远客梦云水竹远', '远客梦云水竹远山影遥铃声',
-                      '竹远山影遥铃声影归声月风', '铃声影归声月风途客春静雨',
-                      '月风途客春静雨路梦远笛心', '静雨路梦远笛心雾影山光',
-                      '笛心雾影山光心念远水声', '山光心念远水声春梦竹门',
-                      '水声春梦竹门静铃声归途', '竹门静铃声春路远梦',
-                    ].map((letters, index) => (
+                    {DOORSONG_STRANDS.map((characters, index) => (
                       <span
-                        key={`${letters}-${index}`}
+                        className="doorsong-strand"
+                        key={`doorsong-strand-${index}`}
                         style={{
-                          left: `${24 + index * 3.55}%`,
-                          top: `${52 + (index % 4) * 1.15}%`,
-                          animationDelay: `${index * 55}ms`,
-                          animationDuration: `${5.4 + (index % 3) * 0.45}s`,
+                          left: `${20 + index * 2.6}%`,
+                          top: `${51 + (index % 4) * 0.55}%`,
+                          animationDelay: `${-1 * (index * 173)}ms`,
+                          animationDirection: index % 2 === 0 ? 'normal' : 'reverse',
+                          animationDuration: `${3.8 + (index % 5) * 0.32}s`,
                         } as CSSProperties}
                       >
-                        {letters}
+                        {characters.map((character, characterIndex) => (
+                          <i
+                            key={`${character}-${characterIndex}`}
+                            style={{ opacity: 0.96 - (characterIndex / characters.length) * 0.58 }}
+                          >
+                            {character}
+                          </i>
+                        ))}
                       </span>
                     ))}
                   </div>
