@@ -23,8 +23,8 @@ const entries: { term: string; detail: ReactNode }[] = [
         by Rasmus Andersson, for body text. <Link href="https://www.jetbrains.com/lp/mono/">
           JetBrains Mono
         </Link>{' '}
-        for labels and code. All three are self-hosted as WOFF2, weight 400 only, since that&rsquo;s the
-        only weight used anywhere on the site.
+        for labels and code. All three are self-hosted as WOFF2, weight 400 only, the only weight used
+        anywhere on the site.
       </>
     ),
   },
@@ -35,12 +35,12 @@ const entries: { term: string; detail: ReactNode }[] = [
   {
     term: 'Motion',
     detail:
-      "Every project card's animation is hand-built in CSS around that product's own idea, not a screen recording, except Jotfield, which uses a 22KB self-hosted video loop. Everything respects prefers-reduced-motion.",
+      "Every project card's animation is hand-built in CSS around that product's own idea. The one exception is Jotfield, which uses a 22KB self-hosted video loop. Everything respects prefers-reduced-motion.",
   },
   {
     term: 'A bug worth mentioning',
     detail:
-      "This site's own base styles once silently broke every Tailwind margin utility on the page, because they sat outside Tailwind's CSS cascade layer, and unlayered CSS always wins regardless of specificity. Moving them into @layer base fixed it.",
+      "This site's own base styles once silently broke every Tailwind margin utility on the page. They sat outside Tailwind's CSS cascade layer, and unlayered CSS always wins regardless of specificity. Moving them into @layer base fixed it.",
   },
   {
     term: 'Source',
