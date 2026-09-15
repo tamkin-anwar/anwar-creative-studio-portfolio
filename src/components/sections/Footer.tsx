@@ -1,5 +1,6 @@
 import { links } from '../../content/links'
 import { useReveal } from '../../hooks/useReveal'
+import { CommandPalette } from '../CommandPalette'
 
 const footerLinks = [
   { label: 'Doorsong', href: links.doorsong },
@@ -74,6 +75,10 @@ export function Footer() {
               </a>
             </span>
           ))}
+          <span aria-hidden style={{ color: 'var(--ink-faint)' }}>
+            &middot;
+          </span>
+          <CommandPalette />
         </nav>
       </div>
     </footer>
