@@ -169,6 +169,23 @@ a {
   isolation: isolate;
 }
 
+.build-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.build-details summary::marker {
+  content: '';
+}
+
+.build-details-chevron {
+  display: inline-block;
+  transition: transform 0.2s var(--ease-out-expo);
+}
+
+.build-details[open] .build-details-chevron {
+  transform: rotate(90deg);
+}
+
 .project-preview-image,
 .project-preview-video,
 .project-motion-layer,

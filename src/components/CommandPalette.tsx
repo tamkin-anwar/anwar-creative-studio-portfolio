@@ -14,6 +14,7 @@ type Item = {
 const ITEMS: Item[] = [
   { group: 'Jump to', label: 'Top', href: `${BASE}#hero` },
   { group: 'Jump to', label: 'Studio', href: `${BASE}#about` },
+  { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
   { group: 'Jump to', label: 'Work', href: `${BASE}#work` },
   { group: 'Jump to', label: 'Now building', href: `${BASE}#roadmap` },
   { group: 'Jump to', label: 'Contact', href: `${BASE}#contact` },

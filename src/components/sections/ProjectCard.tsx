@@ -210,6 +210,40 @@ export function ProjectCard({ project }: { project: Project }) {
         {project.evidence}
       </p>
 
+      <details className="build-details relative">
+        <summary
+          className="font-mono flex cursor-pointer list-none items-center gap-1 tracking-[0.06em] select-none"
+          style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
+        >
+          <span aria-hidden className="build-details-chevron">
+            &#8250;
+          </span>
+          How it was built
+        </summary>
+        <div
+          className="flex flex-col gap-[var(--space-2)] pt-[var(--space-2)]"
+          style={{ fontSize: 'var(--text-caption)' }}
+        >
+          <div className="flex flex-wrap gap-1">
+            {project.build.stack.map((item) => (
+              <span
+                key={item}
+                className="font-mono rounded"
+                style={{
+                  border: '1px solid var(--line-strong)',
+                  padding: '2px 7px',
+                  fontSize: '10px',
+                  color: 'var(--ink-dim)',
+                }}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+          <p style={{ color: 'var(--ink-dim)' }}>{project.build.detail}</p>
+        </div>
+      </details>
+
       <a
         href={project.url}
         target="_blank"

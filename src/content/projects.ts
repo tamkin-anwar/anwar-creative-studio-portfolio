@@ -11,6 +11,10 @@ export type Project = {
   reducedMotionImage?: string
   previewVideoWebm?: string
   previewVideoMp4?: string
+  build: {
+    stack: string[]
+    detail: string
+  }
 }
 
 export const projects: Project[] = [
@@ -24,6 +28,11 @@ export const projects: Project[] = [
     url: links.doorsong,
     previewImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
     reducedMotionImage: `${import.meta.env.BASE_URL}doorsong-mark-wide.webp`,
+    build: {
+      stack: ['Vanilla JS', 'Web Audio API', 'No build step'],
+      detail:
+        "Every instrument is synthesized from real acoustic mechanics, not samples: the ektara's buzz comes from a sawtooth wave through a lowpass filter with a pitch wobble that mimics a bent bamboo neck, and the oud gets a constant low tone under every pluck to model its soundhole as a resonating cavity. The hanging strands run on an actual damped spring equation, not a canned animation.",
+    },
   },
   {
     motion: 'artha',
@@ -35,6 +44,11 @@ export const projects: Project[] = [
     url: links.artha,
     previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
     reducedMotionImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
+    build: {
+      stack: ['Flask', 'SQLAlchemy', 'Postgres', 'Claude API'],
+      detail:
+        'The AI assistant calls Claude directly, but nothing it proposes runs on its own: every tool call becomes a card you have to approve, and only then does it hit the same validated route a manual entry would. The test suite is real integration tests against actual routes and a database, not mocks.',
+    },
   },
   {
     motion: 'tether',
@@ -48,6 +62,11 @@ export const projects: Project[] = [
     // time the asset changes so browsers don't serve a stale cached image
     previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
     reducedMotionImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
+    build: {
+      stack: ['Manifest V3', 'Firebase REST', 'No SDK'],
+      detail:
+        "No Firebase SDK at all, just plain fetch calls and a server-sent-events stream, to stay clear of Chrome's remote-code restrictions in Manifest V3. The clock sync is hand-rolled too: it round-trips a timestamp write to estimate the server's real clock, then corrects for exactly how long a message took in transit.",
+    },
   },
   {
     motion: 'jotfield',
@@ -61,6 +80,11 @@ export const projects: Project[] = [
     reducedMotionImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.webp?v=1`,
     previewVideoWebm: `${import.meta.env.BASE_URL}jotfield-mark-wide.webm?v=2`,
     previewVideoMp4: `${import.meta.env.BASE_URL}jotfield-mark-wide.mp4?v=2`,
+    build: {
+      stack: ['Vanilla JS', 'Web Crypto API', 'Supabase'],
+      detail:
+        "Sync is genuinely end-to-end encrypted: notes are AES-256-GCM encrypted in the browser before they ever leave it, with a key derived from a passphrase that's never transmitted. Supabase only ever sees ciphertext.",
+    },
   },
   {
     motion: 'stub',
@@ -72,5 +96,10 @@ export const projects: Project[] = [
     url: links.stub,
     previewImage: `${import.meta.env.BASE_URL}stub-mark-wide.webp?v=3`,
     reducedMotionImage: `${import.meta.env.BASE_URL}stub-mark-wide.webp?v=3`,
+    build: {
+      stack: ['React', 'Supabase', 'Postgres RLS', 'TMDB via Vercel Edge'],
+      detail:
+        'The shared list and your personal list are the same database table, just pointed at a different owner. Two ratings on one title come from a separate table with one row per person, and access control is pure Postgres row-level security, not app-side checks.',
+    },
   },
 ]
