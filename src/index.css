@@ -401,7 +401,7 @@ a {
 }
 
 [data-motion='stub'] .project-preview {
-  background: radial-gradient(ellipse at 50% 40%, #57202c, #3a0b13 72%);
+  background: #b34156;
 }
 
 [data-motion='stub'][data-motion-active='true'] .project-preview-image:not(.authored-motion) {
@@ -454,7 +454,7 @@ a {
   width: 14%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #3a0b13;
+  background: #b34156;
 }
 
 .stub-ticket-half::after { display: none; }
@@ -462,11 +462,11 @@ a {
 .stub-ticket-right::before { right: -7%; }
 
 [data-motion='stub'][data-motion-active='true'] .stub-ticket-left {
-  animation: stub-left 4.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: stub-left 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 [data-motion='stub'][data-motion-active='true'] .stub-ticket-right {
-  animation: stub-right 4.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: stub-right 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 @keyframes doorsong-characters {
