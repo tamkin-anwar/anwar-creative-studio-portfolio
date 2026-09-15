@@ -32,7 +32,7 @@ export function Footer() {
         className="max-w-xl leading-[1.1]"
         style={{ fontSize: 'var(--text-heading)' }}
       >
-        A design lab for ideas that want to exist.
+        Looked for it. Didn&rsquo;t love it. Built it.
       </h2>
 
       <div data-reveal className="flex flex-col items-center gap-[var(--space-3)]">

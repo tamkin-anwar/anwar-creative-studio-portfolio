@@ -59,7 +59,7 @@ export function Hero() {
           className="max-w-3xl leading-[1.05]"
           style={{ fontSize: 'var(--text-display)' }}
         >
-          A design lab for ideas that want to exist.
+          Looked for it. Didn&rsquo;t love it. Built it.
         </h1>
       </div>
 

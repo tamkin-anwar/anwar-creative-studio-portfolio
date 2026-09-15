@@ -17,7 +17,7 @@ export function printConsoleEasterEgg() {
     `${bg}${ink}${mono}font-size:20px;font-weight:700;letter-spacing:3px;padding:2px 0 8px;`,
   )
   console.log(
-    '%cA design lab for ideas that want to exist.',
+    "%cLooked for it. Didn't love it. Built it.",
     `${bg}${cool}${mono}font-style:italic;font-size:13px;padding-bottom:8px;`,
   )
   console.log(
