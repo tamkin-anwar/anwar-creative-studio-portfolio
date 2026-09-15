@@ -31,7 +31,7 @@ export const projects: Project[] = [
     build: {
       stack: ['Vanilla JS', 'Web Audio API', 'No build step'],
       detail:
-        "Every instrument is synthesized from real acoustic mechanics, not samples: the ektara's buzz comes from a sawtooth wave through a lowpass filter with a pitch wobble that mimics a bent bamboo neck, and the oud gets a constant low tone under every pluck to model its soundhole as a resonating cavity. The hanging strands run on an actual damped spring equation, not a canned animation.",
+        "Every instrument is synthesized live, not sampled. The ektara's buzz comes from a sawtooth wave through a lowpass filter, with a pitch wobble that mimics a bent bamboo neck. The oud adds a constant low tone under every pluck, modeling its soundhole as a resonating cavity. The hanging strands move on a real damped spring equation.",
     },
   },
   {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     build: {
       stack: ['Flask', 'SQLAlchemy', 'Postgres', 'Claude API'],
       detail:
-        'The AI assistant calls Claude directly, but nothing it proposes runs on its own: every tool call becomes a card you have to approve, and only then does it hit the same validated route a manual entry would. The test suite is real integration tests against actual routes and a database, not mocks.',
+        'The assistant calls Claude directly. Every action it proposes becomes a card you approve before anything runs, then hits the same validated route a manual entry would. The test suite runs integration tests against real routes and a real database.',
     },
   },
   {
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     build: {
       stack: ['Manifest V3', 'Firebase REST', 'No SDK'],
       detail:
-        "No Firebase SDK at all, just plain fetch calls and a server-sent-events stream, to stay clear of Chrome's remote-code restrictions in Manifest V3. The clock sync is hand-rolled too: it round-trips a timestamp write to estimate the server's real clock, then corrects for exactly how long a message took in transit.",
+        "Tether skips the Firebase SDK entirely. It syncs with plain fetch calls and a server-sent-events stream, which keeps it clear of Manifest V3's remote-code restrictions. Clock sync is hand-rolled: a timestamp write round-trips to estimate the server's real clock, then corrects playback for exactly how long each message took in transit.",
     },
   },
   {
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     build: {
       stack: ['Vanilla JS', 'Web Crypto API', 'Supabase'],
       detail:
-        "Sync is genuinely end-to-end encrypted: notes are AES-256-GCM encrypted in the browser before they ever leave it, with a key derived from a passphrase that's never transmitted. Supabase only ever sees ciphertext.",
+        "Sync is end-to-end encrypted. Notes are encrypted with AES-256-GCM in the browser before they ever leave it, using a key derived from a passphrase that's never transmitted. Supabase only ever sees ciphertext.",
     },
   },
   {
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     build: {
       stack: ['React', 'Supabase', 'Postgres RLS', 'TMDB via Vercel Edge'],
       detail:
-        'The shared list and your personal list are the same database table, just pointed at a different owner. Two ratings on one title come from a separate table with one row per person, and access control is pure Postgres row-level security, not app-side checks.',
+        'Your personal list and a shared list are the same database table, just pointed at a different owner. Two ratings on one title come from a separate table, one row per person. Access control runs entirely on Postgres row-level security.',
     },
   },
 ]

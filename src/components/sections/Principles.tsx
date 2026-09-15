@@ -3,8 +3,7 @@ import { useReveal } from '../../hooks/useReveal'
 const principles = [
   {
     statement: 'If it doesn’t land, it gets cut.',
-    support:
-      'A hero animation and a rounded popup corner both got reverted the moment they made things worse, not better.',
+    support: 'A hero animation and a rounded popup corner were both reverted the moment they made things worse.',
   },
   {
     statement: 'The corners nobody checks get checked anyway.',
