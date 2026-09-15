@@ -401,7 +401,10 @@ a {
 }
 
 [data-motion='stub'] .project-preview {
-  background: #b34156;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(255, 221, 209, 0.22) 0%, rgba(255, 221, 209, 0.08) 26%, transparent 52%),
+    radial-gradient(ellipse at 50% 115%, rgba(65, 8, 21, 0.34) 0%, transparent 62%),
+    linear-gradient(135deg, #8f2b3c 0%, #b34156 46%, #9b3045 100%);
 }
 
 [data-motion='stub'][data-motion-active='true'] .project-preview-image:not(.authored-motion) {
