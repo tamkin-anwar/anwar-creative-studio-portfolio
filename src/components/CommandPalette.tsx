@@ -108,8 +108,14 @@ export function CommandPalette() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="font-mono inline-flex items-center gap-1 tracking-[0.06em]"
-        style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
+        className="font-mono fixed right-[var(--space-4)] top-[var(--space-4)] z-40 flex items-center gap-1 rounded-full border tracking-[0.06em] backdrop-blur-sm transition-colors"
+        style={{
+          padding: '6px 10px',
+          fontSize: 'var(--text-label)',
+          color: 'var(--ink-faint)',
+          borderColor: 'var(--line)',
+          background: 'rgba(10,10,13,0.6)',
+        }}
         aria-label="Open command palette"
       >
         Search

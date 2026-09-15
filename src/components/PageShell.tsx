@@ -17,20 +17,18 @@ export function PageShell({
         Skip to content
       </a>
       <AmbientField />
+      <CommandPalette />
       <main
         id="main-content"
         className="relative mx-auto flex min-h-[100svh] max-w-2xl flex-col justify-center gap-[var(--space-4)] px-[var(--space-3)] py-[var(--space-7)]"
       >
-        <div className="flex items-center justify-between gap-[var(--space-3)]">
-          <a
-            href={backHref}
-            className="font-mono inline-flex w-fit items-center gap-[var(--space-1)] tracking-[0.06em]"
-            style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
-          >
-            ← Anwar Creative Studio
-          </a>
-          <CommandPalette />
-        </div>
+        <a
+          href={backHref}
+          className="font-mono inline-flex w-fit items-center gap-[var(--space-1)] tracking-[0.06em]"
+          style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
+        >
+          ← Anwar Creative Studio
+        </a>
         <p className="eyebrow">{eyebrow}</p>
         {children}
       </main>

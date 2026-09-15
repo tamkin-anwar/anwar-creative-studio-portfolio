@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Preloader } from './components/Preloader'
 import { AmbientField } from './components/scene/AmbientField'
 import { ScrollProgressRail } from './components/ScrollProgressRail'
+import { CommandPalette } from './components/CommandPalette'
 import { Hero } from './components/sections/Hero'
 import { StudioStatement } from './components/sections/StudioStatement'
 import { Projects } from './components/sections/Projects'
@@ -19,6 +20,7 @@ function App() {
       </a>
       <AmbientField />
       <ScrollProgressRail />
+      <CommandPalette />
       <main id="main-content">
         <Hero />
         <StudioStatement />
