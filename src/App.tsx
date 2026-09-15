@@ -14,12 +14,17 @@ function App() {
   return (
     <>
       {!loaded && <Preloader onComplete={() => setLoaded(true)} />}
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <AmbientField />
       <ScrollProgressRail />
-      <Hero />
-      <StudioStatement />
-      <Projects />
-      <Roadmap />
+      <main id="main-content">
+        <Hero />
+        <StudioStatement />
+        <Projects />
+        <Roadmap />
+      </main>
       <Footer />
     </>
   )

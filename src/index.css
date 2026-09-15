@@ -6,6 +6,43 @@
   box-sizing: border-box;
 }
 
+/* visually hidden until focused: lets keyboard users jump past the
+   section-nav rail straight to the main content instead of tabbing
+   through every nav link first */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: var(--space-3);
+  z-index: 100;
+  background: var(--accent-warm);
+  color: var(--bg);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  text-decoration: none;
+  transition: top 0.2s var(--ease-out-expo);
+}
+
+.skip-link:focus {
+  top: var(--space-3);
+}
+
+/* cross-document view transitions between / , /now/, and /colophon/:
+   pure progressive enhancement, Firefox just ignores the at-rule and
+   keeps the current hard-navigation behavior */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: var(--duration-base);
+    animation-timing-function: var(--ease-out-expo);
+  }
+}
+
 /* iOS Safari bounces/rubber-bands the <html> element itself, not <body>, so
    overflow-x needs to be hidden on both or the page can still be dragged
    sideways there; overscroll-behavior-x kills the horizontal chaining too

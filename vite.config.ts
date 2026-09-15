@@ -14,6 +14,7 @@ export default defineConfig({
         main: resolvePath('./index.html'),
         now: resolvePath('./now/index.html'),
         colophon: resolvePath('./colophon/index.html'),
+        notFound: resolvePath('./404.html'),
       },
     },
   },

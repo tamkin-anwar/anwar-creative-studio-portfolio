@@ -55,7 +55,14 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
       style={{ transitionDuration: '500ms', transitionTimingFunction: 'var(--ease-out-expo)' }}
       aria-hidden={exiting}
     >
-      <div className="flex flex-col items-center gap-[var(--space-2)]">
+      {/* a stable status message for screen readers instead of the ticking
+          percentage below: announcing every rAF-driven frame would spam
+          assistive tech, so the two are deliberately kept separate */}
+      <div role="status" aria-live="polite" className="sr-only">
+        {exiting ? 'Loaded' : 'Loading'}
+      </div>
+
+      <div className="flex flex-col items-center gap-[var(--space-2)]" aria-hidden="true">
         <span className="font-mono text-[var(--text-label)] tracking-[0.12em] text-[var(--ink)]">
           {pct.toString().padStart(3, '0')}%
         </span>
@@ -67,6 +74,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
         </div>
       </div>
       <div
+        aria-hidden="true"
         className="mt-[var(--space-5)] font-mono text-[var(--text-caption)] tracking-[0.14em] text-[var(--ink-faint)] transition-opacity"
         style={{ opacity: pct > 60 ? 1 : 0, transitionDuration: '700ms' }}
       >
