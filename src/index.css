@@ -400,7 +400,7 @@ a {
   transform: translateX(-110%);
 }
 
-[data-motion='stub'] {
+[data-motion='stub'] .project-preview {
   background: radial-gradient(ellipse at 50% 40%, #57202c, #3a0b13 72%);
 }
 
