@@ -1,15 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
-<rect width="1200" height="675" rx="24" fill="#f5efe4"/>
-<style>@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}.mark{transform-origin:32px 32px;animation:breathe 4.7s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.mark{animation:none}}</style>
-<g transform="translate(450 145) scale(4.7)"><g class="mark">
   <defs>
-    <path id="lozenge" d="M7.5 0H13.2Q15 0 15 3V12.5Q15 25 7.5 25H1.8Q0 25 0 22V12.5Q0 0 7.5 0Z"/>
+    <radialGradient id="paper" cx="50%" cy="44%" r="70%"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#f1e8dc"/></radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#463222" flood-opacity=".2"/></filter>
+    <rect id="lozenge" width="16" height="26" rx="8"/>
   </defs>
-  <g transform="translate(32 32) scale(1.65) rotate(42) translate(-7.5 -12.5)">
-    <use href="#lozenge" transform="translate(8 -5)" fill="#c9f06a"/>
-    <use href="#lozenge" transform="translate(-7 6)" fill="#315cf5"/>
-    <use href="#lozenge" fill="#ff5c35"/>
+  <style>
+    .blue,.orange,.lime{transform-box:view-box;transform-origin:center;animation-duration:4.7s;animation-iteration-count:infinite;animation-timing-function:cubic-bezier(.4,0,.2,1)}
+    .blue{animation-name:blue}.orange{animation-name:orange}.lime{animation-name:lime}
+    @keyframes blue{0%,100%{transform:translate(-7px,6px)}35%{transform:translate(-10px,8px)}68%{transform:translate(-6px,5px)}}
+    @keyframes orange{0%,100%{transform:translate(0,0)}45%{transform:translate(1px,-1px)}72%{transform:translate(-1px,1px)}}
+    @keyframes lime{0%,100%{transform:translate(8px,-5px)}32%{transform:translate(11px,-7px)}66%{transform:translate(7px,-4px)}}
+    .halo{animation:halo 4.7s ease-in-out infinite;transform-origin:center}@keyframes halo{0%,100%{opacity:.28;transform:scale(.92)}50%{opacity:.52;transform:scale(1.08)}}
+    @media(prefers-reduced-motion:reduce){.blue,.orange,.lime,.halo{animation:none}.blue{transform:translate(-7px,6px)}.lime{transform:translate(8px,-5px)}}
+  </style>
+  <rect width="1200" height="675" rx="24" fill="url(#paper)"/>
+  <ellipse class="halo" cx="600" cy="322" rx="245" ry="170" fill="#ff7043" opacity=".22" filter="url(#shadow)"/>
+  <g transform="translate(600 320) scale(8.2) rotate(42) translate(-8 -13)" filter="url(#shadow)">
+    <g class="lime"><use href="#lozenge" fill="#c9f06a"/></g>
+    <g class="blue"><use href="#lozenge" fill="#315cf5"/></g>
+    <g class="orange"><use href="#lozenge" fill="#ff5c35"/></g>
   </g>
-</g></g>
-<text x="600" y="552" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#695162">JOTFIELD</text>
+  <text x="600" y="565" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#695162">JOTFIELD</text>
 </svg>
