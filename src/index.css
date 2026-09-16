@@ -583,4 +583,13 @@ a {
   .stub-ticket-demo {
     display: none;
   }
+
+  /* the active-state rule that hides this image isn't itself gated by
+     reduced-motion (it fires just from scrolling into view, not from the
+     animation) and is more specific than a plain override here would be,
+     so without !important a reduced-motion user gets neither the photo
+     nor the CSS ticket it's replaced by: an empty gradient */
+  [data-motion='stub'] .project-preview-image {
+    opacity: 1 !important;
+  }
 }
