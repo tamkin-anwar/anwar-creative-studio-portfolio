@@ -35,7 +35,7 @@ const entries: { term: string; detail: ReactNode }[] = [
   {
     term: 'Motion',
     detail:
-      "Every project card's animation is hand-built in CSS around that product's own idea. The one exception is Jotfield, which uses a 22KB self-hosted video loop. Everything respects prefers-reduced-motion.",
+      "Every project card's animation is hand-built in CSS around that product's own idea. Jotfield uses its canonical app-header lozenge mark in a self-hosted SVG loop. Everything respects prefers-reduced-motion.",
   },
   {
     term: 'A bug worth mentioning',

@@ -76,10 +76,8 @@ export const projects: Project[] = [
       'Open it and start writing. Organize later with spaces, tags, tasks, and daily notes. Everything stays on your device unless you turn on encrypted sync.',
     evidence: 'End-to-end encrypted sync',
     url: links.jotfield,
-    previewImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.webp?v=2`,
-    reducedMotionImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.webp?v=1`,
-    previewVideoWebm: `${import.meta.env.BASE_URL}jotfield-mark-wide.webm?v=2`,
-    previewVideoMp4: `${import.meta.env.BASE_URL}jotfield-mark-wide.mp4?v=2`,
+    previewImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.svg?v=3`,
+    reducedMotionImage: `${import.meta.env.BASE_URL}jotfield-mark-wide.svg?v=3`,
     build: {
       stack: ['Vanilla JS', 'Web Crypto API', 'Supabase'],
       detail:
