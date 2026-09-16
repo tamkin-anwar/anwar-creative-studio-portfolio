@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
   <defs>
     <radialGradient id="paper" cx="50%" cy="44%" r="70%"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#f1e8dc"/></radialGradient>
+    <radialGradient id="glow"><stop stop-color="#ff7043" stop-opacity=".2"/><stop offset=".55" stop-color="#ff7043" stop-opacity=".07"/><stop offset="1" stop-color="#ff7043" stop-opacity="0"/></radialGradient>
     <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#463222" flood-opacity=".2"/></filter>
     <rect id="lozenge" width="16" height="26" rx="8"/>
   </defs>
@@ -14,7 +15,7 @@
     @media(prefers-reduced-motion:reduce){.blue,.orange,.lime,.halo{animation:none}.blue{transform:translate(-7px,6px)}.lime{transform:translate(8px,-5px)}}
   </style>
   <rect width="1200" height="675" rx="24" fill="url(#paper)"/>
-  <ellipse class="halo" cx="600" cy="322" rx="245" ry="170" fill="#ff7043" opacity=".22" filter="url(#shadow)"/>
+  <circle class="halo" cx="600" cy="322" r="250" fill="url(#glow)"/>
   <g transform="translate(600 320) scale(8.2) rotate(42) translate(-8 -13)" filter="url(#shadow)">
     <g class="lime"><use href="#lozenge" fill="#c9f06a"/></g>
     <g class="blue"><use href="#lozenge" fill="#315cf5"/></g>
