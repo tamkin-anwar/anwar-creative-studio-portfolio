@@ -2,7 +2,6 @@
   <defs>
     <radialGradient id="paper" cx="50%" cy="44%" r="70%"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#f1e8dc"/></radialGradient>
     <radialGradient id="glow"><stop stop-color="#ff7043" stop-opacity=".2"/><stop offset=".55" stop-color="#ff7043" stop-opacity=".07"/><stop offset="1" stop-color="#ff7043" stop-opacity="0"/></radialGradient>
-    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#463222" flood-opacity=".2"/></filter>
     <path id="lozenge" d="M7.5 0H13.2A1.8 3 0 0 1 15 3V12.5A7.5 12.5 0 0 1 7.5 25H1.8A1.8 3 0 0 1 0 22V12.5A7.5 12.5 0 0 1 7.5 0Z"/>
   </defs>
   <style>
@@ -16,7 +15,7 @@
   </style>
   <rect width="1200" height="675" rx="24" fill="url(#paper)"/>
   <circle class="halo" cx="600" cy="322" r="250" fill="url(#glow)"/>
-  <g transform="translate(600 320) scale(8.2) rotate(42) translate(-7.5 -12.5)" filter="url(#shadow)">
+  <g transform="translate(600 320) scale(8.2) rotate(42) translate(-7.5 -12.5)">
     <g class="lime"><use href="#lozenge" fill="#c9f06a"/></g>
     <g class="blue"><use href="#lozenge" fill="#315cf5"/></g>
     <g class="orange"><use href="#lozenge" fill="#ff5c35"/></g>
