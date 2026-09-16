@@ -55,8 +55,8 @@ export const projects: Project[] = [
     name: 'Tether',
     tagline: 'The same scene, at the same second.',
     description:
-      'Watch Netflix, Hulu, Disney+, Crunchyroll, and Max together from anywhere. Tether keeps play, pause, and seeking aligned, corrects drift, and gives two people shared notes and chat.',
-    evidence: '5 streaming services',
+      'Watch Netflix, Hulu, Disney+, Crunchyroll, Max, and YouTube together from anywhere. Tether keeps play, pause, and seeking aligned, corrects drift, and gives two people shared notes and chat.',
+    evidence: '6 streaming services',
     url: links.tether,
     // versioned: this one's still being iterated on, bump the number each
     // time the asset changes so browsers don't serve a stale cached image
