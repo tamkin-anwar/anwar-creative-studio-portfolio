@@ -15,9 +15,9 @@ type Item = {
 const ITEMS: Item[] = [
   { group: 'Jump to', label: 'Top', href: `${BASE}#hero` },
   { group: 'Jump to', label: 'Studio', href: `${BASE}#about` },
-  { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
   { group: 'Jump to', label: 'Flagships', href: `${BASE}#flagships` },
   { group: 'Jump to', label: 'Work', href: `${BASE}#work` },
+  { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
   { group: 'Jump to', label: 'Now building', href: `${BASE}#roadmap` },
   { group: 'Jump to', label: 'Contact', href: `${BASE}#contact` },
   { group: 'Pages', label: 'Home', href: BASE },
@@ -27,8 +27,8 @@ const ITEMS: Item[] = [
   { group: 'Products', label: 'Artha', description: 'Money, budgets, bills, and planning', href: links.artha, external: true },
   { group: 'Products', label: 'Corres', description: 'In development · Email, considered. Brief, Needs You, Waiting.', href: `${BASE}#corres` },
   { group: 'Products', label: 'Tether', href: links.tether, external: true },
-  { group: 'Products', label: 'Stub', href: links.stub, external: true },
   { group: 'Products', label: 'Jotfield', href: links.jotfield, external: true },
+  { group: 'Products', label: 'Stub', href: links.stub, external: true },
   { group: 'Elsewhere', label: 'GitHub', href: links.github, external: true },
 ].filter((item) => item.href)
 

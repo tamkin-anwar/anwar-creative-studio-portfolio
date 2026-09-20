@@ -36,7 +36,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated September 19, 2026 &middot;{' '}
+        Last updated September 20, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
