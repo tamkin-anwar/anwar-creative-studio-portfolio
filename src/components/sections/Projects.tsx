@@ -26,10 +26,10 @@ export function Projects() {
       />
 
       <h2 data-reveal className="eyebrow relative z-10 mb-[var(--space-4)]">
-        Shipped
+        More from the studio
       </h2>
       <div className="relative z-10 grid gap-[var(--space-4)] sm:grid-cols-2">
-        {projects.map((project) => (
+        {projects.filter((project) => project.name !== 'Artha').map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
       </div>

@@ -45,7 +45,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
   const handleMove = (e: MouseEvent<HTMLElement>) => {
     const card = cardRef.current
-    if (!card || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
+    if (!card || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
     const rect = card.getBoundingClientRect()
     const px = (e.clientX - rect.left) / rect.width
     const py = (e.clientY - rect.top) / rect.height

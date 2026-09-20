@@ -6,6 +6,7 @@ import { CommandPalette } from './components/CommandPalette'
 import { Hero } from './components/sections/Hero'
 import { StudioStatement } from './components/sections/StudioStatement'
 import { Principles } from './components/sections/Principles'
+import { Flagships } from './components/sections/Flagships'
 import { Projects } from './components/sections/Projects'
 import { Roadmap } from './components/sections/Roadmap'
 import { Footer } from './components/sections/Footer'
@@ -25,8 +26,9 @@ function App() {
       <main id="main-content">
         <Hero />
         <StudioStatement />
-        <Principles />
+        <Flagships />
         <Projects />
+        <Principles />
         <Roadmap />
       </main>
       <Footer />

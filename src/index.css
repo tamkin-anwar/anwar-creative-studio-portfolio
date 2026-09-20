@@ -139,7 +139,7 @@ a {
 }
 
 /* reveal-on-scroll: JS toggles [data-revealed] once elements enter view */
-[data-reveal] {
+[data-reveal][data-reveal-pending] {
   opacity: 0;
   transform: translateY(24px);
   transition:
@@ -153,7 +153,7 @@ a {
 }
 
 /* signature curtain-reveal, reserved for the two headline moments */
-[data-reveal][data-reveal-mask] {
+[data-reveal][data-reveal-mask][data-reveal-pending] {
   opacity: 1;
   transform: none;
   clip-path: inset(0 0 100% 0);
@@ -592,4 +592,29 @@ a {
   [data-motion='stub'] .project-preview-image {
     opacity: 1 !important;
   }
+}
+
+/* Content is readable before enhancement, on focus, and with reduced motion. */
+[data-reveal]:focus-within { opacity: 1; transform: none; clip-path: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal][data-reveal-pending] {
+    opacity: 1; transform: none; clip-path: none; transition: none;
+  }
+}
+.flagships { max-width: 1152px; margin: auto; padding: 64px 24px 96px; }
+.flagship-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.flagship { border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: linear-gradient(145deg, #1b1920, #101115); }
+.flagship-art { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.flagship-copy { padding: 32px; display: flex; flex-direction: column; gap: 20px; }
+.flagship h3 { font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; }
+.flagship p { color: var(--ink-dim); }
+.flagship .flagship-tagline { color: var(--ink); font-size: 1.25rem; }
+.flagship-status { font: 0.75rem var(--font-mono); color: var(--accent-warm); letter-spacing: .07em; text-transform: uppercase; }
+.flagship a, .flagship summary { color: var(--accent-warm); }
+.flagship details p { padding-top: 16px; font-size: .9rem; }
+.flagship-link { align-self: flex-start; padding: 10px 0; }
+#corres, #flagships, #roadmap { scroll-margin-top: 80px; }
+@media (max-width: 639px) {
+  .flagship-grid { grid-template-columns: 1fr; }
+  .flagship-copy { padding: 24px; }
 }

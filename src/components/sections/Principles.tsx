@@ -2,17 +2,16 @@ import { useReveal } from '../../hooks/useReveal'
 
 const principles = [
   {
-    statement: 'If it doesn’t land, it gets cut.',
-    support: 'A hero animation and a rounded popup corner were both reverted the moment they made things worse.',
+    statement: 'Know what happens next.',
+    support: 'Review a statement before it enters Artha. Approve an assistant’s changes before they run. The important steps should be yours to take.',
   },
   {
-    statement: 'The corners nobody checks get checked anyway.',
-    support:
-      'A silent CSS cascade bug, fonts pulled from a third-party CDN, a 404 link that would’ve resolved wrong: fixed before anyone asked.',
+    statement: 'Your private things stay yours.',
+    support: 'Jotfield opens without an account and keeps notes on your device. If you choose cloud sync, notes are encrypted before they leave it.',
   },
   {
-    statement: 'Numbers, not adjectives.',
-    support: '353 automated tests. Six instruments synthesized live. Every claim here is something you can check.',
+    statement: 'Make the everyday parts worth returning to.',
+    support: 'Finding a note, checking a bill, choosing a film together. Those small moments are the reason these products exist, and where most of the care goes.',
   },
 ]
 

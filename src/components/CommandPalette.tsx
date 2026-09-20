@@ -9,12 +9,14 @@ type Item = {
   label: string
   href: string
   external?: boolean
+  description?: string
 }
 
 const ITEMS: Item[] = [
   { group: 'Jump to', label: 'Top', href: `${BASE}#hero` },
   { group: 'Jump to', label: 'Studio', href: `${BASE}#about` },
   { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
+  { group: 'Jump to', label: 'Flagships', href: `${BASE}#flagships` },
   { group: 'Jump to', label: 'Work', href: `${BASE}#work` },
   { group: 'Jump to', label: 'Now building', href: `${BASE}#roadmap` },
   { group: 'Jump to', label: 'Contact', href: `${BASE}#contact` },
@@ -22,7 +24,8 @@ const ITEMS: Item[] = [
   { group: 'Pages', label: 'Now', href: `${BASE}now/` },
   { group: 'Pages', label: 'Colophon', href: `${BASE}colophon/` },
   { group: 'Products', label: 'Doorsong', href: links.doorsong, external: true },
-  { group: 'Products', label: 'Artha', href: links.artha, external: true },
+  { group: 'Products', label: 'Artha', description: 'Money, budgets, bills, and planning', href: links.artha, external: true },
+  { group: 'Products', label: 'Corres', description: 'In development · Email, considered. Brief, Needs You, Waiting.', href: `${BASE}#corres` },
   { group: 'Products', label: 'Tether', href: links.tether, external: true },
   { group: 'Products', label: 'Stub', href: links.stub, external: true },
   { group: 'Products', label: 'Jotfield', href: links.jotfield, external: true },
@@ -34,11 +37,12 @@ export function CommandPalette() {
   const [query, setQuery] = useState('')
   const [selected, setSelected] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
+  const dialogRef = useRef<HTMLDivElement>(null)
   const lastFocused = useRef<HTMLElement | null>(null)
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase()
-    const items = q ? ITEMS.filter((item) => item.label.toLowerCase().includes(q)) : ITEMS
+    const items = q ? ITEMS.filter((item) => `${item.label} ${item.description ?? ''}`.toLowerCase().includes(q)) : ITEMS
     const groups: { group: string; items: Item[] }[] = []
     for (const item of items) {
       const last = groups[groups.length - 1]
@@ -81,6 +85,10 @@ export function CommandPalette() {
     lastFocused.current?.focus()
   }, [open])
 
+  useEffect(() => {
+    if (open) dialogRef.current?.querySelector('[data-selected="true"]')?.scrollIntoView({ block: 'nearest' })
+  }, [open, selected, query])
+
   const navigate = (item: Item) => {
     if (item.external) {
       window.open(item.href, '_blank', 'noopener,noreferrer')
@@ -93,7 +101,7 @@ export function CommandPalette() {
   const onInputKeyDown = (e: ReactKeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault()
-      setSelected((s) => Math.min(s + 1, flat.length - 1))
+      setSelected((s) => Math.max(0, Math.min(s + 1, flat.length - 1)))
     } else if (e.key === 'ArrowUp') {
       e.preventDefault()
       setSelected((s) => Math.max(s - 1, 0))
@@ -136,6 +144,15 @@ export function CommandPalette() {
       {open
         ? createPortal(
             <div
+              ref={dialogRef}
+              onKeyDown={(event) => {
+                if (event.key !== 'Tab') return
+                const controls = dialogRef.current?.querySelectorAll<HTMLElement>('input, button')
+                if (!controls?.length) return
+                const first = controls[0], last = controls[controls.length - 1]
+                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus() }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus() }
+              }}
               role="dialog"
               aria-modal="true"
               aria-label="Command palette"
@@ -150,6 +167,7 @@ export function CommandPalette() {
               >
                 <input
                   ref={inputRef}
+                  aria-label="Search sections, pages, and products"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={onInputKeyDown}
@@ -188,6 +206,7 @@ export function CommandPalette() {
                           const isSelected = index === selected
                           return (
                             <button
+                              data-selected={isSelected}
                               key={`${item.group}-${item.label}`}
                               type="button"
                               onMouseEnter={() => setSelected(index)}
@@ -199,7 +218,7 @@ export function CommandPalette() {
                                 color: 'var(--ink)',
                               }}
                             >
-                              <span>{item.label}</span>
+                              <span>{item.label}{item.description ? <span className="block text-sm" style={{ color: 'var(--ink-dim)' }}>{item.description}</span> : null}</span>
                               {item.external ? (
                                 <span
                                   className="font-mono"

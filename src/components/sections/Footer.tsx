@@ -4,6 +4,7 @@ import { useReveal } from '../../hooks/useReveal'
 const footerLinks = [
   { label: 'Doorsong', href: links.doorsong },
   { label: 'Artha', href: links.artha },
+  { label: 'Corres (in development)', href: `${import.meta.env.BASE_URL}#corres` },
   { label: 'Tether', href: links.tether },
   { label: 'Stub', href: links.stub },
   { label: 'Jotfield', href: links.jotfield },
@@ -47,7 +48,7 @@ export function Footer() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
+              target={link.href.startsWith('http') ? '_blank' : undefined}
               rel="noreferrer"
               className="font-mono tracking-[0.06em]"
               style={{ fontSize: 'var(--text-label)', color: 'var(--ink-dim)' }}

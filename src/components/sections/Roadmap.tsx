@@ -33,12 +33,12 @@ export function Roadmap() {
           <li
             key={entry.name}
             data-reveal
-            className="flex items-center justify-between gap-[var(--space-3)] py-[var(--space-3)]"
+            className="flex flex-col items-start sm:flex-row sm:justify-between gap-[var(--space-3)] py-[var(--space-3)]"
             style={{ borderBottom: '1px solid var(--line)' }}
           >
             <div className="flex flex-col gap-1">
               <span style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-heading)' }}>
-                {entry.name}
+                {entry.href ? <a href={entry.href}>{entry.name} →</a> : entry.name}
               </span>
               <span style={{ color: 'var(--ink-faint)', fontSize: 'var(--text-caption)' }}>
                 {entry.blurb}

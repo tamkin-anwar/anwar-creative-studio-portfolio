@@ -21,7 +21,7 @@ export function printConsoleEasterEgg() {
     `${bg}${cool}${mono}font-style:italic;font-size:13px;padding-bottom:8px;`,
   )
   console.log(
-    '%cFive products. One person. No template.',
+    '%cFive live projects. Corres and Ranna in development.',
     `${bg}${dim}${mono}font-size:12px;padding-bottom:6px;`,
   )
   console.log(

@@ -12,20 +12,31 @@ export function NowPage() {
         style={{ color: 'var(--ink-dim)', fontSize: 'var(--text-body)' }}
       >
         <p>
-          Building Ranna: digitizing my mom&rsquo;s handwritten recipes before the cards themselves wear
-          out.
+          Corres is the main new build: a native Apple-first email app, and the studio’s next flagship
+          alongside Artha. Email, considered.
         </p>
         <p>
-          Jotfield shipped most recently. Doorsong, Artha, Tether, and Stub are all live. I&rsquo;m
-          still building on them: new features, fixes, and feedback from the people using them.
+          Right now I’m working on the iPhone experience: its materials and type, the design system,
+          and how you move between Brief, Needs You, and Waiting. The build uses sample conversations
+          while those interactions take shape. Gmail is planned for the first release.
         </p>
+        <p>
+          Artha is already available. I’m continuing to work on the details around money, bills,
+          and planning, while keeping the decisions and approvals in your hands.
+        </p>
+        <p>
+          Ranna is also in progress: keeping my mom’s handwritten recipes for the next generation.
+          Doorsong, Jotfield, Tether, and Stub are live, with fixes and improvements continuing alongside
+          the new work.
+        </p>
+        <a href={`${import.meta.env.BASE_URL}#corres`} style={{ color: 'var(--accent-warm)' }}>See Corres in the studio →</a>
       </div>
 
       <p
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated September 14, 2026 &middot;{' '}
+        Last updated September 19, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
