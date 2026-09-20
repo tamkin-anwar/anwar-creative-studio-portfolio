@@ -26,9 +26,9 @@ export function NowPage() {
           hands.
         </p>
         <p>
-          Jotfield is getting the most attention of the rest: I’m ironing out rough edges from using
-          it daily. Doorsong, Tether, and Stub are live and stable, with fixes as they come up. Ranna,
-          keeping my mom’s handwritten recipes for the next generation, is planned but not started yet.
+          After that, it’s Jotfield: ironing out rough edges from using it daily. Doorsong, Tether,
+          and Stub are live and stable, with fixes as they come up. Ranna, keeping my mom’s handwritten
+          recipes for the next generation, is planned but not started yet.
         </p>
         <a href={`${import.meta.env.BASE_URL}#corres`} style={{ color: 'var(--accent-warm)' }}>See Corres in the studio →</a>
       </div>
