@@ -6,7 +6,7 @@ const SECTIONS = [
   { id: 'flagships', label: 'Flagships' },
   { id: 'work', label: 'More projects' },
   { id: 'principles', label: 'Principles' },
-  { id: 'roadmap', label: 'Now building' },
+  { id: 'roadmap', label: "What's next" },
   { id: 'contact', label: 'Contact' },
 ]
 

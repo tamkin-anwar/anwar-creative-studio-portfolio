@@ -18,7 +18,7 @@ const ITEMS: Item[] = [
   { group: 'Jump to', label: 'Flagships', href: `${BASE}#flagships` },
   { group: 'Jump to', label: 'Work', href: `${BASE}#work` },
   { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
-  { group: 'Jump to', label: 'Now building', href: `${BASE}#roadmap` },
+  { group: 'Jump to', label: "What's next", href: `${BASE}#roadmap` },
   { group: 'Jump to', label: 'Contact', href: `${BASE}#contact` },
   { group: 'Pages', label: 'Home', href: BASE },
   { group: 'Pages', label: 'Now', href: `${BASE}now/` },

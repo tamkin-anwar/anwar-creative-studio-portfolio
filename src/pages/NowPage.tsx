@@ -25,9 +25,9 @@ export function NowPage() {
           and planning, while keeping the decisions and approvals in your hands.
         </p>
         <p>
-          Ranna is also in progress: keeping my mom’s handwritten recipes for the next generation.
-          Doorsong, Jotfield, Tether, and Stub are live, with fixes and improvements continuing alongside
-          the new work.
+          Ranna, keeping my mom’s handwritten recipes for the next generation, is planned but not
+          started yet. Doorsong, Jotfield, Tether, and Stub are live, with fixes and improvements
+          continuing alongside the new work.
         </p>
         <a href={`${import.meta.env.BASE_URL}#corres`} style={{ color: 'var(--accent-warm)' }}>See Corres in the studio →</a>
       </div>

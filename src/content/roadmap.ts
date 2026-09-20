@@ -1,4 +1,4 @@
-export type RoadmapStatus = 'in progress' | 'In development'
+export type RoadmapStatus = 'in progress' | 'planned'
 
 export type RoadmapEntry = {
   name: string
@@ -10,7 +10,7 @@ export type RoadmapEntry = {
 export const roadmap: RoadmapEntry[] = [
   {
     name: 'Ranna',
-    status: 'in progress',
+    status: 'planned',
     blurb: "Mom's handwritten recipes, kept for the next generation.",
   },
 ]

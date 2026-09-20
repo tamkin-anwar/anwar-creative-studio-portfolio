@@ -21,7 +21,7 @@ export function printConsoleEasterEgg() {
     `${bg}${cool}${mono}font-style:italic;font-size:13px;padding-bottom:8px;`,
   )
   console.log(
-    '%cFive live projects. Corres and Ranna in development.',
+    '%cFive live projects. Corres in development, Ranna planned next.',
     `${bg}${dim}${mono}font-size:12px;padding-bottom:6px;`,
   )
   console.log(
