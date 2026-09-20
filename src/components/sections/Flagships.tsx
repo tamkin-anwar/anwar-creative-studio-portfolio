@@ -13,8 +13,8 @@ export function Flagships() {
           <div className="flagship-copy">
             <span className="flagship-status">Artha · Available now</span>
             <h3 id="artha-title">Artha</h3>
-            <p className="flagship-tagline">Your money, with the rest of life in view.</p>
-            <p>Bring in a bank statement, see where the month went, and plan the next one. Budgets, bills, notes, and your calendar share one workspace, so the numbers stay connected to the decisions behind them.</p>
+            <p className="flagship-tagline">See where it went. Know where it's going.</p>
+            <p>Bring in a bank statement and watch the month sort itself into categories, bills, and a plan for what's next. Budgets, notes, and your calendar stay in the same place the money does.</p>
             <details><summary>How it was built</summary><p>Built with Flask and SQLAlchemy. Statement imports have a review step before saving. The assistant proposes changes as approval cards, then uses the same validated routes as manual entries. Tests cover authentication and money-handling paths.</p></details>
             <a className="flagship-link" href={links.artha} target="_blank" rel="noreferrer">Open Artha ↗</a>
           </div>

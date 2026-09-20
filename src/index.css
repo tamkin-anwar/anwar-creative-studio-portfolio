@@ -276,42 +276,6 @@ a {
   animation-iteration-count: infinite;
 }
 
-[data-motion='artha'] .project-motion-layer {
-  inset: -28%;
-  background: conic-gradient(
-    from 60deg,
-    transparent 0deg,
-    rgba(255, 202, 101, 0.2) 52deg,
-    transparent 105deg,
-    rgba(99, 160, 255, 0.18) 220deg,
-    transparent 285deg
-  );
-  filter: blur(14px);
-  mix-blend-mode: screen;
-}
-
-[data-motion='artha'][data-motion-active='true'] .project-preview-image:not(.authored-motion) {
-  animation: artha-awaken 4.8s var(--ease-out-expo) infinite;
-}
-
-[data-motion='artha'][data-motion-active='true'] .project-motion-layer {
-  animation: artha-light 4.8s ease-in-out infinite;
-  opacity: 0.92;
-}
-
-[data-motion='artha'] .project-motion-glint {
-  inset: 14% 21%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, rgba(255, 247, 211, 0.74), transparent 24%);
-  mix-blend-mode: screen;
-  transform: translate3d(-13%, 9%, 0) scale(0.84);
-}
-
-[data-motion='artha'][data-motion-active='true'] .project-motion-glint {
-  animation: artha-glint 4.8s ease-in-out infinite;
-  opacity: 0.7;
-}
-
 [data-motion='tether'] .project-motion-layer {
   inset: 18% 29%;
   border-radius: 50%;
@@ -477,26 +441,6 @@ a {
   28% { transform: translate3d(-50%, 0, 0) rotate(2.15deg); }
   54% { transform: translate3d(-50%, 0, 0) rotate(-1.35deg); }
   76% { transform: translate3d(-50%, 0, 0) rotate(0.82deg); }
-}
-
-@keyframes artha-awaken {
-  0%, 10%, 100% { transform: scale(1.001) translate3d(0, 0, 0); filter: saturate(1); }
-  38% { transform: scale(1.032) translate3d(0, 0, 0); filter: saturate(1.08); }
-  70%, 88% { transform: scale(1.008) translate3d(0, 0, 0); filter: saturate(1.03); }
-}
-
-@keyframes artha-light {
-  0%, 10%, 100% { transform: rotate(-35deg) scale(0.86); opacity: 0; }
-  28% { opacity: 0.95; }
-  72% { transform: rotate(235deg) scale(1.06); opacity: 0.62; }
-  88% { opacity: 0; }
-}
-
-@keyframes artha-glint {
-  0%, 10%, 100% { transform: translate3d(-13%, 9%, 0) scale(0.84); opacity: 0; }
-  30% { opacity: 0.76; }
-  68% { transform: translate3d(14%, -10%, 0) scale(1.05); opacity: 0.36; }
-  88% { opacity: 0; }
 }
 
 @keyframes tether-hover {

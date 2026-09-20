@@ -1,7 +1,7 @@
 import { links } from './links'
 
 export type Project = {
-  motion: 'doorsong' | 'artha' | 'tether' | 'jotfield' | 'stub'
+  motion: 'doorsong' | 'tether' | 'jotfield' | 'stub'
   name: string
   tagline: string
   description: string
@@ -32,22 +32,6 @@ export const projects: Project[] = [
       stack: ['Vanilla JS', 'Web Audio API', 'No build step'],
       detail:
         "Every instrument is synthesized live, not sampled. The ektara's buzz comes from a sawtooth wave through a lowpass filter, with a pitch wobble that mimics a bent bamboo neck. The oud adds a constant low tone under every pluck, modeling its soundhole as a resonating cavity. The hanging strands move on a real damped spring equation.",
-    },
-  },
-  {
-    motion: 'artha',
-    name: 'Artha',
-    tagline: 'Understand your money. Plan what comes next.',
-    description:
-      'Track spending, budgets, bills, notes, and your calendar in one private workspace. Import statements, model major decisions, and approve actions from a built-in assistant.',
-    evidence: '353 automated tests',
-    url: links.artha,
-    previewImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
-    reducedMotionImage: `${import.meta.env.BASE_URL}artha-mark-wide.webp`,
-    build: {
-      stack: ['Flask', 'SQLAlchemy', 'Postgres', 'Claude API'],
-      detail:
-        'The assistant calls Claude directly. Every action it proposes becomes a card you approve before anything runs, then hits the same validated route a manual entry would. The test suite runs integration tests against real routes and a real database.',
     },
   },
   {
