@@ -4,7 +4,6 @@ import { useReveal } from '../../hooks/useReveal'
 const footerLinks = [
   { label: 'Doorsong', href: links.doorsong },
   { label: 'Artha', href: links.artha },
-  { label: 'Corres (in development)', href: `${import.meta.env.BASE_URL}#corres` },
   { label: 'Tether', href: links.tether },
   { label: 'Jotfield', href: links.jotfield },
   { label: 'Stub', href: links.stub },
