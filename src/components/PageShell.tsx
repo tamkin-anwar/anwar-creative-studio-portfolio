@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { AmbientField } from './scene/AmbientField'
+import { LazyAmbientField } from './LazyAmbientField'
 import { CommandPalette } from './CommandPalette'
 
 export function PageShell({
@@ -16,7 +16,7 @@ export function PageShell({
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
-      <AmbientField />
+      <LazyAmbientField />
       <CommandPalette />
       <main
         id="main-content"

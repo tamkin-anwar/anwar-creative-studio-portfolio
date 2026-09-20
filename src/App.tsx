@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Preloader } from './components/Preloader'
-import { AmbientField } from './components/scene/AmbientField'
+import { LazyAmbientField } from './components/LazyAmbientField'
 import { ScrollProgressRail } from './components/ScrollProgressRail'
 import { CommandPalette } from './components/CommandPalette'
 import { Hero } from './components/sections/Hero'
@@ -20,7 +20,7 @@ function App() {
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
-      <AmbientField />
+      <LazyAmbientField />
       <ScrollProgressRail />
       <CommandPalette />
       <main id="main-content">
