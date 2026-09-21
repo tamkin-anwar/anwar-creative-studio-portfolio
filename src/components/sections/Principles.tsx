@@ -10,6 +10,10 @@ const principles = [
     support: 'Jotfield encrypts notes with a key that’s never transmitted; the server only ever sees ciphertext. Corres is built to never silently forward a message to an AI service.',
   },
   {
+    statement: 'Nothing fails silently, and nothing pretends to succeed.',
+    support: 'Anwar Logistics’ contact form fails closed with a clear error if its email credentials are missing, rather than pretending to succeed. Nuqta once let a failed database read look identical to having no work at all; the board sat empty for a day before anyone caught it.',
+  },
+  {
     statement: 'Make the everyday parts worth returning to.',
     support: 'Finding a note, checking a bill, choosing a film together. Those small moments are the reason these products exist, and where most of the care goes.',
   },
