@@ -570,9 +570,16 @@ a {
 .flagship-light, .flagship-sheen { position: absolute; inset: 0; pointer-events: none; opacity: 0; }
 
 @media (prefers-reduced-motion: no-preference) {
+  [data-flagship-motion='artha'] .flagship-art {
+    animation: artha-orb-float 5s ease-in-out infinite;
+    animation-play-state: paused;
+  }
+  [data-flagship-motion='artha'][data-art-active='true'] .flagship-art {
+    animation-play-state: running;
+  }
   [data-flagship-motion='artha'] .flagship-light {
-    background: radial-gradient(ellipse at 44% 38%, rgba(255,210,137,.32), transparent 48%);
-    animation: artha-light-orbit 9s ease-in-out infinite;
+    background: radial-gradient(ellipse at 44% 38%, rgba(255,210,137,.52), transparent 48%);
+    animation: artha-light-orbit 5s ease-in-out infinite;
   }
   [data-flagship-motion='corres'] .flagship-sheen {
     background: linear-gradient(112deg, transparent 35%, rgba(255,245,219,.04) 43%, rgba(255,245,219,.23) 50%, rgba(210,231,245,.07) 57%, transparent 65%);
@@ -584,6 +591,10 @@ a {
   [data-art-active='true'] .flagship-sheen { animation-play-state: running; }
 }
 
+@keyframes artha-orb-float {
+  0%, 100% { transform: scale(1.06) translateY(1.5%); }
+  50% { transform: scale(1.10) translateY(-1.5%); }
+}
 @keyframes artha-light-orbit {
   0%, 100% { transform: translate(-7%, 4%) scale(.94); opacity: .25; }
   50% { transform: translate(7%, -4%) scale(1.08); opacity: .85; }
