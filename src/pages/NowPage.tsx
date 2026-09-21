@@ -16,9 +16,10 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          Right now I’m working on the iPhone experience: its materials and type, the design system,
-          and how you move between Brief, Needs You, and Waiting. The build uses sample conversations
-          while those interactions take shape. Gmail is planned for the first release.
+          Right now Gmail sign-in and sync are working end to end: real inbox messages render with
+          their original HTML, images, and clickable links, and are saved locally on the device.
+          I&rsquo;m running it daily on my own iPhone. Next up is a proper sync engine and, further out,
+          sending mail from inside the app.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
@@ -37,7 +38,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated September 20, 2026 &middot;{' '}
+        Last updated September 21, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
