@@ -491,6 +491,33 @@ a {
   78% { transform: translate3d(3%, 0, 0) rotate(1deg); }
 }
 
+@keyframes artha-awaken {
+  0%, 10%, 100% { transform: scale(1.001) translate3d(0, 0, 0); filter: saturate(1); }
+  38% { transform: scale(1.032) translate3d(0, 0, 0); filter: saturate(1.08); }
+  70%, 88% { transform: scale(1.008) translate3d(0, 0, 0); filter: saturate(1.03); }
+}
+
+@keyframes artha-light {
+  0%, 10%, 100% { transform: rotate(-35deg) scale(0.86); opacity: 0; }
+  28% { opacity: 0.95; }
+  72% { transform: rotate(235deg) scale(1.06); opacity: 0.62; }
+  88% { opacity: 0; }
+}
+
+@keyframes artha-glint {
+  0%, 10%, 100% { transform: translate3d(-13%, 9%, 0) scale(0.84); opacity: 0; }
+  30% { opacity: 0.76; }
+  68% { transform: translate3d(14%, -10%, 0) scale(1.05); opacity: 0.36; }
+  88% { opacity: 0; }
+}
+
+@keyframes corres-sheen {
+  0%, 12%, 100% { transform: translate3d(-60%, -18%, 0); opacity: 0; }
+  35% { opacity: 0.85; }
+  60% { transform: translate3d(60%, 18%, 0); opacity: 0.5; }
+  78%, 100% { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] {
     opacity: 1;
@@ -505,14 +532,19 @@ a {
   .project-preview-image,
   .project-preview-video,
   .project-motion-layer,
-  .project-motion-glint {
+  .project-motion-glint,
+  .flagship-art,
+  .flagship-motion-layer,
+  .flagship-motion-glint {
     animation: none !important;
     transition: none;
   }
 
   .project-preview-video,
   .project-motion-layer,
-  .project-motion-glint {
+  .project-motion-glint,
+  .flagship-motion-layer,
+  .flagship-motion-glint {
     display: none;
   }
 
@@ -548,7 +580,63 @@ a {
 .flagships { max-width: 1152px; margin: auto; padding: 64px 24px 96px; }
 .flagship-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .flagship { border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: linear-gradient(145deg, #1b1920, #101115); }
-.flagship-art { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.flagship-art { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 1.2s var(--ease-out-expo), filter 1.2s var(--ease-out-expo); }
+.flagship-motion-layer,
+.flagship-motion-glint {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 700ms var(--ease-out-expo);
+}
+
+/* Artha: the orb warming up, like morning light finding it. */
+[data-motion='artha'] .flagship-motion-layer {
+  inset: -28%;
+  background: conic-gradient(
+    from 60deg,
+    transparent 0deg,
+    rgba(255, 202, 101, 0.2) 52deg,
+    transparent 105deg,
+    rgba(99, 160, 255, 0.18) 220deg,
+    transparent 285deg
+  );
+  filter: blur(14px);
+  mix-blend-mode: screen;
+}
+[data-motion='artha'][data-motion-active='true'] .flagship-art {
+  animation: artha-awaken 4.8s var(--ease-out-expo) infinite;
+}
+[data-motion='artha'][data-motion-active='true'] .flagship-motion-layer {
+  animation: artha-light 4.8s ease-in-out infinite;
+  opacity: 0.92;
+}
+[data-motion='artha'] .flagship-motion-glint {
+  inset: 14% 21%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 247, 211, 0.74), transparent 24%);
+  mix-blend-mode: screen;
+  transform: translate3d(-13%, 9%, 0) scale(0.84);
+}
+[data-motion='artha'][data-motion-active='true'] .flagship-motion-glint {
+  animation: artha-glint 4.8s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+/* Corres: a sheen passing over the metal, like light catching the sculpture. */
+[data-motion='corres'] .flagship-motion-layer {
+  background: linear-gradient(
+    115deg,
+    transparent 32%,
+    rgba(255, 235, 200, 0.22) 47%,
+    rgba(190, 215, 255, 0.16) 54%,
+    transparent 68%
+  );
+  mix-blend-mode: screen;
+}
+[data-motion='corres'][data-motion-active='true'] .flagship-motion-layer {
+  animation: corres-sheen 5.5s ease-in-out infinite;
+}
 .flagship-copy { padding: 32px; display: flex; flex-direction: column; gap: 20px; }
 .flagship h3 { font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; }
 .flagship p { color: var(--ink-dim); }

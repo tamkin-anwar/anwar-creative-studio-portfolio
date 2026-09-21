@@ -1,9 +1,11 @@
 import type { ReactNode } from 'react'
 import { useCardTilt } from '../../hooks/useCardTilt'
+import { useScrollActive } from '../../hooks/useScrollActive'
 
 export function FlagshipCard({
   id,
   titleId,
+  motion,
   imgSrc,
   imgWidth,
   imgHeight,
@@ -17,6 +19,7 @@ export function FlagshipCard({
 }: {
   id?: string
   titleId: string
+  motion: 'artha' | 'corres'
   imgSrc: string
   imgWidth: number
   imgHeight: number
@@ -29,15 +32,19 @@ export function FlagshipCard({
   link: ReactNode
 }) {
   const { ref, onMouseMove, onMouseLeave } = useCardTilt<HTMLElement>()
+  const [active, setActive] = useScrollActive(ref)
 
   return (
     <article
       id={id}
       ref={ref}
+      data-motion={motion}
+      data-motion-active={active ? 'true' : 'false'}
       data-reveal
       aria-labelledby={titleId}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
+      onFocusCapture={() => setActive(true)}
       className="flagship relative"
       style={{ transition: 'transform 0.4s var(--ease-out-expo), border-color 0.4s var(--ease-out-expo)', willChange: 'transform' }}
     >
@@ -51,7 +58,11 @@ export function FlagshipCard({
           transitionDuration: '0.3s',
         }}
       />
-      <img className="flagship-art" src={imgSrc} alt="" width={imgWidth} height={imgHeight} loading="lazy" />
+      <div className="flagship-art-frame relative overflow-hidden">
+        <img className="flagship-art" src={imgSrc} alt="" width={imgWidth} height={imgHeight} loading="lazy" />
+        <div aria-hidden className="flagship-motion-layer" />
+        <div aria-hidden className="flagship-motion-glint" />
+      </div>
       <div className="flagship-copy">
         <span className="flagship-status">{status}</span>
         <h3 id={titleId}>{title}</h3>

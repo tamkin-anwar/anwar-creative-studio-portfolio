@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import { useEffect, useRef, type CSSProperties } from 'react'
 import type { Project } from '../../content/projects'
 import { useCardTilt } from '../../hooks/useCardTilt'
+import { useScrollActive } from '../../hooks/useScrollActive'
 
 const DOORSONG_GLYPHS = '心念春铃影静雾远梦光途归水山路竹客月笛琴声风云门雨'
 const DOORSONG_STRANDS = Array.from({ length: 18 }, (_, visibleIndex) => {
@@ -17,19 +18,7 @@ const DOORSONG_STRANDS = Array.from({ length: 18 }, (_, visibleIndex) => {
 export function ProjectCard({ project }: { project: Project }) {
   const { ref: cardRef, onMouseMove, onMouseLeave } = useCardTilt<HTMLElement>()
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [active, setActive] = useState(false)
-
-  useEffect(() => {
-    const card = cardRef.current
-    if (!card) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setActive(entry.isIntersecting),
-      { threshold: 0.12, rootMargin: '-8% 0px -8% 0px' },
-    )
-    observer.observe(card)
-    return () => observer.disconnect()
-  }, [cardRef])
+  const [active, setActive] = useScrollActive(cardRef)
 
   useEffect(() => {
     const video = videoRef.current
