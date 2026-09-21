@@ -2,12 +2,12 @@ import { useReveal } from '../../hooks/useReveal'
 
 const principles = [
   {
-    statement: 'Know what happens next.',
-    support: 'Review a statement before it enters Artha. Approve an assistant’s changes before they run. The important steps should be yours to take.',
+    statement: 'Trust lives in the code, not the interface.',
+    support: 'Artha’s assistant hits the same validated route a manual entry would. Stub’s access control runs entirely on Postgres row-level security, not application code that could be bypassed.',
   },
   {
-    statement: 'Your private things stay yours.',
-    support: 'Jotfield opens without an account and keeps notes on your device. If you choose cloud sync, notes are encrypted before they leave it.',
+    statement: 'What the code can’t do matters more than what it promises.',
+    support: 'Jotfield encrypts notes with a key that’s never transmitted; the server only ever sees ciphertext. Corres is built to never silently forward a message to an AI service.',
   },
   {
     statement: 'Make the everyday parts worth returning to.',
