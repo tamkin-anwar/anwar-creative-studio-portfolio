@@ -34,8 +34,7 @@ export function StudioStatement() {
         }}
       >
         Anwar Creative Studio is where Tamkin Anwar designs and builds independent software, part
-        of the Anwar Ventures family alongside Anwar Autowerks, Anwar Logistics, and Anwar Property
-        Group.
+        of Anwar Ventures alongside Anwar Autowerks, Anwar Logistics, and Anwar Property Group.
       </p>
     </section>
   )
