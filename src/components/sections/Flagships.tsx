@@ -11,6 +11,7 @@ export function Flagships() {
       <div className="flagship-grid">
         <FlagshipCard
           titleId="artha-title"
+          motion="artha"
           imgSrc={`${import.meta.env.BASE_URL}artha-mark-wide.webp`}
           imgWidth={1200}
           imgHeight={750}
@@ -25,6 +26,7 @@ export function Flagships() {
         <FlagshipCard
           id="corres"
           titleId="corres-title"
+          motion="corres"
           imgSrc={`${import.meta.env.BASE_URL}corres-sculpture.jpg`}
           imgWidth={1200}
           imgHeight={1200}

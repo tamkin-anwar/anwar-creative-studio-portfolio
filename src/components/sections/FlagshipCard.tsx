@@ -1,9 +1,11 @@
-import type { ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
+import { useScrollActive } from '../../hooks/useScrollActive'
 import { useCardTilt } from '../../hooks/useCardTilt'
 
 export function FlagshipCard({
   id,
   titleId,
+  motion,
   imgSrc,
   imgWidth,
   imgHeight,
@@ -17,6 +19,7 @@ export function FlagshipCard({
 }: {
   id?: string
   titleId: string
+  motion: 'artha' | 'corres'
   imgSrc: string
   imgWidth: number
   imgHeight: number
@@ -30,10 +33,22 @@ export function FlagshipCard({
 }) {
   const { ref, onMouseMove, onMouseLeave } = useCardTilt<HTMLElement>()
 
+  const [inView] = useScrollActive(ref)
+  const [pageVisible, setPageVisible] = useState(true)
+
+  useEffect(() => {
+    const update = () => setPageVisible(!document.hidden)
+    update()
+    document.addEventListener('visibilitychange', update)
+    return () => document.removeEventListener('visibilitychange', update)
+  }, [])
+
   return (
     <article
       id={id}
       ref={ref}
+      data-flagship-motion={motion}
+      data-art-active={inView && pageVisible ? 'true' : 'false'}
       data-reveal
       aria-labelledby={titleId}
       onMouseMove={onMouseMove}
@@ -51,7 +66,11 @@ export function FlagshipCard({
           transitionDuration: '0.3s',
         }}
       />
-      <img className="flagship-art" src={imgSrc} alt="" width={imgWidth} height={imgHeight} loading="lazy" />
+      <div className="flagship-artwork" aria-hidden="true">
+        <img className="flagship-art" src={imgSrc} alt="" width={imgWidth} height={imgHeight} loading="lazy" decoding="async" />
+        <span className="flagship-light" />
+        <span className="flagship-sheen" />
+      </div>
       <div className="flagship-copy">
         <span className="flagship-status">{status}</span>
         <h3 id={titleId}>{title}</h3>

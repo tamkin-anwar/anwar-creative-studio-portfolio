@@ -562,3 +562,35 @@ a {
   .flagship-grid { grid-template-columns: 1fr; }
   .flagship-copy { padding: 24px; }
 }
+
+/* Artwork motion stays separate from card tilt and entrance reveals.
+   Animate only transform/opacity; pause rather than restart outside the viewport. */
+.flagship-artwork { position: relative; overflow: hidden; aspect-ratio: 16 / 10; isolation: isolate; }
+.flagship-artwork .flagship-art { display: block; height: 100%; }
+.flagship-light, .flagship-sheen { position: absolute; inset: 0; pointer-events: none; opacity: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-flagship-motion='artha'] .flagship-light {
+    background: radial-gradient(ellipse at 44% 38%, rgba(255,210,137,.32), transparent 48%);
+    animation: artha-light-orbit 9s ease-in-out infinite;
+  }
+  [data-flagship-motion='corres'] .flagship-sheen {
+    background: linear-gradient(112deg, transparent 35%, rgba(255,245,219,.04) 43%, rgba(255,245,219,.23) 50%, rgba(210,231,245,.07) 57%, transparent 65%);
+    animation: corres-metal-sheen 8s ease-in-out infinite;
+  }
+  .flagship-artwork .flagship-light,
+  .flagship-artwork .flagship-sheen { animation-play-state: paused; }
+  [data-art-active='true'] .flagship-light,
+  [data-art-active='true'] .flagship-sheen { animation-play-state: running; }
+}
+
+@keyframes artha-light-orbit {
+  0%, 100% { transform: translate(-7%, 4%) scale(.94); opacity: .25; }
+  50% { transform: translate(7%, -4%) scale(1.08); opacity: .85; }
+}
+@keyframes corres-metal-sheen {
+  0%, 18% { transform: translateX(-100%); opacity: 0; }
+  28% { opacity: .65; }
+  58% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
