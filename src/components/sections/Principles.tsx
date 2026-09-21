@@ -11,7 +11,7 @@ const principles = [
   },
   {
     statement: 'Nothing fails silently, and nothing pretends to succeed.',
-    support: 'Anwar Logistics’ contact form fails closed with a clear error if its email credentials are missing, rather than pretending to succeed. Nuqta once let a failed database read look identical to having no work at all; the board sat empty for a day before anyone caught it.',
+    support: 'Anwar Logistics’ contact form fails closed with a clear error if its email credentials are missing, rather than pretending to succeed. Anwar Autowerks’ fallback only appears if the same kind of request actually fails.',
   },
   {
     statement: 'Make the everyday parts worth returning to.',

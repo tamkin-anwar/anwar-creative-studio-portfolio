@@ -6,6 +6,8 @@ export const links = {
   tether: 'https://tamkin-anwar.github.io/tether/',
   stub: 'https://stub-jade.vercel.app',
   jotfield: 'https://tamkin-anwar.github.io/jotfield/',
+  autowerks: 'https://anwarautowerks.com',
+  logistics: 'https://anwarlogistics.com',
   github: 'https://github.com/tamkin-anwar',
   linkedin: '', // fill in later
 }
