@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import type { Project } from '../../content/projects'
+import { useCardTilt } from '../../hooks/useCardTilt'
 
-const TILT_MAX_DEG = 7
 const DOORSONG_GLYPHS = '心念春铃影静雾远梦光途归水山路竹客月笛琴声风云门雨'
 const DOORSONG_STRANDS = Array.from({ length: 18 }, (_, visibleIndex) => {
   const strandIndex = visibleIndex + 3
@@ -15,7 +15,7 @@ const DOORSONG_STRANDS = Array.from({ length: 18 }, (_, visibleIndex) => {
 })
 
 export function ProjectCard({ project }: { project: Project }) {
-  const cardRef = useRef<HTMLElement>(null)
+  const { ref: cardRef, onMouseMove, onMouseLeave } = useCardTilt<HTMLElement>()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [active, setActive] = useState(false)
 
@@ -29,7 +29,7 @@ export function ProjectCard({ project }: { project: Project }) {
     )
     observer.observe(card)
     return () => observer.disconnect()
-  }, [])
+  }, [cardRef])
 
   useEffect(() => {
     const video = videoRef.current
@@ -43,28 +43,6 @@ export function ProjectCard({ project }: { project: Project }) {
     }
   }, [active])
 
-  const handleMove = (e: MouseEvent<HTMLElement>) => {
-    const card = cardRef.current
-    if (!card || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
-    const rect = card.getBoundingClientRect()
-    const px = (e.clientX - rect.left) / rect.width
-    const py = (e.clientY - rect.top) / rect.height
-    const rx = (0.5 - py) * TILT_MAX_DEG
-    const ry = (px - 0.5) * TILT_MAX_DEG
-
-    card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.02)`
-    card.style.setProperty('--glow-x', `${px * 100}%`)
-    card.style.setProperty('--glow-y', `${py * 100}%`)
-    card.style.setProperty('--glow-opacity', '1')
-  }
-
-  const handleLeave = () => {
-    const card = cardRef.current
-    if (!card) return
-    card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)'
-    card.style.setProperty('--glow-opacity', '0')
-  }
-
   return (
     <article
       ref={cardRef}
@@ -72,8 +50,8 @@ export function ProjectCard({ project }: { project: Project }) {
       data-motion={project.motion}
       data-motion-active={active ? 'true' : 'false'}
       data-reveal
-      onMouseMove={handleMove}
-      onMouseLeave={handleLeave}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
       onFocusCapture={() => setActive(true)}
       className="project-card relative flex flex-col gap-[var(--space-2)] overflow-hidden rounded-2xl border p-[var(--space-4)]"
       style={{
