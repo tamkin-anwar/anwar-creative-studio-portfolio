@@ -67,9 +67,12 @@ export function FlagshipCard({
         }}
       />
       <div className="flagship-artwork" aria-hidden="true">
+        <div className="flagship-art-scene">
         <img className="flagship-art" src={imgSrc} alt="" width={imgWidth} height={imgHeight} loading="lazy" decoding="async" />
         <span className="flagship-light" />
         <span className="flagship-sheen" />
+        {motion === 'artha' && <span className="artha-orb-rim"><span /></span>}
+        </div>
       </div>
       <div className="flagship-copy">
         <span className="flagship-status">{status}</span>

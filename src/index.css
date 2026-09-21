@@ -569,18 +569,43 @@ a {
 .flagship-artwork .flagship-art { display: block; height: 100%; }
 .flagship-light, .flagship-sheen { position: absolute; inset: 0; pointer-events: none; opacity: 0; }
 
+/* Ring geometry follows the orb in the original 1200 x 750 artwork. */
+.flagship-art-scene { position: relative; width: 100%; height: 100%; }
+.artha-orb-rim {
+  position: absolute; width: 50%; aspect-ratio: 1; left: 25%; top: 50%;
+  transform: translateY(-50%); border-radius: 50%; pointer-events: none;
+  opacity: 0; filter: blur(2px); mix-blend-mode: screen;
+}
+.artha-orb-rim > span {
+  display: block; width: 100%; height: 100%; border-radius: inherit;
+  background: conic-gradient(from 0deg, transparent 0deg 175deg, rgba(113,182,255,.75) 230deg, #fff1be 285deg, transparent 330deg);
+  mask-image: radial-gradient(circle, transparent 62%, #000 67%, #000 69%, transparent 72%);
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  [data-flagship-motion='artha'] .flagship-art {
-    animation: artha-orb-float 5s ease-in-out infinite;
-    animation-play-state: paused;
-  }
-  [data-flagship-motion='artha'][data-art-active='true'] .flagship-art {
-    animation-play-state: running;
+  [data-flagship-motion='artha'] .flagship-art-scene {
+    animation: artha-awaken 4.8s ease-in-out infinite;
   }
   [data-flagship-motion='artha'] .flagship-light {
-    background: radial-gradient(ellipse at 44% 38%, rgba(255,210,137,.52), transparent 48%);
-    animation: artha-light-orbit 5s ease-in-out infinite;
+    inset: -28%;
+    background: conic-gradient(from 60deg, transparent, rgba(255,202,101,.25) 52deg, transparent 105deg, rgba(99,160,255,.22) 220deg, transparent 285deg);
+    filter: blur(14px);
+    mix-blend-mode: screen;
+    animation: artha-light 4.8s ease-in-out infinite;
   }
+  [data-flagship-motion='artha'] .flagship-sheen {
+    inset: 14% 21%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, rgba(255,247,211,.74), transparent 24%);
+    mix-blend-mode: screen;
+    animation: artha-glint 4.8s ease-in-out infinite;
+  }
+  .artha-orb-rim { opacity: .95; }
+  .artha-orb-rim > span { animation: artha-rim-orbit 6s linear infinite; }
+  [data-flagship-motion='artha'] .flagship-art-scene,
+  .artha-orb-rim > span { animation-play-state: paused; }
+  [data-art-active='true'][data-flagship-motion='artha'] .flagship-art-scene,
+  [data-art-active='true'] .artha-orb-rim > span { animation-play-state: running; }
   [data-flagship-motion='corres'] .flagship-sheen {
     background: linear-gradient(112deg, transparent 35%, rgba(255,245,219,.04) 43%, rgba(255,245,219,.23) 50%, rgba(210,231,245,.07) 57%, transparent 65%);
     animation: corres-metal-sheen 8s ease-in-out infinite;
@@ -591,13 +616,23 @@ a {
   [data-art-active='true'] .flagship-sheen { animation-play-state: running; }
 }
 
-@keyframes artha-orb-float {
-  0%, 100% { transform: scale(1.06) translateY(1.5%); }
-  50% { transform: scale(1.10) translateY(-1.5%); }
+@keyframes artha-awaken {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.065); }
+  75% { transform: scale(1.015); }
 }
-@keyframes artha-light-orbit {
-  0%, 100% { transform: translate(-7%, 4%) scale(.94); opacity: .25; }
-  50% { transform: translate(7%, -4%) scale(1.08); opacity: .85; }
+@keyframes artha-light {
+  0%, 100% { transform: rotate(-35deg) scale(.86); opacity: .15; }
+  28% { opacity: .95; }
+  72% { transform: rotate(235deg) scale(1.06); opacity: .62; }
+}
+@keyframes artha-glint {
+  0%, 100% { transform: translate(-13%, 9%) scale(.84); opacity: .12; }
+  30% { opacity: .76; }
+  68% { transform: translate(14%, -10%) scale(1.05); opacity: .36; }
+}
+@keyframes artha-rim-orbit {
+  to { transform: rotate(360deg); }
 }
 @keyframes corres-metal-sheen {
   0%, 18% { transform: translateX(-100%); opacity: 0; }
