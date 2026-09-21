@@ -80,7 +80,7 @@ export function FlagshipCard({
         <p className="flagship-tagline">{tagline}</p>
         <p>{description}</p>
         <details>
-          <summary>{disclosureLabel}</summary>
+          <summary className="cursor-pointer select-none">{disclosureLabel}</summary>
           <p>{disclosureDetail}</p>
         </details>
         {link}
