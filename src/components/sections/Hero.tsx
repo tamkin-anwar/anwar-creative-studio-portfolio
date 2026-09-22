@@ -10,7 +10,7 @@ export function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative flex min-h-[100svh] flex-col items-center justify-center gap-[var(--space-2)] overflow-hidden px-[var(--space-3)] text-center"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center gap-[var(--space-2)] overflow-hidden px-[var(--space-3)] pb-[var(--space-6)] text-center sm:pb-0"
     >
       <div
         aria-hidden
@@ -40,7 +40,7 @@ export function Hero() {
         </p>
 
         <div
-          className="relative h-[40vh] w-full max-w-2xl sm:h-[48vh]"
+          className="relative h-[40svh] w-full max-w-2xl sm:h-[48svh]"
           style={{
             transform: `translateY(${progress * -50}px) scale(${1 - progress * 0.18})`,
             // fade the canvas out before its own raster edge, so a glowing
