@@ -16,10 +16,11 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          Right now Gmail sign-in and sync are working end to end: real inbox messages render with
-          their original HTML, images, and clickable links, and are saved locally on the device.
-          I&rsquo;m running it daily on my own iPhone. Next up is a proper sync engine and, further out,
-          sending mail from inside the app.
+          It&rsquo;s a real daily driver now: Gmail sync, sending, Archive/Trash, attachments, labels,
+          search, and push notifications all work end to end, and it now supports multiple Gmail
+          accounts connected at once, with a switcher between one merged inbox and any single account.
+          I&rsquo;m running it daily on my own iPhone. Next up: AI-drafted replies, with a clear,
+          disclosed processing choice before anything sends.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
@@ -38,7 +39,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated September 21, 2026 &middot;{' '}
+        Last updated September 23, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
