@@ -19,7 +19,7 @@ export function NowPage() {
           It&rsquo;s a real daily driver now: Gmail sync, sending, Archive/Trash, attachments, labels,
           search, and push notifications all work end to end, and it now supports multiple Gmail
           accounts connected at once, with a switcher between one merged inbox and any single account.
-          On-device intelligence now surfaces what needs you, one-tap unsubscribe clears the rest,
+          Apple Intelligence, running entirely on-device, now surfaces what needs you, one-tap unsubscribe clears the rest,
           and every row has a fully custom, tunable swipe with independent short and long gestures.
           I&rsquo;m running it daily on my own iPhone. Next up: AI-drafted replies, with a clear,
           disclosed processing choice before anything sends.
