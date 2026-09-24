@@ -19,6 +19,8 @@ export function NowPage() {
           It&rsquo;s a real daily driver now: Gmail sync, sending, Archive/Trash, attachments, labels,
           search, and push notifications all work end to end, and it now supports multiple Gmail
           accounts connected at once, with a switcher between one merged inbox and any single account.
+          It surfaces what needs you using Apple Intelligence, entirely on-device, added one-tap
+          unsubscribe, and just got a Spark-style customizable short/long swipe gesture on every row.
           I&rsquo;m running it daily on my own iPhone. Next up: AI-drafted replies, with a clear,
           disclosed processing choice before anything sends.
         </p>
@@ -39,7 +41,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated September 23, 2026 &middot;{' '}
+        Last updated September 24, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
