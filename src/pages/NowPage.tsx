@@ -19,7 +19,8 @@ export function NowPage() {
           It&rsquo;s a real daily driver now: Gmail sync, sending, Archive/Trash, attachments, labels,
           search, and push notifications all work end to end, and it now supports multiple Gmail
           accounts connected at once, with a switcher between one merged inbox and any single account.
-          Apple Intelligence, running entirely on-device, now surfaces what needs you, one-tap unsubscribe clears the rest,
+          Mail appears within seconds of signing in, and anything you read, flag, archive, or delete from
+          another device stays in sync. Apple Intelligence, running entirely on-device, now surfaces what needs you, one-tap unsubscribe clears the rest,
           and every row has a fully custom, tunable swipe with independent short and long gestures.
           I&rsquo;m running it daily on my own iPhone. Next up: AI-drafted replies, with a clear,
           disclosed processing choice before anything sends.
@@ -41,7 +42,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated September 24, 2026 &middot;{' '}
+        Last updated September 25, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
