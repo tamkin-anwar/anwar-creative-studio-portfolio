@@ -39,7 +39,7 @@ export const projects: Project[] = [
     name: 'Tether',
     tagline: 'The same scene, at the same second.',
     description:
-      'Watch Netflix, Hulu, Disney+, Crunchyroll, Max, and YouTube together from anywhere. Tether keeps play, pause, and seeking aligned, corrects drift, and gives two people shared notes and chat.',
+      'Watch Netflix, Hulu, Disney+, Crunchyroll, Max, and YouTube together from anywhere. Tether keeps play, pause, and seeking aligned, corrects drift, and gives two people shared notes, chat, and reactions.',
     evidence: '6 streaming services',
     url: links.tether,
     // versioned: this one's still being iterated on, bump the number each
@@ -47,9 +47,9 @@ export const projects: Project[] = [
     previewImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
     reducedMotionImage: `${import.meta.env.BASE_URL}tether-mark-wide.webp?v=3`,
     build: {
-      stack: ['Manifest V3', 'Firebase REST', 'No SDK'],
+      stack: ['Manifest V3', 'Firebase REST', 'No SDK', 'Reverse-engineered APIs'],
       detail:
-        "Tether skips the Firebase SDK entirely. It syncs with plain fetch calls and a server-sent-events stream, which keeps it clear of Manifest V3's remote-code restrictions. Clock sync is hand-rolled: a timestamp write round-trips to estimate the server's real clock, then corrects playback for exactly how long each message took in transit.",
+        "Tether skips the Firebase SDK entirely, syncing over plain fetch calls and a server-sent-events stream to stay clear of Manifest V3's remote-code restrictions. Netflix and Disney+ each silently reject or corrupt a direct seek on the video element, confirmed by cross-referencing independent reverse-engineering projects rather than guessing, so playback is driven through each platform's own internal player instead. Clock sync is hand-rolled too: a timestamp round-trips to estimate the server's real clock, then corrects playback for exactly how long each message took in transit.",
     },
   },
   {
