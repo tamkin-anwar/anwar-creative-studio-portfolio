@@ -16,14 +16,13 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          It&rsquo;s a real daily driver now: Gmail sync, sending, Archive/Trash, attachments, labels,
-          search, and push notifications all work end to end, and it now supports multiple Gmail
-          accounts connected at once, with a switcher between one merged inbox and any single account.
-          Mail appears within seconds of signing in, and anything you read, flag, archive, or delete from
-          another device stays in sync. Apple Intelligence, running entirely on-device, now surfaces what needs you, one-tap unsubscribe clears the rest,
-          and every row has a fully custom, tunable swipe with independent short and long gestures.
-          I&rsquo;m running it daily on my own iPhone. Next up: AI-drafted replies, with a clear,
-          disclosed processing choice before anything sends.
+          It&rsquo;s a real daily driver, and it has just been fully redesigned: a quiet Obsidian and
+          Ivory look with New York serif type, a new titanium-and-sapphire mark, and Liquid Glass
+          controls, all drawn as vector so it stays razor-sharp. Apple Intelligence, running entirely
+          on-device, sorts what needs you, summarizes long threads, suggests replies and drafts them in
+          your voice, and rewrites what you write shorter, warmer, or more formal. Snooze understands
+          plain language, trackers are blocked on every open, and every Gmail account lives in one
+          inbox that stays in sync with your other devices. I&rsquo;m running it daily on my own iPhone.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
