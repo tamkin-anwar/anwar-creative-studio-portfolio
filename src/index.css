@@ -607,7 +607,7 @@ a {
   [data-art-active='true'][data-flagship-motion='artha'] .flagship-art-scene,
   [data-art-active='true'] .artha-orb-rim > span { animation-play-state: running; }
   [data-flagship-motion='corres'] .flagship-sheen {
-    background: linear-gradient(112deg, transparent 35%, rgba(255,245,219,.04) 43%, rgba(255,245,219,.23) 50%, rgba(210,231,245,.07) 57%, transparent 65%);
+    background: linear-gradient(112deg, transparent 35%, rgba(228,236,248,.04) 43%, rgba(236,242,252,.22) 50%, rgba(143,180,232,.08) 57%, transparent 65%);
     animation: corres-metal-sheen 8s ease-in-out infinite;
   }
   .flagship-artwork .flagship-light,

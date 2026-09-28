@@ -27,7 +27,7 @@ export function Flagships() {
           id="corres"
           titleId="corres-title"
           motion="corres"
-          imgSrc={`${import.meta.env.BASE_URL}corres-sculpture.jpg`}
+          imgSrc={`${import.meta.env.BASE_URL}corres-mark.jpg`}
           imgWidth={1200}
           imgHeight={1200}
           status={`Corres · ${corres.status}`}
