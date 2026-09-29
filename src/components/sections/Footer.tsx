@@ -42,6 +42,13 @@ export function Footer() {
         >
           Anwar Creative Studio
         </p>
+        <a
+          href={`mailto:${links.email}`}
+          className="font-mono tracking-[0.06em]"
+          style={{ fontSize: 'var(--text-caption)', color: 'var(--accent-warm)' }}
+        >
+          {links.email}
+        </a>
         <nav className="flex flex-wrap items-center justify-center gap-[var(--space-3)]">
           {footerLinks.map((link) => (
             <a

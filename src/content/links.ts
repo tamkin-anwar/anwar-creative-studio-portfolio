@@ -8,6 +8,7 @@ export const links = {
   jotfield: 'https://tamkin-anwar.github.io/jotfield/',
   autowerks: 'https://anwarautowerks.com',
   logistics: 'https://anwarlogistics.com',
+  email: 'contact@anwarcreativestudio.com',
   github: 'https://github.com/tamkin-anwar',
   linkedin: '', // fill in later
 }

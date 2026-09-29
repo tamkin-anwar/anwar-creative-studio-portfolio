@@ -2,7 +2,7 @@ import { PageShell } from '../components/PageShell'
 
 export function NotFoundPage() {
   return (
-    <PageShell eyebrow="404" backHref="https://tamkin-anwar.github.io/anwar-creative-studio-portfolio/">
+    <PageShell eyebrow="404" backHref="/">
       <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
         This page doesn&rsquo;t exist.
       </h1>

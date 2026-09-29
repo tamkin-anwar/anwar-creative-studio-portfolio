@@ -29,6 +29,7 @@ const ITEMS: Item[] = [
   { group: 'Products', label: 'Tether', href: links.tether, external: true },
   { group: 'Products', label: 'Jotfield', href: links.jotfield, external: true },
   { group: 'Products', label: 'Stub', href: links.stub, external: true },
+  { group: 'Elsewhere', label: 'Email', description: links.email, href: `mailto:${links.email}` },
   { group: 'Elsewhere', label: 'GitHub', href: links.github, external: true },
 ].filter((item) => item.href)
 

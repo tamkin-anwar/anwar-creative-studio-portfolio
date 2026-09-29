@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 const resolvePath = (path: string) => fileURLToPath(new URL(path, import.meta.url))
 
 export default defineConfig({
-  base: '/anwar-creative-studio-portfolio/',
+  base: '/',
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {

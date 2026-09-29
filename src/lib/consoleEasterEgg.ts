@@ -3,7 +3,7 @@
 export function printConsoleEasterEgg() {
   if (typeof window === 'undefined' || typeof console === 'undefined') return
 
-  const site = `https://tamkin-anwar.github.io${import.meta.env.BASE_URL}`
+  const site = 'https://anwarcreativestudio.com/'
   const bg = 'background:#0a0a0d;'
   const warm = 'color:#d9a15c;'
   const cool = 'color:#7c6fa8;'
