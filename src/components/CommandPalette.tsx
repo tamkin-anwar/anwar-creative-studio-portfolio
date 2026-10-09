@@ -25,7 +25,7 @@ const ITEMS: Item[] = [
   { group: 'Pages', label: 'Colophon', href: `${BASE}colophon/` },
   { group: 'Products', label: 'Doorsong', href: links.doorsong, external: true },
   { group: 'Products', label: 'Artha', description: 'Money, budgets, bills, and planning', href: links.artha, external: true },
-  { group: 'Products', label: 'Corres', description: 'In development · Email, considered. Brief, Needs You, Waiting.', href: `${BASE}#corres` },
+  { group: 'Products', label: 'Corres', description: 'In beta · Email, considered. Brief, Needs You, Waiting.', href: `${BASE}#corres` },
   { group: 'Products', label: 'Tether', href: links.tether, external: true },
   { group: 'Products', label: 'Jotfield', href: links.jotfield, external: true },
   { group: 'Products', label: 'Stub', href: links.stub, external: true },

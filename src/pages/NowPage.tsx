@@ -16,15 +16,12 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          It&rsquo;s a real daily driver, and it has just been fully redesigned: a quiet Obsidian and
-          Ivory look with New York serif type, a new titanium-and-sapphire mark, and Liquid Glass
-          controls, all drawn as vector so it stays razor-sharp. Apple Intelligence, running entirely
-          on-device, sorts what needs you, summarizes long threads, suggests replies and drafts them in
-          your voice, and rewrites what you write shorter, warmer, or more formal. Snooze understands
-          plain language, trackers are blocked on every open, and every Gmail account lives in one
-          inbox that stays in sync with your other devices. The first beta is now on TestFlight with a
-          few early testers. It&rsquo;s also built to be shaped around you: the tabs, the actions under an
-          email, every swipe, and which mailboxes show are all yours to arrange.
+          The first beta is on TestFlight with a few early testers, and it&rsquo;s my own daily
+          driver. It sorts what needs you, and Apple Intelligence, running entirely on the iPhone,
+          summarizes threads and drafts replies in your voice. Every kind of email reads the way it
+          was meant to, from plain text to designed newsletters in a true Dark mode, and the app is
+          built to be shaped around you: the tabs, the actions under an email, every swipe, and which
+          mailboxes show are yours to arrange. Next: more testers, then the App Store.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
