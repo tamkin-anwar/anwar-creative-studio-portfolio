@@ -22,7 +22,9 @@ export function NowPage() {
           on-device, sorts what needs you, summarizes long threads, suggests replies and drafts them in
           your voice, and rewrites what you write shorter, warmer, or more formal. Snooze understands
           plain language, trackers are blocked on every open, and every Gmail account lives in one
-          inbox that stays in sync with your other devices. I&rsquo;m running it daily on my own iPhone.
+          inbox that stays in sync with your other devices. The first beta is now on TestFlight with a
+          few early testers. It&rsquo;s also built to be shaped around you: the tabs, the actions under an
+          email, every swipe, and which mailboxes show are all yours to arrange.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
@@ -41,7 +43,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated September 25, 2026 &middot;{' '}
+        Last updated October 8, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
