@@ -16,12 +16,12 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          The first beta is on TestFlight with a few early testers, and it&rsquo;s my own daily
-          driver. It sorts what needs you, and Apple Intelligence, running entirely on the iPhone,
-          summarizes threads and drafts replies in your voice. Every kind of email reads the way it
-          was meant to, from plain text to designed newsletters in a true Dark mode, and the app is
-          built to be shaped around you: the tabs, the actions under an email, every swipe, and which
-          mailboxes show are yours to arrange. Next: more testers, then the App Store.
+          The beta is on TestFlight with early testers, eight builds in, and it&rsquo;s my own daily
+          driver. It sorts what needs you and keeps a Primary inbox that learns from every correction,
+          with Promotions, Social and Updates kept apart. Writing is now complete, from drafts and Send
+          Later to follow-up reminders and sharing straight into an email from any app, and Apple
+          Intelligence, running entirely on the iPhone, summarizes threads and drafts replies in your
+          voice. Next: more testers, Outlook, then the App Store.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
@@ -40,7 +40,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated October 8, 2026 &middot;{' '}
+        Last updated October 12, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
