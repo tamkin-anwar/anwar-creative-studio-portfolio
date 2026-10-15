@@ -16,12 +16,12 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          The beta is on TestFlight with early testers, eight builds in, and it&rsquo;s my own daily
-          driver. It sorts what needs you and keeps a Primary inbox that learns from every correction,
+          The beta is on TestFlight with early testers, nine builds in, and it&rsquo;s my own daily
+          driver, now for Outlook as well as Gmail, in one inbox. It sorts what needs you and keeps a Primary inbox that learns from every correction,
           with Promotions, Social and Updates kept apart. Writing is now complete, from drafts and Send
           Later to follow-up reminders and sharing straight into an email from any app, and Apple
           Intelligence, running entirely on the iPhone, summarizes threads and drafts replies in your
-          voice. Next: more testers, Outlook, then the App Store.
+          voice. Next: more testers, iCloud Mail, then the App Store.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the

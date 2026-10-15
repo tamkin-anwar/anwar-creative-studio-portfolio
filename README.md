@@ -1,6 +1,6 @@
 # Anwar Creative Studio Portfolio
 
-Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). Artha and the upcoming Corres lead the studio portfolio. Doorsong, Jotfield, Tether, and Stub make up the wider collection. Corres is in development and Ranna is planned.
+Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). Artha and the upcoming Corres lead the studio portfolio. Doorsong, Jotfield, Tether, and Stub make up the wider collection. Corres is in beta on TestFlight and Ranna is planned.
 
 Contact: contact@anwarcreativestudio.com
 
