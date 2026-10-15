@@ -33,7 +33,7 @@ export function NowPage() {
           and Stub are live and stable, with fixes as they come up. Ranna, keeping my mom’s handwritten
           recipes for the next generation, is planned but not started yet.
         </p>
-        <a href={`${import.meta.env.BASE_URL}#corres`} style={{ color: 'var(--accent-warm)' }}>See Corres in the studio →</a>
+        <a href={`${import.meta.env.BASE_URL}corres/`} style={{ color: 'var(--accent-warm)' }}>Visit Corres →</a>
       </div>
 
       <p

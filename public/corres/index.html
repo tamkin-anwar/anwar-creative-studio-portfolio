@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Corres · Email, considered.</title>
+<meta name="description" content="Corres is an email app for iPhone that reads and sorts your Gmail and Outlook on the device, brings forward what needs you, and never sends your mail to a server or an AI company.">
+<meta property="og:title" content="Corres · Email, considered.">
+<meta property="og:description" content="What needs you, first. Gmail and Outlook in one calm inbox, read and sorted on your iPhone.">
+<meta property="og:image" content="https://anwarcreativestudio.com/corres/img/brief-dark.jpg">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../corres-mark.jpg">
+<style>
+  /* Corres's own world: Obsidian and Ivory, one sapphire accent, New York
+     serif for what's read, SF for what's done, hairlines over borders. */
+  :root {
+    --bg: #0a0a0c; --bg-2: #101013; --surface: #141417; --raised: #1c1c20;
+    --ink: #f2f3f5; --sec: #a1a3aa; --ter: #8a8c93;
+    --line: rgba(255,255,255,.09); --line-2: rgba(255,255,255,.16);
+    --accent: #8fb4e8; --accent-ink: #0a0a0c; --glow: rgba(110,150,220,.22);
+    --gmail: #e0453a; --outlook: #3b82f6;
+    --serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Helvetica Neue", sans-serif;
+    --page: min(1120px, 100% - 40px);
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f3ec; --bg-2: #efebe2; --surface: #ffffff; --raised: #fbf9f4;
+      --ink: #141312; --sec: #5e5a54; --ter: #6f6a63;
+      --line: rgba(20,19,18,.10); --line-2: rgba(20,19,18,.18);
+      --accent: #2f5d9e; --accent-ink: #ffffff; --glow: rgba(47,93,158,.16);
+      color-scheme: light;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { width: var(--page); margin-inline: auto; }
+  .serif { font-family: var(--serif); font-weight: 400; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ter); }
+
+  /* Bar */
+  .bar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%);
+         background: color-mix(in srgb, var(--bg) 78%, transparent); border-bottom: 1px solid var(--line); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand img { width: 28px; height: 28px; border-radius: 7px; }
+  .brand span { font-family: var(--serif); font-size: 21px; letter-spacing: -.01em; }
+  .nav { display: flex; align-items: center; gap: 26px; font-size: 14.5px; color: var(--sec); }
+  .nav a { text-decoration: none; }
+  .nav a:hover { color: var(--ink); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 22px; border-radius: 999px;
+         font: 600 15px/1 var(--sans); text-decoration: none; transition: transform .2s ease, background .2s ease; white-space: nowrap; }
+  .btn:active { transform: scale(.98); }
+  .btn.primary { background: var(--ink); color: var(--bg); }
+  .btn.primary:hover { background: color-mix(in srgb, var(--ink) 88%, var(--accent)); }
+  .btn.ghost { border: 1px solid var(--line-2); color: var(--ink); }
+  .btn.ghost:hover { border-color: var(--ter); }
+  .btn.small { height: 36px; padding: 0 16px; font-size: 14px; }
+  .btn:focus-visible, .nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; padding: 84px 0 40px; }
+  .hero::before { content: ""; position: absolute; inset: -20% -10% auto; height: 760px; pointer-events: none;
+                  background: radial-gradient(48% 52% at 68% 42%, var(--glow), transparent 70%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(54px, 8.4vw, 104px); line-height: .98; letter-spacing: -.025em; margin: 18px 0 22px; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero .lede { font-size: clamp(18px, 2vw, 21px); color: var(--sec); max-width: 30em; margin: 0 0 32px; }
+  .hero .lede strong { color: var(--ink); font-weight: 500; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .cta-note { margin-top: 16px; font-size: 13.5px; color: var(--ter); }
+
+  /* The phone: a real screen in a drawn frame. */
+  .phone { position: relative; width: min(340px, 78vw); aspect-ratio: 552 / 1200; margin-inline: auto; border-radius: 15.5% / 7.2%;
+           padding: 3.2%; background: linear-gradient(145deg, #3a3b40, #121214 46%, #2a2b2f); box-shadow:
+           0 0 0 1px rgba(255,255,255,.06), 0 60px 120px -40px rgba(0,0,0,.65), 0 30px 60px -30px var(--glow); }
+  .phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 13% / 6%; }
+  .hero .phone { transform: rotate(-2deg); }
+  .float { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 16px;
+           background: color-mix(in srgb, var(--surface) 86%, transparent); border: 1px solid var(--line-2);
+           backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 20px 40px -24px rgba(0,0,0,.5); font-size: 13.5px; }
+  .float b { font-weight: 600; }
+  .float small { display: block; color: var(--ter); font-size: 12px; }
+  .float .ico { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; background: var(--raised); flex: none; }
+  .f1 { left: -8%; bottom: 14%; }
+  .f2 { right: -6%; top: 7%; }
+
+  /* Providers */
+  .providers { border-block: 1px solid var(--line); margin-top: 56px; }
+  .providers .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 34px; padding: 22px 0; color: var(--sec); font-size: 15px; }
+  .providers span { display: inline-flex; align-items: center; gap: 9px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  /* Sections */
+  section { padding: 120px 0; }
+  .head { max-width: 760px; margin-bottom: 56px; }
+  .head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 5.4vw, 62px); line-height: 1.04; letter-spacing: -.02em; margin: 14px 0 18px; }
+  .head p { color: var(--sec); font-size: 19px; margin: 0; max-width: 36em; }
+  .center { text-align: center; margin-inline: auto; }
+  .center p { margin-inline: auto; }
+
+  /* Story rows */
+  .story { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; padding: 56px 0; }
+  .story + .story { border-top: 1px solid var(--line); }
+  .story.flip .copy { order: 2; }
+  .story h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.08; letter-spacing: -.015em; margin: 12px 0 14px; }
+  .story p { color: var(--sec); margin: 0 0 18px; }
+  .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .ticks li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; color: var(--ink); font-size: 15.5px; }
+  .ticks svg { width: 16px; height: 16px; margin-top: 4px; stroke: var(--accent); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Drawn UI: a row of the inbox, an account sheet, a notification. */
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 22px; box-shadow: 0 30px 60px -40px rgba(0,0,0,.45); }
+  .stack { display: grid; gap: 14px; max-width: 420px; margin-inline: auto; width: 100%; }
+  .notif { display: grid; grid-template-columns: 38px 1fr auto; gap: 12px; align-items: start; padding: 14px 16px; border-radius: 20px;
+           background: color-mix(in srgb, var(--raised) 92%, transparent); border: 1px solid var(--line); }
+  .notif img { width: 38px; height: 38px; border-radius: 9px; }
+  .notif b { font-weight: 600; font-size: 14.5px; }
+  .notif p { margin: 1px 0 0; font-size: 14px; color: var(--sec); line-height: 1.4; }
+  .notif time { font-size: 12.5px; color: var(--ter); }
+  .acct { display: grid; grid-template-columns: 42px 1fr auto; gap: 14px; align-items: center; padding: 12px 4px; }
+  .acct + .acct { border-top: 1px solid var(--line); }
+  .ring { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font: 600 14px/1 var(--sans); color: var(--ink);
+          background: var(--raised); box-shadow: 0 0 0 2.5px var(--c), 0 0 0 5px var(--surface); }
+  .acct b { font-weight: 600; display: block; font-size: 16px; }
+  .acct small { color: var(--ter); font-size: 13.5px; }
+  .acct .count { font-variant-numeric: tabular-nums; color: var(--sec); font-size: 15px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; font: 600 10.5px/1 var(--sans); letter-spacing: .06em; color: var(--ter);
+         padding: 4px 7px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); }
+  .tag i { width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
+  .row { display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 14px 0; }
+  .row + .row { border-top: 1px solid var(--line); }
+  .av { width: 40px; height: 40px; border-radius: 50%; background: var(--raised); display: grid; place-items: center; font: 600 13px/1 var(--sans); color: var(--sec); }
+  .row .top { display: flex; align-items: center; gap: 8px; }
+  .row .top b { font-weight: 600; flex: 1; }
+  .row .subj { font-size: 14.5px; margin: 1px 0; }
+  .row .why { font-size: 13px; color: var(--accent); margin-top: 3px; }
+  .sig { font-family: var(--serif); font-size: 17px; line-height: 1.5; color: var(--ink); }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 13.5px; color: var(--sec); }
+  .pill.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  /* Grid of smaller features */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+  .cell { background: var(--bg); padding: 30px 28px 32px; }
+  .cell svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .cell h4 { font-size: 17px; font-weight: 600; margin: 16px 0 6px; }
+  .cell p { color: var(--sec); font-size: 15px; margin: 0; }
+
+  /* Privacy */
+  .privacy { background: var(--bg-2); border-block: 1px solid var(--line); }
+  .promise { font-family: var(--serif); font-size: clamp(30px, 4.4vw, 50px); line-height: 1.14; letter-spacing: -.015em; max-width: 21em; margin: 18px 0 48px; }
+  .promise em { color: var(--accent); font-style: italic; }
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+  .three h4 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+  .three p { color: var(--sec); font-size: 15.5px; margin: 0; }
+  .fine { margin-top: 44px; font-size: 14px; color: var(--ter); max-width: 52em; }
+  .fine a { color: var(--accent); }
+
+  /* Pricing */
+  .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 880px; margin-inline: auto; }
+  .plan { border: 1px solid var(--line-2); border-radius: 24px; padding: 32px; background: var(--surface); }
+  .plan.pro { border-color: color-mix(in srgb, var(--accent) 55%, transparent); box-shadow: 0 30px 80px -50px var(--glow); }
+  .plan h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; margin: 0; }
+  .price { font-family: var(--serif); font-size: 46px; letter-spacing: -.02em; margin: 14px 0 2px; }
+  .price small { font-family: var(--sans); font-size: 15px; color: var(--ter); letter-spacing: 0; }
+  .plan .sub { color: var(--ter); font-size: 14px; margin: 0 0 22px; }
+
+  /* FAQ */
+  .faq { max-width: 780px; margin-inline: auto; }
+  details { border-top: 1px solid var(--line); padding: 20px 0; }
+  details:last-child { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; font-size: 18px; font-weight: 500; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--ter); font-weight: 300; font-size: 24px; line-height: 1; transition: transform .2s ease; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { color: var(--sec); margin: 12px 0 0; max-width: 40em; }
+
+  /* Closing */
+  .closing { text-align: center; padding: 140px 0 120px; }
+  .closing img { width: 84px; height: 84px; border-radius: 20px; margin: 0 auto 26px; box-shadow: 0 30px 60px -30px var(--glow); }
+  .closing h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 6.4vw, 76px); letter-spacing: -.02em; line-height: 1; margin: 0 0 18px; }
+  .closing p { color: var(--sec); font-size: 19px; margin: 0 auto 30px; max-width: 30em; }
+  .closing .cta { justify-content: center; }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0 56px; color: var(--ter); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 32px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
+  footer a { text-decoration: none; color: var(--sec); }
+  footer a:hover { color: var(--ink); }
+  footer .legal { flex-basis: 100%; font-size: 12.5px; line-height: 1.6; max-width: 62em; }
+
+  /* Reveal on scroll, quietly. */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  @media (max-width: 900px) {
+    .hero { padding-top: 48px; }
+    .hero .wrap, .story { grid-template-columns: 1fr; gap: 44px; }
+    .story.flip .copy { order: 0; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .three { grid-template-columns: 1fr; gap: 26px; }
+    .plans { grid-template-columns: 1fr; }
+    .nav .hide-s { display: none; }
+    section { padding: 88px 0; }
+    .f1 { left: 0; } .f2 { right: 0; }
+  }
+  @media (max-width: 560px) {
+    :root { --page: calc(100% - 32px); }
+    .grid { grid-template-columns: 1fr; }
+    .nav { gap: 16px; }
+    .float { display: none; }
+    .providers .wrap { gap: 10px 20px; font-size: 14px; }
+    .hero h1 { margin-top: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Corres home"><img src="../corres-mark.jpg" alt=""><span>corres</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-s" href="#features">Features</a>
+      <a class="hide-s" href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn small primary" href="mailto:support@corres.app?subject=Corres%20early%20access">Get early access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Email for iPhone · Gmail and Outlook</p>
+        <h1>Email,<br><em>considered.</em></h1>
+        <p class="lede">Open Corres and it has already read the morning for you: <strong>what needs you rises to the top</strong>, with the reason why, and everything else waits quietly until you&rsquo;re ready. All on your iPhone.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:support@corres.app?subject=Corres%20early%20access">Get early access</a>
+          <a class="btn ghost" href="#privacy">How it stays private</a>
+        </div>
+        <p class="cta-note">In beta on TestFlight. Coming to the App Store.</p>
+      </div>
+      <div style="position:relative">
+        <div class="float f1" aria-hidden="true">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></span>
+          <span><b>Needs you</b><small>Maya asked you to approve the direction</small></span>
+        </div>
+        <div class="phone"><img src="img/brief-dark.jpg" width="552" height="1200" alt="The Corres Brief: three conversations need you, with who asked what, and the replies you're waiting on."></div>
+        <div class="float f2" aria-hidden="true">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <span><b>Read on this iPhone</b><small>Never on a server</small></span>
+        </div>
+      </div>
+    </div>
+    <div class="providers">
+      <div class="wrap">
+        <span><i class="dot" style="background:var(--gmail)"></i>Gmail &amp; Google Workspace</span>
+        <span><i class="dot" style="background:var(--outlook)"></i>Outlook.com, Hotmail &amp; Live</span>
+        <span><i class="dot" style="background:var(--outlook)"></i>Microsoft 365</span>
+        <span>Every account in one inbox</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">How Corres reads your mail</p>
+        <h2>The few emails that matter, first.</h2>
+        <p>Most email asks nothing of you. Corres finds the ones that do, says why, and lets the rest step back, so a full inbox reads like a short note.</p>
+      </div>
+
+      <div class="story reveal">
+        <div class="copy">
+          <p class="eyebrow">Brief</p>
+          <h3>Your morning, in a paragraph.</h3>
+          <p>Who&rsquo;s waiting on you, what they asked, what&rsquo;s due, and who still owes you a reply. Written fresh each time you open Corres, from your own mail.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Needs You: only mail that asks something of you, with the reason</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Waiting: replies you&rsquo;re owed, with a nudge when they&rsquo;re late</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Deadlines and bills spotted in the email itself</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <div class="row"><span class="av">SL</span><div><div class="top"><b>Sofia Laurent</b><span class="tag" style="--c:var(--gmail)"><i></i>GMAIL</span></div><div class="subj">A place at the table</div><div class="why">↳ Sofia asked you to confirm Thursday</div></div></div>
+            <div class="row"><span class="av">MC</span><div><div class="top"><b>Maya Chen</b><span class="tag" style="--c:var(--outlook)"><i></i>WORK</span></div><div class="subj">The next chapter</div><div class="why">↳ Maya asked you to approve the creative direction</div></div></div>
+            <div class="row"><span class="av">OG</span><div><div class="top"><b>Oliver Grant</b><span class="tag" style="--c:var(--gmail)"><i></i>GMAIL</span></div><div class="subj">A moment before we move forward</div><div class="why">↳ Oliver is waiting for your choice between two options</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="story flip reveal">
+        <div class="copy">
+          <p class="eyebrow">Mail</p>
+          <h3>A Primary inbox that&rsquo;s actually primary.</h3>
+          <p>People and what&rsquo;s urgent up top. Promotions, Social and Updates beside it, placed more carefully than Gmail&rsquo;s own tabs. Move one email, or everything from a sender, and Corres learns, and shows you what it learned.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A security code or an appointment never hides in Updates</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Spam dressed up as a question stays out of the way</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Swipes, tabs and the toolbar under an email are yours to set</li>
+          </ul>
+        </div>
+        <div class="phone" style="width:min(300px,72vw)"><img src="img/mail-dark.jpg" width="552" height="1200" loading="lazy" alt="The Corres Mail list, sorted into Primary, Promotions, Social and Updates."></div>
+      </div>
+
+      <div class="story reveal">
+        <div class="copy">
+          <p class="eyebrow">Notifications</p>
+          <h3>The moment mail lands, and only when it should.</h3>
+          <p>New Outlook mail notifies in seconds, even with Corres closed, with who it&rsquo;s from and what it says. You choose, per account, whether that&rsquo;s everything, people and time-sensitive mail, or only what needs you.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Archive, mark read or reply right from the notification</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Newsletters arrive silently; VIPs always come through</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A morning Brief at the time you pick</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="notif"><img src="../corres-mark.jpg" alt=""><div><b>Maya Chen</b><p><span style="color:var(--ink)">The next chapter</span><br>Your approval on the final direction is the last piece we need…</p></div><time>now</time></div>
+          <div class="notif" style="opacity:.75"><img src="../corres-mark.jpg" alt=""><div><b>James Okafor</b><p><span style="color:var(--ink)">Partnership proposal</span><br>I&rsquo;ll send the revised scope once our team has reviewed it.</p></div><time>2m</time></div>
+          <div class="notif" style="opacity:.5"><img src="../corres-mark.jpg" alt=""><div><b>Morning Brief</b><p>Three conversations need you. You&rsquo;re waiting on two replies.</p></div><time>8:00</time></div>
+        </div>
+      </div>
+
+      <div class="story flip reveal">
+        <div class="copy">
+          <p class="eyebrow">Accounts</p>
+          <h3>Every account, one calm inbox.</h3>
+          <p>Gmail, Google Workspace, Outlook and Microsoft 365, side by side, newest first. Each keeps its own name, its own color, its own notifications and signatures. Tap your photo to see just one.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Colors you already know: Gmail red, Outlook blue, or your own</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Several signatures: a full one for new mail, a short one for replies</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Keep an account out of All Inboxes while it still syncs</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <div class="acct"><span class="ring" style="--c:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5 6h14l2 7v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z"/></svg></span><span><b>All Inboxes</b><small>Every account, newest first</small></span><span class="count">6</span></div>
+            <div class="acct"><span class="ring" style="--c:var(--gmail)">TA</span><span><b>Personal</b><small>you@gmail.com</small></span><span class="count">2</span></div>
+            <div class="acct"><span class="ring" style="--c:var(--outlook)">TA</span><span><b>Work</b><small>you@company.com</small></span><span class="count">4</span></div>
+          </div>
+          <div class="card">
+            <p class="eyebrow" style="margin:0 0 12px">Signature</p>
+            <div class="pills" style="margin-bottom:16px"><span class="pill on">Full</span><span class="pill">Short</span><span class="pill">No Signature</span></div>
+            <div class="sig">Best regards,<br>Tamkin Anwar<br><span style="color:var(--ter);font-family:var(--sans);font-size:14px">Anwar Creative Studio</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">And everything you&rsquo;d expect</p>
+        <h2>Complete, down to the details.</h2>
+      </div>
+      <div class="grid reveal">
+        <div class="cell"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><h4>Writing, finished</h4><p>Drafts that wait for you, bold, lists and links, sending from your other addresses, and a check for a forgotten attachment.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h4>Send Later &amp; follow-ups</h4><p>Schedule an email, and get a reminder if nobody replies. Undo Send for when you change your mind.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3.2-6.9"/><path d="M21 4v5h-5"/></svg><h4>Summaries &amp; replies</h4><p>Long threads summarized and checked against the email itself, and replies drafted in your voice, by Apple Intelligence on the iPhone.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><h4>Ask your mail</h4><p>&ldquo;When is my flight?&rdquo; Answered from your own email, with the messages it came from.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><h4>Invitations &amp; Out of Office</h4><p>Accept, Maybe or Decline right in the email, and turn your automatic reply on from your phone.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3M7 8l5-5 5 5"/></svg><h4>Share to Corres</h4><p>Share a page or photos from any app and write the email right in the Share sheet.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/></svg><h4>Unsubscribe in a tap</h4><p>Leave a mailing list the way the sender intended, without visiting their site.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg><h4>No tracking pixels</h4><p>Remote images and read-receipt trackers are blocked until you choose to show them.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg><h4>iPhone and iPad</h4><p>Light and dark, every text size, VoiceOver, and a three-column layout on iPad.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" class="privacy">
+    <div class="wrap">
+      <p class="eyebrow reveal">Private by design</p>
+      <p class="promise reveal">Your email is read on your iPhone. <em>Not on our servers, and never by an AI company.</em></p>
+      <div class="three reveal">
+        <div><h4>Stored on your device</h4><p>Mail comes straight from Google or Microsoft to your iPhone and stays there, protected by iOS. Corres&rsquo;s servers never receive it.</p></div>
+        <div><h4>Sorted on your device</h4><p>Needs You, summaries, suggested replies and Ask all run on the iPhone. Nothing is sent to an AI service or used to train one.</p></div>
+        <div><h4>Nothing to sell</h4><p>No ads, no analytics, no tracking SDKs, no read receipts. Corres is paid for by the people who use it.</p></div>
+      </div>
+      <p class="fine reveal">Read the full <a href="privacy/">privacy policy</a>. Corres&rsquo;s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2>Free to read. Pro to think.</h2>
+        <p>Corres is a complete mail app for free. Pro adds the parts that read your mail for you.</p>
+      </div>
+      <div class="plans reveal">
+        <div class="plan">
+          <h3>Corres</h3>
+          <div class="price">Free</div>
+          <p class="sub">Every account, forever</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Read, reply, archive and search</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Gmail and Outlook in one inbox</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Notifications, signatures, swipes</li>
+          </ul>
+        </div>
+        <div class="plan pro">
+          <h3>Corres Pro</h3>
+          <div class="price">$20 <small>a month · or $200 a year</small></div>
+          <p class="sub">Try it free first</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Brief, Needs You and Waiting</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Summaries, replies in your voice, and Ask</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Everything in Corres, free</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head center reveal"><h2>Questions</h2></div>
+      <div class="faq reveal">
+        <details><summary>Which email accounts work with Corres?</summary><p>Gmail and Google Workspace, Outlook.com, Hotmail and Live, and work or school Microsoft 365 accounts. Add as many as you like; they share one inbox.</p></details>
+        <details><summary>Does Corres read my email on its servers?</summary><p>No. Your mail is downloaded from Google or Microsoft directly to your iPhone and processed there. An optional notification relay only learns that your mailbox changed, never what&rsquo;s in it. The <a href="privacy/" style="color:var(--accent)">privacy policy</a> has the details.</p></details>
+        <details><summary>Do I need Apple Intelligence?</summary><p>No. Sorting, Needs You, Waiting and the Brief work on every supported iPhone. Summaries and drafted replies use Apple Intelligence where your iPhone has it.</p></details>
+        <details><summary>Is there an iPad version?</summary><p>Yes, Corres runs on iPhone and iPad, with a three-column layout on iPad.</p></details>
+        <details><summary>How do I get it?</summary><p>Corres is in beta on TestFlight. <a href="mailto:support@corres.app?subject=Corres%20early%20access" style="color:var(--accent)">Ask for early access</a>, and it&rsquo;s coming to the App Store.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="closing">
+    <img src="../corres-mark.jpg" alt="">
+    <h2>Email, considered.</h2>
+    <p>A calmer inbox, read on your iPhone, from a small studio that would rather you spent less time in it.</p>
+    <div class="cta"><a class="btn primary" href="mailto:support@corres.app?subject=Corres%20early%20access">Get early access</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Corres, by <a href="../">Anwar Creative Studio</a></span>
+    <nav aria-label="Footer">
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+      <a href="mailto:support@corres.app">Support</a>
+      <a href="mailto:privacy@corres.app">privacy@corres.app</a>
+    </nav>
+    <p class="legal">Corres&rsquo;s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. Gmail and Google Workspace are trademarks of Google LLC. Outlook and Microsoft 365 are trademarks of Microsoft Corporation. Apple Intelligence, iPhone and iPad are trademarks of Apple Inc. © 2026 Anwar Creative Studio.</p>
+  </div>
+</footer>
+
+<script>
+  // Sections ease in as they reach the screen; everything is visible
+  // without this script, and with Reduce Motion.
+  const io = 'IntersectionObserver' in window && new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io ? io.observe(el) : el.classList.add('in'));
+</script>
+</body>
+</html>
