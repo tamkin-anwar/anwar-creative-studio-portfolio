@@ -17,11 +17,11 @@ export function NowPage() {
         </p>
         <p>
           The beta is on TestFlight with early testers, ten builds in, and it&rsquo;s my own daily
-          driver, now for Outlook as well as Gmail, in one inbox. It sorts what needs you and keeps a Primary inbox that learns from every correction,
+          driver, for Gmail, Outlook and now iCloud Mail, in one inbox. It sorts what needs you and keeps a Primary inbox that learns from every correction,
           with Promotions, Social and Updates kept apart. Writing is now complete, from drafts and Send
           Later to follow-up reminders and sharing straight into an email from any app, and Apple
           Intelligence, running entirely on the iPhone, summarizes threads and drafts replies in your
-          voice. Next: more testers, iCloud Mail, then the App Store.
+          voice. Next: more testers, then the App Store.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
@@ -40,7 +40,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated October 12, 2026 &middot;{' '}
+        Last updated October 18, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"

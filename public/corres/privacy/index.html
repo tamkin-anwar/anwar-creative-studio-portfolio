@@ -32,18 +32,19 @@
   <p class="eyebrow">Corres · Privacy Policy</p>
   <h1>Your mail stays yours.</h1>
   <p class="lede">Corres reads and sorts your email on your iPhone. It doesn't sell your data, show ads, or send your mail to an AI company.</p>
-  <p>Effective October 14, 2026. Corres is made by Anwar Creative Studio (“we”).</p>
+  <p>Effective October 18, 2026. Corres is made by Anwar Creative Studio (“we”).</p>
 
   <h2>What Corres accesses</h2>
   <p>When you connect a Gmail account, you sign in with Google directly; Corres never sees your password. Google gives Corres permission to read, send and organize (archive, label, mark read, move to Trash) your Gmail, which is what an email app needs to work. If you open Out of Office in Settings, Corres asks Google for one more permission, to change your Gmail settings, so it can turn your vacation reply on and off; it's asked for only then, never at sign-in. You can revoke any of this anytime in your Google Account settings or by removing the account in Corres.</p>
   <p>When you connect an Outlook account (Outlook.com, Hotmail, Live, or a work or school Microsoft 365 account), you sign in with Microsoft directly; Corres never sees your password. Microsoft gives Corres permission to read and organize your mail (archive, move, flag, mark read, categories), send mail as you, change your mailbox settings so Out of Office can turn your automatic replies on and off, and read your basic profile (your name and photo, shown in Corres). You can revoke this anytime at account.microsoft.com under Privacy → Apps and services, through your organization's IT for a work account, or by removing the account in Corres.</p>
+  <p>When you connect iCloud Mail, Apple asks other mail apps for an app-specific password instead of your Apple Account password. You make one at account.apple.com and give it to Corres, which checks it with iCloud and keeps it in your device's Keychain. Corres connects to iCloud's mail servers directly with it to read, organize and send your mail, and to file a copy of what you send in Sent. Corres never sees your Apple Account password. You can turn the app-specific password off anytime at account.apple.com, or remove the account in Corres.</p>
   <p>If you allow it, Corres also reads your iPhone Contacts, on your device only, to suggest people as you type and show their photos. It never uploads them.</p>
 
   <h2>Where your mail is processed</h2>
   <ul>
-    <li><strong>On your device.</strong> Your messages are downloaded from Google or Microsoft to your iPhone or iPad and stored there, protected by iOS. Sorting, summaries, suggested replies, rewrites, dictation and Ask your mail all run on your device using Apple Intelligence and Apple's on-device speech recognition.</li>
+    <li><strong>On your device.</strong> Your messages are downloaded from Google, Microsoft or Apple to your iPhone or iPad and stored there, protected by iOS. Sorting, summaries, suggested replies, rewrites, dictation and Ask your mail all run on your device using Apple Intelligence and Apple's on-device speech recognition.</li>
     <li><strong>Never on our servers, never with AI companies.</strong> The contents of your email are not sent to Anwar Creative Studio or to any AI provider.</li>
-    <li><strong>Your sign-in permission</strong> is kept in your device's Keychain, shared only with Corres's own Share extension so you can write an email from the Share sheet.</li>
+    <li><strong>Your sign-in permission</strong> (or, for iCloud, your app-specific password) is kept in your device's Keychain, shared only with Corres's own Share extension so you can write an email from the Share sheet.</li>
     <li><strong>New-mail notifications are written on your device.</strong> When a notification arrives, Corres's notification extension fetches that one email from Google or Microsoft with your own sign-in and shows its sender, subject and opening words. Nothing about the email passes through our servers.</li>
     <li><strong>Your account settings</strong> (each account's name, color, signatures and notification choices) are kept on your device.</li>
     <li><strong>What Corres learns from you</strong> (where you move a sender's mail, what you mark as needing no action, your habits) is kept on your device, and you can see and forget any of it in Settings.</li>
@@ -52,7 +53,7 @@
 
   <h2>What our servers see</h2>
   <ul>
-    <li><strong>New-mail notifications (optional).</strong> If you turn on notifications, a small relay stores your device's notification token and the email addresses of your connected accounts, so it can tell your device that something changed. Google tells the relay only that a mailbox changed. For an Outlook account, Microsoft tells it that a new message arrived and gives that message's identifier, which the relay passes straight to your device so it can fetch the email itself; the relay keeps the Outlook subscription's identifier and a scrambled (hashed) copy of the secret Corres uses to confirm notifications really come from Microsoft. The relay never receives a subject, sender or message. Turning notifications off or removing an account deletes these records.</li>
+    <li><strong>New-mail notifications (optional).</strong> If you turn on notifications, a small relay stores your device's notification token and the email addresses of your connected accounts, so it can tell your device that something changed. Google tells the relay only that a mailbox changed. For an Outlook account, Microsoft tells it that a new message arrived and gives that message's identifier, which the relay passes straight to your device so it can fetch the email itself; the relay keeps the Outlook subscription's identifier and a scrambled (hashed) copy of the secret Corres uses to confirm notifications really come from Microsoft. The relay never receives a subject, sender or message. Turning notifications off or removing an account deletes these records. iCloud Mail doesn't use the relay: Corres checks iCloud itself, from your device, whenever iOS gives it time.</li>
   </ul>
 
   <h2>What we don't do</h2>
@@ -69,7 +70,7 @@
   <p>Corres Pro is sold through the App Store. Apple handles payment; we receive no card details. Your plan is verified on your device from Apple's signed receipts.</p>
 
   <h2>Deleting your data</h2>
-  <p>Remove an account in Corres (Settings → the account → Remove Account) to delete its mail and settings from your device and its notification record from the relay. Deleting the app removes everything stored on your device. Nothing is deleted from Gmail or Outlook themselves.</p>
+  <p>Remove an account in Corres (Settings → the account → Remove Account) to delete its mail and settings from your device and its notification record from the relay. Deleting the app removes everything stored on your device. Nothing is deleted from Gmail, Outlook or iCloud themselves.</p>
 
   <h2>Children</h2>
   <p>Corres is not directed to children under 13.</p>
