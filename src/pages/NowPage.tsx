@@ -16,7 +16,7 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          The beta is on TestFlight with early testers, ten builds in, and it&rsquo;s my own daily
+          The beta is on TestFlight with early testers, eleven builds in, and it&rsquo;s my own daily
           driver, for Gmail, Outlook and now iCloud Mail, in one inbox. It sorts what needs you and keeps a Primary inbox that learns from every correction,
           with Promotions, Social and Updates kept apart. Writing is now complete, from drafts and Send
           Later to follow-up reminders and sharing straight into an email from any app, and Apple
