@@ -134,22 +134,40 @@
   .center { text-align: center; margin-inline: auto; }
   .center p { margin-inline: auto; }
 
-  /* Every screen: the Mac window, with iPad and iPhone in front of it. */
-  .devices-stage { position: relative; max-width: 1080px; margin: 8px auto 0; padding-bottom: 9%; }
-  .macwin { width: 84%; margin-left: auto; border-radius: 12px; overflow: hidden; background: #0b0b0d;
-            box-shadow: 0 0 0 1px rgba(255,255,255,.14), 0 40px 90px rgba(0,0,0,.55), 0 10px 30px rgba(0,0,0,.35); }
-  .macwin img { display: block; width: 100%; height: auto; }
-  .ipad { position: absolute; left: 0; bottom: 0; width: 31%; border-radius: 7% / 5.2%; padding: 2.4%;
-          background: linear-gradient(145deg, #4a4c52, #1d1e21 40%, #2b2d31);
-          box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 30px 70px rgba(0,0,0,.6); }
-  .ipad .glass { background: #020203; border-radius: 5.2% / 3.9%; padding: 3.2%; }
-  .ipad img { display: block; width: 100%; height: auto; border-radius: 2.6% / 1.95%; }
-  .devices-stage .phone { position: absolute; right: -1%; bottom: -3%; width: 15.5%; margin: 0; }
+  /* Every screen: a MacBook Pro, with an iPad Pro and an iPhone in front. */
+  .devices-stage { position: relative; max-width: 1080px; margin: 8px auto 0; padding-bottom: 6%; }
+  .macbook { width: 80%; margin: 0 5% 0 auto; }
+  .mb-lid { position: relative; background: #050506; border-radius: 3.1% / 4.6%; padding: 1.5% 1.5% 2.3%;
+            box-shadow: 0 0 0 1.5px #3a3b40, 0 0 0 2.5px #18191b, 0 40px 90px rgba(0,0,0,.55); }
+  .mb-lid::after { content: ""; position: absolute; left: 50%; top: 1.5%; width: 9.5%; height: 3.2%; transform: translateX(-50%);
+                   background: #050506; border-radius: 0 0 22% 22% / 0 0 60% 60%; }
+  .mb-display { position: relative; aspect-ratio: 1.547; overflow: hidden; border-radius: .6%; container-type: inline-size;
+                background: radial-gradient(120% 90% at 20% 0%, #23324d 0%, #12151d 45%, #0b0c10 100%); }
+  .mb-menubar { position: absolute; inset: 0 0 auto 0; height: 3.4%; display: flex; align-items: center; justify-content: space-between;
+                padding: 0 1.6%; font-size: 1.05cqw; color: rgba(255,255,255,.88); background: rgba(0,0,0,.35); font-weight: 500; }
+  .mb-menubar b { font-weight: 700; margin-right: 1.6cqw; }
+  .mb-menubar span + span { margin-left: 1.5cqw; }
+  .mb-window { position: absolute; left: 4%; top: 6.2%; width: 92%; border-radius: .9cqw; overflow: hidden;
+               box-shadow: 0 0 0 1px rgba(255,255,255,.14), 0 1.4cqw 3.6cqw rgba(0,0,0,.55); }
+  .mb-window img { display: block; width: 100%; height: auto; }
+  .mb-base { position: relative; width: 114%; margin-left: -7%; height: 0; padding-bottom: 2.3%;
+             background: linear-gradient(180deg, #5b5d63 0%, #2c2d31 38%, #17181a 100%);
+             border-radius: 0 0 46% 46% / 0 0 100% 100%; box-shadow: 0 14px 30px rgba(0,0,0,.5); }
+  .mb-base::before { content: ""; position: absolute; left: 50%; top: 0; width: 15%; height: 42%; transform: translateX(-50%);
+                     background: linear-gradient(180deg, #17181b, #2a2b2f); border-radius: 0 0 40% 40% / 0 0 100% 100%; }
+  .ipad { position: absolute; left: 0; bottom: 0; width: 29%; padding: .5%; border-radius: 6.4% / 4.8%;
+          background: linear-gradient(145deg, #6d6f75 0%, #2b2c30 35%, #1b1c1f 70%, #4a4c51 100%);
+          box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 8px 20px rgba(0,0,0,.35); }
+  .ipad .glass { position: relative; background: #010102; border-radius: 6% / 4.5%; padding: 4%; }
+  .ipad .glass::after { content: ""; position: absolute; right: 1.7%; top: 50%; width: 1.4%; aspect-ratio: 1; transform: translateY(-50%);
+                        border-radius: 50%; background: radial-gradient(circle at 35% 35%, #2b3a55, #07080b 70%); }
+  .ipad img { display: block; width: 100%; height: auto; border-radius: 2.8% / 2.1%; }
+  .devices-stage .phone { position: absolute; right: -1%; bottom: -2%; width: 15.5%; margin: 0; }
   @media (max-width: 900px) {
-    .macwin { width: 100%; }
-    .ipad { width: 40%; left: -2%; bottom: -6%; }
-    .devices-stage { padding-bottom: 22%; }
-    .devices-stage .phone { width: 21%; right: -2%; bottom: -8%; }
+    .macbook { width: 88%; margin: 0 6%; }
+    .ipad { width: 40%; left: -2%; bottom: -8%; }
+    .devices-stage { padding-bottom: 24%; }
+    .devices-stage .phone { width: 21%; right: -2%; bottom: -10%; }
   }
 
   /* Story rows */
@@ -408,7 +426,7 @@
     </div>
   </section>
 
-  <section id="devices" style="padding-top:0">
+  <section id="devices" style="padding-top:0; overflow-x: clip">
     <div class="wrap">
       <div class="head center reveal">
         <p class="eyebrow">iPhone, iPad and Mac</p>
@@ -416,7 +434,15 @@
         <p>The same Needs You, the same sorting and your same accounts on all three. Add an account once and it&rsquo;s on your other devices too, through iCloud Keychain. On the Mac, a native app with Mail&rsquo;s shortcuts and Gmail&rsquo;s.</p>
       </div>
       <div class="devices-stage reveal">
-        <div class="macwin"><img src="img/mac-dark.jpg" width="1362" height="870" loading="lazy" alt="Corres on a Mac: the sidebar, Needs You with the reason for each email, and an open conversation"></div>
+        <div class="macbook">
+          <div class="mb-lid">
+            <div class="mb-display">
+              <div class="mb-menubar" aria-hidden="true"><div><b>Corres</b><span>File</span><span>Edit</span><span>View</span><span>Mailbox</span><span>Message</span><span>Window</span></div><div><span>Mon Oct 19</span><span>9:41 AM</span></div></div>
+              <div class="mb-window"><img src="img/mac-dark.jpg" width="1362" height="870" loading="lazy" alt="Corres on a Mac: the sidebar, Needs You with the reason for each email, and an open conversation"></div>
+            </div>
+          </div>
+          <div class="mb-base" aria-hidden="true"></div>
+        </div>
         <div class="ipad"><div class="glass"><img src="img/ipad-dark.jpg" width="1032" height="1376" loading="lazy" alt="Corres on iPad: three columns with Needs You and an open email"></div></div>
         <div class="phone"><div class="glass"><img src="img/mail-dark.jpg" loading="lazy" alt="Corres on iPhone: the Primary list"></div></div>
       </div>
