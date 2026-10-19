@@ -36,7 +36,7 @@ export function Flagships() {
           description={corres.description}
           disclosureLabel="What is taking shape"
           disclosureDetail={corres.progress}
-          link={<a className="flagship-link" href={`${import.meta.env.BASE_URL}corres/`}>Visit Corres →</a>}
+          link={<a className="flagship-link" href={links.corres} target="_blank" rel="noreferrer">Visit Corres ↗</a>}
         />
       </div>
     </section>
