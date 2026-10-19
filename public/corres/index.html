@@ -162,12 +162,14 @@
   .ipad .glass::after { content: ""; position: absolute; right: 1.7%; top: 50%; width: 1.4%; aspect-ratio: 1; transform: translateY(-50%);
                         border-radius: 50%; background: radial-gradient(circle at 35% 35%, #2b3a55, #07080b 70%); }
   .ipad img { display: block; width: 100%; height: auto; border-radius: 2.8% / 2.1%; }
-  .devices-stage .phone { position: absolute; right: -1%; bottom: -2%; width: 15.5%; margin: 0; }
+  /* In a slot of its own, so its bezel is measured from the phone, not the stage. */
+  .phone-slot { position: absolute; right: -1%; bottom: -2%; width: 15.5%; }
+  .phone-slot .phone { width: 100%; padding: 1.7%; margin: 0; }
   @media (max-width: 900px) {
     .macbook { width: 88%; margin: 0 6%; }
     .ipad { width: 40%; left: -2%; bottom: -8%; }
     .devices-stage { padding-bottom: 24%; }
-    .devices-stage .phone { width: 21%; right: -2%; bottom: -10%; }
+    .phone-slot { width: 21%; right: -2%; bottom: -10%; }
   }
 
   /* Story rows */
@@ -444,7 +446,7 @@
           <div class="mb-base" aria-hidden="true"></div>
         </div>
         <div class="ipad"><div class="glass"><img src="img/ipad-dark.jpg" width="1032" height="1376" loading="lazy" alt="Corres on iPad: three columns with Needs You and an open email"></div></div>
-        <div class="phone"><div class="glass"><img src="img/mail-dark.jpg" loading="lazy" alt="Corres on iPhone: the Primary list"></div></div>
+        <div class="phone-slot"><div class="phone"><div class="glass"><img src="img/mail-dark.jpg" loading="lazy" alt="Corres on iPhone: the Primary list"></div></div></div>
       </div>
     </div>
   </section>
