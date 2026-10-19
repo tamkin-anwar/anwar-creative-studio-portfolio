@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Corres · Email, considered.</title>
-<meta name="description" content="Corres is an email app for iPhone that reads and sorts your Gmail, Outlook and iCloud Mail on the device, brings forward what needs you, and never sends your mail to a server or an AI company.">
+<meta name="description" content="Corres is an email app for iPhone, iPad and Mac that reads and sorts your Gmail, Outlook and iCloud Mail on your own devices, brings forward what needs you, and never sends your mail to a server or an AI company.">
 <link rel="canonical" href="https://corres.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Corres">
 <meta property="og:url" content="https://corres.app/">
 <meta property="og:title" content="Corres · Email, considered.">
-<meta property="og:description" content="What needs you, first. Gmail, Outlook, iCloud and more in one calm inbox, read and sorted on your iPhone.">
+<meta property="og:description" content="What needs you, first. Gmail, Outlook, iCloud and more in one calm inbox, read and sorted on your iPhone, iPad and Mac.">
 <meta property="og:image" content="https://corres.app/img/share.jpg">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
@@ -133,6 +133,24 @@
   .head p { color: var(--sec); font-size: 19px; margin: 0; max-width: 36em; }
   .center { text-align: center; margin-inline: auto; }
   .center p { margin-inline: auto; }
+
+  /* Every screen: the Mac window, with iPad and iPhone in front of it. */
+  .devices-stage { position: relative; max-width: 1080px; margin: 8px auto 0; padding-bottom: 9%; }
+  .macwin { width: 84%; margin-left: auto; border-radius: 12px; overflow: hidden; background: #0b0b0d;
+            box-shadow: 0 0 0 1px rgba(255,255,255,.14), 0 40px 90px rgba(0,0,0,.55), 0 10px 30px rgba(0,0,0,.35); }
+  .macwin img { display: block; width: 100%; height: auto; }
+  .ipad { position: absolute; left: 0; bottom: 0; width: 31%; border-radius: 7% / 5.2%; padding: 2.4%;
+          background: linear-gradient(145deg, #4a4c52, #1d1e21 40%, #2b2d31);
+          box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 30px 70px rgba(0,0,0,.6); }
+  .ipad .glass { background: #020203; border-radius: 5.2% / 3.9%; padding: 3.2%; }
+  .ipad img { display: block; width: 100%; height: auto; border-radius: 2.6% / 1.95%; }
+  .devices-stage .phone { position: absolute; right: -1%; bottom: -3%; width: 15.5%; margin: 0; }
+  @media (max-width: 900px) {
+    .macwin { width: 100%; }
+    .ipad { width: 40%; left: -2%; bottom: -6%; }
+    .devices-stage { padding-bottom: 22%; }
+    .devices-stage .phone { width: 21%; right: -2%; bottom: -8%; }
+  }
 
   /* Story rows */
   .story { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; padding: 56px 0; }
@@ -271,7 +289,7 @@
   <div class="hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow">Email for iPhone · Gmail, Outlook and iCloud</p>
+        <p class="eyebrow">Email for iPhone, iPad and Mac · Gmail, Outlook and iCloud</p>
         <h1>Email,<br><em>considered.</em></h1>
         <p class="lede">Corres opens on <strong>what needs you</strong>: every email that asks something of you, with the reason why. The rest of your mail is one swipe along, quiet until you&rsquo;re ready. All read and sorted on your iPhone.</p>
         <div class="cta">
@@ -390,6 +408,21 @@
     </div>
   </section>
 
+  <section id="devices" style="padding-top:0">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">iPhone, iPad and Mac</p>
+        <h2>One Corres, on every screen.</h2>
+        <p>The same Needs You, the same sorting and your same accounts on all three. Add an account once and it&rsquo;s on your other devices too, through iCloud Keychain. On the Mac, a native app with Mail&rsquo;s shortcuts and Gmail&rsquo;s.</p>
+      </div>
+      <div class="devices-stage reveal">
+        <div class="macwin"><img src="img/mac-dark.jpg" width="1362" height="870" loading="lazy" alt="Corres on a Mac: the sidebar, Needs You with the reason for each email, and an open conversation"></div>
+        <div class="ipad"><div class="glass"><img src="img/ipad-dark.jpg" width="1032" height="1376" loading="lazy" alt="Corres on iPad: three columns with Needs You and an open email"></div></div>
+        <div class="phone"><div class="glass"><img src="img/mail-dark.jpg" loading="lazy" alt="Corres on iPhone: the Primary list"></div></div>
+      </div>
+    </div>
+  </section>
+
   <section style="padding-top:0">
     <div class="wrap">
       <div class="head reveal">
@@ -406,7 +439,7 @@
         <div class="cell"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3M7 8l5-5 5 5"/></svg><h4>Share to Corres</h4><p>Share a page or photos from any app and write the email right in the Share sheet.</p></div>
         <div class="cell"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/></svg><h4>Unsubscribe in a tap</h4><p>Leave a mailing list the way the sender intended, without visiting their site.</p></div>
         <div class="cell"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg><h4>No tracking pixels</h4><p>Remote images and read-receipt trackers are blocked until you choose to show them.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg><h4>iPhone and iPad</h4><p>Light and dark, every text size, VoiceOver, and a three-column layout on iPad.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg><h4>iPhone, iPad and Mac</h4><p>A native Mac app with its own windows, menus and keyboard shortcuts, three columns on iPad, and your accounts and choices on all of them through iCloud.</p></div>
       </div>
     </div>
   </section>
@@ -414,10 +447,10 @@
   <section id="privacy" class="privacy">
     <div class="wrap">
       <p class="eyebrow reveal">Private by design</p>
-      <p class="promise reveal">Your email is read on your iPhone. <em>Not on our servers, and never by an AI company.</em></p>
+      <p class="promise reveal">Your email is read on your own devices. <em>Not on our servers, and never by an AI company.</em></p>
       <div class="three reveal">
-        <div><h4>Stored on your device</h4><p>Mail comes straight from Google, Microsoft or Apple to your iPhone and stays there, protected by iOS. Corres&rsquo;s servers never receive it.</p></div>
-        <div><h4>Sorted on your device</h4><p>Needs You, summaries, suggested replies and answers in Search all run on the iPhone. Nothing is sent to an AI service or used to train one.</p></div>
+        <div><h4>Stored on your device</h4><p>Mail comes straight from Google, Microsoft or Apple to your iPhone, iPad or Mac and stays there, protected by Apple&rsquo;s built-in encryption. Corres&rsquo;s servers never receive it.</p></div>
+        <div><h4>Sorted on your device</h4><p>Needs You, summaries, suggested replies and answers in Search all run on your device. Nothing is sent to an AI service or used to train one.</p></div>
         <div><h4>Nothing to sell</h4><p>No ads, no analytics, no tracking SDKs, no read receipts. Corres is paid for by the people who use it.</p></div>
       </div>
       <p class="fine reveal">Read the full <a href="privacy/">privacy policy</a>. Corres&rsquo;s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
@@ -461,12 +494,11 @@
       <div class="head center reveal"><h2>Questions</h2></div>
       <div class="faq reveal">
         <details><summary>Which email accounts work with Corres?</summary><p>Gmail and Google Workspace, Outlook.com, Hotmail and Live, work or school Microsoft 365, and iCloud Mail. Add as many as you like; they share one inbox. iCloud asks for an app-specific password instead of your Apple Account password, and Corres walks you through making one in about a minute.</p></details>
-        <details><summary>What is Postwright?</summary><p>Postwright is the mail engine we built for Corres. It talks to Gmail, Outlook and iCloud Mail each in its own way, on your iPhone, so your actions are instant, Undo always works, and every account stays in step with the web. It&rsquo;s why Corres doesn&rsquo;t need a server of its own to hold your mail.</p></details>
-        <details><summary>Does Corres read my email on its servers?</summary><p>No. Your mail is downloaded from Google, Microsoft or Apple directly to your iPhone and processed there. An optional notification relay only learns that your mailbox changed, never what&rsquo;s in it. The <a href="privacy/" style="color:var(--accent)">privacy policy</a> has the details.</p></details>
-        <details><summary>Do I need Apple Intelligence?</summary><p>No. Sorting, Needs You and Waiting work on every supported iPhone. Summaries and drafted replies use Apple Intelligence where your iPhone has it.</p></details>
-        <details><summary>Is there an iPad version?</summary><p>Yes, Corres runs on iPhone and iPad, with a three-column layout on iPad.</p></details>
-        <details><summary>Does it work without a signal?</summary><p>Yes. Your mail is on your iPhone, so it reads offline, and anything you archive, delete, flag or mark read goes through as soon as you&rsquo;re back online.</p></details>
-        <details><summary>Is there a Mac app?</summary><p>It&rsquo;s in the works: a native Mac app, built for the Mac rather than carried over from iPhone, on the same engine and with what you&rsquo;ve set in Corres following you there through iCloud.</p></details>
+        <details><summary>What is Postwright?</summary><p>Postwright is the mail engine we built for Corres. It talks to Gmail, Outlook and iCloud Mail each in its own way, on your device, so your actions are instant, Undo always works, and every account stays in step with the web. It&rsquo;s why Corres doesn&rsquo;t need a server of its own to hold your mail.</p></details>
+        <details><summary>Does Corres read my email on its servers?</summary><p>No. Your mail is downloaded from Google, Microsoft or Apple directly to your iPhone, iPad or Mac and processed there. An optional notification relay only learns that your mailbox changed, never what&rsquo;s in it. The <a href="privacy/" style="color:var(--accent)">privacy policy</a> has the details.</p></details>
+        <details><summary>Do I need Apple Intelligence?</summary><p>No. Sorting, Needs You and Waiting work on every supported iPhone, iPad and Mac. Summaries and drafted replies use Apple Intelligence where your device has it.</p></details>
+        <details><summary>Is there an iPad or Mac version?</summary><p>Yes. Corres runs on iPhone, iPad and Mac: three columns on iPad, and on the Mac a native app with its own windows, menus and keyboard shortcuts, including Mail&rsquo;s and Gmail&rsquo;s. One Corres Pro covers all three, and the accounts you add follow you through iCloud Keychain.</p></details>
+        <details><summary>Does it work without a signal?</summary><p>Yes. Your mail is on your device, so it reads offline, and anything you archive, delete, flag or mark read goes through as soon as you&rsquo;re back online.</p></details>
         <details><summary>How do I get it?</summary><p>Corres is in beta on TestFlight. <a href="mailto:support@corres.app?subject=Corres%20early%20access" style="color:var(--accent)">Ask for early access</a>, and it&rsquo;s coming to the App Store.</p></details>
       </div>
     </div>
@@ -475,7 +507,7 @@
   <div class="closing">
     <img src="img/mark.jpg" alt="">
     <h2>Email, considered.</h2>
-    <p>A calmer inbox, read on your iPhone, from a small studio that would rather you spent less time in it.</p>
+    <p>A calmer inbox, read on your iPhone, iPad and Mac, from a small studio that would rather you spent less time in it.</p>
     <div class="cta"><a class="btn primary" href="mailto:support@corres.app?subject=Corres%20early%20access">Get early access</a></div>
   </div>
 </main>
