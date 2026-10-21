@@ -16,19 +16,20 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          The beta is on TestFlight with early testers, twenty-two builds in, and it&rsquo;s my own daily
+          The beta is on TestFlight with early testers, twenty-four builds in, and it&rsquo;s my own daily
           driver, for Gmail, Outlook and now iCloud Mail, in one inbox. It sorts what needs you and keeps a Primary inbox that learns from every correction,
           with Promotions, Social and Updates kept apart. Writing is now complete, from drafts and Send
           Later to follow-up reminders and sharing straight into an email from any app, and Apple
           Intelligence, running entirely on the iPhone, summarizes threads and drafts replies in your
           voice. Search now reaches the whole mailbox, and invitations are answered right in the email.
           A native Mac app on the same engine is on TestFlight too, with desktop widgets and
-          notifications, and Corres now speaks Japanese, Chinese, German, Korean, French, Spanish and
-          Portuguese. The latest builds are about speed: measured on my own 5,500-conversation
+          notifications, and Corres now speaks Japanese, Chinese, German, Korean, French, Spanish,
+          Portuguese and Bengali. Recent builds are about speed: measured on my own 5,500-conversation
           mailbox, emails now open almost at once instead of after a few seconds, and the Mac app no
           longer stalls at launch. They also bring rules, templates, muted
-          conversations, Unread Only on any tab and search that puts the best matches first. Next come
-          more testers and the App Store.
+          conversations, Unread Only on any tab and search that puts the best matches first. The
+          newest add a Liquid Glass app icon and companies&rsquo; logos beside their mail, fetched by
+          our own server so no company learns when you read. Next come more testers and the App Store.
         </p>
         <p>
           Artha is already available. I’m polishing it further for everyday use, smoothing out the
