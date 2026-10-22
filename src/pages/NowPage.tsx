@@ -31,9 +31,12 @@ export function NowPage() {
           Store.
         </p>
         <p>
-          Artha is already available. I’m polishing it further for everyday use, smoothing out the
-          usability and functionality without changing how the decisions and approvals stay in your
-          hands.
+          Artha is in its biggest change since it began. The money side was rebuilt around one
+          number, what&rsquo;s safe to spend, and a native app for iPhone and iPad is in beta on
+          TestFlight, five builds in, sharing one design language with the website. This week brought
+          any of about 160 currencies instead of six, text that grows with your iPhone&rsquo;s text
+          size, charts VoiceOver can play as sound, and a new icon in Liquid Glass. Next come the Mac
+          app for testers, then the App Store.
         </p>
         <p>
           After that, it’s Jotfield: ironing out rough edges from using it daily. Doorsong, Tether,
