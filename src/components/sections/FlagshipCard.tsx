@@ -71,7 +71,6 @@ export function FlagshipCard({
         <img className="flagship-art" src={imgSrc} alt="" width={imgWidth} height={imgHeight} loading="lazy" decoding="async" />
         <span className="flagship-light" />
         <span className="flagship-sheen" />
-        {motion === 'artha' && <span className="artha-orb-rim"><span /></span>}
         </div>
       </div>
       <div className="flagship-copy">
