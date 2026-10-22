@@ -16,7 +16,7 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          The beta is on TestFlight with early testers, twenty-six builds in, and it&rsquo;s my own daily
+          The beta is on TestFlight with early testers, twenty-eight builds in, and it&rsquo;s my own daily
           driver, for Gmail, Outlook and iCloud Mail in one inbox, on iPhone, iPad, Mac and now Apple
           Watch. It sorts what needs you and keeps a Primary inbox that learns from every correction,
           with Promotions, Social and Updates kept apart. Writing is complete, from drafts and Send
@@ -24,7 +24,9 @@ export function NowPage() {
           5,500-conversation mailbox, emails open almost at once. The newest builds learn how you
           write, so suggested replies use your own greeting and sign-off; let Siri write and send an
           email in Corres; put Send Later and today&rsquo;s deliveries on the Lock Screen; and bring
-          Corres to the wrist, with replies by voice. Every screen was checked with Apple&rsquo;s own
+          Corres to the wrist, with replies by voice. The latest bring the Mac level with the iPhone:
+          suggested replies, key details at the top of an email, translation, and a compose window
+          that knows who you write to. Every screen was checked with Apple&rsquo;s own
           accessibility audit, and Corres speaks nine languages. Next come more testers and the App
           Store.
         </p>
