@@ -11,7 +11,7 @@ const principles = [
   },
   {
     statement: 'Nothing fails silently, and nothing pretends to succeed.',
-    support: 'Anwar Logistics’ contact form fails closed with a clear error if its email credentials are missing, rather than pretending to succeed. Anwar Autowerks’ fallback only appears if the same kind of request actually fails.',
+    support: 'Corres checks every summary and reason against the email itself before you see it, and an archive made with no signal goes through once you’re back online instead of quietly vanishing. Netflix and Disney+ silently reject a direct seek, so Tether drives playback through each platform’s own player.',
   },
   {
     statement: 'Make the everyday parts worth returning to.',

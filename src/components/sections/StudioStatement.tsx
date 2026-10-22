@@ -1,5 +1,4 @@
 import { useReveal } from '../../hooks/useReveal'
-import { links } from '../../content/links'
 
 export function StudioStatement() {
   const ref = useReveal<HTMLElement>()
@@ -34,16 +33,7 @@ export function StudioStatement() {
           color: 'var(--ink-dim)',
         }}
       >
-        Anwar Creative Studio is where Tamkin Anwar designs and builds independent software, part
-        of Anwar Ventures alongside{' '}
-        <a href={links.autowerks} target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>
-          Anwar Autowerks
-        </a>
-        ,{' '}
-        <a href={links.logistics} target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>
-          Anwar Logistics
-        </a>
-        , and Anwar Property Group.
+        Anwar Creative Studio is where Tamkin Anwar designs and builds independent software.
       </p>
     </section>
   )
