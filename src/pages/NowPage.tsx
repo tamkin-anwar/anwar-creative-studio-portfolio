@@ -16,7 +16,7 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          The beta is on TestFlight with early testers, thirty builds in, and it&rsquo;s my own daily
+          The beta is on TestFlight with early testers, thirty-two builds in, and it&rsquo;s my own daily
           driver, for Gmail, Outlook and iCloud Mail in one inbox, on iPhone, iPad, Mac and now Apple
           Watch. It sorts what needs you and keeps a Primary inbox that learns from every correction,
           with Promotions, Social and Updates kept apart. Writing is complete, from drafts and Send
@@ -24,10 +24,13 @@ export function NowPage() {
           5,500-conversation mailbox, emails open almost at once. The newest builds learn how you
           write, so suggested replies use your own greeting and sign-off; let Siri write and send an
           email in Corres; put Send Later and today&rsquo;s deliveries on the Lock Screen; and bring
-          Corres to the wrist, with replies by voice. The latest bring the Mac level with the iPhone:
+          Corres to the wrist, with replies by voice. Recent ones brought the Mac level with the iPhone:
           suggested replies, key details at the top of an email, translation, and a compose window
           that knows who you write to. Rules now run inside Gmail and Outlook too, so they work with
-          Corres closed, and what needs you sits on the watch face. Every screen was checked with Apple&rsquo;s own
+          Corres closed, and what needs you sits on the watch face. The newest make sure nothing you do
+          is lost: a send that doesn&rsquo;t go waits and goes by itself once you&rsquo;re back online,
+          and your moves, snoozes and rules merge between your devices; search is about ten times
+          faster on a big mailbox. Every screen was checked with Apple&rsquo;s own
           accessibility audit, and Corres speaks nine languages. Next come more testers and the App
           Store.
         </p>
@@ -51,7 +54,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated October 22, 2026 &middot;{' '}
+        Last updated October 23, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
