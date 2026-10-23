@@ -16,7 +16,7 @@ export function NowPage() {
           alongside Artha. Email, considered.
         </p>
         <p>
-          The beta is on TestFlight with early testers, thirty-two builds in, and it&rsquo;s my own daily
+          The beta is on TestFlight with early testers, thirty-six builds in, and it&rsquo;s my own daily
           driver, for Gmail, Outlook and iCloud Mail in one inbox, on iPhone, iPad, Mac and now Apple
           Watch. It sorts what needs you and keeps a Primary inbox that learns from every correction,
           with Promotions, Social and Updates kept apart. Writing is complete, from drafts and Send
@@ -30,7 +30,8 @@ export function NowPage() {
           Corres closed, and what needs you sits on the watch face. The newest make sure nothing you do
           is lost: a send that doesn&rsquo;t go waits and goes by itself once you&rsquo;re back online,
           and your moves, snoozes and rules merge between your devices; search is about ten times
-          faster on a big mailbox. Every screen was checked with Apple&rsquo;s own
+          faster on a big mailbox. The latest send an email the moment you leave Corres,
+          notify new mail sooner, and let every word on the Mac grow to twice its size. Every screen was checked with Apple&rsquo;s own
           accessibility audit, and Corres speaks nine languages. Next come more testers and the App
           Store.
         </p>
