@@ -11,6 +11,7 @@ export function Flagships() {
       <h2 id="flagships-title" data-reveal className="eyebrow mb-[var(--space-4)]">The flagships</h2>
       <div className="flagship-grid">
         <FlagshipCard
+          id="artha"
           titleId="artha-title"
           motion="artha"
           imgSrc={`${import.meta.env.BASE_URL}artha-mark-wide.webp`}
@@ -40,7 +41,7 @@ export function Flagships() {
           title="Corres"
           tagline={corres.tagline}
           description={corres.description}
-          disclosureLabel="What is taking shape"
+          disclosureLabel="Where the beta stands"
           disclosureDetail={corres.progress}
           link={<a className="flagship-link" href={links.corres} target="_blank" rel="noreferrer">Visit Corres ↗</a>}
         />

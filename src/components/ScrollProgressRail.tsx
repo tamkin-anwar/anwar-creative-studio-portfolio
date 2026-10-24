@@ -4,9 +4,8 @@ const SECTIONS = [
   { id: 'hero', label: 'Top' },
   { id: 'about', label: 'Studio' },
   { id: 'flagships', label: 'Flagships' },
-  { id: 'work', label: 'More projects' },
   { id: 'principles', label: 'Principles' },
-  { id: 'roadmap', label: "What's next" },
+  { id: 'workshop', label: 'From the workshop' },
   { id: 'contact', label: 'Contact' },
 ]
 

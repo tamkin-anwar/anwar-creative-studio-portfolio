@@ -557,7 +557,7 @@ a {
 .flagship a, .flagship summary { color: var(--accent-warm); }
 .flagship details p { padding-top: 16px; font-size: .9rem; }
 .flagship-link { align-self: flex-start; padding: 10px 0; }
-#corres, #flagships, #roadmap { scroll-margin-top: 80px; }
+#corres, #artha, #flagships, #workshop, #principles { scroll-margin-top: 80px; }
 @media (max-width: 639px) {
   .flagship-grid { grid-template-columns: 1fr; }
   .flagship-copy { padding: 24px; }
@@ -640,3 +640,90 @@ a {
   58% { transform: translateX(100%); opacity: 0; }
   100% { transform: translateX(100%); opacity: 0; }
 }
+
+/* site header: the one visible navigation on every page; ⌘K stays as a shortcut */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: calc(env(safe-area-inset-top, 0px) + 14px) max(var(--space-3), env(safe-area-inset-right, 0px)) 14px max(var(--space-3), env(safe-area-inset-left, 0px));
+  background: linear-gradient(to bottom, rgba(10, 10, 13, 0.92), rgba(10, 10, 13, 0.7));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.site-wordmark {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.site-nav { display: flex; align-items: center; gap: var(--space-3); }
+.site-nav-link {
+  font-size: 0.875rem;
+  color: var(--ink-dim);
+  transition: color 0.2s;
+}
+.site-nav-link:hover, .site-nav-link:focus-visible { color: var(--ink); }
+.site-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+  border: 1px solid var(--line);
+  border-radius: 9999px;
+  padding: 5px 10px;
+}
+.site-search:hover { color: var(--ink); border-color: var(--line-strong); }
+.site-search-kbd { border: 1px solid var(--line-strong); border-radius: 4px; padding: 0 5px; font-size: 10px; font-family: inherit; }
+.site-search-label-narrow { display: none; }
+@media (max-width: 639px) {
+  .site-nav-link { display: none; }
+  .site-search-label-wide, .site-search-kbd { display: none; }
+  .site-search-label-narrow { display: inline; }
+  .site-wordmark { font-size: 1rem; }
+}
+
+/* hero buttons */
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 10px 18px;
+  font-size: 0.9375rem;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.hero-cta:hover { border-color: var(--ink-dim); }
+.hero-cta-primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.hero-cta-primary:hover { background: transparent; color: var(--ink); }
+
+/* long-form pages: about, contact, legal */
+.prose-page h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-warm);
+  margin-top: var(--space-4);
+}
+.prose-page p, .prose-page li { color: var(--ink-dim); font-size: var(--text-body); line-height: 1.65; }
+.prose-page a { color: var(--accent-warm); }
+.prose-page ul { display: flex; flex-direction: column; gap: var(--space-1); padding-left: 1.1em; list-style: disc; }
+.prose-page strong { color: var(--ink); font-weight: 400; }
+.detail-list { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 10px var(--space-3); }
+.detail-list dt { font-family: var(--font-mono); font-size: var(--text-caption); color: var(--ink-faint); padding-top: 3px; }
+.detail-list dd { margin: 0; color: var(--ink-dim); }
+@media (max-width: 520px) { .detail-list { grid-template-columns: 1fr; gap: 2px; } .detail-list dd { margin-bottom: 10px; } }
+.workshop-row { transition: padding-left 0.3s var(--ease-out-expo); }
+.workshop-row:hover, .workshop-row:focus-visible { padding-left: 6px; }
+@media (prefers-reduced-motion: reduce) { .workshop-row { transition: none; } }

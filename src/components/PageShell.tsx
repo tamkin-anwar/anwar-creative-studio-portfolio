@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react'
 import { LazyAmbientField } from './LazyAmbientField'
 import { CommandPalette } from './CommandPalette'
+import { SiteHeader } from './SiteHeader'
+import { Footer } from './sections/Footer'
 
 export function PageShell({
   eyebrow,
@@ -17,10 +19,11 @@ export function PageShell({
         Skip to content
       </a>
       <LazyAmbientField />
+      <SiteHeader />
       <CommandPalette />
       <main
         id="main-content"
-        className="relative mx-auto flex min-h-[100svh] max-w-2xl flex-col justify-center gap-[var(--space-4)] px-[var(--space-3)] py-[var(--space-7)]"
+        className="relative mx-auto flex min-h-[100svh] max-w-2xl flex-col justify-center gap-[var(--space-4)] px-[var(--space-3)] pb-[var(--space-7)] pt-[calc(var(--space-7)+48px)]"
       >
         <a
           href={backHref}
@@ -32,6 +35,7 @@ export function PageShell({
         <p className="eyebrow">{eyebrow}</p>
         {children}
       </main>
+      <Footer />
     </>
   )
 }

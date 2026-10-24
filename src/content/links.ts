@@ -8,6 +8,10 @@ export const links = {
   stub: 'https://stub-jade.vercel.app',
   jotfield: 'https://tamkin-anwar.github.io/jotfield/',
   email: 'contact@anwarcreativestudio.com',
+  corresSupport: 'support@corres.app',
+  corresPrivacy: 'privacy@corres.app',
+  arthaSupport: 'support@arthaapp.com',
+  arthaPrivacy: 'privacy@arthaapp.com',
   github: 'https://github.com/tamkin-anwar',
   linkedin: '', // fill in later
 }

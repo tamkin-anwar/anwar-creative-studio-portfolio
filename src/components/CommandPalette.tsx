@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { links } from '../content/links'
+import { OPEN_EVENT } from '../lib/commandPalette'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -13,23 +14,22 @@ type Item = {
 }
 
 const ITEMS: Item[] = [
-  { group: 'Jump to', label: 'Top', href: `${BASE}#hero` },
-  { group: 'Jump to', label: 'Studio', href: `${BASE}#about` },
-  { group: 'Jump to', label: 'Flagships', href: `${BASE}#flagships` },
-  { group: 'Jump to', label: 'Work', href: `${BASE}#work` },
-  { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
-  { group: 'Jump to', label: "What's next", href: `${BASE}#roadmap` },
-  { group: 'Jump to', label: 'Contact', href: `${BASE}#contact` },
-  { group: 'Pages', label: 'Home', href: BASE },
-  { group: 'Pages', label: 'Now', href: `${BASE}now/` },
-  { group: 'Pages', label: 'Colophon', href: `${BASE}colophon/` },
-  { group: 'Products', label: 'Doorsong', href: links.doorsong, external: true },
+  { group: 'Products', label: 'Corres', description: 'Email, considered. In beta on iPhone, iPad and Mac.', href: links.corres, external: true },
   { group: 'Products', label: 'Artha', description: "Know what's safe to spend. On the web, and in beta on iPhone and iPad.", href: links.artha, external: true },
-  { group: 'Products', label: 'Corres', description: 'In beta · Email, considered. Gmail, Outlook and iCloud, on iPhone, iPad and Mac.', href: 'https://corres.app' },
-  { group: 'Products', label: 'Tether', href: links.tether, external: true },
-  { group: 'Products', label: 'Jotfield', href: links.jotfield, external: true },
-  { group: 'Products', label: 'Stub', href: links.stub, external: true },
-  { group: 'Elsewhere', label: 'Email', description: links.email, href: `mailto:${links.email}` },
+  { group: 'Company', label: 'Home', href: BASE },
+  { group: 'Company', label: 'About', href: `${BASE}about/` },
+  { group: 'Company', label: 'Contact and support', href: `${BASE}contact/` },
+  { group: 'Company', label: 'Now', description: 'What the studio is working on', href: `${BASE}now/` },
+  { group: 'Company', label: 'Colophon', description: 'How this site is built', href: `${BASE}colophon/` },
+  { group: 'Company', label: 'Privacy', href: `${BASE}privacy/` },
+  { group: 'Company', label: 'Terms', href: `${BASE}terms/` },
+  { group: 'Jump to', label: 'Flagships', href: `${BASE}#flagships` },
+  { group: 'Jump to', label: 'From the workshop', href: `${BASE}#workshop` },
+  { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
+  { group: 'From the workshop', label: 'Tether', href: links.tether, external: true },
+  { group: 'From the workshop', label: 'Jotfield', href: links.jotfield, external: true },
+  { group: 'From the workshop', label: 'Doorsong', href: links.doorsong, external: true },
+  { group: 'Elsewhere', label: 'Email the studio', description: links.email, href: `mailto:${links.email}` },
   { group: 'Elsewhere', label: 'GitHub', href: links.github, external: true },
 ].filter((item) => item.href)
 
@@ -58,6 +58,12 @@ export function CommandPalette() {
   useEffect(() => {
     setSelected(0)
   }, [query])
+
+  useEffect(() => {
+    const onOpen = () => setOpen(true)
+    window.addEventListener(OPEN_EVENT, onOpen)
+    return () => window.removeEventListener(OPEN_EVENT, onOpen)
+  }, [])
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -115,33 +121,6 @@ export function CommandPalette() {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="font-mono fixed right-[var(--space-4)] top-[var(--space-4)] z-40 flex items-center gap-1 rounded-full border tracking-[0.06em] backdrop-blur-sm transition-colors"
-        style={{
-          padding: '6px 10px',
-          fontSize: 'var(--text-label)',
-          color: 'var(--ink-faint)',
-          borderColor: 'var(--line)',
-          background: 'rgba(10,10,13,0.6)',
-        }}
-        aria-label="Open command palette"
-      >
-        Search
-        <span
-          className="rounded"
-          style={{
-            border: '1px solid var(--line-strong)',
-            padding: '1px 5px',
-            fontSize: '10px',
-            color: 'var(--ink-faint)',
-          }}
-        >
-          &#8984;K
-        </span>
-      </button>
-
       {open
         ? createPortal(
             <div
@@ -172,7 +151,7 @@ export function CommandPalette() {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={onInputKeyDown}
-                  placeholder="Jump to a section, page, or product"
+                  placeholder="Go to a product, page or section"
                   className="font-mono w-full bg-transparent outline-none"
                   style={{
                     padding: 'var(--space-3)',

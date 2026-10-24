@@ -1,23 +1,6 @@
+import { principles } from '../../content/company'
 import { useReveal } from '../../hooks/useReveal'
 
-const principles = [
-  {
-    statement: 'Trust lives in the code, not the interface.',
-    support: 'Artha’s assistant hits the same validated route a manual entry would. Stub’s access control runs entirely on Postgres row-level security, not application code that could be bypassed.',
-  },
-  {
-    statement: 'What the code can’t do matters more than what it promises.',
-    support: 'Jotfield encrypts notes with a key that’s never transmitted; the server only ever sees ciphertext. Corres is built to never silently forward a message to an AI service.',
-  },
-  {
-    statement: 'Nothing fails silently, and nothing pretends to succeed.',
-    support: 'Corres checks every summary and reason against the email itself before you see it, and an archive made with no signal goes through once you’re back online instead of quietly vanishing. Netflix and Disney+ silently reject a direct seek, so Tether drives playback through each platform’s own player.',
-  },
-  {
-    statement: 'Make the everyday parts worth returning to.',
-    support: 'Finding a note, checking a bill, choosing a film together. Those small moments are the reason these products exist, and where most of the care goes.',
-  },
-]
 
 export function Principles() {
   const ref = useReveal<HTMLElement>()
@@ -43,7 +26,7 @@ export function Principles() {
       />
 
       <h2 data-reveal className="eyebrow relative z-10 mb-[var(--space-4)]">
-        Principles
+        What we hold to
       </h2>
 
       <ul className="relative z-10 flex flex-col" style={{ borderTop: '1px solid var(--line)' }}>
@@ -57,7 +40,7 @@ export function Principles() {
             <span style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-heading)' }}>
               {p.statement}
             </span>
-            <span style={{ color: 'var(--ink-faint)', fontSize: 'var(--text-caption)' }}>
+            <span style={{ color: 'var(--ink-dim)', fontSize: 'var(--text-caption)' }}>
               {p.support}
             </span>
           </li>

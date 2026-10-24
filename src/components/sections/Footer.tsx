@@ -1,87 +1,94 @@
+import { company } from '../../content/company'
 import { links } from '../../content/links'
-import { useReveal } from '../../hooks/useReveal'
 
-const footerLinks = [
-  { label: 'Doorsong', href: links.doorsong },
-  { label: 'Artha', href: links.artha },
-  { label: 'Tether', href: links.tether },
-  { label: 'Jotfield', href: links.jotfield },
-  { label: 'Stub', href: links.stub },
-  { label: 'GitHub', href: links.github },
-  { label: 'LinkedIn', href: links.linkedin },
-].filter((link) => link.href)
+const BASE = import.meta.env.BASE_URL
 
-const metaLinks = [
-  { label: 'Now', href: `${import.meta.env.BASE_URL}now/` },
-  { label: 'Colophon', href: `${import.meta.env.BASE_URL}colophon/` },
+const columns = [
+  {
+    title: 'Products',
+    items: [
+      { label: 'Corres', href: links.corres },
+      { label: 'Artha', href: links.artha },
+      { label: 'From the workshop', href: `${BASE}#workshop` },
+    ],
+  },
+  {
+    title: 'Company',
+    items: [
+      { label: 'About', href: `${BASE}about/` },
+      { label: 'Now', href: `${BASE}now/` },
+      { label: 'Colophon', href: `${BASE}colophon/` },
+    ],
+  },
+  {
+    title: 'Support',
+    items: [
+      { label: 'Corres support', href: 'https://corres.app/support/' },
+      { label: 'Artha support', href: `mailto:${links.arthaSupport}` },
+      { label: 'Contact', href: `${BASE}contact/` },
+    ],
+  },
+  {
+    title: 'Legal',
+    items: [
+      { label: 'Privacy', href: `${BASE}privacy/` },
+      { label: 'Terms', href: `${BASE}terms/` },
+      { label: 'Corres privacy', href: 'https://corres.app/privacy/' },
+    ],
+  },
 ]
 
 export function Footer() {
-  const ref = useReveal<HTMLElement>()
-
   return (
     <footer
       id="contact"
-      ref={ref}
-      className="flex flex-col items-center gap-[var(--space-6)] px-[var(--space-3)] pb-[var(--space-6)] pt-[var(--space-8)] text-center"
+      className="mx-auto flex max-w-5xl flex-col gap-[var(--space-5)] px-[var(--space-3)] pb-[var(--space-6)] pt-[var(--space-7)]"
       style={{ borderTop: '1px solid var(--line)' }}
     >
-      <h2
-        data-reveal
-        data-reveal-mask
-        className="max-w-xl leading-[1.1]"
-        style={{ fontSize: 'var(--text-heading)' }}
-      >
-        Looked for it. Didn&rsquo;t love it. Built it.
-      </h2>
-
-      <div data-reveal className="flex flex-col items-center gap-[var(--space-3)]">
-        <p
-          className="font-mono"
-          style={{ fontSize: 'var(--text-caption)', color: 'var(--ink-faint)' }}
-        >
-          Anwar Creative Studio
+      <div className="flex flex-col gap-[var(--space-2)]">
+        <p style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-heading)', lineHeight: 1.15 }}>
+          Looked for it. Didn&rsquo;t love it. Built it.
         </p>
         <a
           href={`mailto:${links.email}`}
-          className="font-mono tracking-[0.06em]"
+          className="font-mono w-fit tracking-[0.06em]"
           style={{ fontSize: 'var(--text-caption)', color: 'var(--accent-warm)' }}
         >
           {links.email}
         </a>
-        <nav className="flex flex-wrap items-center justify-center gap-[var(--space-3)]">
-          {footerLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith('http') ? '_blank' : undefined}
-              rel="noreferrer"
-              className="font-mono tracking-[0.06em]"
-              style={{ fontSize: 'var(--text-label)', color: 'var(--ink-dim)' }}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+      </div>
 
-        <nav className="flex flex-wrap items-center justify-center gap-[var(--space-2)]">
-          {metaLinks.map((link, index) => (
-            <span key={link.label} className="flex items-center gap-[var(--space-2)]">
-              {index > 0 ? (
-                <span aria-hidden style={{ color: 'var(--ink-faint)' }}>
-                  &middot;
-                </span>
-              ) : null}
+      <nav aria-label="Footer" className="grid grid-cols-2 gap-[var(--space-4)] sm:grid-cols-4">
+        {columns.map((column) => (
+          <div key={column.title} className="flex flex-col gap-[var(--space-1)]">
+            <p className="font-mono" style={{ fontSize: '10.5px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-faint)' }}>
+              {column.title}
+            </p>
+            {column.items.map((item) => (
               <a
-                href={link.href}
-                className="font-mono tracking-[0.06em]"
-                style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel="noreferrer"
+                style={{ fontSize: '0.875rem', color: 'var(--ink-dim)' }}
               >
-                {link.label}
+                {item.label}
               </a>
-            </span>
-          ))}
-        </nav>
+            ))}
+          </div>
+        ))}
+      </nav>
+
+      <div
+        className="font-mono flex flex-wrap items-center justify-between gap-[var(--space-2)] pt-[var(--space-3)]"
+        style={{ borderTop: '1px solid var(--line)', fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
+      >
+        <span>
+          &copy; {company.year} {company.legalName} &middot; {company.registered}
+        </span>
+        <a href={links.github} target="_blank" rel="noreferrer" style={{ color: 'var(--ink-faint)' }}>
+          GitHub ↗
+        </a>
       </div>
     </footer>
   )

@@ -33,8 +33,18 @@ export function StudioStatement() {
           color: 'var(--ink-dim)',
         }}
       >
-        Anwar Creative Studio is where Tamkin Anwar designs and builds independent software.
+        Anwar Creative Studio is an independent software company. We make Corres, an email app that
+        opens on what needs you, and Artha, which tells you what&rsquo;s safe to spend. We&rsquo;re
+        self-funded, so the only people we answer to are the ones who use what we make.
       </p>
+      <a
+        data-reveal
+        href={`${import.meta.env.BASE_URL}about/`}
+        className="font-mono relative z-10 mt-[var(--space-4)] inline-block tracking-[0.06em]"
+        style={{ fontSize: 'var(--text-label)', color: 'var(--accent-warm)' }}
+      >
+        About the studio →
+      </a>
     </section>
   )
 }

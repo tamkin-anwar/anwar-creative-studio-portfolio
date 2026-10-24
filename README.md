@@ -1,6 +1,6 @@
 # Anwar Creative Studio Portfolio
 
-Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). Artha and Corres (in beta) lead the studio portfolio. Doorsong, Jotfield, Tether, and Stub make up the wider collection. Corres is in beta on TestFlight and Ranna is planned.
+Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). The company website of Anwar Creative Studio LLC, an independent software company. Corres and Artha are the flagships; Tether, Jotfield and Doorsong sit in "From the workshop".
 
 Contact: contact@anwarcreativestudio.com
 

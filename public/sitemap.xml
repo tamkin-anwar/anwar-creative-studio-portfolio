@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://anwarcreativestudio.com/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://anwarcreativestudio.com/about/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://anwarcreativestudio.com/contact/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://anwarcreativestudio.com/now/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://anwarcreativestudio.com/colophon/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://anwarcreativestudio.com/corres/</loc>
+    <loc>https://anwarcreativestudio.com/privacy/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://anwarcreativestudio.com/corres/privacy/</loc>
-  </url>
-  <url>
-    <loc>https://anwarcreativestudio.com/corres/terms/</loc>
-  </url>
-  <url>
-    <loc>https://anwarcreativestudio.com/corres/support/</loc>
+    <loc>https://anwarcreativestudio.com/terms/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
 </urlset>
