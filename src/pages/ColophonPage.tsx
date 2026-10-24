@@ -8,7 +8,8 @@ function Link(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
 const entries: { term: string; detail: ReactNode }[] = [
   {
     term: 'Built with',
-    detail: 'Vite, React 19, TypeScript, and Tailwind CSS v4.',
+    detail:
+      'Vite, React 19, TypeScript, and Tailwind CSS v4. Every page is rendered to HTML at build time, so it reads fine before any JavaScript runs, then React takes over in the browser.',
   },
   {
     term: 'Hosted on',
@@ -30,12 +31,17 @@ const entries: { term: string; detail: ReactNode }[] = [
   },
   {
     term: 'Privacy',
-    detail: 'No analytics, no trackers, nothing watching what you do on this page.',
+    detail: (
+      <>
+        No analytics, no cookies, no trackers, nothing watching what you do on this page. The full policy is
+        on the <a href={`${import.meta.env.BASE_URL}privacy/`} style={{ color: 'var(--accent-warm)' }}>privacy page</a>.
+      </>
+    ),
   },
   {
     term: 'Motion',
     detail:
-      "Every project card's animation is hand-built in CSS around that product's own idea. Jotfield uses its canonical app-header lozenge mark in a self-hosted SVG loop. Everything respects prefers-reduced-motion.",
+      "The hero's particle field and the ambient stars are drawn on canvas, and each flagship's artwork moves in CSS around that product's own idea. Everything respects prefers-reduced-motion.",
   },
   {
     term: 'A bug worth mentioning',

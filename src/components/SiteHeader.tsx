@@ -14,6 +14,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <a href={BASE} className="site-wordmark">
+        <img src={`${BASE}favicon.svg`} alt="" width={20} height={20} className="site-mark" />
         Anwar Creative Studio
       </a>
       <nav aria-label="Main" className="site-nav">
