@@ -33,9 +33,9 @@ export function StudioStatement() {
           color: 'var(--ink-dim)',
         }}
       >
-        Anwar Creative Studio is an independent software company. We make Corres, an email app that
-        opens on what needs you, and Artha, which tells you what&rsquo;s safe to spend. We&rsquo;re
-        self-funded, so the only people we answer to are the ones who use what we make.
+        Two apps lead the studio. Corres opens on the emails that ask something of you. Artha opens on
+        what you can safely spend today. We&rsquo;re self-funded, so the only people we answer to are the
+        ones who use what we make.
       </p>
       <a
         data-reveal

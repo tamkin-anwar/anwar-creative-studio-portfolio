@@ -11,6 +11,21 @@ export function Flagships() {
       <h2 id="flagships-title" data-reveal className="eyebrow mb-[var(--space-4)]">The flagships</h2>
       <div className="flagship-grid">
         <FlagshipCard
+          id="corres"
+          titleId="corres-title"
+          motion="corres"
+          imgSrc={`${import.meta.env.BASE_URL}corres-mark.webp`}
+          imgWidth={1200}
+          imgHeight={1200}
+          status={`Corres · ${corres.status}`}
+          title="Corres"
+          tagline={corres.tagline}
+          description={corres.description}
+          disclosureLabel="Where the beta stands"
+          disclosureDetail={corres.progress}
+          link={<a className="flagship-link" href={links.corres} target="_blank" rel="noreferrer">Visit Corres ↗</a>}
+        />
+        <FlagshipCard
           id="artha"
           titleId="artha-title"
           motion="artha"
@@ -26,24 +41,9 @@ export function Flagships() {
           link={
             <div className="flex flex-wrap gap-x-6">
               <a className="flagship-link" href={links.artha} target="_blank" rel="noreferrer">Open Artha ↗</a>
-              <a className="flagship-link" href={artha.beta} target="_blank" rel="noreferrer">Join the iPhone beta ↗</a>
+              <a className="flagship-link" href={artha.beta} target="_blank" rel="noreferrer">Join the beta ↗</a>
             </div>
           }
-        />
-        <FlagshipCard
-          id="corres"
-          titleId="corres-title"
-          motion="corres"
-          imgSrc={`${import.meta.env.BASE_URL}corres-mark.webp`}
-          imgWidth={1200}
-          imgHeight={1200}
-          status={`Corres · ${corres.status}`}
-          title="Corres"
-          tagline={corres.tagline}
-          description={corres.description}
-          disclosureLabel="Where the beta stands"
-          disclosureDetail={corres.progress}
-          link={<a className="flagship-link" href={links.corres} target="_blank" rel="noreferrer">Visit Corres ↗</a>}
         />
       </div>
     </section>

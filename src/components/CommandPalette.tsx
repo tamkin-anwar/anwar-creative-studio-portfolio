@@ -14,7 +14,7 @@ type Item = {
 }
 
 const ITEMS: Item[] = [
-  { group: 'Products', label: 'Corres', description: 'Email, considered. In beta on iPhone, iPad and Mac.', href: links.corres, external: true },
+  { group: 'Products', label: 'Corres', description: 'Email, considered. In beta on iPhone, iPad, Mac and Apple Watch.', href: links.corres, external: true },
   { group: 'Products', label: 'Artha', description: "Know what's safe to spend. On the web, and in beta on iPhone, iPad and Mac.", href: links.artha, external: true },
   { group: 'Company', label: 'Home', href: BASE },
   { group: 'Company', label: 'About', href: `${BASE}about/` },
