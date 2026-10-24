@@ -17,9 +17,10 @@ export function PrivacyPage() {
 
         <h2>What this site collects</h2>
         <p>
-          Nothing about you. There are no cookies, no analytics, no advertising and no tracking scripts.
-          Fonts and images are served from this site itself, so visiting doesn&rsquo;t send a request to
-          any font or tracking service.
+          Nothing that identifies you. There are no cookies, no advertising and no tracking across sites.
+          To count visits, we use Cloudflare Web Analytics, which doesn&rsquo;t use cookies or fingerprinting
+          and doesn&rsquo;t track individual visitors; it tells us totals such as page views, pages visited
+          and countries. Fonts and images are served from this site itself.
         </p>
         <p>
           The site is hosted on GitHub Pages. Like any web host, GitHub receives technical information

@@ -24,8 +24,8 @@ export function AboutPage() {
         </p>
         <p>
           <strong>Artha</strong> tells you what&rsquo;s safe to spend: one number for today, worked out
-          from your bills, budget and accounts. It&rsquo;s live on the web, with an app for iPhone and iPad
-          in beta.{' '}
+          from your bills, budget and accounts. It&rsquo;s live on the web, with an app for iPhone, iPad and
+          Mac in beta.{' '}
           <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
         </p>
         <p>

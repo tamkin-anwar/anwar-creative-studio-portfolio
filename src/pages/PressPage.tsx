@@ -57,7 +57,7 @@ export function PressPage() {
           <img src={`${BASE}press/artha-icon.png`} alt="The Artha app icon" width={96} height={96} />
           <p>
             <strong>Know what&rsquo;s safe to spend.</strong> Artha opens on one number: what you can spend
-            today and still end the month on plan. On the web, with an app for iPhone and iPad in beta. No
+            today and still end the month on plan. On the web, with an app for iPhone, iPad and Mac in beta. No
             bank login, no ads, no tracking. Free.{' '}
             <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
           </p>

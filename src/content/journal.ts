@@ -32,7 +32,7 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-10-21',
     product: 'Artha',
-    title: 'Artha for iPhone and iPad, in beta',
+    title: 'Artha for iPhone, iPad and Mac, in beta',
     body:
       'The native Artha app went to TestFlight, with a Mac version a day later. It opens on what’s safe to spend, shares one design language with the website, and works with any of about 160 currencies.',
     link: { label: 'Join the beta', href: 'https://testflight.apple.com/join/hj61wEUG' },

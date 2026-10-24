@@ -37,7 +37,7 @@ export function NowPage() {
         </p>
         <p>
           Artha is in its biggest change since it began. The money side was rebuilt around one
-          number, what&rsquo;s safe to spend, and a native app for iPhone and iPad is in beta on
+          number, what&rsquo;s safe to spend, and a native app for iPhone, iPad and Mac is in beta on
           TestFlight, five builds in, sharing one design language with the website. This week brought
           any of about 160 currencies instead of six, text that grows with your iPhone&rsquo;s text
           size, charts VoiceOver can play as sound, and a new icon in Liquid Glass. Next come the Mac

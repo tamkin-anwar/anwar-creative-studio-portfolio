@@ -33,7 +33,7 @@ const entries: { term: string; detail: ReactNode }[] = [
     term: 'Privacy',
     detail: (
       <>
-        No analytics, no cookies, no trackers, nothing watching what you do on this page. The full policy is
+        No cookies and no trackers. Visits are counted with Cloudflare Web Analytics, which records totals, not people. The full policy is
         on the <a href={`${import.meta.env.BASE_URL}privacy/`} style={{ color: 'var(--accent-warm)' }}>privacy page</a>.
       </>
     ),
