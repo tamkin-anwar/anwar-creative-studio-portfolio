@@ -6,6 +6,7 @@ const nav = [
   { label: 'Corres', href: `${BASE}#corres` },
   { label: 'Artha', href: `${BASE}#artha` },
   { label: 'About', href: `${BASE}about/` },
+  { label: 'Journal', href: `${BASE}journal/` },
   { label: 'Contact', href: `${BASE}contact/` },
 ]
 

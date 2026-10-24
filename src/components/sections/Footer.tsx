@@ -16,8 +16,9 @@ const columns = [
     title: 'Company',
     items: [
       { label: 'About', href: `${BASE}about/` },
+      { label: 'Journal', href: `${BASE}journal/` },
+      { label: 'Press kit', href: `${BASE}press/` },
       { label: 'Now', href: `${BASE}now/` },
-      { label: 'Colophon', href: `${BASE}colophon/` },
     ],
   },
   {
@@ -34,6 +35,8 @@ const columns = [
       { label: 'Privacy', href: `${BASE}privacy/` },
       { label: 'Terms', href: `${BASE}terms/` },
       { label: 'Corres privacy', href: 'https://corres.app/privacy/' },
+      { label: 'Artha privacy', href: 'https://arthaapp.com/privacy' },
+      { label: 'Colophon', href: `${BASE}colophon/` },
     ],
   },
 ]

@@ -685,7 +685,7 @@ a {
 .site-search:hover { color: var(--ink); border-color: var(--line-strong); }
 .site-search-kbd { border: 1px solid var(--line-strong); border-radius: 4px; padding: 0 5px; font-size: 10px; font-family: inherit; }
 .site-search-label-narrow { display: none; }
-@media (max-width: 639px) {
+@media (max-width: 799px) {
   .site-nav-link { display: none; }
   .site-search-label-wide, .site-search-kbd { display: none; }
   .site-search-label-narrow { display: inline; }
@@ -727,3 +727,16 @@ a {
 .workshop-row { transition: padding-left 0.3s var(--ease-out-expo); }
 .workshop-row:hover, .workshop-row:focus-visible { padding-left: 6px; }
 @media (prefers-reduced-motion: reduce) { .workshop-row { transition: none; } }
+
+/* journal */
+.journal-list { list-style: none; padding: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.journal-entry { padding: var(--space-3) 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.prose-page .journal-meta { font-size: var(--text-label); color: var(--ink-faint); letter-spacing: 0.04em; }
+.prose-page h2.journal-title { font-family: var(--font-display); font-size: 1.5rem; text-transform: none; letter-spacing: 0; color: var(--ink); margin-top: 0; }
+
+/* press kit */
+.press-product { display: flex; gap: var(--space-3); align-items: flex-start; }
+.press-product img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+.press-shots { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: var(--space-2); align-items: start; }
+.press-shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+@media (max-width: 520px) { .press-product { flex-direction: column; } }
