@@ -1,8 +1,7 @@
 import { useEffect, useRef, type CSSProperties } from 'react'
 import { links } from '../../content/links'
 import { startMacTour } from '../../lib/tours'
-
-const BASE = import.meta.env.BASE_URL
+import { MacBezel } from '../devices/Bezels'
 
 // The headline, then Corres for Mac in Apple's own MacBook Pro bezel: a live,
 // four-chapter tour of sample mail laid out at the 14-inch "Larger Text"
@@ -96,7 +95,7 @@ export function Hero() {
               </div>
             </div>
           </div>
-          </div></div><img className="bezel" src={`${BASE}devices/macbook-pro-14-space-black.png`} alt="" /></div>
+          </div></div><MacBezel /></div>
           <div className="chapters"><div className="ch-row"><button type="button" className="ch-tab on" data-ch="sort" aria-pressed="true"><span className="bar"><i></i></span><b>Sorts what needs you</b><span>Only the emails that ask something of you, each with the reason it&rsquo;s there.</span></button><button type="button" className="ch-tab" data-ch="ask" aria-pressed="false"><span className="bar"><i></i></span><b>Answers from your mail</b><span>Ask a question in plain words; Corres finds the answer in your email and shows where it came from.</span></button><button type="button" className="ch-tab" data-ch="reply" aria-pressed="false"><span className="bar"><i></i></span><b>Replies in your words</b><span>A summary checked against the email, and a reply drafted in your own voice.</span></button><button type="button" className="ch-tab" data-ch="private" aria-pressed="false"><span className="bar"><i></i></span><b>Keeps your mail private</b><span>The details you need at the top, trackers blocked, all on your Mac.</span></button></div><button type="button" className="ch-pause"  aria-pressed="false">Pause</button></div>
         </div>
       </section>

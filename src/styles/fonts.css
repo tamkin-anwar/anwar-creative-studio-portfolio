@@ -1,22 +1,24 @@
-/* self-hosted, latin-subset, weight 400 only: the only weight/style either
-   family is ever actually set to anywhere in this codebase. Self-hosting
-   drops the fonts.googleapis.com round trip (extra DNS + TCP + a
-   render-blocking CSS request) that was sitting in front of first paint. */
+/* self-hosted, latin subset. Fraunces and Inter are variable fonts:
+   Fraunces carries the optical-size, weight and SOFT axes the headings
+   and the wordmark are set with; Inter covers weights 400 to 700.
+   Self-hosting drops the fonts.googleapis.com round trip (extra DNS +
+   TCP + a render-blocking CSS request) that was sitting in front of
+   first paint. */
 
 @font-face {
   font-family: 'Fraunces';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/fraunces-400.woff2') format('woff2');
+  src: url('/fonts/fraunces-var.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400 700;
   font-display: swap;
-  src: url('/fonts/inter-400.woff2') format('woff2');
+  src: url('/fonts/inter-var.woff2') format('woff2');
 }
 
 @font-face {

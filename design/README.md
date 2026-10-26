@@ -69,10 +69,13 @@ Files for press: `public/press/identity/` (PNG lockups for light and dark ground
 
 - Paper `#fbf9f4` and ink `#1a1916` in light; `#0b0b0e` and `#f2ede2` in dark. The site follows the
   device's setting, with no toggle. All tokens are in `src/styles/theme.css`.
-- Fraunces for headings and the wordmark, Inter for text, JetBrains Mono for small labels.
-  Self-hosted, weight 400 only for now. The concepts used the variable fonts, which draw headings
-  lighter and give the wordmark its optical size; switching to them is the main gap between
-  concept 5 and the live site.
+- Fraunces for headings and the wordmark, Inter for text, JetBrains Mono for small labels, all
+  self-hosted (latin). Fraunces is the variable font (optical size, weight and SOFT axes), so the
+  headings get the light, high-contrast display cut the concepts were designed with. Inter is
+  variable over 400 to 700.
+- Display headings use large optical sizes (hero 144, section titles 120) at desktop sizes. Below
+  1100 px and again below 720 px, `home.css` steps the optical size and tracking down, because the
+  display cut at phone sizes closes up the spaces between words.
 
 ## The devices
 
@@ -80,7 +83,12 @@ Files for press: `public/press/identity/` (PNG lockups for light and dark ground
   Resources terms: drawn as images over live HTML screens, never redrawn, tilted, animated or
   recolored. Only web-sized copies are in this repo (`public/devices/`); the full-size originals are
   not redistributed.
-- The iPhone is silver in light mode and black in dark.
+- The iPhone is silver in light mode and black in dark. Frames are WebP (about 14 KB per iPhone,
+  57 KB for the MacBook) inside `<picture>` (`src/components/devices/Bezels.tsx`), so a visitor
+  downloads only the iPhone their mode shows, and phones skip the MacBook frame, which the phone
+  layout hides. The PNGs stay in `public/devices/` for the archived concepts.
+- The iPhone is 300 px wide, or the screen width minus 56 px on very small phones. Everything
+  on its screen is sized in points (`--pt`), so it scales as one piece.
 - iPhone 18 Pro: image 1350 x 2760; screen 1206 x 2622 at (72, 69), so left 5.3333%, top 2.5%,
   width 89.3333%, height 95%, corner radius 15.42% / 7.09%. One iOS point is
   `--ip-w * 0.893333 / 402`.
@@ -106,6 +114,13 @@ The homepage shows why each app is different instead of what it looks like. Code
 Rules: a tour starts when its device scrolls into view, pauses when it leaves, plays once and
 stops. Tabs jump to any chapter; Pause holds it. With Reduce Motion each chapter shows its end
 state. All mail and money in them is sample data with made-up people.
+
+## Every screen size
+
+Checked at 320, 375, 430, 768, 1024 and 1440 px on every page: no sideways scrolling, no text
+under 12 px outside the device screens. On touch screens, every link and button outside running
+text has a hit area of at least 44 pt (Apple's minimum); the footer's link lists get real
+spacing, and the smaller controls get an invisible larger hit area so nothing looks different.
 
 ## Copy
 

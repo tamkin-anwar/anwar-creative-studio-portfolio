@@ -71,7 +71,7 @@ export function PressPage() {
 
         <h2>Corres</h2>
         <div className="press-product">
-          <img src={`${BASE}press/corres-icon.png`} alt="The Corres app icon" width={96} height={96} />
+          <img src={`${BASE}press/corres-icon.webp`} alt="The Corres app icon" width={96} height={96} />
           <p>
             <strong>Email, considered.</strong> Corres opens on the emails that ask something of you, with the
             reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
@@ -87,7 +87,7 @@ export function PressPage() {
 
         <h2>Artha</h2>
         <div className="press-product">
-          <img src={`${BASE}press/artha-icon.png`} alt="The Artha app icon" width={96} height={96} />
+          <img src={`${BASE}press/artha-icon.webp`} alt="The Artha app icon" width={96} height={96} />
           <p>
             <strong>Know what&rsquo;s safe to spend.</strong> Artha opens on one number: what you can spend
             today and still end the month on plan. On the web, with an app for iPhone, iPad and Mac in beta. No
