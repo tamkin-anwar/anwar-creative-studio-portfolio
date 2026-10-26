@@ -4,7 +4,7 @@ export function NowPage() {
   return (
     <PageShell eyebrow="Now">
       <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
-        What I&rsquo;m focused on.
+        What we&rsquo;re working on.
       </h1>
 
       <div
@@ -12,43 +12,35 @@ export function NowPage() {
         style={{ color: 'var(--ink-dim)', fontSize: 'var(--text-body)' }}
       >
         <p>
-          Corres is the main new build: a native Apple-first email app, and the studio’s next flagship
-          alongside Artha. Email, considered.
+          Corres is our main build right now: a native email app for iPhone, iPad, Mac and Apple
+          Watch, and the studio&rsquo;s next flagship alongside Artha. Email, considered.
         </p>
         <p>
-          The beta is on TestFlight with early testers, thirty-eight builds in, and it&rsquo;s my own daily
-          driver, for Gmail, Outlook and iCloud Mail in one inbox, on iPhone, iPad, Mac and now Apple
-          Watch. It sorts what needs you and keeps a Primary inbox that learns from every correction,
-          with Promotions, Social and Updates kept apart. Writing is complete, from drafts and Send
-          Later to follow-up reminders, and search reaches the whole mailbox. Measured on my own
-          5,500-conversation mailbox, emails open almost at once. The newest builds learn how you
-          write, so suggested replies use your own greeting and sign-off; let Siri write and send an
-          email in Corres; put Send Later and today&rsquo;s deliveries on the Lock Screen; and bring
-          Corres to the wrist, with replies by voice. Recent ones brought the Mac level with the iPhone:
-          suggested replies, key details at the top of an email, translation, and a compose window
-          that knows who you write to. Rules now run inside Gmail and Outlook too, so they work with
-          Corres closed, and what needs you sits on the watch face. The newest make sure nothing you do
-          is lost: a send that doesn&rsquo;t go waits and goes by itself once you&rsquo;re back online,
-          and your moves, snoozes and rules merge between your devices; search is about ten times
-          faster on a big mailbox. The latest send an email the moment you leave Corres,
-          notify new mail sooner, and let every word on the Mac grow to twice its size. The newest
-          read deadlines, receipts and deliveries in every language Corres speaks, follow your
-          region&rsquo;s weekend, and add an optional Brief of what&rsquo;s due today. Every screen was checked with Apple&rsquo;s own
-          accessibility audit, and Corres speaks nine languages. Next come more testers and the App
-          Store.
+          The beta is on TestFlight with early testers, thirty-eight builds in, and we use it every
+          day ourselves. Gmail, Outlook and iCloud Mail share one inbox that opens on what needs you,
+          with a Primary inbox that learns from every correction and Promotions, Social and Updates
+          kept apart. Writing is complete, from Send Later and Undo Send to follow-up reminders, and
+          search reaches the whole mailbox. Nothing you do is lost: an email sent with no signal goes
+          by itself once you&rsquo;re back online, and your choices follow you between devices.
         </p>
         <p>
-          Artha is in its biggest change since it began. The money side was rebuilt around one
-          number, what&rsquo;s safe to spend, and a native app for iPhone, iPad and Mac is in beta on
-          TestFlight, five builds in, sharing one design language with the website. This week brought
-          any of about 160 currencies instead of six, text that grows with your iPhone&rsquo;s text
-          size, charts VoiceOver can play as sound, and a new icon in Liquid Glass. Next come the Mac
-          app for testers, then the App Store.
+          The latest builds are about everywhere and everyone. Corres reads deadlines, receipts,
+          deliveries and questions in all nine languages it speaks, follows your region&rsquo;s weekend,
+          and offers an optional Brief of what&rsquo;s due today. Every screen was checked with
+          Apple&rsquo;s own accessibility audit. Next come more testers, then the App Store.
         </p>
         <p>
-          After that, it’s Jotfield: ironing out rough edges from using it daily. Doorsong, Tether,
-          and Stub are live and stable, with fixes as they come up. Ranna, keeping my mom’s handwritten
-          recipes for the next generation, is planned but not started yet.
+          Artha is going through its biggest change since it began. The money side was rebuilt around
+          one number, what&rsquo;s safe to spend, and a native app for iPhone, iPad and Mac is in beta
+          on TestFlight, sharing one design language with the website. It works with any of about 160
+          currencies, grows with your text size, and lets VoiceOver play its charts as sound. Next
+          comes the App Store.
+        </p>
+        <p>
+          After that, it&rsquo;s Jotfield: smoothing the rough edges we find using it every day.
+          Doorsong, Tether and Stub are live and stable, with fixes as they come up. Ranna, an app for
+          keeping a family&rsquo;s handwritten recipes for the next generation, is planned but not
+          started yet.
         </p>
         <a href="https://corres.app" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>Visit Corres ↗</a>
       </div>
