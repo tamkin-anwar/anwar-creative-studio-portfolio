@@ -63,10 +63,10 @@ export function AboutPage() {
 
         <h2>Company details</h2>
         <dl className="detail-list">
-          <dt>Legal name</dt>
+          <dt>Run by</dt>
           <dd>{company.legalName}</dd>
-          <dt>Registered in</dt>
-          <dd>{company.registered}</dd>
+          <dt>Company</dt>
+          <dd>{company.entity}</dd>
           <dt>Funding</dt>
           <dd>Independent and self-funded</dd>
           <dt>Contact</dt>

@@ -25,7 +25,7 @@ export function PressPage() {
         <h2>The company</h2>
         <dl className="detail-list">
           <dt>Name</dt>
-          <dd>{company.legalName}</dd>
+          <dd>{company.name}</dd>
           <dt>What it is</dt>
           <dd>An independent software company making premium apps for iPhone, iPad and Mac</dd>
           <dt>Founder</dt>

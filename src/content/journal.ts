@@ -20,7 +20,7 @@ export const journal: JournalEntry[] = [
     product: 'Studio',
     title: 'A proper home for the studio',
     body:
-      'anwarcreativestudio.com is now the company site of Anwar Creative Studio LLC: who we are, what we make, how to reach us, and the legal pages to go with it. Artha gained a public front page and its own terms on the same day.',
+      'anwarcreativestudio.com is now the company site of Anwar Creative Studio: who we are, what we make, how to reach us, and the legal pages to go with it. Artha gained a public front page and its own terms on the same day.',
   },
   {
     date: '2026-10-23',

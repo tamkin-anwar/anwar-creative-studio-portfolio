@@ -11,7 +11,7 @@ export function PrivacyPage() {
         </h1>
         <p className="font-mono" style={{ fontSize: 'var(--text-label)' }}>Effective October 23, 2026</p>
         <p>
-          This policy covers anwarcreativestudio.com, run by {company.legalName} (&ldquo;we&rdquo;). Our
+          This policy covers anwarcreativestudio.com, run by {company.legalName}, as {company.name} (&ldquo;we&rdquo;). Our
           apps have their own policies, linked at the end, which apply when you use them.
         </p>
 

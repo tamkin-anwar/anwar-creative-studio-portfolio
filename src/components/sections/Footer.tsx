@@ -87,7 +87,7 @@ export function Footer() {
         style={{ borderTop: '1px solid var(--line)', fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
         <span>
-          &copy; {company.year} {company.legalName} &middot; {company.registered}
+          &copy; {company.year} {company.name} &middot; {company.registered}
         </span>
         <a href={links.github} target="_blank" rel="noreferrer" style={{ color: 'var(--ink-faint)' }}>
           GitHub ↗

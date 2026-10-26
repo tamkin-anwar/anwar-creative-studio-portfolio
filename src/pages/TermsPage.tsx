@@ -11,7 +11,7 @@ export function TermsPage() {
         </h1>
         <p className="font-mono" style={{ fontSize: 'var(--text-label)' }}>Effective October 23, 2026</p>
         <p>
-          These terms cover your use of anwarcreativestudio.com, run by {company.legalName}. Each of our
+          These terms cover your use of anwarcreativestudio.com, run by {company.legalName}, as {company.name}. Each of our
           apps has its own terms, which apply when you use that app. For Corres, see{' '}
           <a href="https://corres.app/terms/" target="_blank" rel="noreferrer">corres.app/terms</a>.
         </p>
