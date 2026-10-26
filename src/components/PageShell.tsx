@@ -1,15 +1,14 @@
 import type { ReactNode } from 'react'
-import { LazyAmbientField } from './LazyAmbientField'
 import { CommandPalette } from './CommandPalette'
 import { SiteHeader } from './SiteHeader'
 import { Footer } from './sections/Footer'
 
 export function PageShell({
   eyebrow,
-  backHref = '../',
   children,
 }: {
   eyebrow: string
+  /** kept for older call sites; the header lockup now links home */
   backHref?: string
   children: ReactNode
 }) {
@@ -18,20 +17,12 @@ export function PageShell({
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
-      <LazyAmbientField />
       <SiteHeader />
       <CommandPalette />
       <main
         id="main-content"
-        className="relative mx-auto flex min-h-[100svh] max-w-2xl flex-col justify-center gap-[var(--space-4)] px-[var(--space-3)] pb-[var(--space-7)] pt-[calc(var(--space-7)+48px)]"
+        className="relative mx-auto flex min-h-[70svh] max-w-2xl flex-col gap-[var(--space-4)] px-[var(--space-3)] pb-[var(--space-6)] pt-[var(--space-7)]"
       >
-        <a
-          href={backHref}
-          className="font-mono inline-flex w-fit items-center gap-[var(--space-1)] tracking-[0.06em]"
-          style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
-        >
-          ← Anwar Creative Studio
-        </a>
         <p className="eyebrow">{eyebrow}</p>
         {children}
       </main>

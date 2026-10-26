@@ -1,18 +1,38 @@
 :root {
-  /* palette: dark field, warm gem accent, cool violet depth */
-  --bg: #0a0a0d;
-  --ink: #f2ede2;
-  --ink-dim: rgba(242, 237, 226, 0.6);
-  --ink-faint: rgba(242, 237, 226, 0.56);
-  --accent-warm: #d9a15c;
-  --accent-cool: #7c6fa8;
-  --line: rgba(242, 237, 226, 0.12);
-  --line-strong: rgba(242, 237, 226, 0.22);
+  /* palette: warm paper by default, the near-black field in dark mode.
+     Legacy names (--bg, --ink-dim, --ink-faint, --accent-warm) alias the new ones. */
+  --paper: #fbf9f4;
+  --paper-2: #f3efe6;
+  --ink: #1a1916;
+  --ink-2: #5c5850;
+  --ink-3: #75706a;
+  --line: rgba(26, 25, 22, 0.11);
+  --line-strong: rgba(26, 25, 22, 0.2);
+  --link: #8f5a17;
+  --btn: #1a1916;
+  --btn-ink: #fbf9f4;
+  --gold-pt: #b9822f;
+  --shadow: 0 40px 80px -36px rgba(40, 30, 10, 0.38), 0 2px 6px rgba(40, 30, 10, 0.06);
+  --bg: var(--paper);
+  --ink-dim: var(--ink-2);
+  --ink-faint: var(--ink-3);
+  --accent-warm: var(--link);
+  --accent-cool: var(--ink-3);
+
+  /* Corres's own palette, for its live demos */
+  --c-bg: #f6f3ec; --c-side: #efebe2; --c-surface: #ffffff; --c-ink: #141312; --c-sec: #5e5a54; --c-ter: #8a857b;
+  --c-line: rgba(20, 19, 18, 0.09); --c-accent: #2f5d9e; --c-sel: rgba(47, 93, 158, 0.12); --c-due: #b4561f;
+  /* Artha's Daybreak palette, for its live demos */
+  --a-ground: #f4f6fa; --a-surface: #ffffff; --a-ink: #0b1020; --a-sec: #586174; --a-accent: #2f5fd0; --a-good: #16804b;
+  --a-line: rgba(11, 16, 32, 0.08); --a-caution: #9a5b00;
 
   /* type */
   --font-display: 'Fraunces', ui-serif, Georgia, serif;
   --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+  --font-app: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+  --font-app-serif: ui-serif, 'New York', 'Iowan Old Style', Georgia, serif;
+  --font-figure: ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
 
   --text-display: clamp(2.5rem, 6vw, 5rem);
   --text-heading: clamp(1.5rem, 3vw, 2.25rem);
@@ -38,4 +58,29 @@
   --duration-fast: 0.3s;
   --duration-base: 0.6s;
   --duration-slow: 0.9s;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring: cubic-bezier(0.34, 1.36, 0.64, 1);
+  color-scheme: light dark;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0b0b0e;
+    --paper-2: #131318;
+    --ink: #f2ede2;
+    --ink-2: rgba(242, 237, 226, 0.72);
+    --ink-3: rgba(242, 237, 226, 0.56);
+    --line: rgba(242, 237, 226, 0.12);
+    --line-strong: rgba(242, 237, 226, 0.22);
+    --link: #d9a15c;
+    --btn: #f2ede2;
+    --btn-ink: #0b0b0e;
+    --gold-pt: #e2ac5f;
+    --shadow: 0 40px 80px -36px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.07);
+    --c-bg: #0a0a0c; --c-side: #101013; --c-surface: #141417; --c-ink: #f2f3f5; --c-sec: #a1a3aa; --c-ter: #8a8c93;
+    --c-line: rgba(255, 255, 255, 0.08); --c-accent: #8fb4e8; --c-sel: rgba(143, 180, 232, 0.16); --c-due: #f0a46a;
+    --a-ground: #0a0e17; --a-surface: #121826; --a-ink: #f2f4f8; --a-sec: #a3abbd; --a-accent: #6e95ff; --a-good: #3dd68c;
+    --a-line: rgba(242, 244, 248, 0.07); --a-caution: #f5b544;
+  }
+}
+

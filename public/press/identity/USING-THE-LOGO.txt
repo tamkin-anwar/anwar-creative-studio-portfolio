@@ -1,0 +1,22 @@
+ANWAR CREATIVE STUDIO: USING THE LOGO
+
+The parts
+  The lockup      The hanging a with "Anwar." Use it wherever the studio is named.
+  The hanging a   A lowercase a hanging from a headline, with a gold point.
+                  For square spaces only: avatars, favicons, app icons.
+  The gold point  The full stop of "Anwar." and the point inside the a.
+
+Files
+  anwar-lockup-ink.png     dark ink, for light backgrounds
+  anwar-lockup-light.png   light ink, for dark backgrounds
+  anwar-symbol-ink.svg     the hanging a, dark ink
+  anwar-symbol-light.svg   the hanging a, light ink
+
+Please
+  Leave clear space around the logo of at least half its height.
+  Keep it at least 80 px wide on screen (20 mm in print).
+  Use the files as they are: no recoloring, stretching, outlines,
+  shadows or effects, and never set the name in another typeface.
+  Write the studio's name in text as "Anwar Creative Studio".
+
+Questions: contact@anwarcreativestudio.com

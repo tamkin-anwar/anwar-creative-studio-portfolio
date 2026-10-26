@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./styles/theme.css";
 @import "./styles/fonts.css";
+@import "./styles/home.css";
 
 * {
   box-sizing: border-box;
@@ -49,7 +50,6 @@
    while leaving iOS's native vertical momentum scroll untouched */
 html {
   background: var(--bg);
-  color-scheme: dark;
   overflow-x: hidden;
   overscroll-behavior-x: none;
 }
@@ -82,18 +82,6 @@ canvas {
   user-select: none;
 }
 
-/* sitewide film grain, fixed so it stays constant while content scrolls beneath it */
-#root::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0.05;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
 /* base-level element resets live in Tailwind's own cascade layer: unlayered
    CSS always beats layered CSS regardless of specificity, so without this
    these rules would silently override any Tailwind margin utility (mb-*,
@@ -120,22 +108,11 @@ a {
   color: var(--bg);
 }
 
-/* soft ambient glow blobs: used sparingly, one per section, to keep the dark field
-   from reading as flat or empty without competing with the hero's own particles */
-.ambient-glow {
-  position: absolute;
-  z-index: 0;
-  border-radius: 9999px;
-  filter: blur(90px);
-  pointer-events: none;
-}
-
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-warm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-3);
 }
 
 /* reveal-on-scroll: JS toggles [data-revealed] once elements enter view */
@@ -183,157 +160,6 @@ a {
     opacity: 1; transform: none; clip-path: none; transition: none;
   }
 }
-.flagships { max-width: 1152px; margin: auto; padding: 64px 24px 96px; }
-.flagship-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.flagship { border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: linear-gradient(145deg, #1b1920, #101115); }
-.flagship-art { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-.flagship-copy { padding: 32px; display: flex; flex-direction: column; gap: 20px; }
-.flagship h3 { font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; }
-.flagship p { color: var(--ink-dim); }
-.flagship .flagship-tagline { color: var(--ink); font-size: 1.25rem; }
-.flagship-status { font: 0.75rem var(--font-mono); color: var(--accent-warm); letter-spacing: .07em; text-transform: uppercase; }
-.flagship a, .flagship summary { color: var(--accent-warm); }
-.flagship details p { padding-top: 16px; font-size: .9rem; }
-.flagship-link { align-self: flex-start; padding: 10px 0; }
-#corres, #artha, #flagships, #workshop, #principles { scroll-margin-top: 80px; }
-@media (max-width: 639px) {
-  .flagship-grid { grid-template-columns: 1fr; }
-  .flagship-copy { padding: 24px; }
-}
-
-/* Artwork motion stays separate from card tilt and entrance reveals.
-   Animate only transform/opacity; pause rather than restart outside the viewport. */
-.flagship-artwork { position: relative; overflow: hidden; aspect-ratio: 16 / 10; isolation: isolate; }
-.flagship-artwork .flagship-art { display: block; height: 100%; }
-.flagship-light, .flagship-sheen { position: absolute; inset: 0; pointer-events: none; opacity: 0; }
-
-/* Ring geometry follows the orb in the original 1200 x 750 artwork. */
-.flagship-art-scene { position: relative; width: 100%; height: 100%; }
-.artha-orb-rim {
-  position: absolute; width: 50%; aspect-ratio: 1; left: 25%; top: 50%;
-  transform: translateY(-50%); border-radius: 50%; pointer-events: none;
-  opacity: 0; filter: blur(2px); mix-blend-mode: screen;
-}
-.artha-orb-rim > span {
-  display: block; width: 100%; height: 100%; border-radius: inherit;
-  background: conic-gradient(from 0deg, transparent 0deg 175deg, rgba(113,182,255,.75) 230deg, #fff1be 285deg, transparent 330deg);
-  mask-image: radial-gradient(circle, transparent 62%, #000 67%, #000 69%, transparent 72%);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  [data-flagship-motion='artha'] .flagship-art-scene {
-    animation: artha-awaken 4.8s ease-in-out infinite;
-  }
-  [data-flagship-motion='artha'] .flagship-light {
-    inset: -28%;
-    background: conic-gradient(from 60deg, transparent, rgba(255,202,101,.25) 52deg, transparent 105deg, rgba(99,160,255,.22) 220deg, transparent 285deg);
-    filter: blur(14px);
-    mix-blend-mode: screen;
-    animation: artha-light 4.8s ease-in-out infinite;
-  }
-  [data-flagship-motion='artha'] .flagship-sheen {
-    inset: 14% 21%;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, rgba(255,247,211,.74), transparent 24%);
-    mix-blend-mode: screen;
-    animation: artha-glint 4.8s ease-in-out infinite;
-  }
-  .artha-orb-rim { opacity: .95; }
-  .artha-orb-rim > span { animation: artha-rim-orbit 6s linear infinite; }
-  [data-flagship-motion='artha'] .flagship-art-scene,
-  .artha-orb-rim > span { animation-play-state: paused; }
-  [data-art-active='true'][data-flagship-motion='artha'] .flagship-art-scene,
-  [data-art-active='true'] .artha-orb-rim > span { animation-play-state: running; }
-  [data-flagship-motion='corres'] .flagship-sheen {
-    background: linear-gradient(112deg, transparent 35%, rgba(228,236,248,.04) 43%, rgba(236,242,252,.22) 50%, rgba(143,180,232,.08) 57%, transparent 65%);
-    animation: corres-metal-sheen 8s ease-in-out infinite;
-  }
-  .flagship-artwork .flagship-light,
-  .flagship-artwork .flagship-sheen { animation-play-state: paused; }
-  [data-art-active='true'] .flagship-light,
-  [data-art-active='true'] .flagship-sheen { animation-play-state: running; }
-}
-
-@keyframes artha-awaken {
-  0%, 100% { transform: scale(1); }
-  40% { transform: scale(1.065); }
-  75% { transform: scale(1.015); }
-}
-@keyframes artha-light {
-  0%, 100% { transform: rotate(-35deg) scale(.86); opacity: .15; }
-  28% { opacity: .95; }
-  72% { transform: rotate(235deg) scale(1.06); opacity: .62; }
-}
-@keyframes artha-glint {
-  0%, 100% { transform: translate(-13%, 9%) scale(.84); opacity: .12; }
-  30% { opacity: .76; }
-  68% { transform: translate(14%, -10%) scale(1.05); opacity: .36; }
-}
-@keyframes artha-rim-orbit {
-  to { transform: rotate(360deg); }
-}
-@keyframes corres-metal-sheen {
-  0%, 18% { transform: translateX(-100%); opacity: 0; }
-  28% { opacity: .65; }
-  58% { transform: translateX(100%); opacity: 0; }
-  100% { transform: translateX(100%); opacity: 0; }
-}
-
-/* site header: the one visible navigation on every page; ⌘K stays as a shortcut */
-.site-header {
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 45;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
-  padding: calc(env(safe-area-inset-top, 0px) + 14px) max(var(--space-3), env(safe-area-inset-right, 0px)) 14px max(var(--space-3), env(safe-area-inset-left, 0px));
-  background: linear-gradient(to bottom, rgba(10, 10, 13, 0.92), rgba(10, 10, 13, 0.7));
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-.site-mark { width: 20px; height: 20px; flex: none; }
-.site-wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 1.0625rem;
-  letter-spacing: 0.01em;
-  color: var(--ink);
-  white-space: nowrap;
-}
-.site-nav { display: flex; align-items: center; gap: var(--space-3); }
-.site-nav-link {
-  font-size: 0.875rem;
-  color: var(--ink-dim);
-  transition: color 0.2s;
-}
-.site-nav-link:hover, .site-nav-link:focus-visible { color: var(--ink); }
-.site-search {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: 0.06em;
-  color: var(--ink-dim);
-  border: 1px solid var(--line);
-  border-radius: 9999px;
-  padding: 5px 10px;
-}
-.site-search:hover { color: var(--ink); border-color: var(--line-strong); }
-.site-search-kbd { border: 1px solid var(--line-strong); border-radius: 4px; padding: 0 5px; font-size: 10px; font-family: inherit; }
-.site-search-label-narrow { display: none; }
-@media (max-width: 799px) {
-  .site-nav-link { display: none; }
-  .site-search-label-wide, .site-search-kbd { display: none; }
-  .site-search-label-narrow { display: inline; }
-  .site-wordmark { font-size: 1rem; }
-}
-
 /* hero buttons */
 .hero-cta {
   display: inline-flex;
@@ -351,11 +177,12 @@ a {
 
 /* long-form pages: about, contact, legal */
 .prose-page h2 {
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-warm);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--ink);
   margin-top: var(--space-4);
 }
 .prose-page p, .prose-page li { color: var(--ink-dim); font-size: var(--text-body); line-height: 1.65; }

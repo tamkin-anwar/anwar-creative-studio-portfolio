@@ -24,8 +24,7 @@ const entries: { term: string; detail: ReactNode }[] = [
         by Rasmus Andersson, for body text. <Link href="https://www.jetbrains.com/lp/mono/">
           JetBrains Mono
         </Link>{' '}
-        for labels and code. All three are self-hosted as WOFF2, weight 400 only, the only weight used
-        anywhere on the site.
+        for labels and code. All three are self-hosted as WOFF2.
       </>
     ),
   },
@@ -39,9 +38,35 @@ const entries: { term: string; detail: ReactNode }[] = [
     ),
   },
   {
-    term: 'Motion',
+    term: 'The demos',
     detail:
-      "The hero's particle field and the ambient stars are drawn on canvas, and each flagship's artwork moves in CSS around that product's own idea. Everything respects prefers-reduced-motion.",
+      'Corres and Artha on the homepage are not videos or screenshots. Each screen is live HTML, drawn at the size the real app is laid out at and scaled to fit, and a short script plays it one chapter at a time once it scrolls into view. It plays once and stops, pauses when you scroll away, and with Reduce Motion each chapter simply shows how it ends. The people in the mail are made up.',
+  },
+  {
+    term: 'Devices',
+    detail: (
+      <>
+        The iPhone and MacBook Pro frames are Apple&rsquo;s own{' '}
+        <Link href="https://developer.apple.com/design/resources/">Product Bezels</Link>, used as Apple
+        provides them: never redrawn, tilted or animated.
+      </>
+    ),
+  },
+  {
+    term: 'Light and dark',
+    detail:
+      'The site follows your device. Every color is a token with a light and a dark value, and the iPhone switches from silver to black with it.',
+  },
+  {
+    term: 'The mark',
+    detail: (
+      <>
+        A lowercase a hanging from a headline, sized to the capital height of Fraunces so it sits on the
+        same line as &ldquo;Anwar.&rdquo; The gold point is the full stop. It appears once in a view, where a
+        sentence ends, and never as decoration. Files and rules are in the{' '}
+        <a href={`${import.meta.env.BASE_URL}press/`} style={{ color: 'var(--accent-warm)' }}>press kit</a>.
+      </>
+    ),
   },
   {
     term: 'A bug worth mentioning',

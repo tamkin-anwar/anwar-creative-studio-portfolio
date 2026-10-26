@@ -1,0 +1,294 @@
+<title>ACS Homepage Concept II</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..500,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: an editorial, left-aligned page in one column of ~1120px; the hero is the headline over one composed product scene; warm paper by default, ACS's near-black when the system is dark */
+:root {
+  --paper: #fbf9f4;
+  --paper-2: #f3efe6;
+  --ink: #1a1916;
+  --ink-2: #5c5850;
+  --ink-3: #8a857b;
+  --line: rgba(26, 25, 22, 0.11);
+  --link: #8f5a17;
+  --btn: #1a1916;
+  --btn-ink: #fbf9f4;
+  --shadow: 0 30px 70px -30px rgba(40, 30, 10, 0.35), 0 2px 6px rgba(40, 30, 10, 0.06);
+  /* Artha's Daybreak, Day */
+  --a-ground: #f4f6fa; --a-surface: #ffffff; --a-ink: #0b1020; --a-sec: #586174; --a-accent: #2f5fd0; --a-good: #16804b; --a-line: rgba(11,16,32,.08);
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-figure: ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b0b0e; --paper-2: #131318; --ink: #f2ede2; --ink-2: rgba(242,237,226,.7); --ink-3: rgba(242,237,226,.5);
+    --line: rgba(242,237,226,.12); --link: #d9a15c; --btn: #f2ede2; --btn-ink: #0b0b0e;
+    --shadow: 0 30px 70px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.06);
+    --a-ground: #0a0e17; --a-surface: #121826; --a-ink: #f2f4f8; --a-sec: #a3abbd; --a-accent: #6e95ff; --a-good: #3dd68c; --a-line: rgba(242,244,248,.07);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0b0b0e; --paper-2: #131318; --ink: #f2ede2; --ink-2: rgba(242,237,226,.7); --ink-3: rgba(242,237,226,.5);
+  --line: rgba(242,237,226,.12); --link: #d9a15c; --btn: #f2ede2; --btn-ink: #0b0b0e;
+  --shadow: 0 30px 70px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.06);
+  --a-ground: #0a0e17; --a-surface: #121826; --a-ink: #f2f4f8; --a-sec: #a3abbd; --a-accent: #6e95ff; --a-good: #3dd68c; --a-line: rgba(242,244,248,.07);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  letter-spacing: -0.006em; -webkit-font-smoothing: antialiased;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+
+/* concept bar: not part of the design */
+.concept { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding-block: 14px; border-bottom: 1px dashed var(--line); font-size: 13px; color: var(--ink-3); }
+.concept b { color: var(--ink-2); font-weight: 500; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+.seg button { font: 500 12.5px var(--font-body); color: var(--ink-2); background: none; border: 0; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* header */
+.hdr { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+.word { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-display); font-size: 18px; font-variation-settings: "opsz" 24, "SOFT" 50; letter-spacing: -0.01em; }
+.word img { width: 18px; height: 18px; }
+.nav { display: flex; gap: 28px; font-size: 15px; color: var(--ink-2); }
+.nav a:hover { color: var(--ink); }
+@media (max-width: 640px) { .nav a:not(:last-child) { display: none; } }
+
+/* hero */
+.hero { padding-block: 64px 0; }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 340; font-size: clamp(3rem, 8.4vw, 6.9rem); line-height: .98;
+  letter-spacing: -0.035em; font-variation-settings: "opsz" 144, "SOFT" 30; margin: 0; max-width: 11.5ch; text-wrap: balance;
+}
+.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px 48px; margin-top: 30px; }
+.hero p { font-size: 1.22rem; line-height: 1.5; color: var(--ink-2); max-width: 30rem; margin: 0; }
+.cta { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; background: var(--btn); color: var(--btn-ink); font-weight: 500; font-size: 15.5px; padding: 12px 20px; border-radius: 999px; }
+.tlink { color: var(--link); font-weight: 500; font-size: 15.5px; }
+.fine { font-size: 13px; color: var(--ink-3); margin-top: 10px; }
+
+/* scene */
+.scene { position: relative; margin-top: 56px; padding-bottom: 70px; }
+.window { position: relative; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); background: #000; width: 86%; margin-left: auto; }
+.window img { display: block; width: 100%; }
+.phone { position: absolute; width: 21%; min-width: 150px; border-radius: 34px; padding: 7px; background: #0d0d10; box-shadow: var(--shadow); }
+.phone img, .phone .ascreen { display: block; width: 100%; border-radius: 28px; }
+.phone.corres { left: 0; bottom: 0; }
+.phone.artha { right: 6%; bottom: -10px; }
+.ascreen { background: var(--a-ground); aspect-ratio: 9 / 19.5; padding: 14% 7% 0; display: flex; flex-direction: column; gap: 7px; overflow: hidden; color: var(--a-ink); }
+.acard { background: var(--a-surface); border-radius: 14px; padding: 9px 10px; border: 1px solid var(--a-line); }
+.alabel { font-size: 7.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--a-sec); }
+.afig { font-family: var(--font-figure); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.apill { display: inline-flex; align-items: center; gap: 4px; font-size: 8.5px; font-weight: 700; color: var(--a-good); background: color-mix(in srgb, var(--a-good) 14%, transparent); border-radius: 999px; padding: 2px 7px; }
+.apill i { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+.arow { display: flex; justify-content: space-between; font-size: 9.5px; padding: 4px 0; border-bottom: 1px solid var(--a-line); }
+.arow:last-child { border-bottom: 0; }
+.arow small { display: block; color: var(--a-sec); font-size: 8px; }
+.caption { position: absolute; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); letter-spacing: .02em; }
+.caption.c1 { left: 0; bottom: -28px; } .caption.c2 { left: 14%; top: -22px; } .caption.c3 { right: 6%; bottom: -36px; }
+@media (max-width: 760px) {
+  .window { width: 100%; }
+  .phone { width: 34%; min-width: 0; }
+  .phone.corres { left: -2%; bottom: -40px; } .phone.artha { right: -2%; bottom: -50px; }
+  .scene { padding-bottom: 110px; } .caption { display: none; }
+}
+
+/* sections */
+.sec { padding-block: 120px 0; }
+.kicker { font-size: 14px; font-weight: 500; color: var(--ink-3); margin: 0 0 14px; }
+.h2 { font-family: var(--font-display); font-weight: 350; font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 1.04; letter-spacing: -0.03em; font-variation-settings: "opsz" 120, "SOFT" 30; margin: 0; max-width: 18ch; text-wrap: balance; }
+
+.apps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; margin-top: 56px; }
+.app img.icon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 24px -10px rgba(0,0,0,.35); }
+.app h3 { font-family: var(--font-display); font-weight: 400; font-size: 2.3rem; letter-spacing: -0.025em; font-variation-settings: "opsz" 72, "SOFT" 40; margin: 20px 0 2px; line-height: 1; }
+.app .tag { font-size: 1.15rem; font-weight: 500; margin: 8px 0 12px; }
+.app p { color: var(--ink-2); margin: 0 0 14px; max-width: 30rem; }
+.app .fine { margin: 0 0 14px; }
+.app .links { display: flex; gap: 22px; }
+@media (max-width: 760px) { .apps { grid-template-columns: 1fr; gap: 64px; } }
+
+.statement { font-family: var(--font-display); font-weight: 350; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.3; letter-spacing: -0.02em; font-variation-settings: "opsz" 72, "SOFT" 40; max-width: 30ch; margin: 0; }
+.statement span { color: var(--ink-3); }
+
+.stand { margin-top: 36px; border-top: 1px solid var(--line); }
+.stand a { display: grid; grid-template-columns: 9rem minmax(0, 1fr) auto; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.stand time { font-family: var(--font-mono); font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.stand span { font-size: 1.05rem; }
+.stand em { font-style: normal; color: var(--ink-3); font-size: 14px; }
+.stand a:hover span { color: var(--link); }
+@media (max-width: 600px) { .stand a { grid-template-columns: 1fr; gap: 2px; } }
+
+.principles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 56px; margin-top: 48px; }
+.principles h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.55rem; letter-spacing: -0.02em; font-variation-settings: "opsz" 48, "SOFT" 40; margin: 0 0 8px; line-height: 1.15; }
+.principles p { color: var(--ink-2); margin: 0; }
+@media (max-width: 760px) { .principles { grid-template-columns: 1fr; } }
+
+.work { margin-top: 32px; border-top: 1px solid var(--line); }
+.work a { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.work b { font-weight: 500; margin-right: 12px; }
+.work span { color: var(--ink-2); }
+.work small { color: var(--ink-3); font-size: 14px; }
+
+.close { padding-block: 120px 0; }
+.close p { font-family: var(--font-display); font-weight: 350; font-size: clamp(1.6rem, 3.4vw, 2.5rem); letter-spacing: -0.025em; line-height: 1.2; font-variation-settings: "opsz" 96, "SOFT" 40; margin: 0; max-width: 24ch; }
+.close .tlink { display: inline-block; margin-top: 18px; font-size: 1.05rem; }
+
+.foot { margin-top: 120px; padding-top: 36px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1.4fr repeat(4, minmax(0, 1fr)); gap: 24px; font-size: 14px; color: var(--ink-2); }
+.foot b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 8px; }
+.foot div { display: flex; flex-direction: column; gap: 4px; }
+.legal { margin-top: 40px; font-size: 13px; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 760px) { .foot { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* notes on what changed */
+.notes { margin-top: 96px; padding: 28px; border: 1px dashed var(--line); border-radius: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px 32px; font-size: 14.5px; color: var(--ink-2); }
+.notes h5 { grid-column: 1 / -1; margin: 0; font: 500 13px var(--font-body); color: var(--ink-3); }
+.notes b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 2px; }
+</style>
+
+<div class="wrap">
+  <div class="concept">
+    <span><b>Concept II</b> · not live · nothing on anwarcreativestudio.com has changed</span>
+    <span class="seg" role="group" aria-label="Appearance">
+      <button type="button" id="t-system" aria-pressed="true">System</button>
+      <button type="button" id="t-light" aria-pressed="false">Light</button>
+      <button type="button" id="t-dark" aria-pressed="false">Dark</button>
+    </span>
+  </div>
+
+  <header class="hdr">
+    <a class="word"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiByb2xlPSJpbWciPgo8dGl0bGU+QW53YXIgQ3JlYXRpdmUgU3R1ZGlvPC90aXRsZT4KPGRlc2M+QSBib2xkIGZvdXItcG9pbnQgZ29sZCBzcGFya2xlIHdpdGggYSBzb2Z0IGdsb3csIGZpbGxpbmcgdGhlIGljb24gZnJhbWUuPC9kZXNjPgo8ZGVmcz4KPHJhZGlhbEdyYWRpZW50IGlkPSJnIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI2NSUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjhlY2Q2Ii8+CjxzdG9wIG9mZnNldD0iNTUlIiBzdG9wLWNvbG9yPSIjZTNhYjVmIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M5ODUzZiIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmFkaWFsR3JhZGllbnQgaWQ9ImhhbG8iIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjUwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlM2FiNWYiIHN0b3Atb3BhY2l0eT0iMC41NSIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlM2FiNWYiIHN0b3Atb3BhY2l0eT0iMCIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8L2RlZnM+CjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ5IiBmaWxsPSJ1cmwoI2hhbG8pIi8+CjxwYXRoIGQ9Ik01MCAxIFE2MCA0MCA5OSA1MCBRNjAgNjAgNTAgOTkgUTQwIDYwIDEgNTAgUTQwIDQwIDUwIDEgWiIgZmlsbD0idXJsKCNnKSIvPgo8L3N2Zz4K" alt="">Anwar Creative Studio</a>
+    <nav class="nav" aria-label="Main"><a>Corres</a><a>Artha</a><a>About</a><a>Journal</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Looked for it. Didn&rsquo;t love it. Built&nbsp;it.</h1>
+    <div class="hero-row">
+      <p>Anwar Creative Studio is an independent software company making apps for iPhone, iPad and Mac. Corres for your email. Artha for your money.</p>
+      <div>
+        <div class="cta"><a class="btn">Join the Corres beta</a><a class="tlink">See Artha →</a></div>
+        <div class="fine">Free during the beta · TestFlight on iPhone, iPad, Mac and Apple Watch</div>
+      </div>
+    </div>
+
+    <div class="scene" role="img" aria-label="Corres on a Mac and an iPhone, showing a suggested reply and Needs You with sample mail, beside Artha on iPhone showing $64 safe to spend today.">
+      <span class="caption c2">Corres for Mac · sample mail</span>
+      <div class="window"><img src="assets/c258fbb9a369.jpg" alt=""></div>
+      <div class="phone corres"><img src="assets/66aab853cd31.jpg" alt=""></div>
+      <span class="caption c1">Corres · Needs You</span>
+      <div class="phone artha">
+        <div class="ascreen">
+          <div class="acard"><div class="alabel">Safe to spend today</div><div class="afig" style="font-size:1.55rem;line-height:1;margin:5px 0 6px">$64</div><span class="apill"><i></i>On pace</span></div>
+          <div class="acard"><div class="alabel">October so far</div>
+            <svg viewBox="0 0 300 100" style="width:100%;display:block;margin-top:3px" aria-hidden="true"><line x1="6" y1="92" x2="294" y2="10" stroke="var(--a-line)" stroke-width="3" stroke-dasharray="5 6"/><path d="M6 92 L40 86 L74 80 L108 70 L142 64 L176 56 L200 51" fill="none" stroke="var(--a-accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="200" cy="51" r="8" fill="var(--a-accent)"/></svg>
+          </div>
+          <div class="acard" style="padding:3px 10px"><div class="arow"><span>Rent<small>Due Nov 1</small></span><span class="afig">$1,450</span></div><div class="arow"><span>Phone<small>Due Oct 24</small></span><span class="afig">$45</span></div></div>
+        </div>
+      </div>
+      <span class="caption c3">Artha · Today</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="kicker">The apps</p>
+    <h2 class="h2">Two apps, made to be lived in every day.</h2>
+    <div class="apps">
+      <div class="app">
+        <img class="icon" src="../../public/press/corres-icon.png" alt="Corres icon">
+        <h3>Corres</h3>
+        <p class="tag">Email, considered.</p>
+        <p>Corres opens on the emails that ask something of you, with the reason each one is there. Gmail, Outlook and iCloud in one inbox, sorted on your device with Apple Intelligence.</p>
+        <p class="fine">Beta · iPhone, iPad, Mac and Apple Watch · nine languages</p>
+        <div class="links"><a class="tlink">corres.app →</a><a class="tlink">Join the beta →</a></div>
+      </div>
+      <div class="app">
+        <img class="icon" src="../../public/press/artha-icon.png" alt="Artha icon">
+        <h3>Artha</h3>
+        <p class="tag">Know what&rsquo;s safe to spend.</p>
+        <p>Artha opens on one number: what you can spend today and still end the month on plan, with the bills still to come already counted. No bank login, ever.</p>
+        <p class="fine">Live on the web · beta on iPhone, iPad and Mac · free</p>
+        <div class="links"><a class="tlink">arthaapp.com →</a><a class="tlink">Join the beta →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="statement">We&rsquo;re a small, self-funded studio in California. <span>The only people we answer to are the ones who use what we make, so we make a few things and take our time with them.</span></p>
+  </section>
+
+  <section class="sec">
+    <p class="kicker">Where things stand</p>
+    <h2 class="h2">Recently.</h2>
+    <div class="stand">
+      <a><time>Oct 23, 2026</time><span>Corres, build 36: nothing you do offline is lost, and search is ten times faster.</span><em>Corres</em></a>
+      <a><time>Oct 22, 2026</time><span>Corres comes to Apple Watch, with replies by voice.</span><em>Corres</em></a>
+      <a><time>Oct 21, 2026</time><span>Artha for iPhone, iPad and Mac opens on TestFlight.</span><em>Artha</em></a>
+    </div>
+    <a class="tlink" style="display:inline-block;margin-top:18px">The full journal →</a>
+  </section>
+
+  <section class="sec">
+    <p class="kicker">What we hold to</p>
+    <h2 class="h2">Four promises you can check.</h2>
+    <div class="principles">
+      <div><h4>Your data isn&rsquo;t the product.</h4><p>No ads, no trackers, and nothing sold. We&rsquo;d rather charge for what we make than make money from what you do in it.</p></div>
+      <div><h4>Private where it counts.</h4><p>Corres sorts, summarizes and drafts on your iPhone with Apple Intelligence, so your mail is never sent to us or to an AI company.</p></div>
+      <div><h4>Nothing fails silently.</h4><p>If something doesn&rsquo;t go through, you&rsquo;ll know. An email sent with no signal waits and goes by itself once you&rsquo;re back online.</p></div>
+      <div><h4>Native, and finished.</h4><p>Written in SwiftUI for iPhone, iPad and Mac, following your text size and working with VoiceOver.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="kicker">From the workshop</p>
+    <div class="work">
+      <a><span><b>Tether</b><span>The same scene, at the same second.</span></span><small>Chrome extension ↗</small></a>
+      <a><span><b>Jotfield</b><span>A place for every thought.</span></span><small>Web app ↗</small></a>
+      <a><span><b>Doorsong</b><span>Six doorways, each tuned to a different place.</span></span><small>Web ↗</small></a>
+    </div>
+  </section>
+
+  <section class="close">
+    <p>Corres is in beta now. If you&rsquo;d like to try it before the App Store, ask, and a person will write back.</p>
+    <a class="tlink">Request an invitation →</a>
+  </section>
+
+  <footer class="foot">
+    <div><b>Anwar Creative Studio</b><span>contact@anwarcreativestudio.com</span></div>
+    <div><b>Apps</b><a>Corres</a><a>Artha</a><a>Workshop</a></div>
+    <div><b>Company</b><a>About</a><a>Journal</a><a>Press kit</a></div>
+    <div><b>Support</b><a>Corres</a><a>Artha</a><a>Contact</a></div>
+    <div><b>Legal</b><a>Privacy</a><a>Terms</a><a>Colophon</a></div>
+  </footer>
+  <div class="legal"><span>© 2026 Anwar Creative Studio LLC · California</span><span>Looked for it. Didn&rsquo;t love it. Built it.</span></div>
+
+  <aside class="notes" aria-label="What changed from the live site">
+    <h5>What changed from the live site, and why</h5>
+    <div><b>The product is the hero</b>Corres on Mac and iPhone and Artha on iPhone replace the particle network, which reads as stock &ldquo;AI and data&rdquo; art.</div>
+    <div><b>Left-aligned, one button</b>The headline leads at full size; one primary action, everything else a text link, like Apple, Linear and Stripe.</div>
+    <div><b>Warm paper by default</b>Light like Things, Bear and Craft, with the current near-black when your device is in dark mode. Try the switch at the top.</div>
+    <div><b>Tighter type</b>Fraunces set lighter and tighter with its optical-size and soft axes; Inter at medium for actions. Mono only for dates.</div>
+    <div><b>Fine print, not chips</b>One quiet line under each app instead of a row of pills, the way Nova shows its specs.</div>
+    <div><b>Fewer decorations</b>No eyebrow labels in capitals, no side dot navigation, amber kept for links only.</div>
+  </aside>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement, ids = ['system', 'light', 'dark'];
+  function set(mode) {
+    if (mode === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', mode);
+    ids.forEach(function (m) { document.getElementById('t-' + m).setAttribute('aria-pressed', String(m === mode)); });
+  }
+  ids.forEach(function (m) { document.getElementById('t-' + m).addEventListener('click', function () { set(m); }); });
+})();
+</script>

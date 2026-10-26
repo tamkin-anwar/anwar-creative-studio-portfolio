@@ -1,15 +1,16 @@
 import { company } from '../../content/company'
 import { links } from '../../content/links'
+import { Lockup } from '../identity/Lockup'
 
 const BASE = import.meta.env.BASE_URL
 
 const columns = [
   {
-    title: 'Products',
+    title: 'Apps',
     items: [
       { label: 'Corres', href: links.corres },
       { label: 'Artha', href: links.artha },
-      { label: 'From the workshop', href: `${BASE}#workshop` },
+      { label: 'Workshop', href: `${BASE}#workshop` },
     ],
   },
   {
@@ -24,8 +25,8 @@ const columns = [
   {
     title: 'Support',
     items: [
-      { label: 'Corres support', href: 'https://corres.app/support/' },
-      { label: 'Artha support', href: `mailto:${links.arthaSupport}` },
+      { label: 'Corres', href: 'https://corres.app/support/' },
+      { label: 'Artha', href: `mailto:${links.arthaSupport}` },
       { label: 'Contact', href: `${BASE}contact/` },
     ],
   },
@@ -34,8 +35,6 @@ const columns = [
     items: [
       { label: 'Privacy', href: `${BASE}privacy/` },
       { label: 'Terms', href: `${BASE}terms/` },
-      { label: 'Corres privacy', href: 'https://corres.app/privacy/' },
-      { label: 'Artha privacy', href: 'https://arthaapp.com/privacy' },
       { label: 'Colophon', href: `${BASE}colophon/` },
     ],
   },
@@ -43,55 +42,36 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer
-      id="contact"
-      className="mx-auto flex max-w-5xl flex-col gap-[var(--space-5)] px-[var(--space-3)] pb-[var(--space-6)] pt-[var(--space-7)]"
-      style={{ borderTop: '1px solid var(--line)' }}
-    >
-      <div className="flex flex-col gap-[var(--space-2)]">
-        <p style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-heading)', lineHeight: 1.15 }}>
-          Looked for it. Didn&rsquo;t love it. Built it.
-        </p>
-        <a
-          href={`mailto:${links.email}`}
-          className="font-mono w-fit tracking-[0.06em]"
-          style={{ fontSize: 'var(--text-caption)', color: 'var(--accent-warm)' }}
-        >
-          {links.email}
-        </a>
-      </div>
-
-      <nav aria-label="Footer" className="grid grid-cols-2 gap-[var(--space-4)] sm:grid-cols-4">
+    <footer id="contact" className="wrap site-footer">
+      <div className="foot">
+        <div>
+          <a href={BASE} className="site-home" aria-label="Anwar Creative Studio, home">
+            <Lockup big />
+          </a>
+          <span className="foot-line">{company.descriptor}</span>
+          <a href={`mailto:${links.email}`}>{links.email}</a>
+        </div>
         {columns.map((column) => (
-          <div key={column.title} className="flex flex-col gap-[var(--space-1)]">
-            <p className="font-mono" style={{ fontSize: '10.5px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-faint)' }}>
-              {column.title}
-            </p>
+          <nav key={column.title} aria-label={column.title}>
+            <b>{column.title}</b>
             {column.items.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 target={item.href.startsWith('http') ? '_blank' : undefined}
                 rel="noreferrer"
-                style={{ fontSize: '0.875rem', color: 'var(--ink-dim)' }}
               >
                 {item.label}
               </a>
             ))}
-          </div>
+          </nav>
         ))}
-      </nav>
-
-      <div
-        className="font-mono flex flex-wrap items-center justify-between gap-[var(--space-2)] pt-[var(--space-3)]"
-        style={{ borderTop: '1px solid var(--line)', fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
-      >
+      </div>
+      <div className="legal">
         <span>
           &copy; {company.year} {company.name} &middot; {company.registered}
         </span>
-        <a href={links.github} target="_blank" rel="noreferrer" style={{ color: 'var(--ink-faint)' }}>
-          GitHub ↗
-        </a>
+        <span>Looked for it. Didn&rsquo;t love it. Built it.</span>
       </div>
     </footer>
   )

@@ -1,0 +1,474 @@
+<title>ACS Homepage Concept III</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..500,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: editorial left-aligned column (~1120px). The products move: Corres's inbox sorts itself in the hero, Artha's number rolls when you log a purchase. Warm paper by default; near-black in dark mode. */
+:root {
+  --paper: #fbf9f4; --paper-2: #f3efe6; --ink: #1a1916; --ink-2: #5c5850; --ink-3: #8a857b; --line: rgba(26,25,22,.11);
+  --link: #8f5a17; --btn: #1a1916; --btn-ink: #fbf9f4;
+  --shadow: 0 40px 80px -36px rgba(40,30,10,.38), 0 2px 6px rgba(40,30,10,.06);
+  /* Corres, light */
+  --c-bg: #f6f3ec; --c-side: #efebe2; --c-surface: #ffffff; --c-ink: #141312; --c-sec: #5e5a54; --c-ter: #8a857b; --c-line: rgba(20,19,18,.09); --c-accent: #2f5d9e; --c-sel: rgba(47,93,158,.12); --c-due: #b4561f;
+  /* Artha Daybreak, Day */
+  --a-ground: #f4f6fa; --a-surface: #ffffff; --a-ink: #0b1020; --a-sec: #586174; --a-accent: #2f5fd0; --a-good: #16804b; --a-line: rgba(11,16,32,.08);
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-app: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+  --font-app-serif: ui-serif, 'New York', 'Iowan Old Style', Georgia, serif;
+  --font-figure: ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --spring: cubic-bezier(.34, 1.36, .64, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b0b0e; --paper-2: #131318; --ink: #f2ede2; --ink-2: rgba(242,237,226,.7); --ink-3: rgba(242,237,226,.5); --line: rgba(242,237,226,.12);
+    --link: #d9a15c; --btn: #f2ede2; --btn-ink: #0b0b0e; --shadow: 0 40px 80px -36px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.07);
+    --c-bg: #0a0a0c; --c-side: #101013; --c-surface: #141417; --c-ink: #f2f3f5; --c-sec: #a1a3aa; --c-ter: #8a8c93; --c-line: rgba(255,255,255,.08); --c-accent: #8fb4e8; --c-sel: rgba(143,180,232,.16); --c-due: #f0a46a;
+    --a-ground: #0a0e17; --a-surface: #121826; --a-ink: #f2f4f8; --a-sec: #a3abbd; --a-accent: #6e95ff; --a-good: #3dd68c; --a-line: rgba(242,244,248,.07);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0b0b0e; --paper-2: #131318; --ink: #f2ede2; --ink-2: rgba(242,237,226,.7); --ink-3: rgba(242,237,226,.5); --line: rgba(242,237,226,.12);
+  --link: #d9a15c; --btn: #f2ede2; --btn-ink: #0b0b0e; --shadow: 0 40px 80px -36px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.07);
+  --c-bg: #0a0a0c; --c-side: #101013; --c-surface: #141417; --c-ink: #f2f3f5; --c-sec: #a1a3aa; --c-ter: #8a8c93; --c-line: rgba(255,255,255,.08); --c-accent: #8fb4e8; --c-sel: rgba(143,180,232,.16); --c-due: #f0a46a;
+  --a-ground: #0a0e17; --a-surface: #121826; --a-ink: #f2f4f8; --a-sec: #a3abbd; --a-accent: #6e95ff; --a-good: #3dd68c; --a-line: rgba(242,244,248,.07);
+  color-scheme: dark;
+}
+@supports (color: color(display-p3 1 1 1)) {
+  :root { --link: color(display-p3 .55 .35 .1); }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; letter-spacing: -0.006em;
+  -webkit-font-smoothing: antialiased; text-wrap: pretty;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+
+.concept { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding-block: 14px; border-bottom: 1px dashed var(--line); font-size: 13px; color: var(--ink-3); }
+.concept b { color: var(--ink-2); font-weight: 500; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+.seg button { font-size: 12.5px; font-weight: 500; color: var(--ink-2); background: none; border: 0; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+.hdr { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+.word { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-display); font-size: 18px; font-variation-settings: "opsz" 24, "SOFT" 50; letter-spacing: -0.01em; }
+.word img { width: 18px; height: 18px; }
+.nav { display: flex; gap: 28px; font-size: 15px; color: var(--ink-2); }
+@media (max-width: 640px) { .nav a:not(:last-child) { display: none; } }
+
+/* hero */
+.hero { padding-block: 56px 0; }
+.hero h1 { font-family: var(--font-display); font-weight: 340; font-size: clamp(3rem, 8.4vw, 6.9rem); line-height: .98; letter-spacing: -0.035em; font-variation-settings: "opsz" 144, "SOFT" 30; margin: 0; max-width: 11.5ch; }
+.hero h1 .ln { display: block; overflow: clip; padding-bottom: .06em; }
+.hero h1 .ln > span { display: inline-block; animation: rise .9s var(--ease-out) both; }
+.hero h1 .ln:nth-child(2) > span { animation-delay: .08s; }
+.hero h1 .ln:nth-child(3) > span { animation-delay: .16s; }
+@keyframes rise { from { transform: translateY(105%); } }
+.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px 48px; margin-top: 30px; animation: fade .8s .35s var(--ease-out) both; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } }
+.hero p.lede { font-size: 1.22rem; line-height: 1.5; color: var(--ink-2); max-width: 30rem; margin: 0; }
+.cta { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; background: var(--btn); color: var(--btn-ink); font-weight: 500; font-size: 15.5px; padding: 12px 20px; border-radius: 999px; border: 0; cursor: pointer; transition: transform .2s var(--ease-out); }
+.btn:active { transform: scale(.97); }
+.tlink { color: var(--link); font-weight: 500; font-size: 15.5px; background: none; border: 0; padding: 0; cursor: pointer; }
+.fine { font-size: 13px; color: var(--ink-3); margin-top: 10px; }
+
+/* the Corres demo */
+.stage { margin-top: 56px; position: relative; }
+.stage-cap { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-3); }
+.stage-cap button { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-2); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+.win { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); background: var(--c-bg); color: var(--c-ink); font-family: var(--font-app); display: grid; grid-template-columns: 200px minmax(0, 380px) minmax(0, 1fr); height: 520px; border: 1px solid var(--c-line); }
+.side { background: var(--c-side); padding: 14px 10px; display: flex; flex-direction: column; gap: 2px; font-size: 13px; border-right: 1px solid var(--c-line); }
+.lights { display: flex; gap: 7px; padding: 2px 6px 16px; }
+.lights i { width: 11px; height: 11px; border-radius: 50%; }
+.lights i:nth-child(1) { background: #ff5f57; } .lights i:nth-child(2) { background: #febc2e; } .lights i:nth-child(3) { background: #28c840; }
+.sitem { display: flex; justify-content: space-between; align-items: center; padding: 5px 9px; border-radius: 7px; color: var(--c-sec); transition: background-color .35s var(--ease-out), color .35s var(--ease-out); }
+.sitem.on { background: var(--c-sel); color: var(--c-ink); }
+.sitem .n { font-size: 11.5px; color: var(--c-ter); font-variant-numeric: tabular-nums; }
+.shead { font-size: 10.5px; font-weight: 600; color: var(--c-ter); padding: 12px 9px 4px; }
+.list { border-right: 1px solid var(--c-line); display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.lhead { padding: 16px 16px 10px; }
+.lhead b { font-family: var(--font-app-serif); font-size: 22px; font-weight: 500; display: block; letter-spacing: -0.01em; }
+.lhead span { font-size: 11.5px; color: var(--c-sec); }
+.lhead .swap { display: grid; }
+.lhead .swap > * { grid-area: 1 / 1; transition: opacity .4s var(--ease-out), transform .4s var(--ease-out); }
+.lhead .swap .b { opacity: 0; transform: translateY(6px); }
+.sorted .lhead .swap .a { opacity: 0; transform: translateY(-6px); }
+.sorted .lhead .swap .b { opacity: 1; transform: none; }
+.status { margin: 0 16px 6px; font-size: 11px; color: var(--c-sec); display: flex; align-items: center; gap: 7px; height: 16px; opacity: 0; transition: opacity .3s; }
+.status i { width: 6px; height: 6px; border-radius: 50%; background: var(--c-accent); animation: pulse 1s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+.reading .status { opacity: 1; }
+.rows { flex: 1; overflow: hidden; padding: 0 8px; }
+.fold { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .6s var(--ease-out), opacity .45s var(--ease-out); }
+.fold > div { overflow: hidden; min-height: 0; }
+.fold.closed, .sorted .fold.other { grid-template-rows: 0fr; opacity: 0; }
+.sorted .fold.reveal { grid-template-rows: 1fr; opacity: 1; }
+.waiting { margin: 2px 8px 8px; padding: 8px 10px; border-radius: 9px; border: 1px solid var(--c-line); font-size: 12px; display: flex; justify-content: space-between; color: var(--c-sec); background: var(--c-surface); }
+.waiting b { color: var(--c-ink); font-weight: 500; }
+.ghead { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--c-ter); padding: 10px 8px 4px; }
+.row { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 2px 10px; padding: 9px 8px; border-radius: 9px; font-size: 12.5px; transition: background-color .35s var(--ease-out), opacity .45s; }
+.row .av { grid-row: span 3; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: 10.5px; font-weight: 600; background: var(--c-side); color: var(--c-sec); border: 1px solid var(--c-line); }
+.row .who { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row .time { font-size: 11px; color: var(--c-ter); }
+.row .subj, .row .prev { grid-column: 2 / 4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row .prev { color: var(--c-sec); }
+.row .why { grid-column: 2 / 4; color: var(--c-accent); font-size: 11.5px; display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .5s var(--ease-out), opacity .5s var(--ease-out); }
+.row .why > span { overflow: hidden; min-height: 0; white-space: nowrap; text-overflow: ellipsis; display: block; }
+.sorted .row .why { grid-template-rows: 1fr; opacity: 1; transition-delay: var(--d, .25s); }
+.row .chip { font-size: 10px; font-weight: 600; color: var(--c-due); border: 1px solid currentColor; border-radius: 999px; padding: 0 6px; margin-left: 6px; opacity: 0; transition: opacity .4s; }
+.sorted .row .chip { opacity: 1; }
+.row.sel { background: var(--c-sel); }
+.pane { padding: 22px 26px; overflow: hidden; display: flex; flex-direction: column; gap: 14px; position: relative; }
+.pane .empty, .pane .msg { transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); }
+.pane .msg { opacity: 0; transform: translateY(10px); position: absolute; inset: 22px 26px auto; display: flex; flex-direction: column; gap: 14px; }
+.picked .pane .msg { opacity: 1; transform: none; }
+.picked .pane .empty { opacity: 0; }
+.pane .empty { margin: auto; color: var(--c-ter); font-size: 13px; }
+.msg h3 { font-family: var(--font-app-serif); font-size: 24px; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+.from { display: flex; align-items: center; gap: 10px; font-size: 12.5px; }
+.from .av { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: 10.5px; font-weight: 600; background: var(--c-side); border: 1px solid var(--c-line); }
+.from small { display: block; color: var(--c-ter); font-size: 11px; }
+.short { border: 1px solid var(--c-line); background: var(--c-surface); border-radius: 10px; padding: 10px 12px; font-size: 12.5px; }
+.short em { display: block; font-style: normal; font-size: 10.5px; font-weight: 600; color: var(--c-accent); margin-bottom: 3px; }
+.body { font-size: 13.5px; line-height: 1.6; color: var(--c-ink); }
+.body p { margin: 0 0 10px; }
+.replies { display: flex; gap: 8px; flex-wrap: wrap; }
+.replies span { font-size: 12px; font-weight: 500; color: var(--c-accent); background: var(--c-sel); border-radius: 999px; padding: 5px 11px; opacity: 0; transform: translateY(6px); transition: opacity .4s var(--ease-out), transform .4s var(--ease-out); }
+.picked .replies span { opacity: 1; transform: none; }
+.picked .replies span:nth-child(2) { transition-delay: .12s; }
+@media (max-width: 900px) { .win { grid-template-columns: minmax(0, 1fr); height: 540px; } .side, .pane { display: none; } .list { border-right: 0; } }
+
+/* sections */
+.sec { padding-block: 128px 0; }
+.kicker { font-size: 14px; font-weight: 500; color: var(--ink-3); margin: 0 0 14px; }
+.h2 { font-family: var(--font-display); font-weight: 350; font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 1.04; letter-spacing: -0.03em; font-variation-settings: "opsz" 120, "SOFT" 30; margin: 0; max-width: 18ch; text-wrap: balance; }
+.lead { color: var(--ink-2); font-size: 1.12rem; max-width: 32rem; margin: 18px 0 0; }
+
+.duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+@media (max-width: 860px) { .duo { grid-template-columns: 1fr; gap: 48px; } }
+.appname { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.appname img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 10px 24px -10px rgba(0,0,0,.35); }
+.appname b { font-family: var(--font-display); font-weight: 400; font-size: 1.9rem; letter-spacing: -0.02em; font-variation-settings: "opsz" 72, "SOFT" 40; }
+.appname small { display: block; font-size: 13px; color: var(--ink-3); }
+.ticks { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-direction: column; gap: 9px; color: var(--ink-2); }
+.ticks li { display: flex; gap: 12px; align-items: baseline; }
+.ticks li::before { content: ""; flex: none; width: 12px; height: 1px; background: var(--ink-3); transform: translateY(-4px); }
+.links { display: flex; gap: 22px; margin-top: 22px; }
+
+/* Artha phone */
+.phone { width: min(320px, 82vw); margin: 0 auto; border-radius: 48px; padding: 10px; background: #0d0d10; box-shadow: var(--shadow); }
+.ascreen { border-radius: 38px; background: var(--a-ground); color: var(--a-ink); font-family: var(--font-app); padding: 22px 14px 18px; display: flex; flex-direction: column; gap: 10px; }
+.astat { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; padding: 0 8px 6px; }
+.acard { background: var(--a-surface); border-radius: 20px; padding: 14px; border: 1px solid var(--a-line); }
+.alabel { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--a-sec); }
+.big { font-family: var(--font-figure); font-weight: 800; font-size: 3.1rem; line-height: 1; margin: 8px 0 10px; display: flex; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.digit { display: inline-block; height: 1em; overflow: hidden; }
+.digit > span { display: flex; flex-direction: column; transition: transform 1.1s var(--spring); }
+.digit > span > i { font-style: normal; height: 1em; line-height: 1; }
+.apill { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; color: var(--a-good); background: color-mix(in srgb, var(--a-good) 14%, transparent); border-radius: 999px; padding: 4px 10px; }
+.apill i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.asent { font-size: 12px; color: var(--a-sec); margin: 10px 0 0; line-height: 1.45; }
+.chart path.line { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .9s var(--ease-out); }
+.chart circle { opacity: 0; transition: opacity .3s .8s; }
+.drawn .chart path.line { stroke-dashoffset: 0; }
+.drawn .chart circle { opacity: 1; }
+.arows .arow { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; padding: 8px 0; border-bottom: 1px solid var(--a-line); }
+.arows .arow:last-child { border-bottom: 0; }
+.arow small { display: block; font-size: 11px; color: var(--a-sec); }
+.arow .afig { font-family: var(--font-figure); font-weight: 800; font-variant-numeric: tabular-nums; }
+.newrow { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .5s var(--ease-out), opacity .5s var(--ease-out); }
+.newrow > div { overflow: hidden; min-height: 0; }
+.logged .newrow { grid-template-rows: 1fr; opacity: 1; }
+.try { display: flex; justify-content: center; margin-top: 18px; }
+.try button { font-size: 14px; font-weight: 500; border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 9px 16px; cursor: pointer; transition: transform .2s var(--ease-out); }
+.try button:active { transform: scale(.97); }
+
+.statement { font-family: var(--font-display); font-weight: 350; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.3; letter-spacing: -0.02em; font-variation-settings: "opsz" 72, "SOFT" 40; max-width: 30ch; margin: 0; }
+.statement span { color: var(--ink-3); }
+
+.stand { margin-top: 36px; border-top: 1px solid var(--line); }
+.stand a { display: grid; grid-template-columns: 9rem minmax(0, 1fr) auto; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.stand time { font-family: var(--font-mono); font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.stand em { font-style: normal; color: var(--ink-3); font-size: 14px; }
+@media (max-width: 600px) { .stand a { grid-template-columns: 1fr; gap: 2px; } }
+
+.principles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 56px; margin-top: 48px; }
+.principles h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.55rem; letter-spacing: -0.02em; font-variation-settings: "opsz" 48, "SOFT" 40; margin: 0 0 8px; line-height: 1.15; }
+.principles p { color: var(--ink-2); margin: 0; }
+@media (max-width: 760px) { .principles { grid-template-columns: 1fr; } }
+
+.work { margin-top: 32px; border-top: 1px solid var(--line); }
+.work a { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.work b { font-weight: 500; margin-right: 12px; }
+.work span { color: var(--ink-2); }
+.work small { color: var(--ink-3); font-size: 14px; }
+
+.close { padding-block: 128px 0; }
+.close p { font-family: var(--font-display); font-weight: 350; font-size: clamp(1.6rem, 3.4vw, 2.5rem); letter-spacing: -0.025em; line-height: 1.2; font-variation-settings: "opsz" 96, "SOFT" 40; margin: 0; max-width: 24ch; }
+
+.foot { margin-top: 128px; padding-top: 36px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1.4fr repeat(4, minmax(0, 1fr)); gap: 24px; font-size: 14px; color: var(--ink-2); }
+.foot b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 8px; }
+.foot div { display: flex; flex-direction: column; gap: 4px; }
+.legal { margin-top: 40px; font-size: 13px; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 760px) { .foot { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.notes { margin-top: 96px; padding: 28px; border: 1px dashed var(--line); border-radius: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px 32px; font-size: 14.5px; color: var(--ink-2); }
+.notes h5 { grid-column: 1 / -1; margin: 0; font-weight: 500; font-size: 13px; color: var(--ink-3); }
+.notes b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 2px; }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .win, .phone { animation: settle linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+    @keyframes settle { from { opacity: .4; transform: translateY(40px) scale(.98); } }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
+}
+</style>
+
+<div class="wrap">
+  <div class="concept">
+    <span><b>Concept III</b> · not live · nothing on anwarcreativestudio.com has changed</span>
+    <span class="seg" role="group" aria-label="Appearance">
+      <button type="button" id="t-system" aria-pressed="true">System</button>
+      <button type="button" id="t-light" aria-pressed="false">Light</button>
+      <button type="button" id="t-dark" aria-pressed="false">Dark</button>
+    </span>
+  </div>
+
+  <header class="hdr">
+    <a class="word"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiByb2xlPSJpbWciPgo8dGl0bGU+QW53YXIgQ3JlYXRpdmUgU3R1ZGlvPC90aXRsZT4KPGRlc2M+QSBib2xkIGZvdXItcG9pbnQgZ29sZCBzcGFya2xlIHdpdGggYSBzb2Z0IGdsb3csIGZpbGxpbmcgdGhlIGljb24gZnJhbWUuPC9kZXNjPgo8ZGVmcz4KPHJhZGlhbEdyYWRpZW50IGlkPSJnIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI2NSUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjhlY2Q2Ii8+CjxzdG9wIG9mZnNldD0iNTUlIiBzdG9wLWNvbG9yPSIjZTNhYjVmIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M5ODUzZiIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmFkaWFsR3JhZGllbnQgaWQ9ImhhbG8iIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjUwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlM2FiNWYiIHN0b3Atb3BhY2l0eT0iMC41NSIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlM2FiNWYiIHN0b3Atb3BhY2l0eT0iMCIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8L2RlZnM+CjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ5IiBmaWxsPSJ1cmwoI2hhbG8pIi8+CjxwYXRoIGQ9Ik01MCAxIFE2MCA0MCA5OSA1MCBRNjAgNjAgNTAgOTkgUTQwIDYwIDEgNTAgUTQwIDQwIDUwIDEgWiIgZmlsbD0idXJsKCNnKSIvPgo8L3N2Zz4K" alt="">Anwar Creative Studio</a>
+    <nav class="nav" aria-label="Main"><a>Corres</a><a>Artha</a><a>About</a><a>Journal</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1 aria-label="Looked for it. Didn't love it. Built it."><span class="ln" aria-hidden="true"><span>Looked for it.</span></span><span class="ln" aria-hidden="true"><span>Didn&rsquo;t love it.</span></span><span class="ln" aria-hidden="true"><span>Built it.</span></span></h1>
+    <div class="hero-row">
+      <p class="lede">Anwar Creative Studio is an independent software company making apps for iPhone, iPad and Mac. Corres for your email. Artha for your money.</p>
+      <div>
+        <div class="cta"><a class="btn">Join the Corres beta</a><a class="tlink" href="#artha">See Artha →</a></div>
+        <div class="fine">Free during the beta · TestFlight on iPhone, iPad, Mac and Apple Watch</div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-cap"><span>Corres for Mac · a live demo with sample mail</span><button type="button" id="replay">Play again</button></div>
+      <div class="win" id="corres" role="img" aria-label="Corres for Mac sorting eight emails: five that need nothing fold away, and the three that need you rise to Needs You, each with the reason, before Maya's email opens with a short summary and two suggested replies.">
+        <div class="side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="sitem" data-s="needs"><span>Needs You</span><span class="n" id="needN">0</span></div>
+          <div class="sitem"><span>Waiting</span><span class="n">2</span></div>
+          <div class="shead">Mail</div>
+          <div class="sitem"><span>Primary</span></div>
+          <div class="sitem on" data-s="all"><span>Everything</span><span class="n">8</span></div>
+          <div class="sitem"><span>Promotions</span></div>
+          <div class="sitem"><span>Updates</span></div>
+          <div class="shead">Mailboxes</div>
+          <div class="sitem"><span>Drafts</span></div>
+          <div class="sitem"><span>Sent</span></div>
+          <div class="sitem"><span>Archive</span></div>
+        </div>
+        <div class="list" aria-hidden="true">
+          <div class="lhead"><div class="swap"><div class="a"><b>Everything</b><span>8 conversations</span></div><div class="b"><b>Needs You</b><span>3 conversations · 2 due soon</span></div></div></div>
+          <div class="status"><i></i>Reading on this Mac</div>
+          <div class="rows">
+            <div class="fold closed reveal"><div><div class="waiting"><span>Waiting on <b>2 replies</b></span><span>Longest 5 days ›</span></div></div></div>
+            <div class="fold closed reveal"><div><div class="ghead">Due soon</div></div></div>
+            <div class="fold other"><div><div class="row"><span class="av">WE</span><span class="who">The Weekly Edit</span><span class="time">11:12</span><span class="subj">Ten things worth reading this weekend</span><span class="prev">Long reads, one recipe and a very good map</span></div></div></div>
+            <div class="fold"><div><div class="row"><span class="av">SL</span><span class="who">Sofia Laurent<span class="chip">Tomorrow</span></span><span class="time">10:31</span><span class="subj">A place at the table</span><span class="prev">Could you confirm Thursday&rsquo;s conversation?</span><span class="why" style="--d:.3s"><span>↳ Sofia asked you to confirm Thursday</span></span></div></div></div>
+            <div class="fold other"><div><div class="row"><span class="av">NG</span><span class="who">Northwind Goods</span><span class="time">10:03</span><span class="subj">Your order is on its way</span><span class="prev">Arriving Tuesday · Track your package</span></div></div></div>
+            <div class="fold"><div><div class="row" id="maya"><span class="av">MC</span><span class="who">Maya Chen<span class="chip">Today</span></span><span class="time">9:45</span><span class="subj">The next chapter</span><span class="prev">Your approval on the final direction is the last piece</span><span class="why" style="--d:.35s"><span>↳ Maya asked you to approve the creative direction</span></span></div></div></div>
+            <div class="fold other"><div><div class="row"><span class="av">LA</span><span class="who">Lumen Air</span><span class="time">9:19</span><span class="subj">Your trip to Lisbon is coming up</span><span class="prev">Everything you need before you fly</span></div></div></div>
+            <div class="fold other"><div><div class="row"><span class="av">FH</span><span class="who">Fieldhouse</span><span class="time">8:40</span><span class="subj">20% off, this week only</span><span class="prev">Our autumn collection, now on sale</span></div></div></div>
+            <div class="fold closed reveal"><div><div class="ghead">When you can</div></div></div>
+            <div class="fold"><div><div class="row"><span class="av">OG</span><span class="who">Oliver Grant</span><span class="time">8:27</span><span class="subj">A moment before we move forward</span><span class="prev">Two options for the launch. One decision to make.</span><span class="why" style="--d:.4s"><span>↳ Oliver is waiting for your choice between two options</span></span></div></div></div>
+            <div class="fold other"><div><div class="row"><span class="av">SN</span><span class="who">Studio Notes</span><span class="time">7:02</span><span class="subj">The October roundup</span><span class="prev">What we shipped, read and listened to</span></div></div></div>
+          </div>
+        </div>
+        <div class="pane" aria-hidden="true">
+          <div class="empty">Choose a conversation</div>
+          <div class="msg">
+            <h3>The next chapter</h3>
+            <div class="from"><span class="av">MC</span><span>Maya Chen<small>to you · 9:45</small></span></div>
+            <div class="short"><em>In short</em>Maya needs your approval on the final direction before tomorrow&rsquo;s review.</div>
+            <div class="body"><p>Hello,</p><p>Your approval on the final direction is the last piece. We have taken time to consider the details and would appreciate your perspective. Everything you need for this conversation is here.</p><p>Warmly,<br>Maya</p></div>
+            <div class="replies"><span>Approve the direction</span><span>Ask for one more round</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="duo">
+      <div>
+        <div class="appname"><img src="../../public/press/corres-icon.png" alt=""><span><b>Corres</b><small>Email, considered.</small></span></div>
+        <h2 class="h2">Opens on what needs you.</h2>
+        <p class="lead">Most email asks nothing of you. Corres finds the few that do, says why, and lets the rest wait. It reads and sorts on your own device with Apple Intelligence, so your mail never goes to a server or an AI company.</p>
+        <ul class="ticks"><li>Gmail, Outlook and iCloud in one inbox</li><li>Summaries and replies in your own words</li><li>iPhone, iPad, Mac and Apple Watch, in nine languages</li></ul>
+        <div class="links"><a class="tlink">corres.app →</a><a class="tlink">Join the beta →</a></div>
+      </div>
+      <div class="statement">&ldquo;What needs me?&rdquo; <span>is the first question of every morning. Corres answers it before you have to ask.</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="artha">
+    <div class="duo">
+      <div>
+        <div class="appname"><img src="../../public/press/artha-icon.png" alt=""><span><b>Artha</b><small>Know what&rsquo;s safe to spend.</small></span></div>
+        <h2 class="h2">One number, kept honest.</h2>
+        <p class="lead">Artha opens on what you can spend today and still end the month on plan, with the bills still to come already counted. Log a purchase and the number answers back.</p>
+        <ul class="ticks"><li>No bank login, ever</li><li>Statements you review before anything is saved</li><li>On the web, and in beta on iPhone, iPad and Mac</li></ul>
+        <div class="links"><a class="tlink">arthaapp.com →</a><a class="tlink">Join the beta →</a></div>
+      </div>
+      <div>
+        <div class="phone" id="artha-phone" role="img" aria-label="Artha on iPhone with sample figures: $64 safe to spend today and on pace. Logging a $32 lunch lowers it to $32.">
+          <div class="ascreen">
+            <div class="astat"><span>9:41</span><span>Today</span></div>
+            <div class="acard">
+              <div class="alabel">Safe to spend today</div>
+              <div class="big" aria-hidden="true"><span>$</span><span class="digit" data-d="0"><span></span></span><span class="digit" data-d="1"><span></span></span></div>
+              <span class="apill"><i></i>On pace</span>
+              <p class="asent" id="asent">You can spend $64 a day until the 31st and still finish October on plan.</p>
+            </div>
+            <div class="acard">
+              <div class="alabel">October so far</div>
+              <svg class="chart" viewBox="0 0 300 110" style="width:100%;display:block;margin-top:6px" aria-hidden="true">
+                <line x1="6" y1="100" x2="294" y2="12" stroke="var(--a-line)" stroke-width="2.5" stroke-dasharray="4 6"/>
+                <path class="line" pathLength="1" d="M6 100 L40 94 L74 88 L108 77 L142 71 L176 63 L200 58" fill="none" stroke="var(--a-accent)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="200" cy="58" r="5.5" fill="var(--a-accent)"/>
+              </svg>
+            </div>
+            <div class="acard" style="padding:4px 14px">
+              <div class="arows">
+                <div class="newrow"><div><div class="arow"><span>Lunch<small>Eating out · just now</small></span><span class="afig">$32.00</span></div></div></div>
+                <div class="arow"><span>Groceries<small>Corner Market · yesterday</small></span><span class="afig">$58.20</span></div>
+                <div class="arow"><span>Phone<small>Bill due Oct 24</small></span><span class="afig">$45.00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="try"><button type="button" id="log">Log a $32 lunch</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="kicker">Where things stand</p>
+    <h2 class="h2">Recently.</h2>
+    <div class="stand">
+      <a><time>Oct 23, 2026</time><span>Corres, build 36: nothing you do offline is lost, and search is ten times faster.</span><em>Corres</em></a>
+      <a><time>Oct 22, 2026</time><span>Corres comes to Apple Watch, with replies by voice.</span><em>Corres</em></a>
+      <a><time>Oct 21, 2026</time><span>Artha for iPhone, iPad and Mac opens on TestFlight.</span><em>Artha</em></a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="kicker">What we hold to</p>
+    <h2 class="h2">Four promises you can check.</h2>
+    <div class="principles">
+      <div><h4>Your data isn&rsquo;t the product.</h4><p>No ads, no trackers, and nothing sold. We&rsquo;d rather charge for what we make than make money from what you do in it.</p></div>
+      <div><h4>Private where it counts.</h4><p>Corres sorts, summarizes and drafts on your iPhone with Apple Intelligence, so your mail is never sent to us or to an AI company.</p></div>
+      <div><h4>Nothing fails silently.</h4><p>If something doesn&rsquo;t go through, you&rsquo;ll know. An email sent with no signal waits and goes by itself once you&rsquo;re back online.</p></div>
+      <div><h4>Native, and finished.</h4><p>Written in SwiftUI for iPhone, iPad and Mac, following your text size and working with VoiceOver.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="kicker">From the workshop</p>
+    <div class="work">
+      <a><span><b>Tether</b><span>The same scene, at the same second.</span></span><small>Chrome extension ↗</small></a>
+      <a><span><b>Jotfield</b><span>A place for every thought.</span></span><small>Web app ↗</small></a>
+      <a><span><b>Doorsong</b><span>Six doorways, each tuned to a different place.</span></span><small>Web ↗</small></a>
+    </div>
+  </section>
+
+  <section class="close">
+    <p>We&rsquo;re a small, self-funded studio in California. Corres is in beta now; ask to try it, and a person will write back.</p>
+    <a class="tlink" style="display:inline-block;margin-top:18px">Request an invitation →</a>
+  </section>
+
+  <footer class="foot">
+    <div><b>Anwar Creative Studio</b><span>contact@anwarcreativestudio.com</span></div>
+    <div><b>Apps</b><a>Corres</a><a>Artha</a><a>Workshop</a></div>
+    <div><b>Company</b><a>About</a><a>Journal</a><a>Press kit</a></div>
+    <div><b>Support</b><a>Corres</a><a>Artha</a><a>Contact</a></div>
+    <div><b>Legal</b><a>Privacy</a><a>Terms</a><a>Colophon</a></div>
+  </footer>
+  <div class="legal"><span>© 2026 Anwar Creative Studio LLC · California</span><span>Looked for it. Didn&rsquo;t love it. Built it.</span></div>
+
+  <aside class="notes" aria-label="What moves and why">
+    <h5>What moves, and why</h5>
+    
+    <div><b>The product is the demo</b>Corres for Mac is rebuilt in HTML, the way Linear builds its homepage: eight emails arrive, the five that need nothing fold away, the three that need you rise with their reasons, and Maya&rsquo;s email opens with a summary and suggested replies. It plays once when you reach it, takes about two seconds, and never loops.</div>
+    <div><b>Artha answers back</b>The pace line draws, then the number settles on $64. Press &ldquo;Log a $32 lunch&rdquo; and it rolls to $32, the way the app does. Every figure is real text, readable by screen readers.</div>
+    <div><b>Native, not heavy</b>No video, canvas, WebGL or animation library. Device frames ease in with the new CSS scroll timeline in Chrome and Safari; other browsers show them still. The whole page weighs less than one product video.</div>
+    <div><b>Follows your theme</b>Both app recreations switch with light and dark, so there&rsquo;s no dark screenshot sitting on a light page. Theme changes are instant, as interface designers recommend.</div>
+    <div><b>Calm everywhere else</b>Only the products move. No fade-ups on every section, no parallax, no smooth-scroll, no cursor effects; the headline rises once on load.</div>
+    <div><b>Respects Reduce Motion</b>With Reduce Motion on, both demos simply show their finished state.</div>
+
+  </aside>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement, modes = ['system', 'light', 'dark'];
+  function setTheme(m) {
+    var apply = function () {
+      if (m === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', m);
+      modes.forEach(function (x) { document.getElementById('t-' + x).setAttribute('aria-pressed', String(x === m)); });
+    };
+    apply();
+  }
+  modes.forEach(function (m) { document.getElementById('t-' + m).addEventListener('click', function () { setTheme(m); }); });
+  function reduce() { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+
+  // Corres: the inbox sorts itself into Needs You.
+  var win = document.getElementById('corres'), needN = document.getElementById('needN');
+  var timers = [];
+  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+  function count(to) { var n = 0; var step = function () { needN.textContent = String(n); if (n++ < to) later(step, 90); }; step(); }
+  function sel(which) { win.querySelectorAll('.sitem').forEach(function (s) { s.classList.toggle('on', s.dataset.s === which); }); }
+  function reset() {
+    timers.forEach(clearTimeout); timers = [];
+    win.classList.remove('reading', 'sorted', 'picked'); sel('all'); needN.textContent = '0';
+    document.getElementById('maya').classList.remove('sel');
+  }
+  function play() {
+    reset();
+    if (reduce()) { win.classList.add('sorted', 'picked'); sel('needs'); needN.textContent = '3'; document.getElementById('maya').classList.add('sel'); return; }
+    later(function () { win.classList.add('reading'); }, 450);
+    later(function () { win.classList.remove('reading'); win.classList.add('sorted'); sel('needs'); count(3); }, 1400);
+    later(function () { document.getElementById('maya').classList.add('sel'); win.classList.add('picked'); }, 2500);
+  }
+  document.getElementById('replay').addEventListener('click', play);
+  var played = false;
+  new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting && !played) { played = true; play(); } }); }, { threshold: .35 }).observe(win);
+
+  // Artha: the number rolls; logging a purchase answers back.
+  var phone = document.getElementById('artha-phone'), digits = phone.querySelectorAll('.digit'), sent = document.getElementById('asent');
+  digits.forEach(function (d) { var s = d.firstElementChild; for (var i = 0; i < 10; i++) { var it = document.createElement('i'); it.textContent = i; s.appendChild(it); } });
+  function show(n) { var str = String(n).padStart(2, '0'); digits.forEach(function (d, i) { d.firstElementChild.style.transform = 'translateY(' + (-Number(str[i])) + 'em)'; }); }
+  show(0);
+  var shown = false, logged = false;
+  new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting && !shown) { shown = true; phone.classList.add('drawn'); setTimeout(function () { show(64); }, reduce() ? 0 : 850); } }); }, { threshold: .4 }).observe(phone);
+  document.getElementById('log').addEventListener('click', function () {
+    logged = !logged;
+    phone.classList.toggle('logged', logged);
+    show(logged ? 32 : 64);
+    sent.textContent = logged ? 'Lunch is logged. You can still spend $32 today and finish October on plan.' : 'You can spend $64 a day until the 31st and still finish October on plan.';
+    this.textContent = logged ? 'Undo' : 'Log a $32 lunch';
+  });
+})();
+</script>

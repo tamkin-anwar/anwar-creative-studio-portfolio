@@ -1,4 +1,5 @@
 import { PageShell } from '../components/PageShell'
+import { Lockup, Symbol } from '../components/identity/Lockup'
 import { company } from '../content/company'
 import { links } from '../content/links'
 
@@ -36,6 +37,38 @@ export function PressPage() {
           <dd>Independent and self-funded</dd>
         </dl>
 
+        <h2>The logo</h2>
+        <p>
+          The studio&rsquo;s mark is a lowercase a hanging from a headline, with a gold point. Beside it,
+          &ldquo;Anwar.&rdquo; ends on the same gold point.
+        </p>
+        <div className="brand-tiles">
+          <figure className="brand-tile on-paper">
+            <Lockup big />
+            <figcaption>On light backgrounds</figcaption>
+          </figure>
+          <figure className="brand-tile on-ink">
+            <Lockup big />
+            <figcaption>On dark backgrounds</figcaption>
+          </figure>
+          <figure className="brand-tile on-paper square">
+            <Symbol className="sym" />
+            <figcaption>The hanging a, for square spaces</figcaption>
+          </figure>
+        </div>
+        <ul>
+          <li>Leave clear space around the logo of at least half its height.</li>
+          <li>Keep it at least 80 px wide on screen, 20 mm in print.</li>
+          <li>Use the files as they are: no recoloring, stretching, outlines, shadows or effects.</li>
+          <li>In text, write the name as &ldquo;Anwar Creative Studio&rdquo;.</li>
+        </ul>
+        <p className="brand-files">
+          <a href={`${BASE}press/identity/anwar-lockup-ink.png`}>Lockup, dark ink (PNG)</a>
+          <a href={`${BASE}press/identity/anwar-lockup-light.png`}>Lockup, light ink (PNG)</a>
+          <a href={`${BASE}press/identity/anwar-symbol-ink.svg`}>The hanging a, dark (SVG)</a>
+          <a href={`${BASE}press/identity/anwar-symbol-light.svg`}>The hanging a, light (SVG)</a>
+        </p>
+
         <h2>Corres</h2>
         <div className="press-product">
           <img src={`${BASE}press/corres-icon.png`} alt="The Corres app icon" width={96} height={96} />
@@ -66,6 +99,7 @@ export function PressPage() {
         <h2>In the zip</h2>
         <ul>
           <li>A one-page fact sheet</li>
+          <li>The logo and the hanging a, with how to use them</li>
           <li>Corres and Artha app icons at 1024 &times; 1024</li>
           <li>Corres screenshots on iPhone, iPad and Mac, made with sample mail</li>
         </ul>

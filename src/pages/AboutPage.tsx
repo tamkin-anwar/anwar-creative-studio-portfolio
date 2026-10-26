@@ -1,6 +1,7 @@
 import { PageShell } from '../components/PageShell'
 import { company, principles } from '../content/company'
 import { links } from '../content/links'
+import { EndMark } from '../components/identity/Lockup'
 
 export function AboutPage() {
   return (
@@ -49,7 +50,7 @@ export function AboutPage() {
         <p>
           Anwar Creative Studio was founded by Tamkin Anwar, who designs and builds every product, from the
           first sketch to the code that ships. Write to the studio at{' '}
-          <a href={`mailto:${links.email}`}>{links.email}</a> and he&rsquo;ll read it.
+          <a href={`mailto:${links.email}`}>{links.email}</a> and Tamkin will read it.&nbsp;<EndMark />
         </p>
 
         <h2>What we hold to</h2>

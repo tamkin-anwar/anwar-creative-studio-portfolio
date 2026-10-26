@@ -1,0 +1,339 @@
+<title>ACS Homepage Concept</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: the proposed homepage drawn at real scale inside a browser frame, with numbered notes beside each change; ACS's own dark identity, deliberately single-theme like the live site */
+:root {
+  --bg: #0a0a0d;
+  --surface: #121218;
+  --ink: #f2ede2;
+  --ink-dim: rgba(242, 237, 226, 0.72);
+  --ink-faint: rgba(242, 237, 226, 0.56);
+  --line: rgba(242, 237, 226, 0.12);
+  --line-strong: rgba(242, 237, 226, 0.22);
+  --amber: #d9a15c;
+  --violet: #7c6fa8;
+  --corres: #8fb4e8;
+  --d-ground: #0a0e17; --d-surface: #121826; --d-raised: #1a2233; --d-ink: #f2f4f8; --d-sec: #a3abbd; --d-accent: #6e95ff; --d-good: #3dd68c;
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-figure: ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: #050507; color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 80px; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.page { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+
+/* intro */
+.intro { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.intro h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.08; margin: 8px 0 12px; text-wrap: balance; }
+.intro p { color: var(--ink-dim); margin: 0; max-width: 34rem; }
+.tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); }
+.legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.legend li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; align-items: start; font-size: 14px; color: var(--ink-dim); }
+.legend b { color: var(--ink); font-weight: 600; }
+.pin { width: 24px; height: 24px; border-radius: 50%; background: var(--amber); color: #1a1208; font: 600 12px/24px var(--font-body); text-align: center; flex: none; box-shadow: 0 0 0 4px rgba(217,161,92,.18); }
+@media (max-width: 860px) { .intro { grid-template-columns: 1fr; } }
+
+/* browser frame */
+.browser { border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; background: var(--bg); }
+.bar { display: flex; align-items: center; gap: 7px; padding: 11px 14px; background: #16161b; border-bottom: 1px solid var(--line); }
+.bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(242,237,226,.16); }
+.bar span { margin: 0 auto; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-faint); background: rgba(242,237,226,.06); padding: 3px 14px; border-radius: 6px; }
+
+/* site */
+.site { position: relative; }
+.annot { position: relative; }
+.annot > .pin { position: absolute; top: 14px; left: 14px; z-index: 5; }
+.note { position: absolute; z-index: 5; top: 12px; left: 46px; font-size: 12px; color: #1a1208; background: var(--amber); padding: 3px 9px; border-radius: 6px; font-weight: 500; max-width: 280px; line-height: 1.35; }
+@media (max-width: 640px) { .note { display: none; } }
+
+.hdr { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 28px; border-bottom: 1px solid var(--line); }
+.word { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 17px; }
+.word img { width: 20px; height: 20px; }
+.nav { display: flex; align-items: center; gap: 22px; font-size: 14px; color: var(--ink-dim); }
+.nav .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+@media (max-width: 760px) { .nav a:not(.k) { display: none; } }
+
+.hero { position: relative; text-align: center; padding: 70px 24px 56px; overflow: hidden; }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+.hero > *:not(canvas) { position: relative; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); }
+.hero h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.04; margin: 18px auto 18px; max-width: 14ch; text-wrap: balance; }
+.hero p { color: var(--ink-dim); max-width: 36rem; margin: 0 auto 26px; font-size: 1.06rem; }
+.ctas { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; border-radius: 999px; padding: 10px 18px; font-size: 15px; font-weight: 500; border: 1px solid var(--line-strong); color: var(--ink); }
+.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.flagships { padding: 8px 28px 64px; }
+.flag-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+@media (max-width: 860px) { .flag-grid { grid-template-columns: 1fr; } }
+.card { border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: linear-gradient(145deg, #1b1920, #101115); display: flex; flex-direction: column; min-width: 0; }
+.stage { position: relative; height: 330px; overflow: hidden; background-size: cover; background-position: center; }
+.stage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,13,.15), rgba(10,10,13,.55)); }
+.device { position: absolute; left: 50%; bottom: -150px; transform: translateX(-50%); width: 236px; z-index: 2; border-radius: 38px; padding: 8px; background: linear-gradient(160deg, #3a3f4a, #121318); box-shadow: 0 30px 60px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08) inset; }
+.device img { display: block; width: 100%; border-radius: 31px; }
+.dscreen { border-radius: 31px; background: var(--d-ground); padding: 16px 12px; display: flex; flex-direction: column; gap: 9px; min-height: 470px; }
+.dcard { background: var(--d-surface); border-radius: 18px; padding: 12px; border: 1px solid rgba(242,244,248,.07); color: var(--d-ink); }
+.dlabel { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--d-sec); }
+.dfig { font-family: var(--font-figure); font-weight: 800; font-variant-numeric: tabular-nums; }
+.dpill { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 700; color: var(--d-good); background: rgba(61,214,140,.14); border-radius: 999px; padding: 3px 8px; }
+.dpill i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.drow { display: flex; justify-content: space-between; font-size: 11.5px; padding: 6px 0; border-bottom: 1px solid rgba(242,244,248,.07); color: var(--d-ink); }
+.drow:last-child { border-bottom: 0; }
+.drow small { color: var(--d-sec); display: block; font-size: 10px; }
+
+.copy { padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 14px; }
+.name { display: flex; align-items: center; gap: 14px; }
+.name img { width: 52px; height: 52px; border-radius: 12px; box-shadow: 0 6px 18px -6px rgba(0,0,0,.6); }
+.name h3 { font-family: var(--font-display); font-weight: 400; font-size: 2.3rem; line-height: 1; margin: 0; }
+.status { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--amber); }
+.tagline { font-size: 1.2rem; color: var(--ink); font-weight: 500; margin: 0; }
+.desc { color: var(--ink-dim); margin: 0; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px; }
+.facts span { font-size: 12.5px; font-weight: 500; color: var(--ink-dim); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+.links { display: flex; gap: 22px; font-weight: 500; color: var(--amber); font-size: 15px; }
+
+.statement { text-align: center; padding: 56px 28px; font-family: var(--font-display); font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.35; color: var(--ink-dim); max-width: 860px; margin: 0 auto; }
+
+.section { padding: 48px 28px; max-width: 860px; margin: 0 auto; }
+.section .eyebrow { display: block; margin-bottom: 18px; }
+.principles { border-top: 1px solid var(--line); }
+.principles div { padding: 18px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; }
+.principles b { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; line-height: 1.2; }
+.principles span { color: var(--ink-dim); font-size: 1.02rem; }
+
+.stand { border-top: 1px solid var(--line); }
+.stand a { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.stand time { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
+.stand em { font-style: normal; font-family: var(--font-mono); font-size: 11px; color: var(--amber); }
+@media (max-width: 560px) { .stand a { grid-template-columns: 1fr; gap: 2px; } }
+
+.work { border-top: 1px solid var(--line); }
+.work div { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.work b { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; margin-right: 10px; }
+.work span { color: var(--ink-dim); }
+.work small { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); }
+.unchanged { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); border: 1px dashed var(--line-strong); border-radius: 6px; padding: 2px 8px; margin-left: 8px; }
+
+.closing { margin: 24px 28px 0; border-radius: 24px; border: 1px solid var(--line); padding: 56px 28px; text-align: center; background: radial-gradient(70% 120% at 50% 0%, rgba(143,180,232,.14), transparent 70%), var(--surface); }
+.closing img { width: 64px; height: 64px; border-radius: 14px; }
+.closing h4 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin: 16px 0 10px; }
+.closing p { color: var(--ink-dim); margin: 0 auto 22px; max-width: 32rem; }
+
+.foot { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; padding: 36px 28px 18px; margin-top: 56px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-dim); }
+.foot b { display: block; font-family: var(--font-mono); font-weight: 400; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+.legal { padding: 12px 28px 22px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-faint); border-top: 1px solid var(--line); margin: 0 28px; }
+@media (max-width: 640px) { .foot { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* before / after */
+.compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.compare h5 { margin: 0 0 10px; font-family: var(--font-mono); font-weight: 400; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); }
+.compare h5.after { color: var(--amber); }
+.old .stage { height: 250px; }
+.old .stage::after { display: none; }
+.disc { font-size: 14px; color: var(--amber); }
+.mini .stage { height: 250px; }
+.mini .device { width: 180px; bottom: -150px; }
+@media (max-width: 860px) { .compare { grid-template-columns: 1fr; } }
+.section-title { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; margin: 18px 0 4px; }
+.sub { color: var(--ink-dim); margin: 0 0 16px; max-width: 46rem; }
+@media (prefers-reduced-motion: reduce) { .hero canvas { display: none; } }
+</style>
+
+<div class="page">
+
+  <div class="intro">
+    <div>
+      <span class="tag">Concept · not live · nothing on the site has changed</span>
+      <h1>The homepage, with the six changes.</h1>
+      <p>Drawn at real size with the real assets: the Corres screenshot and icons from the press kit, and Artha&rsquo;s Today screen in Daybreak. The numbers match the list I sent.</p>
+    </div>
+    <ol class="legend">
+      <li><span class="pin">1</span><span><b>Real product screens and icons</b> in front of the artwork</span></li>
+      <li><span class="pin">2</span><span><b>Shorter hero</b>, so the apps start in the first screen</span></li>
+      <li><span class="pin">3</span><span><b>Facts at a glance</b> instead of the two text toggles</span></li>
+      <li><span class="pin">4</span><span><b>&ldquo;Where things stand&rdquo; and a closing call to action</b></span></li>
+      <li><span class="pin">5</span><span><b>Principles you can read</b>: body size, not 13px</span></li>
+      <li><span class="pin">6</span><span><b>More type weight</b> for buttons, labels and taglines</span></li>
+    </ol>
+  </div>
+
+  <div class="browser">
+    <div class="bar"><i></i><i></i><i></i><span>anwarcreativestudio.com</span></div>
+    <div class="site">
+      <header class="hdr">
+        <span class="word"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiByb2xlPSJpbWciPgo8dGl0bGU+QW53YXIgQ3JlYXRpdmUgU3R1ZGlvPC90aXRsZT4KPGRlc2M+QSBib2xkIGZvdXItcG9pbnQgZ29sZCBzcGFya2xlIHdpdGggYSBzb2Z0IGdsb3csIGZpbGxpbmcgdGhlIGljb24gZnJhbWUuPC9kZXNjPgo8ZGVmcz4KPHJhZGlhbEdyYWRpZW50IGlkPSJnIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI2NSUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjhlY2Q2Ii8+CjxzdG9wIG9mZnNldD0iNTUlIiBzdG9wLWNvbG9yPSIjZTNhYjVmIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M5ODUzZiIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmFkaWFsR3JhZGllbnQgaWQ9ImhhbG8iIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjUwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlM2FiNWYiIHN0b3Atb3BhY2l0eT0iMC41NSIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlM2FiNWYiIHN0b3Atb3BhY2l0eT0iMCIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8L2RlZnM+CjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ5IiBmaWxsPSJ1cmwoI2hhbG8pIi8+CjxwYXRoIGQ9Ik01MCAxIFE2MCA0MCA5OSA1MCBRNjAgNjAgNTAgOTkgUTQwIDYwIDEgNTAgUTQwIDQwIDUwIDEgWiIgZmlsbD0idXJsKCNnKSIvPgo8L3N2Zz4K" alt="">Anwar Creative Studio</span>
+        <nav class="nav"><a>Corres</a><a>Artha</a><a>About</a><a>Journal</a><a>Contact</a><a class="k">Search ⌘K</a></nav>
+      </header>
+
+      <section class="hero annot">
+        <span class="pin">2</span><span class="note">About 40% shorter: the cards below now start inside the first screen on a laptop</span>
+        <canvas id="field" aria-hidden="true"></canvas>
+        <div class="eyebrow">An independent software company</div>
+        <h2>Looked for it. Didn&rsquo;t love it. Built it.</h2>
+        <p>Anwar Creative Studio makes premium apps for iPhone, iPad and Mac. Corres for your email. Artha for your money.</p>
+        <div class="ctas annot" style="display:inline-flex"><a class="btn primary">Meet Corres</a><a class="btn">Meet Artha</a></div>
+      </section>
+
+      <section class="flagships">
+        <div class="flag-grid">
+          <article class="card annot">
+            <span class="pin">1</span><span class="note">The Needs You screen from the App Store set, sample mail, over the existing Corres artwork</span>
+            <div class="stage" style="background-image:url(assets/cdbeb05ad249.webp)">
+              <div class="device"><img src="../../public/press/corres-iphone.jpg" alt="Corres on iPhone showing Needs You, with sample mail"></div>
+            </div>
+            <div class="copy">
+              <div class="name"><img src="../../public/press/corres-icon.png" alt="Corres icon"><div><div class="status">In beta</div><h3>Corres</h3></div></div>
+              <p class="tagline">Email, considered.</p>
+              <p class="desc">Corres opens on the emails that ask something of you, with the reason each one is there. The rest waits quietly until you&rsquo;re ready.</p>
+              <div class="facts annot"><span>iPhone · iPad · Mac · Apple Watch</span><span>Gmail, Outlook, iCloud</span><span>9 languages</span><span>Free · Pro $20/mo</span></div>
+              <div class="links"><a>Visit corres.app ↗</a><a>Request early access</a></div>
+            </div>
+          </article>
+          <article class="card annot">
+            <span class="pin">3</span><span class="note">Facts replace &ldquo;How it&rsquo;s made&rdquo; and &ldquo;Where the beta stands&rdquo;; the long text moves to the Journal</span>
+            <div class="stage" style="background-image:url(assets/9964c76401c3.webp)">
+              <div class="device">
+                <div class="dscreen">
+                  <div class="dcard"><div class="dlabel">Safe to spend today</div><div class="dfig" style="font-size:2.1rem;line-height:1;margin:6px 0 8px">$64</div><span class="dpill"><i></i>On pace</span></div>
+                  <div class="dcard"><div class="dlabel">October so far</div>
+                    <svg viewBox="0 0 300 100" style="width:100%;display:block;margin-top:4px" aria-hidden="true"><line x1="6" y1="92" x2="294" y2="10" stroke="#2a3346" stroke-width="2" stroke-dasharray="4 5"/><path d="M6 92 L40 86 L74 80 L108 70 L142 64 L176 56 L200 51" fill="none" stroke="#6e95ff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="200" cy="51" r="5.5" fill="#6e95ff"/></svg>
+                  </div>
+                  <div class="dcard" style="padding:4px 12px"><div class="drow"><span>Rent<small>Due Nov 1</small></span><span class="dfig">$1,450</span></div><div class="drow"><span>Phone<small>Due Oct 24</small></span><span class="dfig">$45</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="copy">
+              <div class="name"><img src="../../public/press/artha-icon.png" alt="Artha icon"><div><div class="status">Live on the web · in beta</div><h3>Artha</h3></div></div>
+              <p class="tagline">Know what&rsquo;s safe to spend.</p>
+              <p class="desc">Artha opens on one number: what you can spend today and still end the month on plan, with the bills still to come already counted.</p>
+              <div class="facts"><span>Web · iPhone · iPad · Mac</span><span>No bank login</span><span>160 currencies</span><span>Free</span></div>
+              <div class="links"><a>Open Artha ↗</a><a>Join the beta ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <p class="statement">Two apps lead the studio. Corres opens on the emails that ask something of you. Artha opens on what you can safely spend today. We&rsquo;re self-funded, so the only people we answer to are the ones who use what we make.</p>
+
+      <section class="section annot">
+        <span class="pin">5</span><span class="note">Explanations at body size and brighter, so the strongest part of the page reads</span>
+        <span class="eyebrow" style="padding-top:28px">What we hold to</span>
+        <div class="principles">
+          <div><b>Your data isn&rsquo;t the product.</b><span>No ads, no trackers, and nothing sold. We&rsquo;d rather charge for what we make than make money from what you do in it.</span></div>
+          <div><b>Private where it counts.</b><span>Corres sorts, summarizes and drafts on your iPhone with Apple Intelligence, so your mail is never sent to us or to an AI company.</span></div>
+          <div><b>Nothing fails silently.</b><span>If something doesn&rsquo;t go through, you&rsquo;ll know. An email sent with no signal waits and goes by itself once you&rsquo;re back online.</span></div>
+          <div><b>Native, and finished.</b><span>Written in SwiftUI for iPhone, iPad and Mac, following your text size and working with VoiceOver.</span></div>
+        </div>
+      </section>
+
+      <section class="section annot">
+        <span class="pin">4</span><span class="note">Pulled from the Journal automatically, newest three</span>
+        <span class="eyebrow" style="padding-top:28px">Where things stand</span>
+        <div class="stand">
+          <a><time>Oct 23, 2026</time><span>Corres is thirty-six builds in: nothing you do offline is lost, and search is ten times faster</span><em>Corres</em></a>
+          <a><time>Oct 22, 2026</time><span>Corres on Apple Watch: what needs you on your wrist, replies by voice</span><em>Corres</em></a>
+          <a><time>Oct 21, 2026</time><span>Artha for iPhone, iPad and Mac goes to beta on TestFlight</span><em>Artha</em></a>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="eyebrow">From the workshop <span class="unchanged">unchanged</span></span>
+        <div class="work">
+          <div><span><b>Tether</b><span>The same scene, at the same second.</span></span><small>Chrome extension ↗</small></div>
+          <div><span><b>Jotfield</b><span>A place for every thought.</span></span><small>Web app ↗</small></div>
+          <div><span><b>Doorsong</b><span>Six doorways, each tuned to a different place.</span></span><small>Web ↗</small></div>
+        </div>
+      </section>
+
+      <div class="closing annot">
+        <span class="pin">4</span><span class="note">Replaces the page ending on a repeat of the slogan</span>
+        <img src="../../public/press/corres-icon.png" alt="">
+        <h4>Try Corres before it reaches the App Store.</h4>
+        <p>Corres is in beta on TestFlight. Ask for an invitation and you&rsquo;ll hear from a person, usually within a day.</p>
+        <div class="ctas annot" style="display:inline-flex"><span class="pin" style="position:absolute;left:-36px;top:6px">6</span><a class="btn primary">Request early access</a><a class="btn">See what&rsquo;s new</a></div>
+      </div>
+
+      <footer class="foot">
+        <div><b>Products</b>Corres<br>Artha<br>From the workshop</div>
+        <div><b>Company</b>About<br>Journal<br>Press kit<br>Now</div>
+        <div><b>Support</b>Corres support<br>Artha support<br>Contact</div>
+        <div><b>Legal</b>Privacy<br>Terms<br>Colophon</div>
+      </footer>
+      <div class="legal">© 2026 Anwar Creative Studio LLC · California, United States</div>
+    </div>
+  </div>
+
+  <div>
+    <span class="tag">Close-up</span>
+    <h2 class="section-title">The Corres card, today and proposed</h2>
+    <p class="sub">Today the card shows artwork and a toggle that opens a paragraph. Proposed, it shows the app itself, its icon, and the facts a buyer looks for.</p>
+    <div class="compare">
+      <div>
+        <h5>Today</h5>
+        <article class="card old">
+          <div class="stage" style="background-image:url(assets/cdbeb05ad249.webp)"></div>
+          <div class="copy">
+            <div class="status">Corres · In beta on iPhone, iPad, Mac and Apple Watch</div>
+            <h3 style="font-family:var(--font-display);font-weight:400;font-size:2.3rem;margin:0">Corres</h3>
+            <p class="tagline" style="font-weight:400">Email, considered.</p>
+            <p class="desc">Corres opens on what needs you: every email that asks something of you, with the reason why. The rest waits quietly until you&rsquo;re ready.</p>
+            <span class="disc">▸ Where the beta stands</span>
+            <div class="links" style="font-weight:400">Visit Corres ↗</div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <h5 class="after">Proposed</h5>
+        <article class="card mini">
+          <div class="stage" style="background-image:url(assets/cdbeb05ad249.webp)">
+            <div class="device"><img src="../../public/press/corres-iphone.jpg" alt=""></div>
+          </div>
+          <div class="copy">
+            <div class="name"><img src="../../public/press/corres-icon.png" alt=""><div><div class="status">In beta</div><h3>Corres</h3></div></div>
+            <p class="tagline">Email, considered.</p>
+            <div class="facts"><span>iPhone · iPad · Mac · Apple Watch</span><span>9 languages</span><span>Free · Pro $20/mo</span></div>
+            <div class="links"><a>Visit corres.app ↗</a><a>Request early access</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// A light stand-in for the live site's particle field, so the hero reads true to the real page.
+(function () {
+  var c = document.getElementById('field');
+  if (!c || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var x = c.getContext('2d'), w, h, pts = [];
+  function size() { w = c.width = c.offsetWidth; h = c.height = c.offsetHeight; }
+  size(); window.addEventListener('resize', size);
+  for (var i = 0; i < 70; i++) pts.push({ x: Math.random(), y: Math.random() * .7 + .05, vx: (Math.random() - .5) * .0004, vy: (Math.random() - .5) * .0003, a: Math.random() < .5 });
+  function tick() {
+    x.clearRect(0, 0, w, h);
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i]; p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > 1) p.vx *= -1; if (p.y < .03 || p.y > .8) p.vy *= -1;
+      for (var j = i + 1; j < pts.length; j++) {
+        var q = pts[j], dx = (p.x - q.x) * w, dy = (p.y - q.y) * h, d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 110) { x.strokeStyle = 'rgba(242,237,226,' + (0.18 * (1 - d / 110)) + ')'; x.beginPath(); x.moveTo(p.x * w, p.y * h); x.lineTo(q.x * w, q.y * h); x.stroke(); }
+      }
+      x.fillStyle = p.a ? 'rgba(217,161,92,.9)' : 'rgba(124,111,168,.9)';
+      x.beginPath(); x.arc(p.x * w, p.y * h, 1.8, 0, 6.3); x.fill();
+    }
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+</script>

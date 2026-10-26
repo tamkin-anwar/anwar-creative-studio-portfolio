@@ -306,6 +306,9 @@
   footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
   footer a { text-decoration: none; color: var(--sec); }
   footer a:hover { color: var(--ink); }
+  footer .from a { font-family: var(--serif); font-size: 17px; letter-spacing: -.01em; color: var(--ink); }
+  footer .from .pt { display: inline-block; width: .11em; height: .11em; border-radius: 50%; background: #e2ac5f; margin-left: .03em; }
+  @media (prefers-color-scheme: light) { footer .from .pt { background: #b9822f; } }
   footer .legal { flex-basis: 100%; font-size: 12.5px; line-height: 1.6; max-width: 62em; }
 
   /* Reveal on scroll, quietly. */
@@ -605,7 +608,7 @@
 
 <footer>
   <div class="wrap">
-    <span>Corres, by <a href="https://anwarcreativestudio.com/">Anwar Creative Studio</a></span>
+    <span class="from">Corres, from <a href="https://anwarcreativestudio.com/" aria-label="Anwar Creative Studio">Anwar<i class="pt"></i></a></span>
     <nav aria-label="Footer">
       <a href="support/">Support</a>
       <a href="privacy/">Privacy</a>

@@ -1,4 +1,5 @@
 import { PageShell } from '../components/PageShell'
+import { EndMark } from '../components/identity/Lockup'
 import { journal } from '../content/journal'
 
 const format = (iso: string) =>
@@ -32,7 +33,7 @@ export function JournalPage() {
           ))}
         </ol>
         <p>
-          For a running note on what&rsquo;s in progress, see <a href={`${import.meta.env.BASE_URL}now/`}>Now</a>.
+          For a running note on what&rsquo;s in progress, see <a href={`${import.meta.env.BASE_URL}now/`}>Now</a>.&nbsp;<EndMark />
         </p>
       </div>
     </PageShell>

@@ -1,17 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
 <title>Anwar Creative Studio</title>
-<desc>A bold four-point gold sparkle with a soft glow, filling the icon frame.</desc>
-<defs>
-<radialGradient id="g" cx="50%" cy="50%" r="65%">
-<stop offset="0%" stop-color="#f8ecd6"/>
-<stop offset="55%" stop-color="#e3ab5f"/>
-<stop offset="100%" stop-color="#c9853f"/>
-</radialGradient>
-<radialGradient id="halo" cx="50%" cy="50%" r="50%">
-<stop offset="0%" stop-color="#e3ab5f" stop-opacity="0.55"/>
-<stop offset="100%" stop-color="#e3ab5f" stop-opacity="0"/>
-</radialGradient>
-</defs>
-<circle cx="50" cy="50" r="49" fill="url(#halo)"/>
-<path d="M50 1 Q60 40 99 50 Q60 60 50 99 Q40 60 1 50 Q40 40 50 1 Z" fill="url(#g)"/>
+<desc>The hanging a: a lowercase a hanging from a headline, with a gold point in its counter.</desc>
+<style>.ink{fill:#1a1916}.ring{stroke:#1a1916}.pt{fill:#b9822f}@media (prefers-color-scheme:dark){.ink{fill:#f2ede2}.ring{stroke:#f2ede2}.pt{fill:#e2ac5f}}</style>
+<rect class="ink" x="7" y="9" width="50" height="9" rx="1"/>
+<rect class="ink" x="40" y="9" width="10" height="47" rx="1"/>
+<circle class="ring" cx="27.5" cy="40" r="10.5" fill="none" stroke-width="10"/>
+<circle class="pt" cx="27.5" cy="40" r="4.4"/>
 </svg>

@@ -1,3 +1,4 @@
+import { Lockup } from './identity/Lockup'
 import { openCommandPalette } from '../lib/commandPalette'
 
 const BASE = import.meta.env.BASE_URL
@@ -13,22 +14,21 @@ const nav = [
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <a href={BASE} className="site-wordmark">
-        <img src={`${BASE}favicon.svg`} alt="" width={20} height={20} className="site-mark" />
-        Anwar Creative Studio
-      </a>
-      <nav aria-label="Main" className="site-nav">
-        {nav.map((item) => (
-          <a key={item.label} href={item.href} className="site-nav-link">
-            {item.label}
-          </a>
-        ))}
-        <button type="button" onClick={openCommandPalette} className="site-search" aria-label="Search the site">
-          <span className="site-search-label-wide">Search</span>
-          <span className="site-search-label-narrow">Menu</span>
-          <kbd className="site-search-kbd">&#8984;K</kbd>
-        </button>
-      </nav>
+      <div className="wrap site-header-inner">
+        <a href={BASE} className="site-home" aria-label="Anwar Creative Studio, home">
+          <Lockup />
+        </a>
+        <nav aria-label="Main" className="site-nav">
+          {nav.map((item) => (
+            <a key={item.label} href={item.href} className="site-nav-link">
+              {item.label}
+            </a>
+          ))}
+          <button type="button" onClick={openCommandPalette} className="site-menu" aria-label="Open the menu">
+            Menu
+          </button>
+        </nav>
+      </div>
     </header>
   )
 }

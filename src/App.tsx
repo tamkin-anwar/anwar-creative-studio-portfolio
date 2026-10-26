@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
-import { LazyAmbientField } from './components/LazyAmbientField'
-import { ScrollProgressRail } from './components/ScrollProgressRail'
 import { CommandPalette } from './components/CommandPalette'
 import { SiteHeader } from './components/SiteHeader'
 import { Hero } from './components/sections/Hero'
-import { StudioStatement } from './components/sections/StudioStatement'
+import { CorresSection } from './components/sections/CorresSection'
+import { ArthaSection } from './components/sections/ArthaSection'
+import { Recently } from './components/sections/Recently'
 import { Principles } from './components/sections/Principles'
-import { Flagships } from './components/sections/Flagships'
 import { Workshop } from './components/sections/Workshop'
+import { Closing } from './components/sections/Closing'
 import { Footer } from './components/sections/Footer'
 
 function App() {
-  // Links like /#corres from other pages arrive before sections have settled,
+  // Links like /#corres from other pages arrive before the page has settled,
   // so the browser's own jump to the anchor can land short. Go there once ready.
   useEffect(() => {
     const id = decodeURIComponent(window.location.hash.slice(1))
@@ -27,16 +27,16 @@ function App() {
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
-      <LazyAmbientField />
       <SiteHeader />
-      <ScrollProgressRail />
       <CommandPalette />
-      <main id="main-content">
+      <main id="main-content" className="wrap">
         <Hero />
-        <StudioStatement />
-        <Flagships />
+        <CorresSection />
+        <ArthaSection />
+        <Recently />
         <Principles />
         <Workshop />
+        <Closing />
       </main>
       <Footer />
     </>
