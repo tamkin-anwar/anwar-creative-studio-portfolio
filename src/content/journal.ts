@@ -34,7 +34,7 @@ export const journal: JournalEntry[] = [
     product: 'Corres',
     title: 'Corres on Apple Watch',
     body:
-      'Read what needs you on your wrist and reply by voice. Send Later and today’s deliveries also reach the Lock Screen.',
+      'Read what needs you on your wrist and reply by voice. Send Later and today’s deliveries also reach the Lock Screen, and Siri can write and send an email in Corres.',
   },
   {
     date: '2026-10-21',
