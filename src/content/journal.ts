@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-10-25',
+    product: 'Corres',
+    title: 'Built for everywhere',
+    body:
+      'Corres now reads deadlines, receipts, deliveries, sign-in codes and questions in all nine of its languages, follows your region\u2019s weekend for Snooze and Send Later, and shows mail in older Japanese, Chinese and Korean encodings in full. An optional Brief at the top of Needs You lists what\u2019s due today, and Corres for Mac gained Undo Send.',
+  },
+  {
     date: '2026-10-23',
     product: 'Studio',
     title: 'A proper home for the studio',
