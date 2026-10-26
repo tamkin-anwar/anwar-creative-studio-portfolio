@@ -3,20 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Corres · Email, considered.</title>
-<meta name="description" content="Corres is an email app for iPhone, iPad and Mac that reads and sorts your Gmail, Outlook and iCloud Mail on your own devices, brings forward what needs you, and never sends your mail to a server or an AI company.">
+<title>Corres · Email, considered. For iPhone, iPad and Mac</title>
+<meta name="description" content="Corres is an email app for iPhone, iPad, Mac and Apple Watch. Gmail, Outlook, iCloud Mail and other email in one inbox, opening on the emails that need you, each with the reason. Your mail is read on your own devices. Free beta on TestFlight.">
 <link rel="canonical" href="https://corres.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Corres">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://corres.app/">
 <meta property="og:title" content="Corres · Email, considered.">
-<meta property="og:description" content="What needs you, first. Gmail, Outlook, iCloud and more in one calm inbox, read and sorted on your iPhone, iPad and Mac.">
+<meta property="og:description" content="What needs you, first. Gmail, Outlook, iCloud and other email in one inbox, read and sorted on your iPhone, iPad and Mac.">
 <meta property="og:image" content="https://corres.app/img/share.jpg">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta property="og:image:alt" content="The Corres app icon above the words Email, considered.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Corres · Email, considered.">
+<meta name="twitter:description" content="What needs you, first. Gmail, Outlook, iCloud and other email in one inbox, read and sorted on your iPhone, iPad and Mac.">
 <meta name="twitter:image" content="https://corres.app/img/share.jpg">
+<meta name="twitter:image:alt" content="The Corres app icon above the words Email, considered.">
 <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/png" href="img/favicon.png">
@@ -27,10 +31,13 @@
   "@type": "SoftwareApplication",
   "name": "Corres",
   "url": "https://corres.app/",
-  "description": "An email app for iPhone, iPad, Mac and Apple Watch that opens on what needs you.",
+  "description": "An email app for iPhone, iPad, Mac and Apple Watch that opens on what needs you. Gmail, Outlook, iCloud Mail and other email in one inbox, read and sorted on your own devices.",
   "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Email",
   "operatingSystem": "iOS, iPadOS, macOS, watchOS",
   "image": "https://corres.app/img/share.jpg",
+  "screenshot": "https://corres.app/img/needs-you-dark.jpg",
+  "inLanguage": ["en", "ja", "zh-Hans", "de", "ko", "fr", "es", "pt-BR", "bn"],
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -44,6 +51,7 @@
   }
 }
 </script>
+<script>document.documentElement.classList.add('js')</script>
 <style>
   /* Corres's own world: Obsidian and Ivory, one sapphire accent, New York
      serif for what's read, SF for what's done, hairlines over borders. */
@@ -95,6 +103,10 @@
   .btn.ghost:hover { border-color: var(--ter); }
   .btn.small { height: 36px; padding: 0 16px; font-size: 14px; }
   .btn:focus-visible, .nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .skip { position: absolute; left: 16px; top: -100px; z-index: 50; padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--bg); font-weight: 600; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  .text-link { color: var(--accent); }
 
   /* Hero */
   .hero { position: relative; overflow: hidden; padding: 84px 0 40px; }
@@ -242,15 +254,15 @@
   .cell.wide { grid-column: 1 / -1; }
   .cell.wide p { max-width: 640px; }
   .cell svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-  .cell h4 { font-size: 17px; font-weight: 600; margin: 16px 0 6px; }
+  .cell h3 { font-size: 17px; font-weight: 600; margin: 16px 0 6px; }
   .cell p { color: var(--sec); font-size: 15px; margin: 0; }
 
   /* Privacy */
   .privacy { background: var(--bg-2); border-block: 1px solid var(--line); }
-  .promise { font-family: var(--serif); font-size: clamp(30px, 4.4vw, 50px); line-height: 1.14; letter-spacing: -.015em; max-width: 21em; margin: 18px 0 48px; }
+  .promise { font-weight: 400; font-family: var(--serif); font-size: clamp(30px, 4.4vw, 50px); line-height: 1.14; letter-spacing: -.015em; max-width: 21em; margin: 18px 0 48px; }
   .promise em { color: var(--accent); font-style: italic; }
   .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
-  .three h4 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+  .three h3 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
   .three p { color: var(--sec); font-size: 15.5px; margin: 0; }
   .fine { margin-top: 44px; font-size: 14px; color: var(--ter); max-width: 52em; }
   .fine a { color: var(--accent); }
@@ -274,6 +286,15 @@
   details[open] summary::after { transform: rotate(45deg); }
   details p { color: var(--sec); margin: 12px 0 0; max-width: 40em; }
 
+  /* Getting started */
+  .steps { list-style: none; padding: 0; margin: 0 auto 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 980px; counter-reset: step; text-align: left; }
+  .steps li { counter-increment: step; border: 1px solid var(--line); border-radius: 20px; padding: 22px 22px 24px; background: var(--surface); }
+  .steps li::before { content: counter(step); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line-2); font: 600 13px/1 var(--sans); color: var(--accent); margin-bottom: 12px; }
+  .steps b { display: block; font-weight: 600; margin-bottom: 4px; }
+  .steps span { color: var(--sec); font-size: 15px; }
+  .closing .cta-note { max-width: 40em; margin: 18px auto 0; font-size: 14px; color: var(--ter); }
+  .closing .cta-note a { color: var(--accent); }
+
   /* Closing */
   .closing { text-align: center; padding: 140px 0 120px; }
   .closing img { width: 84px; height: 84px; border-radius: 20px; margin: 0 auto 26px; box-shadow: 0 30px 60px -30px var(--glow); }
@@ -289,9 +310,9 @@
   footer .legal { flex-basis: 100%; font-size: 12.5px; line-height: 1.6; max-width: 62em; }
 
   /* Reveal on scroll, quietly. */
-  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
-  .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
   @media (max-width: 900px) {
     .hero { padding-top: 48px; }
@@ -300,6 +321,7 @@
     .grid { grid-template-columns: 1fr 1fr; }
     .three { grid-template-columns: 1fr; gap: 26px; }
     .plans { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
     .nav .hide-s { display: none; }
     section { padding: 88px 0; }
     .f1 { left: 0; } .f2 { right: 0; }
@@ -315,51 +337,51 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 
 <header class="bar">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="Corres home"><img src="img/mark.jpg" alt=""><span>corres</span></a>
+    <a class="brand" href="./" aria-label="Corres home"><img src="img/mark.jpg" alt="" width="28" height="28"><span>corres</span></a>
     <nav class="nav" aria-label="Main">
       <a class="hide-s" href="#features">Features</a>
       <a class="hide-s" href="#privacy">Privacy</a>
       <a href="#pricing">Pricing</a>
-      <a class="btn small primary" href="mailto:support@corres.app?subject=Corres%20early%20access">Get early access</a>
+      <a class="btn small primary" href="https://testflight.apple.com/join/ntjvUNCR">Join the beta</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="content">
   <div class="hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow">Email for iPhone, iPad and Mac · Gmail, Outlook and iCloud</p>
+        <p class="eyebrow">Email for iPhone, iPad, Mac and Apple Watch</p>
         <h1>Email,<br><em>considered.</em></h1>
-        <p class="lede">Corres opens on <strong>what needs you</strong>: every email that asks something of you, with the reason why. The rest of your mail is one tap away, quiet until you&rsquo;re ready. All read and sorted on your iPhone.</p>
+        <p class="lede">Corres opens on <strong>what needs you</strong>: every email that asks something of you, with the reason why. The rest of your mail is one tap away, quiet until you&rsquo;re ready. All of it read and sorted on your own devices.</p>
         <div class="cta">
-          <a class="btn primary" href="mailto:support@corres.app?subject=Corres%20early%20access">Get early access</a>
+          <a class="btn primary" href="https://testflight.apple.com/join/ntjvUNCR">Join the beta on TestFlight</a>
           <a class="btn ghost" href="#privacy">How it stays private</a>
         </div>
-        <p class="cta-note">In beta on TestFlight. Coming to the App Store.</p>
+        <p class="cta-note">Free to try while in beta, on iPhone, iPad and Mac. Not on the App Store yet.</p>
       </div>
       <div style="position:relative">
         <div class="float f1" aria-hidden="true">
           <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></span>
           <span><b>Needs you</b><small>Maya asked you to approve the direction</small></span>
         </div>
-        <div class="phone"><div class="glass"><img src="img/needs-you-dark.jpg" width="552" height="1199" alt="Corres opening on Needs You: three conversations that need you, each with the reason, and the replies you're waiting on."></div></div>
+        <div class="phone"><div class="glass"><img src="img/needs-you-dark.jpg" width="552" height="1199" alt="Corres on iPhone, opening on Needs You: three emails that need you, each with the reason, and a row for the two replies you're waiting on."></div></div>
         <div class="float f2" aria-hidden="true">
           <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
-          <span><b>Read on this iPhone</b><small>Never on a server</small></span>
+          <span><b>Read on this iPhone</b><small>Never on our servers</small></span>
         </div>
       </div>
     </div>
     <div class="providers">
       <div class="wrap">
         <span><i class="dot" style="background:var(--gmail)"></i>Gmail &amp; Google Workspace</span>
-        <span><i class="dot" style="background:var(--outlook)"></i>Outlook.com, Hotmail &amp; Live</span>
-        <span><i class="dot" style="background:var(--outlook)"></i>Microsoft 365</span>
+        <span><i class="dot" style="background:var(--outlook)"></i>Outlook &amp; Microsoft 365</span>
         <span><i class="dot" style="background:var(--icloud)"></i>iCloud Mail</span>
-        <span>Every account in one inbox</span>
+        <span><i class="dot" style="background:var(--ter)"></i>Yahoo, Fastmail, Naver, QQ and other email</span>
       </div>
     </div>
   </div>
@@ -369,7 +391,7 @@
       <div class="head reveal">
         <p class="eyebrow">How Corres reads your mail</p>
         <h2>The few emails that matter, first.</h2>
-        <p>Most email asks nothing of you. Corres finds the ones that do, says why, and lets the rest step back, so a full inbox reads like a short note.</p>
+        <p>Most email asks nothing of you. Corres finds the ones that do, says why, and lets the rest step back.</p>
       </div>
 
       <div class="story reveal">
@@ -378,16 +400,16 @@
           <h3>Opens on what needs you.</h3>
           <p>The emails that ask something of you come first, each with the reason it&rsquo;s there. Who still owes you a reply sits one row above. Everything else waits in Primary until you get to it.</p>
           <ul class="ticks">
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Needs You: only mail that asks something of you, with the reason</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Waiting: replies you&rsquo;re owed, with a nudge when they&rsquo;re late</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Deadlines and bills spotted in the email itself</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Needs You: only mail that asks something of you, with the reason</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Waiting: replies you&rsquo;re owed, with a nudge when they&rsquo;re late</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Today&rsquo;s Brief, if you want it: what&rsquo;s due, today&rsquo;s events and deliveries on one card</li>
           </ul>
         </div>
-        <div class="stack">
+        <div class="stack" aria-hidden="true">
           <div class="card">
             <div class="row"><span class="av">SL</span><div><div class="top"><b>Sofia Laurent</b><span class="tag" style="--c:var(--gmail)"><i></i>GMAIL</span></div><div class="subj">A place at the table</div><div class="why">↳ Sofia asked you to confirm Thursday</div></div></div>
             <div class="row"><span class="av">MC</span><div><div class="top"><b>Maya Chen</b><span class="tag" style="--c:var(--outlook)"><i></i>WORK</span></div><div class="subj">The next chapter</div><div class="why">↳ Maya asked you to approve the creative direction</div></div></div>
-            <div class="row"><span class="av">OG</span><div><div class="top"><b>Oliver Grant</b><span class="tag" style="--c:var(--gmail)"><i></i>GMAIL</span></div><div class="subj">A moment before we move forward</div><div class="why">↳ Oliver is waiting for your choice between two options</div></div></div>
+            <div class="row"><span class="av">OG</span><div><div class="top"><b>Oliver Grant</b><span class="tag" style="--c:var(--icloud)"><i></i>ICLOUD</span></div><div class="subj">A moment before we move forward</div><div class="why">↳ Oliver is waiting for your choice between two options</div></div></div>
           </div>
         </div>
       </div>
@@ -396,28 +418,28 @@
         <div class="copy">
           <p class="eyebrow">Mail</p>
           <h3>A Primary inbox that&rsquo;s actually primary.</h3>
-          <p>People and what&rsquo;s urgent up top. Promotions, Social and Updates beside it, placed more carefully than Gmail&rsquo;s own tabs. Move one email, or everything from a sender, and Corres learns, and shows you what it learned.</p>
+          <p>People and what&rsquo;s urgent up top. Everything, Promotions, Social and Updates beside it, sorted by Corres&rsquo;s own rules for every account you add. Move one email, or everything from a sender, and Corres learns, and shows you what it learned.</p>
           <ul class="ticks">
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A security code or an appointment never hides in Updates</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Spam dressed up as a question stays out of the way</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Swipes, lists and the toolbar under an email are yours to set</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>A security code or an appointment never hides in Updates</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>First emails from new senders can wait for your yes</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Swipes, lists and the toolbar under an email are yours to set</li>
           </ul>
         </div>
-        <div class="phone" style="width:min(300px,72vw)"><div class="glass"><img src="img/mail-dark.jpg" width="552" height="1200" loading="lazy" alt="The Corres Mail list, sorted into Primary, Promotions, Social and Updates."></div></div>
+        <div class="phone" style="width:min(300px,72vw)"><div class="glass"><img src="img/mail-dark.jpg" width="552" height="1200" loading="lazy" alt="The Corres mail list on iPhone, open on Primary, with the other tabs beside it."></div></div>
       </div>
 
       <div class="story reveal">
         <div class="copy">
           <p class="eyebrow">Notifications</p>
-          <h3>The moment mail lands, and only when it should.</h3>
-          <p>New Outlook and iCloud mail notifies in seconds, even with Corres closed, with who it&rsquo;s from and what it says. You choose, per account, whether that&rsquo;s everything, people and time-sensitive mail, or only what needs you.</p>
+          <h3>Told when it matters, and only then.</h3>
+          <p>New Outlook mail notifies within seconds, even with Corres closed. iCloud and other email can too, once you turn on Instant Notifications for that account. You choose, per account, whether that&rsquo;s all new mail, people and time-sensitive mail, or only what needs you.</p>
           <ul class="ticks">
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Archive, mark read or reply right from the notification</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Newsletters arrive silently; VIPs always come through</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A Morning Brief notification at the time you pick</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Archive, mark read or reply right from the notification</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Newsletters can arrive silently, and VIPs always come through</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>A Morning Brief notification at the time you pick</li>
           </ul>
         </div>
-        <div class="stack">
+        <div class="stack" aria-hidden="true">
           <div class="notif"><img src="img/mark.jpg" alt=""><div><b>Maya Chen</b><p><span style="color:var(--ink)">The next chapter</span><br>Your approval on the final direction is the last piece we need…</p></div><time>now</time></div>
           <div class="notif" style="opacity:.75"><img src="img/mark.jpg" alt=""><div><b>James Okafor</b><p><span style="color:var(--ink)">Partnership proposal</span><br>I&rsquo;ll send the revised scope once our team has reviewed it.</p></div><time>2m</time></div>
           <div class="notif" style="opacity:.5"><img src="img/mark.jpg" alt=""><div><b>Morning Brief</b><p>Three conversations need you. You&rsquo;re waiting on two replies.</p></div><time>8:00</time></div>
@@ -427,15 +449,15 @@
       <div class="story flip reveal">
         <div class="copy">
           <p class="eyebrow">Accounts</p>
-          <h3>Every account, one calm inbox.</h3>
-          <p>Gmail, Google Workspace, Outlook, Microsoft 365 and iCloud Mail, side by side, newest first. Each keeps its own name, its own color, its own notifications and signatures. Tap your photo to see just one.</p>
+          <h3>Every account, one inbox.</h3>
+          <p>Gmail, Google Workspace, Outlook, Microsoft 365 and iCloud Mail, plus Yahoo, Fastmail, Yahoo! JAPAN, Naver, QQ, 163 and almost any other email with your address and its password or an app password. Each keeps its own name, color, notifications and signatures. Tap your photo to see just one.</p>
           <ul class="ticks">
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Colors you already know: Gmail red, Outlook blue, or your own</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Several signatures: a full one for new mail, a short one for replies</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Keep an account out of All Inboxes while it still syncs</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Colors you already know: Gmail red, Outlook blue, or your own</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Several signatures: a full one for new mail, a short one for replies</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Add an account once and it&rsquo;s on your other devices too</li>
           </ul>
         </div>
-        <div class="stack">
+        <div class="stack" aria-hidden="true">
           <div class="card">
             <div class="acct"><span class="ring" style="--c:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5 6h14l2 7v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z"/></svg></span><span><b>All Inboxes</b><small>Every account, newest first</small></span><span class="count">6</span></div>
             <div class="acct"><span class="ring" style="--c:var(--gmail)">TA</span><span><b>Personal</b><small>you@gmail.com</small></span><span class="count">2</span></div>
@@ -454,66 +476,66 @@
   <section id="devices" style="padding-top:0; overflow-x: clip">
     <div class="wrap">
       <div class="head center reveal">
-        <p class="eyebrow">iPhone, iPad and Mac</p>
+        <p class="eyebrow">iPhone, iPad, Mac and Apple Watch</p>
         <h2>One Corres, on every screen.</h2>
-        <p>The same Needs You, the same sorting and your same accounts on all three. Add an account once and it&rsquo;s on your other devices too, through iCloud Keychain. On the Mac, a native app with Mail&rsquo;s shortcuts and Gmail&rsquo;s.</p>
+        <p>The same Needs You, the same sorting and the same accounts everywhere. Add an account once and it&rsquo;s on your other devices through iCloud Keychain. On the Mac, a native app with Mail&rsquo;s shortcuts and Gmail&rsquo;s. On Apple Watch, what needs you, on your wrist and your watch face.</p>
       </div>
       <div class="devices-stage reveal">
         <div class="macbook">
           <div class="mb-lid">
             <div class="mb-display">
               <div class="mb-menubar" aria-hidden="true"><div><b>Corres</b><span>File</span><span>Edit</span><span>View</span><span>Mailbox</span><span>Message</span><span>Window</span></div><div><span>Mon Oct 19</span><span>9:41 AM</span></div></div>
-              <div class="mb-window"><img src="img/mac-dark.jpg" width="1362" height="870" loading="lazy" alt="Corres on a Mac: the sidebar, Needs You with the reason for each email, and an open conversation"></div>
+              <div class="mb-window"><img src="img/mac-dark.jpg" width="1362" height="870" loading="lazy" alt="Corres on a Mac: the sidebar, Needs You with the reason for each email, and an open conversation."></div>
             </div>
           </div>
           <div class="mb-base" aria-hidden="true"></div>
         </div>
-        <div class="ipad"><div class="glass"><img src="img/ipad-dark.jpg" width="1032" height="1376" loading="lazy" alt="Corres on iPad: three columns with Needs You and an open email"></div></div>
-        <div class="phone-slot"><div class="phone"><div class="glass"><img src="img/mail-dark.jpg" loading="lazy" alt="Corres on iPhone: the Primary list"></div></div></div>
+        <div class="ipad"><div class="glass"><img src="img/ipad-dark.jpg" width="1032" height="1376" loading="lazy" alt="Corres on iPad: three columns with Needs You and an open email."></div></div>
+        <div class="phone-slot"><div class="phone"><div class="glass"><img src="img/mail-dark.jpg" width="552" height="1200" loading="lazy" alt="Corres on iPhone: the mail list."></div></div></div>
       </div>
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <section style="padding-top:0" aria-labelledby="details-title">
     <div class="wrap">
       <div class="head reveal">
         <p class="eyebrow">And everything you&rsquo;d expect</p>
-        <h2>Complete, down to the details.</h2>
+        <h2 id="details-title">Complete, down to the details.</h2>
       </div>
       <div class="grid reveal">
-        <div class="cell wide"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h4>Built on Postwright</h4><p>Corres runs on its own mail engine. Archive and delete happen the moment you swipe, even with no signal, and go through when you&rsquo;re back online. What you do on the web or another device shows up here.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><h4>Writing, finished</h4><p>Drafts that wait for you, bold, lists and links, sending from your other addresses, and a check for a forgotten attachment.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h4>Send Later &amp; follow-ups</h4><p>Schedule an email, and get a reminder if nobody replies. Undo Send for when you change your mind.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3.2-6.9"/><path d="M21 4v5h-5"/></svg><h4>Summaries &amp; replies</h4><p>Long threads summarized and checked against the email itself, and replies drafted in your voice, by Apple Intelligence on the iPhone.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><h4>Search that answers</h4><p>Search every account at once, archived mail included, with the best matches first and filters like from: and has:attachment. Find any conversation from Search on your Home Screen, too. Or ask, &ldquo;When is my flight?&rdquo;, and get the answer from your own email, with the messages it came from.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><h4>Invitations &amp; Out of Office</h4><p>See when it is in your time zone, where, the call to join and whether you&rsquo;re free. Accept, Maybe or Decline right in the email, add it to your calendar, and turn your automatic reply on without leaving Corres.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3M7 8l5-5 5 5"/></svg><h4>Share to Corres</h4><p>Share a page or photos from any app and write the email right in the Share sheet.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/></svg><h4>Unsubscribe in a tap</h4><p>Leave a mailing list the way the sender intended, without visiting their site.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg><h4>No tracking pixels</h4><p>Remote images and read-receipt trackers are blocked until you choose to show them.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg><h4>iPhone, iPad, Mac &amp; Watch</h4><p>A native Mac app with everything the iPhone has, plus its own windows, menus and shortcuts, three columns and extra windows on iPad, and on Apple Watch what needs you, on the watch face and with replies by voice. Your accounts and choices follow you through iCloud.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg><h4>Fast with any mailbox</h4><p>Corres opens on your newest mail at once, even with thousands of conversations, and an email opens the moment you tap it.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h6"/></svg><h4>Rules, templates &amp; mute</h4><p>Sort mail as it arrives, even with Corres closed, since rules can run in Gmail and Outlook too. Save the replies you write often, and mute a conversation so new replies stay quiet.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg><h4>Siri, Shortcuts &amp; widgets</h4><p>Ask Siri to write and send an email, find one or archive it, add New Email and Needs You to Control Center, and mark mail Handled from a widget.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12l2 2 4-4"/></svg><h4>Company logos, privately</h4><p>The logo a company publishes for email, shown beside its mail only when a certificate backs it, and fetched by our server so no company learns when you read.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h4>In your language</h4><p>English, Japanese, Chinese, German, Korean, French, Spanish, Portuguese and Bengali, following your device or set for Corres alone.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg><h4>Made for everyone</h4><p>Checked with Apple&rsquo;s own accessibility audit: VoiceOver hears what just happened, Voice Control knows what you call things, and every word fits at the largest text sizes.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M4 19c4-1 6-4 6-8"/><path d="M14 5h6M14 9h6M14 13h4"/><circle cx="7" cy="7" r="3"/></svg><h4>Replies that sound like you</h4><p>Suggested replies use the greeting, sign-off and length you use, learned from email you&rsquo;ve sent, on your device.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M9 15h6"/></svg><h4>On the Lock Screen</h4><p>An email in Send Later counts down in its last hours, and a package out for delivery today shows until it arrives.</p></div>
-        <div class="cell"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.5"/><circle cx="4.5" cy="12" r="1.5"/><circle cx="4.5" cy="18" r="1.5"/></svg><h4>Remind Me</h4><p>Add any email to Reminders for this evening, tomorrow morning or when it&rsquo;s due, with a link straight back to it.</p></div>
+        <div class="cell wide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Built on Postwright</h3><p>Corres runs on its own mail engine, on your device. Archive and delete happen the moment you swipe, even with no signal, and an email you send offline goes by itself once you&rsquo;re back. What you do on the web or another device shows up here.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><h3>Writing, finished</h3><p>Drafts that wait for you, bold, lists and links, sending from your other addresses, templates, and a check for a forgotten attachment.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Send Later &amp; Undo Send</h3><p>Schedule an email, get a reminder if nobody replies, and take back what you just sent, on iPhone, iPad and Mac.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3.2-6.9"/><path d="M21 4v5h-5"/></svg><h3>Summaries &amp; replies</h3><p>With Apple Intelligence, long threads are summarized and checked against the email itself, and replies are drafted, all on your device. Without it, Needs You, its reasons and the key details still work.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><h3>Search, or ask</h3><p>Search every account at once, archived mail included, with filters like from: and has:attachment. Or ask, &ldquo;When is my flight?&rdquo;, and get the answer from your own email, with the messages it came from.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><h3>New senders</h3><p>Choose how first emails arrive: review everyone, review only companies, mark them new, or let everyone in. Blocking hides them in Corres and never changes your account.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><h3>Invitations &amp; Out of Office</h3><p>See when it is in your time zone, where, the call to join and whether you&rsquo;re free. Accept, Maybe or Decline right in the email, and turn your automatic reply on without leaving Corres.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h6"/></svg><h3>Rules &amp; mute</h3><p>Sort mail as it arrives. Rules can also run inside Gmail and Outlook, so they work with Corres closed. Mute a conversation so new replies stay quiet.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4z"/><path d="M8 11h8M8 15h5"/></svg><h3>The details, up top</h3><p>A receipt&rsquo;s or bill&rsquo;s amount and status, a delivery&rsquo;s date, and what a long email asks of you, read from the email and shown at the top.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg><h3>No tracking pixels</h3><p>Remote images and read-receipt trackers are blocked until you choose to show them. Unsubscribe is one tap.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12l2 2 4-4"/></svg><h3>Company logos, privately</h3><p>The logo a company publishes for email, shown only when a certificate backs it, and fetched by our server so no company learns when you read.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg><h3>Siri, Shortcuts &amp; widgets</h3><p>Ask Siri to write, send or find an email. Needs You in widgets, Control Center and on your watch face, and deliveries and Send Later on the Lock Screen.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h3>Made for everywhere</h3><p>English, Japanese, Chinese, German, Korean, French, Spanish, Portuguese and Bengali. Deadlines, receipts, deliveries, codes and quoted replies are understood in each, and weekends follow your region.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg><h3>Made for everyone</h3><p>Checked with Apple&rsquo;s accessibility audit. VoiceOver says what just happened, Voice Control knows what you call things, and text grows to the largest sizes on iPhone and iPad, and to twice the size on the Mac.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19c4-1 6-4 6-8"/><path d="M14 5h6M14 9h6M14 13h4"/><circle cx="7" cy="7" r="3"/></svg><h3>Replies that sound like you</h3><p>Suggested replies use the greeting, sign-off and length you use, learned on your device from email you&rsquo;ve sent.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.5"/><circle cx="4.5" cy="12" r="1.5"/><circle cx="4.5" cy="18" r="1.5"/></svg><h3>Remind Me</h3><p>Add any email to Reminders for this evening, tomorrow morning or when it&rsquo;s due, with a link straight back to it.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3M7 8l5-5 5 5"/></svg><h3>Share to Corres</h3><p>Share a page or photos from any app and write the email right in the Share sheet.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="12" height="14" rx="4"/><path d="M9 5V2h6v3M9 19v3h6v-3"/></svg><h3>On Apple Watch</h3><p>What needs you, and the start of each email. Reply by voice, Scribble or a ready answer, or mark it handled.</p></div>
+        <div class="cell"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><h3>Fast with a big mailbox</h3><p>Corres opens on your newest mail right away, even with thousands of conversations, and pull to refresh finishes in seconds.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="privacy" class="privacy">
+  <section id="privacy" class="privacy" aria-labelledby="privacy-title">
     <div class="wrap">
       <p class="eyebrow reveal">Private by design</p>
-      <p class="promise reveal">Your email is read on your own devices. <em>Not on our servers, and never by an AI company.</em></p>
+      <h2 class="promise reveal" id="privacy-title">Your email is read on your own devices. <em>Not on our servers, and never by an AI company.</em></h2>
       <div class="three reveal">
-        <div><h4>Stored on your device</h4><p>Mail comes straight from Google, Microsoft or Apple to your iPhone, iPad or Mac and stays there, protected by Apple&rsquo;s built-in encryption. Corres&rsquo;s servers never receive it.</p></div>
-        <div><h4>Sorted on your device</h4><p>Needs You, summaries, suggested replies and answers in Search all run on your device. Nothing is sent to an AI service or used to train one.</p></div>
-        <div><h4>Nothing to sell</h4><p>No ads, no analytics, no tracking SDKs, no read receipts. Corres is paid for by the people who use it.</p></div>
+        <div><h3>Stored on your device</h3><p>Mail comes straight from your email provider to your iPhone, iPad or Mac and stays there, protected by Apple&rsquo;s built-in encryption. Corres&rsquo;s servers never receive it.</p></div>
+        <div><h3>Sorted on your device</h3><p>Needs You, summaries, suggested replies and answers in Search all run on your device. Nothing is sent to an AI service or used to train one.</p></div>
+        <div><h3>Nothing to sell</h3><p>No ads, no analytics, no tracking, no read receipts. Corres is paid for by the people who use it.</p></div>
       </div>
-      <p class="fine reveal">Read the full <a href="privacy/">privacy policy</a>. Corres&rsquo;s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+      <p class="fine reveal">Two small servers help, and neither sees your email: a notification relay that learns only that a mailbox changed, and a logo server that sees only the sender&rsquo;s web domain. The <a href="privacy/">privacy policy</a> lists exactly what each one keeps. Corres&rsquo;s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
     </div>
   </section>
 
@@ -521,67 +543,78 @@
     <div class="wrap">
       <div class="head center reveal">
         <p class="eyebrow">Pricing</p>
-        <h2>Free, and complete.</h2>
-        <p>Every account, every mail feature, free. Pro adds the parts that read your mail for you.</p>
+        <h2>Mail is free.</h2>
+        <p>Every account and every mail feature, free. Corres Pro adds the parts that read your mail for you.</p>
       </div>
       <div class="plans reveal">
         <div class="plan">
           <h3>Corres</h3>
           <div class="price">Free</div>
-          <p class="sub">Every account, forever</p>
+          <p class="sub">Every account, no time limit</p>
           <ul class="ticks">
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Read, reply, archive and search</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Gmail, Outlook and iCloud in one inbox</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Notifications, signatures, swipes</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Read, write, search and organize</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Every account in one inbox</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Notifications, rules, Send Later, signatures</li>
           </ul>
         </div>
         <div class="plan pro">
           <h3>Corres Pro</h3>
-          <div class="price">$20 <small>a month · or $200 a year</small></div>
-          <p class="sub">Try it free first</p>
+          <div class="price">$20 <small>a month, or $200 a year</small></div>
+          <p class="sub">Starts with a two-week free trial. Lifetime is $1,000 once. US prices; the App Store shows yours.</p>
           <ul class="ticks">
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Needs You and Waiting, with the reason for each</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Summaries, replies in your voice, and answers from your mail</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Everything in Corres, free</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Needs You and Waiting, with the reason for each</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Summaries, replies in your voice, and answers from your mail</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Everything in the free plan, on iPhone, iPad and Mac</li>
           </ul>
         </div>
       </div>
+      <p class="cta-note center reveal" style="text-align:center;margin-top:24px">During the beta, everyone on TestFlight gets Corres Pro free.</p>
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <section style="padding-top:0" aria-labelledby="faq-title">
     <div class="wrap">
-      <div class="head center reveal"><h2>Questions</h2></div>
+      <div class="head center reveal"><h2 id="faq-title">Questions</h2></div>
       <div class="faq reveal">
-        <details><summary>Which email accounts work with Corres?</summary><p>Gmail and Google Workspace, Outlook.com, Hotmail and Live, work or school Microsoft 365, and iCloud Mail. Add as many as you like; they share one inbox. iCloud asks for an app-specific password instead of your Apple Account password, and Corres walks you through making one in about a minute.</p></details>
-        <details><summary>What is Postwright?</summary><p>Postwright is the mail engine we built for Corres. It talks to Gmail, Outlook and iCloud Mail each in its own way, on your device, so your actions are instant, Undo always works, and every account stays in step with the web. It&rsquo;s why Corres doesn&rsquo;t need a server of its own to hold your mail.</p></details>
-        <details><summary>Does Corres read my email on its servers?</summary><p>No. Your mail is downloaded from Google, Microsoft or Apple directly to your iPhone, iPad or Mac and processed there. An optional notification relay only learns that your mailbox changed, never what&rsquo;s in it. The <a href="privacy/" style="color:var(--accent)">privacy policy</a> has the details.</p></details>
-        <details><summary>Do I need Apple Intelligence?</summary><p>No. Sorting, Needs You and Waiting work on every supported iPhone, iPad and Mac. Summaries and drafted replies use Apple Intelligence where your device has it.</p></details>
-        <details><summary>Is there an iPad or Mac version?</summary><p>Yes. Corres runs on iPhone, iPad and Mac: three columns on iPad, and on the Mac a native app with its own windows, menus and keyboard shortcuts, including Mail&rsquo;s and Gmail&rsquo;s. One Corres Pro covers all three, and the accounts you add follow you through iCloud Keychain.</p></details>
-        <details><summary>Does it work without a signal?</summary><p>Yes. Your mail is on your device, so it reads offline, and anything you archive, delete, flag or mark read goes through as soon as you&rsquo;re back online.</p></details>
-        <details><summary>How do I get it?</summary><p>Corres is in beta on TestFlight. <a href="mailto:support@corres.app?subject=Corres%20early%20access" style="color:var(--accent)">Ask for early access</a>, and it&rsquo;s coming to the App Store.</p></details>
+        <details><summary>Which email accounts work with Corres?</summary><p>Gmail and Google Workspace, Outlook.com, Hotmail and Live, work or school Microsoft 365, iCloud Mail, and almost any other email that offers IMAP: Yahoo, AOL, Fastmail, Zoho, GMX, Yahoo! JAPAN, Naver, QQ, 163 and more. Add as many as you like; they share one inbox. iCloud and most others ask for an app password instead of your main password, and Corres walks you through making one.</p></details>
+        <details><summary>Can I use my Gmail account in the beta?</summary><p>Yes, once we add you. Until Google finishes reviewing Corres, Gmail sign-in works only for addresses on Google&rsquo;s test list. <a class="text-link" href="mailto:support@corres.app?subject=Add%20my%20Gmail%20to%20the%20Corres%20beta">Email us</a> the Gmail address you&rsquo;d like to use. Outlook, iCloud and other email work right away.</p></details>
+        <details><summary>Does Corres read my email on its servers?</summary><p>No. Your mail is downloaded from your email provider directly to your iPhone, iPad or Mac and processed there. A notification relay learns only that your mailbox changed, never what&rsquo;s in it. The <a class="text-link" href="privacy/">privacy policy</a> has the details.</p></details>
+        <details><summary>Do I need Apple Intelligence?</summary><p>No. Needs You, Waiting, sorting and key details work on every supported iPhone, iPad and Mac. Summaries and drafted replies use Apple Intelligence where your device has it, on the device itself.</p></details>
+        <details><summary>Is there an iPad, Mac or Apple Watch version?</summary><p>Yes. Three columns on iPad, a native Mac app with its own windows, menus and keyboard shortcuts, and on Apple Watch what needs you, with replies by voice. One Corres Pro covers iPhone, iPad and Mac, and the accounts you add follow you through iCloud Keychain.</p></details>
+        <details><summary>Does it work without a signal?</summary><p>Yes. Your mail is on your device, so it reads offline. What you archive, delete, flag or send goes through by itself once you&rsquo;re back online.</p></details>
+        <details><summary>What is Postwright?</summary><p>Postwright is the mail engine we built for Corres. It runs on your device and talks to Gmail, Outlook, iCloud and other mail servers each in its own way, so your actions are instant and every account stays in step with the web. It&rsquo;s why Corres doesn&rsquo;t need a server of its own to hold your mail.</p></details>
+        <details><summary>How do I get it?</summary><p>Install Apple&rsquo;s TestFlight app, then open the <a class="text-link" href="https://testflight.apple.com/join/ntjvUNCR">Corres beta link</a> on your iPhone, iPad or Mac. You can explore every screen with sample mail before adding an account. It&rsquo;s coming to the App Store.</p></details>
       </div>
     </div>
   </section>
 
-  <div class="closing">
-    <img src="img/mark.jpg" alt="">
-    <h2>Email, considered.</h2>
-    <p>A calmer inbox, read on your iPhone, iPad and Mac, from a small studio that would rather you spent less time in it.</p>
-    <div class="cta"><a class="btn primary" href="mailto:support@corres.app?subject=Corres%20early%20access">Get early access</a></div>
-  </div>
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="wrap">
+      <img src="img/mark.jpg" alt="" width="84" height="84">
+      <h2 id="closing-title">Email, considered.</h2>
+      <p>Try Corres in three steps.</p>
+      <ol class="steps">
+        <li><b>Get TestFlight</b><span>Apple&rsquo;s free app for trying apps before they reach the App Store.</span></li>
+        <li><b>Join the beta</b><span>Open the Corres link on your iPhone, iPad or Mac and tap Install.</span></li>
+        <li><b>Add your accounts</b><span>Or explore with sample mail first. Corres opens on what needs you.</span></li>
+      </ol>
+      <div class="cta"><a class="btn primary" href="https://testflight.apple.com/join/ntjvUNCR">Join the beta on TestFlight</a></div>
+      <p class="cta-note">Questions or feedback: <a href="mailto:support@corres.app">support@corres.app</a>. A person reads every email.</p>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="wrap">
     <span>Corres, by <a href="https://anwarcreativestudio.com/">Anwar Creative Studio</a></span>
     <nav aria-label="Footer">
+      <a href="support/">Support</a>
       <a href="privacy/">Privacy</a>
       <a href="terms/">Terms</a>
-      <a href="support/">Support</a>
-      <a href="mailto:privacy@corres.app">privacy@corres.app</a>
+      <a href="https://anwarcreativestudio.com/press/">Press</a>
+      <a href="mailto:support@corres.app">support@corres.app</a>
     </nav>
-    <p class="legal">Corres&rsquo;s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. Gmail and Google Workspace are trademarks of Google LLC. Outlook and Microsoft 365 are trademarks of Microsoft Corporation. iCloud, Apple Intelligence, iPhone, iPad and Mac are trademarks of Apple Inc. © 2026 Anwar Creative Studio.</p>
+    <p class="legal">Corres&rsquo;s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. Gmail and Google Workspace are trademarks of Google LLC. Outlook and Microsoft 365 are trademarks of Microsoft Corporation. Apple, Apple Intelligence, Apple Watch, iCloud, iPad, iPhone, Mac, Siri and TestFlight are trademarks of Apple Inc., registered in the U.S. and other countries. Other names are trademarks of their owners. © 2026 Anwar Creative Studio.</p>
   </div>
 </footer>
 
