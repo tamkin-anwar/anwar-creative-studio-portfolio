@@ -1,6 +1,6 @@
 {
   "name": "Anwar Creative Studio",
-  "short_name": "Anwar Creative",
+  "short_name": "Anwar",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fbf9f4",
@@ -23,6 +23,14 @@
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ]
+  ],
+  "id": "/",
+  "description": "An independent software company making apps for iPhone, iPad and Mac: Corres for your email, Artha for your money."
 }

@@ -7,7 +7,7 @@ const format = (iso: string) =>
 
 export function JournalPage() {
   return (
-    <PageShell eyebrow="Journal" backHref={import.meta.env.BASE_URL}>
+    <PageShell eyebrow="Journal">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
           What&rsquo;s new at the studio.

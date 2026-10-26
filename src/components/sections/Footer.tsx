@@ -42,7 +42,7 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="wrap site-footer">
+    <footer className="wrap site-footer">
       <div className="foot">
         <div>
           <a href={BASE} className="site-home" aria-label="Anwar Creative Studio, home">

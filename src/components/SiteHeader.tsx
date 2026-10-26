@@ -24,7 +24,7 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <button type="button" onClick={openCommandPalette} className="site-menu" aria-label="Open the menu">
+          <button type="button" onClick={openCommandPalette} className="site-menu" aria-label="Open the menu" aria-haspopup="dialog">
             Menu
           </button>
         </nav>

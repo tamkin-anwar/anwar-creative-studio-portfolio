@@ -57,7 +57,7 @@ function chapters(opts: {
     if (!still && !paused) {
       advance = window.setTimeout(() => {
         if (cur < order.length - 1) run(order[cur + 1])
-        else { finished = true; bar.classList.add('done') }
+        else { finished = true; bar.classList.add('done'); pause.textContent = 'Replay' }
       }, duration[ch])
     }
   }
@@ -72,10 +72,10 @@ function chapters(opts: {
   const onTab = (e: Event) => {
     const ch = (e.currentTarget as HTMLElement).dataset.ch
     if (!ch) return
-    finished = false; bar.classList.remove('done'); run(ch)
+    finished = false; bar.classList.remove('done'); pause.textContent = paused ? 'Play' : 'Pause'; run(ch)
   }
   const onPause = () => {
-    if (finished) { finished = false; bar.classList.remove('done'); paused = false; run(order[0]) }
+    if (finished) { finished = false; bar.classList.remove('done'); paused = false; pause.textContent = 'Pause'; run(order[0]) }
     else setPaused(!paused)
   }
   tabs.forEach((t) => t.addEventListener('click', onTab))
@@ -117,6 +117,7 @@ export function startMacTour(root: HTMLElement): Cleanup {
   const askq = root.querySelector<HTMLElement>('[data-ask]')!
   const draftq = root.querySelector<HTMLElement>('[data-draft]')!
   const maya = root.querySelector<HTMLElement>('[data-maya]')!
+  const sofia = root.querySelector<HTMLElement>('[data-sofia]')!
   const Q = 'When is my flight to Lisbon?'
   const DRAFT = 'Hi Maya,\n\nApproved. This is the one, and thank you for taking the time with it. See you at tomorrow’s review.\n\nBest,\nTamkin'
   const t = timers()
@@ -127,6 +128,7 @@ export function startMacTour(root: HTMLElement): Cleanup {
     win.dataset.ch = ch
     win.classList.remove('reading', 'asking', 'answered', 'picked', 'drafting', 'opened')
     askq.textContent = ''; draftq.textContent = ''; maya.classList.remove('sel')
+    sofia.classList.toggle('sel', ch === 'sort')
     if (ch === 'sort') { win.classList.remove('sorted'); sel('all'); needN.textContent = '0' }
     else { win.classList.add('sorted'); needN.textContent = '3'; sel(ch === 'private' ? 'updates' : 'needs') }
 

@@ -7,7 +7,7 @@ const short = (iso: string) =>
 // The three newest journal entries: dated proof the studio is shipping.
 export function Recently() {
   return (
-    <section className="sec" aria-labelledby="recently-title">
+    <section className="sec" id="recently" aria-labelledby="recently-title">
       <p className="kicker">Where things stand</p>
       <h2 className="h2" id="recently-title">Recently.</h2>
       <div className="stand">

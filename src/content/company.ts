@@ -21,7 +21,7 @@ export const principles = [
   {
     statement: 'Private where it counts.',
     support:
-      'Corres sorts, summarizes and drafts on your iPhone with Apple Intelligence, so your mail is never sent to us or to an AI company.',
+      'Corres reads and sorts your mail on your own device, using Apple Intelligence where your device has it, so your mail is never sent to us or to an AI company.',
   },
   {
     statement: 'Nothing fails silently.',
@@ -29,8 +29,8 @@ export const principles = [
       'If something doesn’t go through, you’ll know. An email sent with no signal waits and goes by itself once you’re back online, and Corres checks every summary against the email before you see it.',
   },
   {
-    statement: 'Native, and finished.',
+    statement: 'Native, down to the details.',
     support:
-      'Corres and Artha are written in SwiftUI for iPhone, iPad and Mac, follow your text size and work with VoiceOver. The everyday parts get the most care.',
+      'The Corres and Artha apps are written in SwiftUI, follow your text size and are built for VoiceOver. The everyday parts get the most care.',
   },
 ]

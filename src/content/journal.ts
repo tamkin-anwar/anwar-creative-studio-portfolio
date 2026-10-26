@@ -27,21 +27,21 @@ export const journal: JournalEntry[] = [
     product: 'Corres',
     title: 'Thirty-six builds in',
     body:
-      'The newest Corres betas make sure nothing you do is lost: an email sent with no signal waits and goes by itself once you are back online, and your moves, snoozes and rules merge between your devices. Search is about ten times faster on a big mailbox.',
+      'The newest Corres betas make sure nothing you do is lost: mail written without signal is kept and sent the moment you are back online, and your moves, snoozes and rules merge between your devices. Search is about ten times faster on a big mailbox.',
   },
   {
     date: '2026-10-22',
     product: 'Corres',
     title: 'Corres on Apple Watch',
     body:
-      'Read what needs you on your wrist and reply by voice. Send Later and today’s deliveries also reach the Lock Screen, and Siri can write and send an email in Corres.',
+      'Read what needs you on your wrist and reply by voice. Send Later and today’s deliveries also reach the Lock Screen.',
   },
   {
     date: '2026-10-21',
     product: 'Artha',
     title: 'Artha for iPhone, iPad and Mac, in beta',
     body:
-      'The native Artha app went to TestFlight, with a Mac version a day later. It opens on what’s safe to spend, shares one design language with the website, and works with any of about 160 currencies.',
+      'The native Artha app went to TestFlight, with a Mac version a day later. It opens on what’s safe to spend, and shares one design language with the website.',
     link: { label: 'Join the beta', href: 'https://testflight.apple.com/join/hj61wEUG' },
   },
   {
@@ -49,7 +49,7 @@ export const journal: JournalEntry[] = [
     product: 'Corres',
     title: 'Nine languages',
     body:
-      'Corres now speaks Japanese, Chinese, German, Korean, French, Spanish, Portuguese and Bengali as well as English, along with its App Store listing.',
+      'Corres now speaks Japanese, Chinese, German, Korean, French, Spanish, Portuguese and Bengali as well as English.',
   },
   {
     date: '2026-10-19',
@@ -75,7 +75,7 @@ export const journal: JournalEntry[] = [
     date: '2026-10-08',
     product: 'Corres',
     title: 'Corres reaches its first testers',
-    body: 'The first Corres beta went out on TestFlight, three weeks after the first line of code.',
+    body: 'The first Corres beta went out on TestFlight, less than three weeks after the first line of code.',
   },
   {
     date: '2026-09-20',

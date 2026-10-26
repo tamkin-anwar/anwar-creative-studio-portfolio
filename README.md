@@ -1,6 +1,6 @@
-# Anwar Creative Studio Portfolio
+# Anwar Creative Studio
 
-Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). The company website of Anwar Creative Studio LLC, an independent software company. Corres and Artha are the flagships; Tether, Jotfield and Doorsong sit in "From the workshop".
+Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). The company website of Anwar Creative Studio, an independent software company. Corres and Artha are the flagships; Tether, Jotfield and Doorsong sit in "From the workshop".
 
 Contact: contact@anwarcreativestudio.com
 
@@ -11,24 +11,23 @@ npm install
 npm run dev
 npm run build
 npm run lint
-node --test tests/reveal.test.cjs
 ```
 
-React, TypeScript, Vite, and Tailwind CSS. The hero and ambient field use Canvas 2D. Fonts and artwork are self-hosted. GitHub Actions deploys the production build to GitHub Pages when main is updated, served on the custom domain anwarcreativestudio.com (set in the repo's Pages settings, DNS at Namecheap).
+React 19, TypeScript, Vite and Tailwind CSS v4. Every page is prerendered to HTML at build time (`src/entry-server.tsx`, `scripts/prerender.mjs`), then React hydrates it. Fonts are self-hosted. GitHub Actions deploys `dist/` to GitHub Pages when main is updated, on the custom domain anwarcreativestudio.com (set in the repo's Pages settings, DNS at Namecheap).
 
-## Content
+## Where things live
 
-- `src/content/projects.ts`: released projects and build notes.
-- `src/content/corres.ts`: Corres positioning and current progress.
-- `src/content/roadmap.ts`: work in development.
-- `src/pages/NowPage.tsx`: current work and update date.
-- `src/components/sections/Flagships.tsx`: Artha and Corres features.
-- `src/components/CommandPalette.tsx`: searchable navigation.
+- `src/components/sections/`: the homepage, from the hero to the footer.
+- `src/lib/tours.ts`: the Corres and Artha tours on the homepage.
+- `src/components/identity/Lockup.tsx`: the hanging a, the "Anwar." lockup and the "a." end mark.
+- `src/components/devices/Bezels.tsx`: Apple's Product Bezels around the live screens.
+- `src/styles/site.css`: shared design (header, footer, inner pages). `src/styles/home.css`: the homepage only, loaded by `src/main.tsx`. Tokens for light and dark are in `src/styles/theme.css`.
+- `src/content/`: company facts, the journal and links.
+- `src/pages/`: About, Journal, Now, Press, Contact, Colophon, Privacy, Terms and the 404 page.
+- `src/components/CommandPalette.tsx`: the Menu button and ⌘K navigation.
+- `public/og-image.png`: the card shown when a link to the site is shared.
+- `design/`: the design record, every homepage concept and the logo study. Not deployed.
 
-Corres has its own page at anwarcreativestudio.com/corres/ (static, `public/corres/index.html`), with terms at `/corres/terms/`. Its artwork comes from the native Corres design system. Its privacy policy is served from `public/corres/privacy/` at anwarcreativestudio.com/corres/privacy/.
-
-Each reveal target is observed independently at threshold zero. Keyboard focus reveals its containing item. Reduced motion disables reveal transitions and card tilt. Search supports arrows, Enter, Escape, and contained Tab navigation.
-
-Research and verification: `docs/portfolio-update.md`.
+Corres also has a copy of its site at anwarcreativestudio.com/corres/ (static, `public/corres/`), with privacy and terms. `scripts/publish-corres-app.sh` publishes the same files to corres.app.
 
 Built by Anwar Creative Studio.

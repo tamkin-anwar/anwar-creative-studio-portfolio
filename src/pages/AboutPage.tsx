@@ -5,13 +5,13 @@ import { EndMark } from '../components/identity/Lockup'
 
 export function AboutPage() {
   return (
-    <PageShell eyebrow="About" backHref={import.meta.env.BASE_URL}>
+    <PageShell eyebrow="About">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
           An independent software company.
         </h1>
         <p>
-          Anwar Creative Studio makes premium apps for iPhone, iPad and Mac. We make a few things, take
+          Anwar Creative Studio makes apps for iPhone, iPad and Mac. We make a few things, take
           our time with them, and keep them for the long run. We don&rsquo;t take on client work; everything
           we build is our own.
         </p>
@@ -19,13 +19,13 @@ export function AboutPage() {
         <h2>What we make</h2>
         <p>
           <strong>Corres</strong> is an email app that opens on what needs you: the emails that ask
-          something of you, with the reason each one is there. Gmail, Outlook and iCloud in one inbox, on
+          something of you, with the reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
           iPhone, iPad, Mac and Apple Watch. It&rsquo;s in beta on TestFlight and coming to the App Store.{' '}
           <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
         </p>
         <p>
           <strong>Artha</strong> tells you what&rsquo;s safe to spend: one number for today, worked out
-          from your bills, budget and accounts. It&rsquo;s live on the web, with an app for iPhone, iPad and
+          from your budget and the bills still to come. It&rsquo;s live on the web, with an app for iPhone, iPad and
           Mac in beta.{' '}
           <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
         </p>

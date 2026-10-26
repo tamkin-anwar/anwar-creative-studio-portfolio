@@ -4,7 +4,7 @@ import { links } from '../content/links'
 
 export function PrivacyPage() {
   return (
-    <PageShell eyebrow="Privacy" backHref={import.meta.env.BASE_URL}>
+    <PageShell eyebrow="Privacy">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
           Privacy on this website.

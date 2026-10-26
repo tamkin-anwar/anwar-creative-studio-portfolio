@@ -1,5 +1,4 @@
 import { useEffect, useRef, type CSSProperties } from 'react'
-import { artha } from '../../content/artha'
 import { links } from '../../content/links'
 import { startArthaTour } from '../../lib/tours'
 import { IPhoneBezel } from '../devices/Bezels'
@@ -16,7 +15,7 @@ export function ArthaSection() {
     <section className="sec" id="artha" ref={ref}>
         <div className="duo">
           <div>
-            <div className="appname"><img src={`${BASE}press/artha-icon.webp`} alt="" /><span><b>Artha</b><small>Know what&rsquo;s safe to spend.</small></span></div>
+            <div className="appname"><img src={`${BASE}press/artha-icon.webp`} alt="" loading="lazy" decoding="async" /><span><b>Artha</b><small>Know what&rsquo;s safe to spend.</small></span></div>
             <h2 className="h2">One number, kept honest.</h2>
             <p className="lead">Artha opens on what you can spend today and still end the month on plan, with the bills still to come already counted. No bank login, ever.</p>
             <div className="tour" id="artha-tour">
@@ -25,7 +24,7 @@ export function ArthaSection() {
               <button type="button" className="tour-item" data-ch="plan"><span className="bar"><i></i></span><b>A plan for the month</b><span>Bills, everyday spending and what&rsquo;s left, with limits from your own spending.</span></button>
               <button type="button" className="tour-item" data-ch="import"><span className="bar"><i></i></span><b>Statements you review</b><span>Every row checked by you before it&rsquo;s saved. The file is never kept.</span></button>
             </div>
-            <div className="links"><a className="tlink" href={links.artha}>arthaapp.com &rarr;</a><a className="tlink" href={artha.beta}>Join the beta &rarr;</a><button type="button" className="tlink" data-artha-pause>Pause</button></div>
+            <div className="links"><a className="tlink" href={links.artha}>arthaapp.com &rarr;</a><a className="tlink" href={links.arthaBeta}>Join the beta &rarr;</a><button type="button" className="tlink" data-artha-pause>Pause</button></div>
           </div>
           <div>
             <div className="dev iphone aphone" style={{ '--ip-w': 'min(300px, 100vw - 56px)', margin: '0 auto' } as CSSProperties} id="artha-phone" data-ch="today" role="img" aria-label="A tour of Artha on iPhone with sample figures: $64 safe to spend today and on pace; the assistant proposes adding a $32 lunch and waits for confirmation, leaving $32; the month's plan with a $3,200 budget; and a card statement whose rows are reviewed before saving.">
@@ -50,7 +49,7 @@ export function ArthaSection() {
                       <div className="arows">
                         <div className="newrow"><div><div className="arow"><span>Lunch<small>Eating out · just now</small></span><span className="afig">$32.00</span></div></div></div>
                         <div className="arow"><span>Groceries<small>Corner Market · yesterday</small></span><span className="afig">$58.20</span></div>
-                        <div className="arow"><span>Phone<small>Bill due Oct 24</small></span><span className="afig">$45.00</span></div>
+                        <div className="arow"><span>Phone<small>Bill paid Oct 24</small></span><span className="afig">$45.00</span></div>
                       </div>
                     </div>
                   </div>

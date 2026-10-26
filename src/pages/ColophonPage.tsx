@@ -71,7 +71,7 @@ const entries: { term: string; detail: ReactNode }[] = [
   {
     term: 'A bug worth mentioning',
     detail:
-      "This site's own base styles once silently broke every Tailwind margin utility on the page. They sat outside Tailwind's CSS cascade layer, and unlayered CSS always wins regardless of specificity. Moving them into @layer base fixed it.",
+      "This site’s own base styles once silently broke every Tailwind margin utility on the page. They sat outside Tailwind’s CSS cascade layer, and unlayered CSS always wins regardless of specificity. Moving them into @layer base fixed it.",
   },
   {
     term: 'Source',

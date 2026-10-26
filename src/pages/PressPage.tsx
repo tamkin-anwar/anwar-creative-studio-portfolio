@@ -7,7 +7,7 @@ const BASE = import.meta.env.BASE_URL
 
 export function PressPage() {
   return (
-    <PageShell eyebrow="Press kit" backHref={BASE}>
+    <PageShell eyebrow="Press kit">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
           Press kit.
@@ -18,7 +18,7 @@ export function PressPage() {
           <a href={`mailto:${links.email}?subject=Press`}>{links.email}</a>.
         </p>
         <p>
-          <a href={`${BASE}press/anwar-creative-studio-press-kit.zip`} className="hero-cta hero-cta-primary" style={{ color: 'var(--bg)' }}>
+          <a href={`${BASE}press/anwar-creative-studio-press-kit.zip`} className="btn">
             Download the press kit (zip, 3 MB)
           </a>
         </p>
@@ -28,7 +28,7 @@ export function PressPage() {
           <dt>Name</dt>
           <dd>{company.name}</dd>
           <dt>What it is</dt>
-          <dd>An independent software company making premium apps for iPhone, iPad and Mac</dd>
+          <dd>An independent software company making apps for iPhone, iPad and Mac</dd>
           <dt>Founder</dt>
           <dd>Tamkin Anwar</dd>
           <dt>Based in</dt>
@@ -67,6 +67,7 @@ export function PressPage() {
           <a href={`${BASE}press/identity/anwar-lockup-light.png`}>Lockup, light ink (PNG)</a>
           <a href={`${BASE}press/identity/anwar-symbol-ink.svg`}>The hanging a, dark (SVG)</a>
           <a href={`${BASE}press/identity/anwar-symbol-light.svg`}>The hanging a, light (SVG)</a>
+          <a href={`${BASE}press/identity/USING-THE-LOGO.txt`}>How to use the logo (text)</a>
         </p>
 
         <h2>Corres</h2>
@@ -75,8 +76,9 @@ export function PressPage() {
           <p>
             <strong>Email, considered.</strong> Corres opens on the emails that ask something of you, with the
             reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
-            iPhone, iPad, Mac and Apple Watch, in nine languages. Its intelligence runs on the device with
-            Apple Intelligence. In beta on TestFlight; free, with Corres Pro at $20 a month or $200 a year.{' '}
+            iPhone, iPad, Mac and Apple Watch, in nine languages. It reads and sorts mail on the device, and
+            summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight. Mail is free; Corres Pro adds Needs You, Waiting,
+            answers in Search, summaries and suggested replies, at $20 a month or $200 a year.{' '}
             <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
           </p>
         </div>

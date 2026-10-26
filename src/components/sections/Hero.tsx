@@ -45,7 +45,7 @@ export function Hero() {
                 <div className="fold closed reveal"><div><div className="waiting"><span>Waiting on <b>2 replies</b></span><span>Longest 5 days ›</span></div></div></div>
                 <div className="fold closed reveal"><div><div className="ghead">Due soon</div></div></div>
                 <div className="fold other"><div><div className="row"><span className="av">WE</span><span className="who">The Weekly Edit</span><span className="time">11:12</span><span className="subj">Ten things worth reading this weekend</span><span className="prev">Long reads, one recipe and a very good map</span></div></div></div>
-                <div className="fold"><div><div className="row"><span className="av">SL</span><span className="who">Sofia Laurent<span className="chip">Tomorrow</span></span><span className="time">10:31</span><span className="subj">A place at the table</span><span className="prev">Could you confirm Thursday&rsquo;s conversation?</span><span className="why" style={{ '--d': '.3s' } as CSSProperties}><span>↳ Sofia asked you to confirm Thursday</span></span></div></div></div>
+                <div className="fold"><div><div className="row" data-sofia><span className="av">SL</span><span className="who">Sofia Laurent<span className="chip">Tomorrow</span></span><span className="time">10:31</span><span className="subj">A place at the table</span><span className="prev">Could you confirm Thursday&rsquo;s conversation?</span><span className="why" style={{ '--d': '.3s' } as CSSProperties}><span>↳ Sofia asked you to confirm Thursday</span></span></div></div></div>
                 <div className="fold other"><div><div className="row"><span className="av">NG</span><span className="who">Northwind Goods</span><span className="time">10:03</span><span className="subj">Your order is on its way</span><span className="prev">Arriving Tuesday · Track your package</span></div></div></div>
                 <div className="fold"><div><div className="row" data-maya><span className="av">MC</span><span className="who">Maya Chen<span className="chip">Today</span></span><span className="time">9:45</span><span className="subj">The next chapter</span><span className="prev">Your approval on the final direction is the last piece</span><span className="why" style={{ '--d': '.35s' } as CSSProperties}><span>↳ Maya asked you to approve the creative direction</span></span></div></div></div>
                 <div className="fold other"><div><div className="row"><span className="av">LA</span><span className="who">Lumen Air</span><span className="time">9:19</span><span className="subj">Your trip to Lisbon is coming up</span><span className="prev">Everything you need before you fly</span></div></div></div>
@@ -55,26 +55,33 @@ export function Hero() {
                 <div className="fold other"><div><div className="row"><span className="av">SN</span><span className="who">Studio Notes</span><span className="time">7:02</span><span className="subj">The October roundup</span><span className="prev">What we shipped, read and listened to</span></div></div></div>
               </div>
               <div className="rows rows-updates">
+                <div className="row"><span className="av">WE</span><span className="who">The Weekly Edit</span><span className="time">11:12</span><span className="subj">Ten things worth reading this weekend</span><span className="prev">Long reads, one recipe and a very good map</span></div>
                 <div className="row sel"><span className="av">NG</span><span className="who">Northwind Goods</span><span className="time">10:03</span><span className="subj">Your order is on its way</span><span className="prev">$86.40 · Arriving Tuesday</span></div>
                 <div className="row"><span className="av">LA</span><span className="who">Lumen Air</span><span className="time">9:19</span><span className="subj">Your trip to Lisbon is coming up</span><span className="prev">Check-in opens tomorrow</span></div>
-                <div className="row"><span className="av">WE</span><span className="who">The Weekly Edit</span><span className="time">11:12</span><span className="subj">Ten things worth reading this weekend</span><span className="prev">Long reads, one recipe and a very good map</span></div>
               </div>
             </div>
             <div className="pane" aria-hidden="true">
               <div className="tbar"><span className="ti"></span><span className="ti"></span><span className="ti"></span><span style={{ flex: '1' }}></span><div className="search"><svg viewBox="0 0 20 20"><circle cx="9" cy="9" r="5" stroke="currentColor" strokeWidth="1.8" fill="none"/><path d="m13 13 3.5 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg><span className="ph">Search, or ask a question</span><span className="q" data-ask></span><span className="caret"></span></div></div>
               <div className="views">
-                <div className="view v-empty"><div className="empty">Choose a conversation</div></div>
+                <div className="view v-sofia">
+                  <div className="msg">
+                    <div className="mh">A place at the table</div>
+                    <div className="from"><span className="av">SL</span><span>Sofia Laurent<small>to you · 10:31</small></span></div>
+                    <div className="short"><em>Needs You</em>Sofia asked you to confirm Thursday&rsquo;s conversation by tomorrow.</div>
+                    <div className="body"><p>Hi,</p><p>We&rsquo;re setting the table for Thursday&rsquo;s conversation and would love to have you there. Could you let me know by tomorrow that you can make it? Once you do, I&rsquo;ll send the details.</p><p>Thank you,<br />Sofia</p></div>
+                  </div>
+                </div>
                 <div className="view v-ask">
                   <div className="seek"><i></i>Looking through your mail on this Mac</div>
                   <div className="answer">
                     <div className="a-label"><span className="ondevice"></span>Answered on this Mac</div>
-                    <p className="a-text">Your flight to Lisbon is <b>Tuesday, October 28 at 9:40 AM</b>, from San Francisco. Lumen Air flight LA 238, seat 14A. Check-in opens tomorrow at 9:40 AM.</p>
+                    <p className="a-text">Your flight to Lisbon is <b>Tuesday, October 27 at 9:40 AM</b>, from San Francisco. Lumen Air flight LA 238, seat 14A. Check-in opens tomorrow at 9:40 AM.</p>
                     <div className="a-src"><span>From 1 email</span><span className="cite"><span className="av sm">LA</span>Lumen Air · Your trip to Lisbon is coming up</span></div>
                   </div>
                 </div>
                 <div className="view v-maya">
                   <div className="msg">
-                    <h3>The next chapter</h3>
+                    <div className="mh">The next chapter</div>
                     <div className="from"><span className="av">MC</span><span>Maya Chen<small>to you · 9:45</small></span></div>
                     <div className="short"><em>In short</em>Maya needs your approval on the final direction before tomorrow&rsquo;s review.<span className="checked">✓ Checked against the email</span></div>
                     <div className="body"><p>Hello,</p><p>Your approval on the final direction is the last piece. We have taken time to consider the details and would appreciate your perspective. Everything you need for this conversation is here.</p><p>Warmly,<br />Maya</p></div>
@@ -84,10 +91,10 @@ export function Hero() {
                 </div>
                 <div className="view v-order">
                   <div className="msg">
-                    <h3>Your order is on its way</h3>
+                    <div className="mh">Your order is on its way</div>
                     <div className="from"><span className="av">NG</span><span>Northwind Goods<small>orders@northwind.example · 10:03</small></span></div>
                     <div className="guard"><span>Images off</span><span className="g-hit">2 trackers blocked</span><span>Unsubscribe</span></div>
-                    <div className="keys"><div><small>Total</small><b>$86.40</b></div><div><small>Arrives</small><b>Tuesday, Oct 28</b></div><div><small>Order</small><b>NW-20481</b></div></div>
+                    <div className="keys"><div><small>Total</small><b>$86.40</b></div><div><small>Arrives</small><b>Tuesday, Oct 27</b></div><div><small>Order</small><b>NW-20481</b></div></div>
                     <div className="imgs"><span>Image not loaded</span><span>Image not loaded</span></div>
                     <div className="body"><p>Good news: your order has shipped and is on its way. You can track your package any time from your account.</p></div>
                   </div>

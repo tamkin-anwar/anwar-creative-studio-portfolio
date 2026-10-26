@@ -33,7 +33,7 @@ header, the footer, documents and the press kit.
 - The gap between the a and the name is 0.243 em, two stems wide.
 - The gold point is a circle 0.11 em across, the size of a Fraunces full stop.
 - Components: `src/components/identity/Lockup.tsx` (`Symbol`, `Lockup`, `EndMark`). CSS:
-  `.lockup` in `src/styles/home.css`.
+  `.lockup` in `src/styles/site.css`.
 
 **The hanging a on its own** is for small square spaces only: the favicon, app icons, social
 avatars. Everywhere else it appears inside the lockup.
@@ -64,6 +64,12 @@ arthaapp.com.
 
 Files for press: `public/press/identity/` (PNG lockups for light and dark grounds, SVG symbols, and
 `USING-THE-LOGO.txt`), also inside the press kit zip.
+
+**The share card** (`public/og-image.png`, 1200 x 630) is what iMessage, WhatsApp, Slack, X and
+LinkedIn show when someone shares a link to the site: the lockup large and centered on paper, with
+"Looked for it. Didn't love it. Built it." beneath. It is centered so that WhatsApp's square crop
+still shows the whole logo. When it changes, bump `?v=` on `og:image` and `twitter:image` in every
+HTML entry so apps fetch the new one.
 
 ## Color and type
 

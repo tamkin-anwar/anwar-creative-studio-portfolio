@@ -2,7 +2,7 @@
 // Bengali-style headline, with the gold point in its counter. The lockup sets
 // the symbol at exactly the cap height of "Anwar." (bar on the cap line, foot on
 // the baseline), two stem widths from the A, and the gold full stop matches
-// the point. Rules: design/identity/README.md.
+// the point. Rules: design/README.md.
 
 export function Symbol({ className = 'sym' }: { className?: string }) {
   return (

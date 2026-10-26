@@ -13,7 +13,7 @@ const routes = [
   {
     title: 'Artha',
     lines: [
-      { label: 'Help with Artha on the web or iPhone', email: links.arthaSupport },
+      { label: 'Help with Artha on the web or in the apps', email: links.arthaSupport },
       { label: 'Privacy and your data', email: links.arthaPrivacy },
     ],
   },
@@ -25,7 +25,7 @@ const routes = [
 
 export function ContactPage() {
   return (
-    <PageShell eyebrow="Contact and support" backHref={import.meta.env.BASE_URL}>
+    <PageShell eyebrow="Contact and support">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
           Get in touch.
@@ -60,8 +60,8 @@ export function ContactPage() {
 
         <h2>Try Corres early</h2>
         <p>
-          Corres is in beta on TestFlight. Ask for an invitation at{' '}
-          <a href={`mailto:${links.corresSupport}?subject=Corres%20early%20access`}>{links.corresSupport}</a>.
+          Corres is in beta on TestFlight, open to anyone.{' '}
+          <a href={links.corresBeta} target="_blank" rel="noreferrer">Join the beta</a>.
         </p>
         <p>We don&rsquo;t take on client or agency work.</p>
       </div>

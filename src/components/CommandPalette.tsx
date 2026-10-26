@@ -15,7 +15,7 @@ type Item = {
 
 const ITEMS: Item[] = [
   { group: 'Products', label: 'Corres', description: 'Email, considered. In beta on iPhone, iPad, Mac and Apple Watch.', href: links.corres, external: true },
-  { group: 'Products', label: 'Artha', description: "Know what's safe to spend. On the web, and in beta on iPhone, iPad and Mac.", href: links.artha, external: true },
+  { group: 'Products', label: 'Artha', description: 'Know what’s safe to spend. On the web, and in beta on iPhone, iPad and Mac.', href: links.artha, external: true },
   { group: 'Company', label: 'Home', href: BASE },
   { group: 'Company', label: 'About', href: `${BASE}about/` },
   { group: 'Company', label: 'Journal', description: 'Releases and milestones', href: `${BASE}journal/` },
@@ -25,9 +25,11 @@ const ITEMS: Item[] = [
   { group: 'Company', label: 'Colophon', description: 'How this site is built', href: `${BASE}colophon/` },
   { group: 'Company', label: 'Privacy', href: `${BASE}privacy/` },
   { group: 'Company', label: 'Terms', href: `${BASE}terms/` },
-  { group: 'Jump to', label: 'Flagships', href: `${BASE}#flagships` },
-  { group: 'Jump to', label: 'From the workshop', href: `${BASE}#workshop` },
+  { group: 'Jump to', label: 'Corres, the tour', description: 'Corres on the Mac and iPhone', href: `${BASE}#corres` },
+  { group: 'Jump to', label: 'Artha, the tour', description: 'Artha on the iPhone', href: `${BASE}#artha` },
+  { group: 'Jump to', label: 'Recently', href: `${BASE}#recently` },
   { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
+  { group: 'Jump to', label: 'From the workshop', href: `${BASE}#workshop` },
   { group: 'From the workshop', label: 'Tether', href: links.tether, external: true },
   { group: 'From the workshop', label: 'Jotfield', href: links.jotfield, external: true },
   { group: 'From the workshop', label: 'Doorsong', href: links.doorsong, external: true },
@@ -128,12 +130,10 @@ export function CommandPalette() {
             <div
               ref={dialogRef}
               onKeyDown={(event) => {
+                // the search field is the palette's only stop: arrows move through results
                 if (event.key !== 'Tab') return
-                const controls = dialogRef.current?.querySelectorAll<HTMLElement>('input, button')
-                if (!controls?.length) return
-                const first = controls[0], last = controls[controls.length - 1]
-                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus() }
-                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus() }
+                event.preventDefault()
+                inputRef.current?.focus()
               }}
               role="dialog"
               aria-modal="true"
@@ -150,10 +150,15 @@ export function CommandPalette() {
                 <input
                   ref={inputRef}
                   aria-label="Search sections, pages, and products"
+                  role="combobox"
+                  aria-expanded="true"
+                  aria-controls="palette-results"
+                  aria-autocomplete="list"
+                  aria-activedescendant={flat.length ? `palette-option-${selected}` : undefined}
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={onInputKeyDown}
-                  placeholder="Go to a product, page or section"
+                  placeholder="Go to a page or product"
                   className="font-mono w-full bg-transparent outline-none"
                   style={{
                     padding: 'var(--space-3)',
@@ -162,9 +167,10 @@ export function CommandPalette() {
                     borderBottom: '1px solid var(--line)',
                   }}
                 />
-                <div className="max-h-[50vh] overflow-y-auto py-[var(--space-2)]">
+                <div id="palette-results" role="listbox" aria-label="Results" className="max-h-[50vh] overflow-y-auto py-[var(--space-2)]">
                   {flat.length === 0 ? (
                     <p
+                      role="status"
                       className="font-mono"
                       style={{
                         padding: 'var(--space-3)',
@@ -175,9 +181,10 @@ export function CommandPalette() {
                       No matches.
                     </p>
                   ) : (
-                    results.map((group) => (
-                      <div key={group.group}>
+                    results.map((group, g) => (
+                      <div key={group.group} role="group" aria-labelledby={`palette-group-${g}`}>
                         <p
+                          id={`palette-group-${g}`}
                           className="eyebrow"
                           style={{ padding: '8px var(--space-3) 4px', fontSize: '10px' }}
                         >
@@ -190,6 +197,10 @@ export function CommandPalette() {
                             <button
                               data-selected={isSelected}
                               key={`${item.group}-${item.label}`}
+                              id={`palette-option-${index}`}
+                              role="option"
+                              aria-selected={isSelected}
+                              tabIndex={-1}
                               type="button"
                               onMouseEnter={() => setSelected(index)}
                               onClick={() => navigate(item)}
@@ -206,7 +217,8 @@ export function CommandPalette() {
                                   className="font-mono"
                                   style={{ fontSize: '10px', color: 'var(--ink-faint)' }}
                                 >
-                                  &#8599;
+                                  <span aria-hidden="true">&#8599;</span>
+                                  <span className="sr-only">, opens in a new tab</span>
                                 </span>
                               ) : null}
                             </button>

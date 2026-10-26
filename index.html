@@ -3,89 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=5" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#fbf9f4" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0b0b0e" media="(prefers-color-scheme: dark)" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Anwar Creative" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Anwar" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="description" content="Anwar Creative Studio is an independent software company making premium apps for iPhone, iPad and Mac: Corres for your email, Artha for your money." />
+    <meta name="description" content="Anwar Creative Studio is an independent software company making apps for iPhone, iPad and Mac: Corres for your email, Artha for your money." />
     <link rel="canonical" href="https://anwarcreativestudio.com/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Anwar Creative Studio" />
     <meta property="og:title" content="Anwar Creative Studio" />
-    <meta property="og:description" content="Anwar Creative Studio is an independent software company making premium apps for iPhone, iPad and Mac: Corres for your email, Artha for your money." />
+    <meta property="og:description" content="Anwar Creative Studio is an independent software company making apps for iPhone, iPad and Mac: Corres for your email, Artha for your money." />
     <meta property="og:url" content="https://anwarcreativestudio.com/" />
-    <meta property="og:image" content="https://anwarcreativestudio.com/og-image.png?v=2" />
+    <meta property="og:image" content="https://anwarcreativestudio.com/og-image.png?v=3" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Anwar. Looked for it. Didn’t love it. Built it." />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Anwar Creative Studio" />
-    <meta name="twitter:description" content="Anwar Creative Studio is an independent software company making premium apps for iPhone, iPad and Mac: Corres for your email, Artha for your money." />
-    <meta name="twitter:image" content="https://anwarcreativestudio.com/og-image.png?v=2" />
+    <meta name="twitter:description" content="Anwar Creative Studio is an independent software company making apps for iPhone, iPad and Mac: Corres for your email, Artha for your money." />
+    <meta name="twitter:image" content="https://anwarcreativestudio.com/og-image.png?v=3" />
+    <meta name="twitter:image:alt" content="Anwar. Looked for it. Didn’t love it. Built it." />
 
     <!-- self-hosted, see src/styles/fonts.css: no third-party font request
          to wait on before first paint -->
     <link rel="preload" href="/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin />
     <title>Anwar Creative Studio</title>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Anwar Creative Studio",
-        "url": "https://anwarcreativestudio.com/",
-        "email": "contact@anwarcreativestudio.com",
-        "description": "An independent, self-funded software company making premium apps for iPhone, iPad and Mac.",
-        "founder": {
-          "@type": "Person",
-          "name": "Tamkin Anwar"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "CA",
-          "addressCountry": "US"
-        },
-        "sameAs": [
-          "https://github.com/tamkin-anwar"
-        ],
-        "makesOffer": [
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://anwarcreativestudio.com/#organization",
+            "name": "Anwar Creative Studio",
+            "url": "https://anwarcreativestudio.com/",
+            "logo": "https://anwarcreativestudio.com/icon-512.png",
+            "email": "contact@anwarcreativestudio.com",
+            "description": "An independent, self-funded software company making apps for iPhone, iPad and Mac.",
+            "founder": {
+              "@type": "Person",
+              "name": "Tamkin Anwar"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            },
+            "sameAs": [
+              "https://github.com/tamkin-anwar"
+            ]
+          },
           {
             "@type": "SoftwareApplication",
             "name": "Corres",
-            "applicationCategory": "BusinessApplication",
+            "applicationCategory": "CommunicationApplication",
             "operatingSystem": "iOS, iPadOS, macOS, watchOS",
-            "url": "https://corres.app"
+            "url": "https://corres.app",
+            "publisher": {
+              "@id": "https://anwarcreativestudio.com/#organization"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
           },
           {
             "@type": "SoftwareApplication",
             "name": "Artha",
             "applicationCategory": "FinanceApplication",
             "operatingSystem": "Web, iOS, iPadOS, macOS",
-            "url": "https://arthaapp.com"
+            "url": "https://arthaapp.com",
+            "publisher": {
+              "@id": "https://anwarcreativestudio.com/#organization"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
           },
           {
             "@type": "SoftwareApplication",
             "name": "Tether",
             "applicationCategory": "BrowserApplication",
-            "url": "https://tamkin-anwar.github.io/tether/"
+            "operatingSystem": "Chrome",
+            "url": "https://tamkin-anwar.github.io/tether/",
+            "publisher": {
+              "@id": "https://anwarcreativestudio.com/#organization"
+            }
           },
           {
             "@type": "SoftwareApplication",
             "name": "Jotfield",
-            "applicationCategory": "ProductivityApplication",
-            "url": "https://tamkin-anwar.github.io/jotfield/"
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Web",
+            "url": "https://tamkin-anwar.github.io/jotfield/",
+            "publisher": {
+              "@id": "https://anwarcreativestudio.com/#organization"
+            }
           },
           {
-            "@type": "SoftwareApplication",
+            "@type": "WebSite",
             "name": "Doorsong",
-            "url": "https://tamkin-anwar.github.io/doorsong/"
+            "url": "https://tamkin-anwar.github.io/doorsong/",
+            "publisher": {
+              "@id": "https://anwarcreativestudio.com/#organization"
+            }
           }
         ]
       }

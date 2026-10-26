@@ -4,7 +4,7 @@ import { links } from '../content/links'
 
 export function TermsPage() {
   return (
-    <PageShell eyebrow="Terms" backHref={import.meta.env.BASE_URL}>
+    <PageShell eyebrow="Terms">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
           Terms for this website.
@@ -13,7 +13,8 @@ export function TermsPage() {
         <p>
           These terms cover your use of anwarcreativestudio.com, run by {company.legalName}, as {company.name}. Each of our
           apps has its own terms, which apply when you use that app. For Corres, see{' '}
-          <a href="https://corres.app/terms/" target="_blank" rel="noreferrer">corres.app/terms</a>.
+          <a href="https://corres.app/terms/" target="_blank" rel="noreferrer">corres.app/terms</a>; for Artha,{' '}
+          <a href="https://arthaapp.com/terms" target="_blank" rel="noreferrer">arthaapp.com/terms</a>.
         </p>
 
         <h2>Using the site</h2>
