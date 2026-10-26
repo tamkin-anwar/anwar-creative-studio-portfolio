@@ -68,6 +68,13 @@ arthaapp.com.
 Files for press: `public/press/identity/` (PNG lockups for light and dark grounds, SVG symbols, and
 `USING-THE-LOGO.txt`), also inside the press kit zip.
 
+**The app icon** (`apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, plus `icon-maskable-512.png`
+with extra margin for Android's circular crop) is the regular hanging a in cream, with its gold point,
+on the dark ground #0b0b0e. iOS gives websites no dark-mode icon of their own: it darkens whatever
+icon it has, which turned the original dark-ink-on-paper icon into a near-invisible mark. A dark tile
+with a light mark reads the same on light and dark Home Screens. The browser-tab favicon stays an SVG
+that switches with the color scheme, drawn heavier for 16 px.
+
 **The share card** (`public/og-image.png`, 1200 x 630) is what iMessage, WhatsApp, Slack, X and
 LinkedIn show when someone shares a link to the site: the lockup large and centered on paper, with
 "Looked for it. Didn't love it. Built it." beneath. It is centered so that WhatsApp's square crop
