@@ -31,8 +31,8 @@ export function NowPage() {
         </p>
         <p>
           Artha is going through its biggest change since it began. It was rebuilt around
-          one number, what&rsquo;s safe to spend, and a native app for iPhone, iPad and Mac is in beta
-          on TestFlight, sharing one design language with the website. It works with any of about 160
+          one number, what&rsquo;s safe to spend, and a native app for iPhone, iPad, Mac and Apple Watch is in
+          beta on TestFlight, sharing one design language with the website. It works with any of about 160
           currencies, grows with your text size, and lets VoiceOver play its charts as sound. Next
           comes the App Store.
         </p>

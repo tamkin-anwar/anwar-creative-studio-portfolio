@@ -14,7 +14,7 @@ export function Hero() {
     <section className="hero" ref={ref}>
         <h1><span className="sr-only">Anwar Creative Studio. Looked for it. Didn&rsquo;t love it. Built it.</span><span className="ln" aria-hidden="true"><span>Looked for it.</span></span><span className="ln" aria-hidden="true"><span>Didn&rsquo;t love it.</span></span><span className="ln" aria-hidden="true"><span>Built it<span className="gp">.</span></span></span></h1>
         <div className="hero-row">
-          <p className="lede">Anwar Creative Studio is an independent software company making apps for iPhone, iPad and Mac. Corres for your email. Artha for your money.</p>
+          <p className="lede">Anwar Creative Studio is an independent software company making apps for iPhone, iPad, Mac and Apple Watch. Corres for your email. Artha for your money.</p>
           <div>
             <div className="cta"><a className="btn" href={links.corresBeta}>Join the Corres beta</a><a className="tlink" href="#artha">See Artha →</a></div>
             <div className="fine">Free during the beta · TestFlight on iPhone, iPad, Mac and Apple Watch</div>

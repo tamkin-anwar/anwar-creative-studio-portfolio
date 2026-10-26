@@ -196,7 +196,7 @@ export function startArthaTour(root: HTMLElement): Cleanup {
     for (let i = 0; i < 10; i++) { const it = document.createElement('i'); it.textContent = String(i); s.appendChild(it) }
   })
   const showNumber = (n: number) => {
-    const str = String(n).padStart(2, '0')
+    const str = String(n).padStart(digits.length, '0')
     digits.forEach((d, i) => { (d.firstElementChild as HTMLElement).style.transform = `translateY(${-Number(str[i])}em)` })
   }
   showNumber(0)
@@ -204,14 +204,14 @@ export function startArthaTour(root: HTMLElement): Cleanup {
   const show = (ch: string, still: boolean) => {
     phone.dataset.ch = ch
     phone.classList.remove('drawn', 'logged', 'typed', 'proposed', 'added', 'filled', 'listed', 'saved')
-    sent.textContent = 'You can spend $64 a day until the 31st and still finish October on plan.'
+    sent.textContent = '$64 a day for 7 days'
     me.textContent = ''
     if (ch === 'today') {
       showNumber(0)
-      if (still) { phone.classList.add('drawn'); showNumber(64) }
-      else { t.later(() => phone.classList.add('drawn'), 200); t.later(() => showNumber(64), 1050) }
+      if (still) { phone.classList.add('drawn'); showNumber(448) }
+      else { t.later(() => phone.classList.add('drawn'), 200); t.later(() => showNumber(448), 1050) }
     } else if (ch === 'assist') {
-      showNumber(64)
+      showNumber(448)
       if (still) { me.textContent = ME; phone.classList.add('typed', 'proposed', 'added') }
       else t.later(() => {
         phone.classList.add('typed')

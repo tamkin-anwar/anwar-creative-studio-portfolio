@@ -11,7 +11,7 @@ export function AboutPage() {
           An independent software company.
         </h1>
         <p>
-          Anwar Creative Studio makes apps for iPhone, iPad and Mac. We make a few things, take
+          Anwar Creative Studio makes apps for iPhone, iPad, Mac and Apple Watch. We make a few things, take
           our time with them, and keep them for the long run. We don&rsquo;t take on client work; everything
           we build is our own.
         </p>
@@ -24,9 +24,9 @@ export function AboutPage() {
           <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
         </p>
         <p>
-          <strong>Artha</strong> tells you what&rsquo;s safe to spend: one number for today, worked out
-          from your budget and the bills still to come. It&rsquo;s live on the web, with an app for iPhone, iPad and
-          Mac in beta.{' '}
+          <strong>Artha</strong> tells you what&rsquo;s safe to spend: what&rsquo;s left for the month once the
+          bills still to come are counted, and what that comes to each day. It&rsquo;s live on the web, with an app for iPhone, iPad, Mac
+          and Apple Watch in beta.{' '}
           <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
         </p>
         <p>
@@ -39,7 +39,7 @@ export function AboutPage() {
           The studio started with a habit: looking for an app, not loving any of the ones out there, and
           building the one we wanted. Corres began because no email app answered the first question of the
           morning, which of these need me. Artha began because budgeting apps showed every number except
-          the one that matters, what you can safely spend today.
+          the one that matters, what you can safely spend.
         </p>
         <p>
           We&rsquo;re independent and self-funded. There are no investors to answer to and no advertisers

@@ -9,6 +9,21 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-10-26',
+    product: 'Artha',
+    title: 'Money the way you write it',
+    body:
+      'Amounts get their commas as you type, rupees and taka are written in lakhs, and a phone set to Bengali or Hindi can type its own digits. Adding a house you already owned no longer shows as net worth jumping overnight.',
+  },
+  {
+    date: '2026-10-25',
+    product: 'Artha',
+    title: 'Artha on Apple Watch',
+    body:
+      'Safe to spend in a pace ring on your wrist, a number pad for a cash purchase, and complications for the watch face. Search now reads months in eight languages, and a refund counts against what it refunds.',
+    link: { label: 'Join the beta', href: 'https://testflight.apple.com/join/hj61wEUG' },
+  },
+  {
     date: '2026-10-25',
     product: 'Corres',
     title: 'Built for everywhere',
