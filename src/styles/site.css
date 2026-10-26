@@ -11,7 +11,16 @@
 
 /* header: the lockup and five links; Menu opens the command palette (also ⌘K) */
 
-.site-header { position: sticky; top: 0; z-index: 45; padding-top: env(safe-area-inset-top, 0px); background: color-mix(in srgb, var(--paper) 86%, transparent); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid transparent; }
+.site-header { position: sticky; top: 0; z-index: 45; padding-top: env(safe-area-inset-top, 0px); background: var(--paper); border-bottom: 1px solid transparent; }
+/* frosted glass where the browser can blur, with Apple's own header values: 80% of the ground,
+   saturate(180%) blur(20px), so what scrolls beneath shows as soft color, never readable text.
+   Solid when the browser can't blur, or the person asks for less transparency or more contrast. */
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .site-header { background: color-mix(in srgb, var(--paper) 80%, transparent); backdrop-filter: saturate(180%) blur(20px); }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .site-header { background: var(--paper); backdrop-filter: none; }
+}
 
 /* the header's hairline fades in once the page has scrolled under it */
 @supports (animation-timeline: scroll()) {
