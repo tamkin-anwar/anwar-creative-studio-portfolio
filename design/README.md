@@ -31,6 +31,9 @@ header, the footer, documents and the press kit.
 - It is drawn at the capital height of Fraunces (0.70 em, measured), so its bar sits on the cap line
   and its foot on the baseline, the same lines as "Anwar".
 - The gap between the a and the name is 0.243 em, two stems wide.
+- The wordmark is Fraunces at weight 800, so its stems match the hanging a's heavy strokes
+  (Tamkin chose it over the regular weight on 2026-10-25). Optical size 36 at header size and 72
+  when large, tracking -0.02 em; the display cut (optical size 144) closes up "An" at this weight.
 - The gold point is a circle 0.11 em across, the size of a Fraunces full stop.
 - Components: `src/components/identity/Lockup.tsx` (`Symbol`, `Lockup`, `EndMark`). CSS:
   `.lockup` in `src/styles/site.css`.

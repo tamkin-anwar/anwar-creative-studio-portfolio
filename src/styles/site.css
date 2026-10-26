@@ -60,6 +60,7 @@
 .brand-tile { margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; min-height: 180px; padding: 28px 20px 16px; border-radius: 16px; border: 1px solid var(--line); }
 
 .brand-tile figcaption { font-size: 13px; }
+.brand-tile .lockup.big { font-size: 32px; }
 
 .brand-tile.on-paper { background: #fbf9f4; --ink: #1a1916; --gold-pt: #b9822f; color: #1a1916; }
 
@@ -93,7 +94,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 
 @keyframes pulse { 50% { opacity: .3; } }
 
-.big { font-family: var(--font-figure); font-weight: 800; font-size: 3.1rem; line-height: 1; margin: 8px 0 10px; display: flex; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 
 .foot { margin-top: 128px; padding-top: 36px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1.4fr repeat(4, minmax(0, 1fr)); gap: 24px; font-size: 14px; color: var(--ink-2); }
 
@@ -114,7 +114,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 
 .legal { margin-top: 40px; font-size: 13px; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
-@media (max-width: 760px) { .foot { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .foot { grid-template-columns: repeat(2, minmax(0, 1fr)); } .foot > div:first-child { grid-column: 1 / -1; } }
 
 @keyframes blink { 50% { opacity: 0; } }
 
@@ -122,7 +122,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 
 @keyframes fill { to { width: 100%; } }
 
-.lockup { display: inline-flex; align-items: baseline; font-family: var(--font-display); font-size: 26px; line-height: 1; letter-spacing: -0.02em; font-variation-settings: "opsz" 36, "SOFT" 30; color: var(--ink); }
+.lockup { display: inline-flex; align-items: baseline; white-space: nowrap; font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1; letter-spacing: -0.02em; font-variation-settings: "opsz" 36, "SOFT" 30; color: var(--ink); }
 
 .lockup .sym { height: .7em; width: auto; margin-right: .243em; overflow: visible; }
 
@@ -130,7 +130,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 
 .lockup.big { font-size: 40px; letter-spacing: -0.03em; font-variation-settings: "opsz" 72, "SOFT" 30; margin-bottom: 4px; }
 
-.endmark { display: inline-flex; align-items: baseline; margin-left: .18em; font-family: var(--font-display); font-size: .62em; font-variation-settings: "opsz" 72, "SOFT" 30; letter-spacing: -0.02em; white-space: nowrap; }
+.endmark { display: inline-flex; align-items: baseline; margin-left: .18em; font-family: var(--font-display); font-weight: 800; font-size: .62em; font-variation-settings: "opsz" 72, "SOFT" 30; letter-spacing: -0.02em; white-space: nowrap; }
 
 .endmark .pt { display: inline-block; width: .11em; height: .11em; border-radius: 50%; background: var(--gold-pt); margin-left: .03em; }
 

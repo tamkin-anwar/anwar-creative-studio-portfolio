@@ -33,7 +33,7 @@ export function ArthaSection() {
                   <div className="aview av-today">
                     <div className="acard">
                       <div className="alabel">Safe to spend today</div>
-                      <div className="big" aria-hidden="true"><span>$</span><span className="digit"><span></span></span><span className="digit"><span></span></span></div>
+                      <div className="anum" aria-hidden="true"><span>$</span><span className="digit"><span></span></span><span className="digit"><span></span></span></div>
                       <span className="apill"><i></i>On pace</span>
                       <p className="asent" data-sentence>You can spend $64 a day until the 31st and still finish October on plan.</p>
                     </div>

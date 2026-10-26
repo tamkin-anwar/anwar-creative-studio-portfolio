@@ -624,6 +624,9 @@
 
 .gp { color: var(--gold-pt); }
 
+/* Artha's safe-to-spend figure (named anum, not big: .lockup.big is the footer logo) */
+.anum { font-family: var(--font-figure); font-weight: 800; font-size: 3.1rem; line-height: 1; margin: 8px 0 10px; display: flex; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+
 /* dark mode for the device scenes (the site follows the system setting) */
 
 @media (prefers-color-scheme: dark) {
