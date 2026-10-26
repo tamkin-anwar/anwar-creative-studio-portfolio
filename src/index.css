@@ -44,9 +44,11 @@
 }
 
 /* iOS Safari bounces/rubber-bands the <html> element itself, not <body>, so
-   overflow-x needs to be hidden on both or the page can still be dragged
+   horizontal overflow is stopped on both or the page can still be dragged
    sideways there; overscroll-behavior-x kills the horizontal chaining too
-   while leaving iOS's native vertical momentum scroll untouched */
+   while leaving iOS's native vertical momentum scroll untouched. <body> uses
+   clip, not hidden: hidden would make it a scroll container of its own, and
+   the sticky header would stick to a box that never scrolls. */
 html {
   background: var(--bg);
   overflow-x: hidden;
@@ -63,7 +65,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
   overscroll-behavior-x: none;
 }
 

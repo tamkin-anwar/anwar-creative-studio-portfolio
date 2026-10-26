@@ -13,6 +13,12 @@
 
 .site-header { position: sticky; top: 0; z-index: 45; padding-top: env(safe-area-inset-top, 0px); background: color-mix(in srgb, var(--paper) 86%, transparent); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid transparent; }
 
+/* the header's hairline fades in once the page has scrolled under it */
+@supports (animation-timeline: scroll()) {
+  .site-header { animation: header-line linear both; animation-timeline: scroll(root); animation-range: 0 48px; }
+  @keyframes header-line { to { border-bottom-color: var(--line); } }
+}
+
 .site-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 
 .site-home { color: var(--ink); text-decoration: none; display: inline-flex; }
