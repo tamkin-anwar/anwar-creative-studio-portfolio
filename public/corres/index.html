@@ -36,7 +36,7 @@
   "applicationSubCategory": "Email",
   "operatingSystem": "iOS, iPadOS, macOS, watchOS",
   "image": "https://corres.app/img/share.jpg",
-  "screenshot": "https://corres.app/img/needs-you-dark.jpg",
+  "screenshot": "https://corres.app/img/devices/iphone-needs-you-dark.webp",
   "inLanguage": ["en", "ja", "zh-Hans", "de", "ko", "fr", "es", "pt-BR", "bn"],
   "offers": {
     "@type": "Offer",
@@ -58,7 +58,7 @@
     --bg: #0a0a0c; --bg-2: #101013; --surface: #141417; --raised: #1c1c20;
     --ink: #f2f3f5; --sec: #a1a3aa; --ter: #8a8c93;
     --line: rgba(255,255,255,.09); --line-2: rgba(255,255,255,.16);
-    --accent: #8fb4e8; --accent-ink: #0a0a0c; --glow: rgba(110,150,220,.22);
+    --accent: #8fb4e8; --accent-ink: #0a0a0c; --glow: rgba(110,150,220,.22); --shade: rgba(0,0,0,.55);
     --gmail: #e0453a; --outlook: #3b82f6; --icloud: #14a3a8;
     --serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
     --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Helvetica Neue", sans-serif;
@@ -70,7 +70,7 @@
       --bg: #f6f3ec; --bg-2: #efebe2; --surface: #ffffff; --raised: #fbf9f4;
       --ink: #141312; --sec: #5e5a54; --ter: #6f6a63;
       --line: rgba(20,19,18,.10); --line-2: rgba(20,19,18,.18);
-      --accent: #2f5d9e; --accent-ink: #ffffff; --glow: rgba(47,93,158,.16);
+      --accent: #2f5d9e; --accent-ink: #ffffff; --glow: rgba(47,93,158,.16); --shade: rgba(40,34,24,.22);
       color-scheme: light;
     }
   }
@@ -119,40 +119,14 @@
   .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
   .cta-note { margin-top: 16px; font-size: 13.5px; color: var(--ter); }
 
-  /* The phone: a real screen in an iPhone 17 Pro Max, drawn to its
-     proportions: titanium band, black border, side buttons. */
-  .phone { position: relative; width: min(340px, 78vw); aspect-ratio: 78 / 163.4; margin-inline: auto;
-           border-radius: 17.5% / 8.4%; padding: 1.3%;
-           background:
-             linear-gradient(90deg, rgba(255,255,255,.28) 0, rgba(255,255,255,0) 1.6%, rgba(255,255,255,0) 98.4%, rgba(255,255,255,.22) 100%),
-             linear-gradient(180deg, rgba(255,255,255,.18) 0, rgba(255,255,255,0) 1.2%, rgba(255,255,255,0) 98.8%, rgba(255,255,255,.12) 100%),
-             linear-gradient(145deg, #5b5d63 0%, #2e3034 30%, #1d1e21 55%, #3b3d42 100%);
-           box-shadow: inset 0 0 0 1px rgba(0,0,0,.55), inset 0 0 0 2px rgba(255,255,255,.07),
-             0 0 0 .5px rgba(0,0,0,.6), 0 60px 120px -40px rgba(0,0,0,.7), 0 30px 60px -30px var(--glow); }
-  .phone .glass { position: relative; height: 100%; border-radius: 16% / 7.6%; padding: 2.4% 2.6%; background: #020203;
-                  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04); overflow: hidden; }
-  .phone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 13.4% / 6.2%; }
-  /* The Dynamic Island: screenshots leave it out; the phone has it. */
-  .phone .glass::before { content: ""; position: absolute; z-index: 1; left: 50%; top: 3.3%; width: 27.5%; height: 3.5%;
-                          transform: translateX(-50%); border-radius: 999px; background: #000; }
-  /* A faint reflection across the glass. */
-  .phone .glass::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
-                         background: linear-gradient(115deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,0) 38%); }
-  /* Action button and volume on the left; side button and Camera Control on the right. */
-  .phone::before, .phone::after { content: ""; position: absolute; width: 1.1%; border-radius: 2px; }
-  .phone::before { left: -1%; top: 17%; height: 26%;
-    background: linear-gradient(180deg, #45474c 0 13%, transparent 13% 28%, #45474c 28% 57%, transparent 57% 64%, #45474c 64% 93%, transparent 93%); }
-  .phone::after { right: -1%; top: 26%; height: 42%;
-    background: linear-gradient(180deg, #45474c 0 26%, transparent 26% 74%, #2a2b2f 74% 92%, transparent 92%); }
-  .hero .phone { transform: rotate(-2deg); }
-  .float { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 16px;
-           background: color-mix(in srgb, var(--surface) 86%, transparent); border: 1px solid var(--line-2);
-           backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 20px 40px -24px rgba(0,0,0,.5); font-size: 13.5px; }
-  .float b { font-weight: 600; }
-  .float small { display: block; color: var(--ter); font-size: 12px; }
-  .float .ico { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; background: var(--raised); flex: none; }
-  .f1 { left: -8%; bottom: 14%; }
-  .f2 { right: -6%; top: 7%; }
+  /* Real screens from Corres, in Apple's own device frames (Apple Design
+     Resources), shown as supplied: never redrawn, tilted or recolored. */
+  .device { display: block; margin-inline: auto; }
+  .device img { width: 100%; height: auto; filter: drop-shadow(0 34px 44px var(--shade)); }
+  .hero .device { width: min(340px, 78vw); }
+  .hero .device img { filter: drop-shadow(0 50px 70px var(--shade)) drop-shadow(0 20px 70px var(--glow)); }
+  .story .device { width: min(300px, 72vw); }
+  .story .device.watch { width: min(210px, 52vw); }
 
   /* Providers */
   .providers { border-block: 1px solid var(--line); margin-top: 56px; }
@@ -168,42 +142,20 @@
   .center { text-align: center; margin-inline: auto; }
   .center p { margin-inline: auto; }
 
-  /* Every screen: a MacBook Pro, with an iPad Pro and an iPhone in front. */
-  .devices-stage { position: relative; max-width: 1080px; margin: 8px auto 0; padding-bottom: 6%; }
-  .macbook { width: 80%; margin: 0 5% 0 auto; }
-  .mb-lid { position: relative; background: #050506; border-radius: 3.1% / 4.6%; padding: 1.5% 1.5% 2.3%;
-            box-shadow: 0 0 0 1.5px #3a3b40, 0 0 0 2.5px #18191b, 0 40px 90px rgba(0,0,0,.55); }
-  .mb-lid::after { content: ""; position: absolute; left: 50%; top: 1.5%; width: 9.5%; height: 3.2%; transform: translateX(-50%);
-                   background: #050506; border-radius: 0 0 22% 22% / 0 0 60% 60%; }
-  .mb-display { position: relative; aspect-ratio: 1.547; overflow: hidden; border-radius: .6%; container-type: inline-size;
-                background: radial-gradient(120% 90% at 20% 0%, #23324d 0%, #12151d 45%, #0b0c10 100%); }
-  .mb-menubar { position: absolute; inset: 0 0 auto 0; height: 3.4%; display: flex; align-items: center; justify-content: space-between;
-                padding: 0 1.6%; font-size: 1.05cqw; color: rgba(255,255,255,.88); background: rgba(0,0,0,.35); font-weight: 500; }
-  .mb-menubar b { font-weight: 700; margin-right: 1.6cqw; }
-  .mb-menubar span + span { margin-left: 1.5cqw; }
-  .mb-window { position: absolute; left: 4%; top: 6.2%; width: 92%; border-radius: .9cqw; overflow: hidden;
-               box-shadow: 0 0 0 1px rgba(255,255,255,.14), 0 1.4cqw 3.6cqw rgba(0,0,0,.55); }
-  .mb-window img { display: block; width: 100%; height: auto; }
-  .mb-base { position: relative; width: 114%; margin-left: -7%; height: 0; padding-bottom: 2.3%;
-             background: linear-gradient(180deg, #5b5d63 0%, #2c2d31 38%, #17181a 100%);
-             border-radius: 0 0 46% 46% / 0 0 100% 100%; box-shadow: 0 14px 30px rgba(0,0,0,.5); }
-  .mb-base::before { content: ""; position: absolute; left: 50%; top: 0; width: 15%; height: 42%; transform: translateX(-50%);
-                     background: linear-gradient(180deg, #17181b, #2a2b2f); border-radius: 0 0 40% 40% / 0 0 100% 100%; }
-  .ipad { position: absolute; left: 0; bottom: 0; width: 29%; padding: .5%; border-radius: 6.4% / 4.8%;
-          background: linear-gradient(145deg, #6d6f75 0%, #2b2c30 35%, #1b1c1f 70%, #4a4c51 100%);
-          box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 8px 20px rgba(0,0,0,.35); }
-  .ipad .glass { position: relative; background: #010102; border-radius: 6% / 4.5%; padding: 4%; }
-  .ipad .glass::after { content: ""; position: absolute; right: 1.7%; top: 50%; width: 1.4%; aspect-ratio: 1; transform: translateY(-50%);
-                        border-radius: 50%; background: radial-gradient(circle at 35% 35%, #2b3a55, #07080b 70%); }
-  .ipad img { display: block; width: 100%; height: auto; border-radius: 2.8% / 2.1%; }
-  /* In a slot of its own, so its bezel is measured from the phone, not the stage. */
-  .phone-slot { position: absolute; right: -1%; bottom: -2%; width: 15.5%; }
-  .phone-slot .phone { width: 100%; padding: 1.7%; margin: 0; }
+  /* Every screen: a MacBook Pro, with an iPad Pro, an iPhone and an Apple
+     Watch in front. */
+  .devices-stage { position: relative; max-width: 1080px; margin: 8px auto 0; padding-bottom: 3%; }
+  .devices-stage .device { position: absolute; margin: 0; }
+  .devices-stage .mac { position: relative; width: 84%; margin: 0 0 0 auto; }
+  .devices-stage .ipad { left: 0; bottom: 0; width: 29%; }
+  .devices-stage .iphone { right: 9.5%; bottom: -3%; width: 13.5%; }
+  .devices-stage .watch { right: 0; bottom: -1%; width: 8.5%; }
   @media (max-width: 900px) {
-    .macbook { width: 88%; margin: 0 6%; }
-    .ipad { width: 40%; left: -2%; bottom: -8%; }
-    .devices-stage { padding-bottom: 24%; }
-    .phone-slot { width: 21%; right: -2%; bottom: -10%; }
+    .devices-stage { padding-bottom: 14%; }
+    .devices-stage .mac { width: 92%; margin-inline: auto; }
+    .devices-stage .ipad { width: 33%; bottom: -2%; }
+    .devices-stage .iphone { width: 17%; right: 11%; bottom: -4%; }
+    .devices-stage .watch { width: 11%; right: -1%; bottom: -2%; }
   }
 
   /* Story rows */
@@ -215,37 +167,6 @@
   .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .ticks li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; color: var(--ink); font-size: 15.5px; }
   .ticks svg { width: 16px; height: 16px; margin-top: 4px; stroke: var(--accent); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
-
-  /* Drawn UI: a row of the inbox, an account sheet, a notification. */
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 22px; box-shadow: 0 30px 60px -40px rgba(0,0,0,.45); }
-  .stack { display: grid; gap: 14px; max-width: 420px; margin-inline: auto; width: 100%; }
-  .notif { display: grid; grid-template-columns: 38px 1fr auto; gap: 12px; align-items: start; padding: 14px 16px; border-radius: 20px;
-           background: color-mix(in srgb, var(--raised) 92%, transparent); border: 1px solid var(--line); }
-  .notif img { width: 38px; height: 38px; border-radius: 9px; }
-  .notif b { font-weight: 600; font-size: 14.5px; }
-  .notif p { margin: 1px 0 0; font-size: 14px; color: var(--sec); line-height: 1.4; }
-  .notif time { font-size: 12.5px; color: var(--ter); }
-  .acct { display: grid; grid-template-columns: 42px 1fr auto; gap: 14px; align-items: center; padding: 12px 4px; }
-  .acct + .acct { border-top: 1px solid var(--line); }
-  .ring { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font: 600 14px/1 var(--sans); color: var(--ink);
-          background: var(--raised); box-shadow: 0 0 0 2.5px var(--c), 0 0 0 5px var(--surface); }
-  .acct b { font-weight: 600; display: block; font-size: 16px; }
-  .acct small { color: var(--ter); font-size: 13.5px; }
-  .acct .count { font-variant-numeric: tabular-nums; color: var(--sec); font-size: 15px; }
-  .tag { display: inline-flex; align-items: center; gap: 5px; font: 600 10.5px/1 var(--sans); letter-spacing: .06em; color: var(--ter);
-         padding: 4px 7px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); }
-  .tag i { width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
-  .row { display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 14px 0; }
-  .row + .row { border-top: 1px solid var(--line); }
-  .av { width: 40px; height: 40px; border-radius: 50%; background: var(--raised); display: grid; place-items: center; font: 600 13px/1 var(--sans); color: var(--sec); }
-  .row .top { display: flex; align-items: center; gap: 8px; }
-  .row .top b { font-weight: 600; flex: 1; }
-  .row .subj { font-size: 14.5px; margin: 1px 0; }
-  .row .why { font-size: 13px; color: var(--accent); margin-top: 3px; }
-  .sig { font-family: var(--serif); font-size: 17px; line-height: 1.5; color: var(--ink); }
-  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill { padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 13.5px; color: var(--sec); }
-  .pill.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
   /* Grid of smaller features */
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
@@ -326,13 +247,11 @@
     .steps { grid-template-columns: 1fr; }
     .nav .hide-s { display: none; }
     section { padding: 88px 0; }
-    .f1 { left: 0; } .f2 { right: 0; }
   }
   @media (max-width: 560px) {
     :root { --page: calc(100% - 32px); }
     .grid { grid-template-columns: 1fr; }
     .nav { gap: 16px; }
-    .float { display: none; }
     .providers .wrap { gap: 10px 20px; font-size: 14px; }
     .hero h1 { margin-top: 12px; }
   }
@@ -366,16 +285,8 @@
         </div>
         <p class="cta-note">Free to try while in beta, on iPhone, iPad and Mac. Not on the App Store yet.</p>
       </div>
-      <div style="position:relative">
-        <div class="float f1" aria-hidden="true">
-          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></span>
-          <span><b>Needs you</b><small>Maya asked you to approve the direction</small></span>
-        </div>
-        <div class="phone"><div class="glass"><img src="img/needs-you-dark.jpg" width="552" height="1199" alt="Corres on iPhone, opening on Needs You: three emails that need you, each with the reason, and a row for the two replies you're waiting on."></div></div>
-        <div class="float f2" aria-hidden="true">
-          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
-          <span><b>Read on this iPhone</b><small>Never on our servers</small></span>
-        </div>
+      <div>
+        <picture class="device iphone"><source srcset="img/devices/iphone-needs-you-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/iphone-needs-you-dark.webp" width="640" height="1309" alt="Corres on iPhone, open on Needs You: emails from Sofia, Maya and Oliver, each with the reason it needs you and when it's due, and a row for the two replies you're waiting on."></picture>
       </div>
     </div>
     <div class="providers">
@@ -407,13 +318,7 @@
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Today&rsquo;s Brief, if you want it: what&rsquo;s due, today&rsquo;s events and deliveries on one card</li>
           </ul>
         </div>
-        <div class="stack" aria-hidden="true">
-          <div class="card">
-            <div class="row"><span class="av">SL</span><div><div class="top"><b>Sofia Laurent</b><span class="tag" style="--c:var(--gmail)"><i></i>GMAIL</span></div><div class="subj">A place at the table</div><div class="why">↳ Sofia asked you to confirm Thursday</div></div></div>
-            <div class="row"><span class="av">MC</span><div><div class="top"><b>Maya Chen</b><span class="tag" style="--c:var(--outlook)"><i></i>WORK</span></div><div class="subj">The next chapter</div><div class="why">↳ Maya asked you to approve the creative direction</div></div></div>
-            <div class="row"><span class="av">OG</span><div><div class="top"><b>Oliver Grant</b><span class="tag" style="--c:var(--icloud)"><i></i>ICLOUD</span></div><div class="subj">A moment before we move forward</div><div class="why">↳ Oliver is waiting for your choice between two options</div></div></div>
-          </div>
-        </div>
+        <picture class="device iphone"><source srcset="img/devices/iphone-email-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/iphone-email-dark.webp" width="640" height="1309" loading="lazy" alt="An email from Maya Chen open in Corres: a short summary, why it's in Needs You with a Handled button, and two suggested replies."></picture>
       </div>
 
       <div class="story flip reveal">
@@ -427,7 +332,7 @@
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Swipes, lists and the toolbar under an email are yours to set</li>
           </ul>
         </div>
-        <div class="phone" style="width:min(300px,72vw)"><div class="glass"><img src="img/mail-dark.jpg" width="552" height="1200" loading="lazy" alt="The Corres mail list on iPhone, open on Primary, with the other tabs beside it."></div></div>
+        <picture class="device iphone"><source srcset="img/devices/iphone-primary-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/iphone-primary-dark.webp" width="640" height="1309" loading="lazy" alt="The Corres mail list on iPhone, open on Primary, with Needs You, Everything, Promotions and Social beside it, and a colored dot for each email's account."></picture>
       </div>
 
       <div class="story reveal">
@@ -441,11 +346,7 @@
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>A Morning Brief notification at the time you pick</li>
           </ul>
         </div>
-        <div class="stack" aria-hidden="true">
-          <div class="notif"><img src="img/mark.jpg" alt=""><div><b>Maya Chen</b><p><span style="color:var(--ink)">The next chapter</span><br>Your approval on the final direction is the last piece we need…</p></div><time>now</time></div>
-          <div class="notif" style="opacity:.75"><img src="img/mark.jpg" alt=""><div><b>James Okafor</b><p><span style="color:var(--ink)">Partnership proposal</span><br>I&rsquo;ll send the revised scope once our team has reviewed it.</p></div><time>2m</time></div>
-          <div class="notif" style="opacity:.5"><img src="img/mark.jpg" alt=""><div><b>Morning Brief</b><p>Three conversations need you. You&rsquo;re waiting on two replies.</p></div><time>8:00</time></div>
-        </div>
+        <picture class="device watch"><source srcset="img/devices/watch-needs-you-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/watch-needs-you-dark.webp" width="320" height="503" loading="lazy" alt="Corres on Apple Watch: Needs You with Maya Chen, who asks you to approve the direction, and Oliver Grant."></picture>
       </div>
 
       <div class="story flip reveal">
@@ -459,18 +360,7 @@
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Add an account once and it&rsquo;s on your other devices too</li>
           </ul>
         </div>
-        <div class="stack" aria-hidden="true">
-          <div class="card">
-            <div class="acct"><span class="ring" style="--c:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5 6h14l2 7v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z"/></svg></span><span><b>All Inboxes</b><small>Every account, newest first</small></span><span class="count">6</span></div>
-            <div class="acct"><span class="ring" style="--c:var(--gmail)">TA</span><span><b>Personal</b><small>you@gmail.com</small></span><span class="count">2</span></div>
-            <div class="acct"><span class="ring" style="--c:var(--outlook)">TA</span><span><b>Work</b><small>you@company.com</small></span><span class="count">4</span></div>
-          </div>
-          <div class="card">
-            <p class="eyebrow" style="margin:0 0 12px">Signature</p>
-            <div class="pills" style="margin-bottom:16px"><span class="pill on">Full</span><span class="pill">Short</span><span class="pill">No Signature</span></div>
-            <div class="sig">Best regards,<br>Tamkin Anwar<br><span style="color:var(--ter);font-family:var(--sans);font-size:14px">Anwar Creative Studio</span></div>
-          </div>
-        </div>
+        <picture class="device iphone"><source srcset="img/devices/iphone-accounts-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/iphone-accounts-dark.webp" width="640" height="1309" loading="lazy" alt="The Corres account switcher: All Inboxes, then Gmail, Outlook and iCloud accounts, each ringed in its own color."></picture>
       </div>
     </div>
   </section>
@@ -483,17 +373,10 @@
         <p>The same Needs You, the same sorting and the same accounts everywhere. Add an account once and it&rsquo;s on your other devices through iCloud Keychain. On the Mac, a native app with Mail&rsquo;s shortcuts and Gmail&rsquo;s. On Apple Watch, what needs you, on your wrist and your watch face.</p>
       </div>
       <div class="devices-stage reveal">
-        <div class="macbook">
-          <div class="mb-lid">
-            <div class="mb-display">
-              <div class="mb-menubar" aria-hidden="true"><div><b>Corres</b><span>File</span><span>Edit</span><span>View</span><span>Mailbox</span><span>Message</span><span>Window</span></div><div><span>Mon Oct 19</span><span>9:41 AM</span></div></div>
-              <div class="mb-window"><img src="img/mac-dark.jpg" width="1362" height="870" loading="lazy" alt="Corres on a Mac: the sidebar, Needs You with the reason for each email, and an open conversation."></div>
-            </div>
-          </div>
-          <div class="mb-base" aria-hidden="true"></div>
-        </div>
-        <div class="ipad"><div class="glass"><img src="img/ipad-dark.jpg" width="1032" height="1376" loading="lazy" alt="Corres on iPad: three columns with Needs You and an open email."></div></div>
-        <div class="phone-slot"><div class="phone"><div class="glass"><img src="img/mail-dark.jpg" width="552" height="1200" loading="lazy" alt="Corres on iPhone: the mail list."></div></div></div>
+        <picture class="device mac"><source srcset="img/devices/mac-window-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/mac-window-dark.webp" width="2000" height="1317" loading="lazy" alt="Corres on a MacBook Pro: the sidebar, Needs You with the reason for each email, and Maya Chen's email open with its summary."></picture>
+        <picture class="device ipad"><source srcset="img/devices/ipad-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/ipad-dark.webp" width="1000" height="1305" loading="lazy" alt="Corres on iPad Pro: the sidebar with each account, Needs You, and an open email."></picture>
+        <picture class="device iphone"><source srcset="img/devices/iphone-primary-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/iphone-primary-dark.webp" width="640" height="1309" loading="lazy" alt="Corres on iPhone: the mail list."></picture>
+        <picture class="device watch"><source srcset="img/devices/watch-needs-you-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/watch-needs-you-dark.webp" width="320" height="503" loading="lazy" alt="Corres on Apple Watch: Needs You."></picture>
       </div>
     </div>
   </section>
