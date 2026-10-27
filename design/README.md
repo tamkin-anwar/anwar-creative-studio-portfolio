@@ -100,9 +100,10 @@ HTML entry so apps fetch the new one.
   recolored. Only web-sized copies are in this repo (`public/devices/`); the full-size originals are
   not redistributed.
 - The iPhone is silver in light mode and black in dark. Frames are WebP (about 14 KB per iPhone,
-  57 KB for the MacBook) inside `<picture>` (`src/components/devices/Bezels.tsx`), so a visitor
-  downloads only the iPhone their mode shows, and phones skip the MacBook frame, which the phone
-  layout hides. The PNGs stay in `public/devices/` for the archived concepts.
+  57 KB for the MacBook); the iPhone sits inside `<picture>` (`src/components/devices/Bezels.tsx`),
+  so a visitor downloads only the one their mode shows. The MacBook stays a MacBook at every width:
+  on phones the whole Mac display shrinks with it rather than swapping to a bare window, so the tour
+  always reads as Corres on a Mac. The PNGs stay in `public/devices/` for the archived concepts.
 - The iPhone is 300 px wide, or the screen width minus 56 px on very small phones. Everything
   on its screen is sized in points (`--pt`), so it scales as one piece.
 - iPhone 18 Pro: image 1350 x 2760; screen 1206 x 2622 at (72, 69), so left 5.3333%, top 2.5%,
