@@ -29,6 +29,7 @@
   h1, h2 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
   h1 { font-size: 44px; line-height: 1.1; margin: 24px 0 8px; }
   h2 { font-size: 24px; margin: 44px 0 8px; }
+  h3 { font-size: 17px; font-weight: 600; margin: 28px 0 6px; }
   p, li { color: var(--sec); }
   strong { color: var(--ink); font-weight: 600; }
   ul { padding-left: 1.2em; }
@@ -46,10 +47,10 @@
   <p class="eyebrow">Corres</p>
   <h1>Privacy Policy</h1>
   <p class="lede">Corres reads and sorts your email on your iPhone, iPad and Mac. It doesn't sell your data, show ads, or send your mail to an AI company.</p>
-  <p>Effective October 26, 2026. Corres is made by Anwar Creative Studio (“we”).</p>
+  <p>Effective October 27, 2026. Corres is made by Anwar Creative Studio (“we”).</p>
 
   <h2>What Corres accesses</h2>
-  <p>When you connect a Gmail account, you sign in with Google directly; Corres never sees your password. Google gives Corres permission to read, send and organize (archive, label, mark read, move to Trash) your Gmail, which is what an email app needs to work. If you open Out of Office in Settings, Corres asks Google for one more permission, to change your Gmail settings, so it can turn your vacation reply on and off; it's asked for only then, never at sign-in. You can revoke any of this anytime in your Google Account settings. Removing the account from all your devices in Corres also withdraws Corres&rsquo;s access with Google.</p>
+  <p>When you connect a Gmail account, you sign in with Google directly; Corres never sees your password. Google gives Corres permission to read, send and organize your Gmail (archive, label, star, mark read or unread, move to Trash, report spam, and save drafts), which is what an email app needs to work. Corres asks Google for one more permission, to change your Gmail settings, only when you use a feature that needs it: Out of Office, to turn your Gmail vacation reply on and off, or Rules, if you choose to also save a rule as a Gmail filter so it runs when Corres is closed. It's never asked for at sign-in. You can revoke any of this anytime in your Google Account settings. Removing the account from all your devices in Corres also withdraws Corres&rsquo;s access with Google.</p>
   <p>When you connect an Outlook account (Outlook.com, Hotmail, Live, or a work or school Microsoft 365 account), you sign in with Microsoft directly; Corres never sees your password. Microsoft gives Corres permission to read and organize your mail (archive, move, flag, mark read, categories), send mail as you, change your mailbox settings so Out of Office can turn your automatic replies on and off, and read your basic profile (your name and photo, shown in Corres). You can revoke this anytime at account.microsoft.com under Privacy → Apps and services or through your organization's IT for a work account. Removing the account in Corres deletes its sign-in from your devices; to withdraw Corres&rsquo;s permission itself, use account.microsoft.com or ask your IT.</p>
   <p>When you connect iCloud Mail, Apple asks other mail apps for an app-specific password instead of your Apple Account password. You make one at account.apple.com and give it to Corres, which checks it with iCloud and keeps it in your device's Keychain. Corres connects to iCloud's mail servers directly with it to read, organize and send your mail, and to file a copy of what you send in Sent. Corres never sees your Apple Account password. You can turn the app-specific password off anytime at account.apple.com, or remove the account in Corres.</p>
   <p>When you connect another email account (for example Yahoo, AOL, Fastmail, Zoho, GMX, Yahoo! JAPAN, Naver, QQ, 163 or a work server), you give Corres that account's password or app password. Corres keeps it in your device's Keychain and uses it only to connect to that service's own mail servers directly, to read, organize and send your mail. You can change the password or turn the app password off with your provider at any time, or remove the account in Corres.</p>
@@ -87,7 +88,26 @@
   </ul>
 
   <h2>Google user data</h2>
-  <p>Corres's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  <p>Corres's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Corres uses Google user data only to show you your Gmail and to carry out what you do with it in the app.</p>
+
+  <h3>Who we share Google user data with</h3>
+  <p>No one. We don't share, transfer, sell or disclose Google user data to anyone: not advertisers, data brokers, AI companies or other apps. Your Gmail messages travel only between Google and your own devices. Our servers never receive them, so there is no Gmail content for us to share. Google user data leaves your device only when:</p>
+  <ul>
+    <li><strong>You send or forward an email</strong>, which goes through Gmail to the people you address it to.</li>
+    <li><strong>You choose to share something</strong> from an email with another app through the share sheet.</li>
+    <li><strong>You turn on new-mail notifications.</strong> Our relay then keeps your Gmail address and receives Google&rsquo;s notice that your mailbox changed (with no message, subject or sender in it), and wakes your device through Apple&rsquo;s push notification service. Our relay runs on Google Cloud, which processes this for us under its terms; nobody else receives it.</li>
+    <li><strong>The law requires it.</strong> We would disclose the little we hold (your Gmail address and notification records) only if legally required, and we hold no email content.</li>
+  </ul>
+
+  <h3>How we protect your data</h3>
+  <ul>
+    <li><strong>Encrypted in transit.</strong> Every connection, between your device and Google and between your device and our relay, uses HTTPS (TLS).</li>
+    <li><strong>Encrypted on your device.</strong> Your mail is stored inside Corres&rsquo;s own private storage on your iPhone, iPad or Mac, which Apple encrypts and other apps can&rsquo;t read.</li>
+    <li><strong>Sign-ins in the Keychain.</strong> Your Google sign-in token is kept in your device&rsquo;s Keychain, Apple&rsquo;s encrypted store for passwords and keys, and in your iCloud Keychain only if you use it, which Apple encrypts end to end. Corres never sees your Google password.</li>
+    <li><strong>Little on our servers, and not for long.</strong> Our relay keeps only what notifications need (above). Google Cloud encrypts it at rest, each service runs with only the permissions it needs, and a device&rsquo;s records are deleted when you turn notifications off or remove the account, or after 30 days without opening Corres.</li>
+    <li><strong>Only genuine copies of Corres.</strong> The relay checks Apple&rsquo;s App Attest (iPhone and iPad) or DeviceCheck (Mac) so other software can&rsquo;t use it.</li>
+    <li><strong>Your control.</strong> You can remove Corres&rsquo;s access anytime at myaccount.google.com/connections. Removing a Gmail account from all your devices in Corres also withdraws its access with Google and deletes what our relay held for it.</li>
+  </ul>
 
   <h2>Purchases</h2>
   <p>Corres Pro is sold through the App Store. Apple handles payment; we receive no card details. Your plan is verified on your device from Apple's signed receipts.</p>
