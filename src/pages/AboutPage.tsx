@@ -72,7 +72,7 @@ export function AboutPage() {
           <dd>Independent and self-funded</dd>
           <dt>Contact</dt>
           <dd>
-            <a href={`mailto:${links.email}`}>{links.email}</a>
+            <a className="hit" href={`mailto:${links.email}`}>{links.email}</a>
           </dd>
           <dt>Careers</dt>
           <dd>We&rsquo;re not hiring right now.</dd>

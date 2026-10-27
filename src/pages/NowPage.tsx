@@ -42,7 +42,7 @@ export function NowPage() {
           keeping a family&rsquo;s handwritten recipes for the next generation, is planned but not
           started yet.
         </p>
-        <a href="https://corres.app" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>Visit Corres ↗</a>
+        <a className="hit" href="https://corres.app" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>Visit Corres ↗</a>
       </div>
 
       <p

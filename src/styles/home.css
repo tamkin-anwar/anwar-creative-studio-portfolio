@@ -306,6 +306,20 @@
 
 @media (max-width: 760px) { .mbp { margin-top: 28px; } }
 
+/* phones: a readable close-up of the Mac's window under the MacBook (filled by tours.ts) */
+
+.mac-close { display: none; }
+
+@media (max-width: 760px) {
+  .mac-close { display: block; margin-top: 18px; }
+  .mac-close .win { height: 500px; }
+  .mac-close .view { overflow: hidden; }
+  .mac-close .v-maya .msg { padding-bottom: 20px; }
+  .mac-close .win[data-ch="sort"] .pane { display: none; }
+  .mac-close .win:not([data-ch="sort"]) .list { display: none; }
+  .mac-close .win:not([data-ch="sort"]) .pane { display: block; }
+}
+
 /* a phone on its side: size the MacBook to the screen's height so the whole laptop fits under the header */
 
 @media (orientation: landscape) and (max-height: 500px) { .mbp { max-width: calc((100svh - 96px) * 3860 / 2540); margin-inline: auto; } }

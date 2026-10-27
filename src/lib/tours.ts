@@ -28,7 +28,7 @@ function typeInto(t: ReturnType<typeof timers>, el: HTMLElement, text: string, s
 
 /** Shared chapter engine: tabs with progress bars, Pause, play-in-view. */
 function chapters(opts: {
-  target: HTMLElement
+  targets: HTMLElement[]
   tabs: HTMLElement[]
   bar: HTMLElement
   pause: HTMLButtonElement
@@ -37,7 +37,7 @@ function chapters(opts: {
   show: (chapter: string, still: boolean) => void
   stopShow: () => void
 }): Cleanup {
-  const { target, tabs, bar, pause, order, duration, show, stopShow } = opts
+  const { targets, tabs, bar, pause, order, duration, show, stopShow } = opts
   let advance = 0, cur = 0, paused = false, started = false, finished = false, offscreen = false
 
   const bars = (ch: string) => tabs.forEach((t) => {
@@ -82,17 +82,21 @@ function chapters(opts: {
   pause.addEventListener('click', onPause)
   if (reduce()) { setPaused(true); run(order[0]) }
 
+  // the tour plays while any of its targets is in view (on phones: the MacBook or its close-up)
+  const inView = new Set<Element>()
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) {
-      if (e.isIntersecting) {
-        if (!started) { started = true; run(order[0]) }
-        else if (offscreen && !paused && !finished) { offscreen = false; run(order[cur]) }
-      } else if (started && !finished) {
-        offscreen = true; stopShow(); clearTimeout(advance)
-      }
+      if (e.isIntersecting) inView.add(e.target)
+      else inView.delete(e.target)
+    }
+    if (inView.size) {
+      if (!started) { started = true; run(order[0]) }
+      else if (offscreen && !paused && !finished) { offscreen = false; run(order[cur]) }
+    } else if (started && !finished && !offscreen) {
+      offscreen = true; stopShow(); clearTimeout(advance)
     }
   }, { threshold: 0.3 })
-  io.observe(target)
+  targets.forEach((t) => io.observe(t))
 
   return () => {
     io.disconnect(); stopShow(); clearTimeout(advance)
@@ -108,6 +112,44 @@ function fitMac(screen: HTMLElement): Cleanup {
   const ro = new ResizeObserver(fit)
   ro.observe(screen)
   return () => ro.disconnect()
+}
+
+/** On phones the whole Mac display is too small to read, so a close-up under
+ * the MacBook mirrors its window, change for change, at a readable size. */
+function closeUp(win: HTMLElement, host: HTMLElement): Cleanup {
+  const phone = window.matchMedia('(max-width: 760px)')
+  const map = new Map<Node, Node>()
+  let mo: MutationObserver | undefined
+  const pair = (a: Node, b: Node) => { map.set(a, b); a.childNodes.forEach((n, i) => pair(n, b.childNodes[i])) }
+  const build = () => {
+    mo?.disconnect(); map.clear(); host.replaceChildren()
+    if (!phone.matches) return
+    const copy = win.cloneNode(true) as HTMLElement
+    copy.removeAttribute('id'); copy.removeAttribute('role'); copy.removeAttribute('aria-label')
+    pair(win, copy)
+    host.appendChild(copy)
+    // the close-up is one column, so the reply draft sits below the email: follow it as it's written
+    const maya = copy.querySelector<HTMLElement>('.v-maya')!
+    const follow = () => {
+      if (copy.classList.contains('drafting')) maya.scrollTo({ top: maya.scrollHeight, behavior: reduce() ? 'auto' : 'smooth' })
+      else maya.scrollTop = 0
+    }
+    mo = new MutationObserver((records) => { records.forEach((r) => {
+      const c = map.get(r.target)
+      if (!c) return
+      if (r.type === 'attributes') {
+        const name = r.attributeName!, v = (r.target as Element).getAttribute(name)
+        if (r.target === win && ['id', 'role', 'aria-label'].includes(name)) return
+        if (v === null) (c as Element).removeAttribute(name)
+        else (c as Element).setAttribute(name, v)
+      } else if (r.type === 'characterData') c.textContent = r.target.textContent
+      else (c as Element).replaceChildren(...[...r.target.childNodes].map((n) => { const k = n.cloneNode(true); pair(n, k); return k }))
+    }); follow() })
+    mo.observe(win, { attributes: true, characterData: true, childList: true, subtree: true })
+  }
+  build()
+  phone.addEventListener('change', build)
+  return () => { mo?.disconnect(); phone.removeEventListener('change', build); host.replaceChildren() }
 }
 
 export function startMacTour(root: HTMLElement): Cleanup {
@@ -152,8 +194,10 @@ export function startMacTour(root: HTMLElement): Cleanup {
   }
 
   const stopFit = fitMac(screen)
+  const close = root.querySelector<HTMLElement>('.mac-close')!
+  const stopClose = closeUp(win, close)
   const stop = chapters({
-    target: win,
+    targets: [win, close],
     tabs: [...root.querySelectorAll<HTMLElement>('.ch-tab')],
     bar: root.querySelector<HTMLElement>('.chapters')!,
     pause: root.querySelector<HTMLButtonElement>('.ch-pause')!,
@@ -162,7 +206,7 @@ export function startMacTour(root: HTMLElement): Cleanup {
     show,
     stopShow: t.stop,
   })
-  return () => { stop(); stopFit() }
+  return () => { stop(); stopFit(); stopClose() }
 }
 
 export function startCorresPhone(root: HTMLElement): Cleanup {
@@ -229,7 +273,7 @@ export function startArthaTour(root: HTMLElement): Cleanup {
   }
 
   return chapters({
-    target: phone,
+    targets: [phone],
     tabs: [...root.querySelectorAll<HTMLElement>('.tour-item')],
     bar: root.querySelector<HTMLElement>('.tour')!,
     pause: root.querySelector<HTMLButtonElement>('[data-artha-pause]')!,

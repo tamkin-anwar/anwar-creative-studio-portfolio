@@ -43,14 +43,14 @@ export function ContactPage() {
                 <div key={line.email} className="contents">
                   <dt>{line.label}</dt>
                   <dd>
-                    <a href={`mailto:${line.email}`}>{line.email}</a>
+                    <a className="hit" href={`mailto:${line.email}`}>{line.email}</a>
                   </dd>
                 </div>
               ))}
             </dl>
             {route.more ? (
               <p>
-                <a href={route.more.href} target="_blank" rel="noreferrer">
+                <a className="hit" href={route.more.href} target="_blank" rel="noreferrer">
                   {route.more.label} ↗
                 </a>
               </p>

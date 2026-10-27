@@ -103,7 +103,11 @@ HTML entry so apps fetch the new one.
   57 KB for the MacBook); the iPhone sits inside `<picture>` (`src/components/devices/Bezels.tsx`),
   so a visitor downloads only the one their mode shows. The MacBook stays a MacBook at every width:
   on phones the whole Mac display shrinks with it rather than swapping to a bare window, so the tour
-  always reads as Corres on a Mac. The PNGs stay in `public/devices/` for the archived concepts.
+  always reads as Corres on a Mac. Because the mail is too small to read at that size, phones also
+  get a close-up under the MacBook: a copy of the Mac's window, one column wide, that mirrors every
+  change as the tour plays (`closeUp` in `src/lib/tours.ts`) and follows the reply draft as it's
+  written. The tour keeps playing while either the MacBook or the close-up is on screen. The PNGs
+  stay in `public/devices/` for the archived concepts.
 - The iPhone is 300 px wide, or the screen width minus 56 px on very small phones. Everything
   on its screen is sized in points (`--pt`), so it scales as one piece.
 - iPhone 18 Pro: image 1350 x 2760; screen 1206 x 2622 at (72, 69), so left 5.3333%, top 2.5%,
@@ -138,7 +142,8 @@ Checked at 320, 375, 390, 430, 768, 834, 1024, 1280 and 1440 px on every page: n
 scrolling, no text under 12 px outside the device screens. With a phone on its side the MacBook
 sizes itself to the screen's height, so the whole laptop fits under the header. On touch screens, every link and button outside running
 text has a hit area of at least 44 pt (Apple's minimum); the footer's link lists get real
-spacing, and the smaller controls get an invisible larger hit area so nothing looks different.
+spacing, and the smaller controls (header links on iPad, email links, `.hit`) get an invisible
+larger hit area so nothing looks different. Links inside sentences are left at text size.
 
 ## Copy
 
