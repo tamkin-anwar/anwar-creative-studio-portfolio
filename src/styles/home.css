@@ -306,6 +306,10 @@
 
 @media (max-width: 760px) { .mbp { margin-top: 28px; } }
 
+/* a phone on its side: size the MacBook to the screen's height so the whole laptop fits under the header */
+
+@media (orientation: landscape) and (max-height: 500px) { .mbp { max-width: calc((100svh - 96px) * 3860 / 2540); margin-inline: auto; } }
+
 /* ---------- Corres for Mac: the four-chapter tour (inside the 1352 x 878 display) ---------- */
 
 .win .pane { padding: 0; position: relative; display: block; }

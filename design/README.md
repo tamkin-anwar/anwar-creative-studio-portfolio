@@ -134,8 +134,9 @@ state. All mail and money in them is sample data with made-up people.
 
 ## Every screen size
 
-Checked at 320, 375, 430, 768, 1024 and 1440 px on every page: no sideways scrolling, no text
-under 12 px outside the device screens. On touch screens, every link and button outside running
+Checked at 320, 375, 390, 430, 768, 834, 1024, 1280 and 1440 px on every page: no sideways
+scrolling, no text under 12 px outside the device screens. With a phone on its side the MacBook
+sizes itself to the screen's height, so the whole laptop fits under the header. On touch screens, every link and button outside running
 text has a hit area of at least 44 pt (Apple's minimum); the footer's link lists get real
 spacing, and the smaller controls get an invisible larger hit area so nothing looks different.
 

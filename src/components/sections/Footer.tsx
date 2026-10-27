@@ -49,7 +49,7 @@ export function Footer() {
             <Lockup big />
           </a>
           <span className="foot-line">{company.descriptor}</span>
-          <a href={`mailto:${links.email}`}>{links.email}</a>
+          <a className="foot-mail" href={`mailto:${links.email}`}>{links.email}</a>
         </div>
         {columns.map((column) => (
           <nav key={column.title} aria-label={column.title}>
