@@ -42,7 +42,7 @@ export const journal: JournalEntry[] = [
     product: 'Corres',
     title: 'Thirty-six builds in',
     body:
-      'The newest Corres betas make sure nothing you do is lost: mail written without signal is kept and sent the moment you are back online, and your moves, snoozes and rules merge between your devices. Search is about ten times faster on a big mailbox.',
+      'The newest Corres betas keep what you do offline: mail written without signal is kept and sent the moment you are back online, and your moves, snoozes and rules merge between your devices. Search is about ten times faster on a big mailbox.',
   },
   {
     date: '2026-10-22',
