@@ -16,7 +16,7 @@ export function ArthaSection() {
         <div className="duo">
           <div>
             <div className="appname"><img src={`${BASE}press/artha-icon.webp`} alt="" loading="lazy" decoding="async" /><span><b>Artha</b><small>Know what&rsquo;s safe to spend.</small></span></div>
-            <h2 className="h2">One number, kept honest.</h2>
+            <h2 className="h2">One number for the rest of the month.</h2>
             <p className="lead">Artha opens on what&rsquo;s safe to spend for the rest of the month, with the bills still to come already counted, and what that comes to each day. No bank login, ever.</p>
             <div className="tour" id="artha-tour">
               <button type="button" className="tour-item on" data-ch="today"><span className="bar"><i></i></span><b>Safe to spend</b><span>What&rsquo;s left for the month once the bills still to come are counted, and what that comes to each day.</span></button>

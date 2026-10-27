@@ -12,8 +12,7 @@ export function NowPage() {
         style={{ color: 'var(--ink-dim)', fontSize: 'var(--text-body)' }}
       >
         <p>
-          Corres is our main build right now: a native email app for iPhone, iPad, Mac and Apple
-          Watch, and one of the studio&rsquo;s two flagships, with Artha.
+          Most of our time goes to Corres, the email app for iPhone, iPad, Mac and Apple Watch.
         </p>
         <p>
           The beta is on TestFlight with early testers, thirty-eight builds in, and we use it every
@@ -24,7 +23,7 @@ export function NowPage() {
           you&rsquo;re back, and your choices follow you between devices.
         </p>
         <p>
-          The latest builds work the same wherever you are. Corres reads deadlines, receipts,
+          Corres now reads deadlines, receipts,
           deliveries and questions in all nine languages it speaks, follows your region&rsquo;s weekend,
           and offers an optional Brief of what&rsquo;s due today. Its main screens were checked with
           Apple&rsquo;s own accessibility audit. Next come more testers, then the App Store.

@@ -28,11 +28,11 @@ export function ContactPage() {
     <PageShell eyebrow="Contact and support">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
-          Get in touch.
+          A person reads every message.
         </h1>
         <p>
-          A person reads every message, usually within a day. Writing to the right address below gets
-          you an answer fastest.
+          You&rsquo;ll usually hear back within a day. Writing to the right address below gets you an
+          answer fastest.
         </p>
 
         {routes.map((route) => (

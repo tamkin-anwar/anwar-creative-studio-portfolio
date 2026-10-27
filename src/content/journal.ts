@@ -26,7 +26,7 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-10-25',
     product: 'Corres',
-    title: 'Built for everywhere',
+    title: 'Deadlines in every language',
     body:
       'Corres now reads deadlines, receipts, deliveries, sign-in codes and questions in all nine of its languages, follows your region\u2019s weekend for Snooze and Send Later, and shows mail in older Japanese, Chinese and Korean encodings in full. An optional Brief at the top of Needs You lists what\u2019s due today, and Corres for Mac gained Undo Send.',
   },
@@ -102,6 +102,6 @@ export const journal: JournalEntry[] = [
     date: '2026-01-04',
     product: 'Artha',
     title: 'Artha begins',
-    body: 'The first version of Artha, a personal finance dashboard, built because no budgeting app showed the one number that matters.',
+    body: 'The first version of Artha, a personal finance dashboard, built because no budgeting app would say how much was safe to spend.',
   },
 ]

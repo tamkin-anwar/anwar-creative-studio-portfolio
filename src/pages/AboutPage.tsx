@@ -34,7 +34,7 @@ export function AboutPage() {
           <a href={`${import.meta.env.BASE_URL}#workshop`}>the workshop</a>: Tether, Jotfield and Doorsong.
         </p>
 
-        <h2>Why we exist</h2>
+        <h2>Why we started</h2>
         <p>
           The studio started with a habit: looking for an app, not loving any of the ones out there, and
           building the one we wanted. Corres began because no email app answered the first question of the
@@ -43,7 +43,7 @@ export function AboutPage() {
         </p>
         <p>
           We&rsquo;re independent and self-funded. There are no investors to answer to and no advertisers
-          to please, so the apps can stay private and stay focused on the people who use them.
+          to please, so the apps answer only to the people who use them.
         </p>
 
         <h2>Who builds it</h2>
