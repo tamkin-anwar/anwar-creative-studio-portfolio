@@ -93,7 +93,8 @@ export function PressPage() {
           <p>
             <strong>Know what&rsquo;s safe to spend.</strong> Artha opens on one number: what&rsquo;s safe to spend
             for the rest of the month, with the bills still to come already counted. On the web, with an app for iPhone, iPad, Mac and Apple Watch in beta. No
-            bank login, no ads, no tracking. Free.{' '}
+            bank login, no ads, no tracking. Safe to spend is free; Artha Pro adds the assistant, receipts and scans read
+            for you, scenarios and longer reports, at $9.99 a month or $79.99 a year.{' '}
             <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
           </p>
         </div>
