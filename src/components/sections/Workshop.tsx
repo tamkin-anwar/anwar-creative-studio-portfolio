@@ -2,7 +2,7 @@ import { links } from '../../content/links'
 
 // Smaller things the studio made along the way: one line each, linking out.
 const workshop = [
-  { name: 'Tether', tagline: 'Watch Netflix or YouTube together, in sync, from anywhere.', href: links.tether, kind: 'Chrome extension' },
+  { name: 'Tether', tagline: 'Watch the same show at the same time, apart. Netflix, Prime Video, YouTube and more.', href: links.tether, kind: 'Chrome extension' },
   { name: 'Jotfield', tagline: 'A place for every thought.', href: links.jotfield, kind: 'Web app' },
   { name: 'Doorsong', tagline: 'Six doorways, each tuned to a different place.', href: links.doorsong, kind: 'Website' },
 ]
