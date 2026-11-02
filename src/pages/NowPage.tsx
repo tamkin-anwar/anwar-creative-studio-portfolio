@@ -15,7 +15,7 @@ export function NowPage() {
           Most of our time goes to Corres, the email app for iPhone, iPad, Mac and Apple Watch.
         </p>
         <p>
-          The beta is on TestFlight with early testers, thirty-eight builds in, and we use it every
+          The beta is on TestFlight with early testers, forty-six builds in, and we use it every
           day ourselves. Gmail, Outlook, iCloud Mail and other IMAP accounts share one inbox that opens on what needs you,
           with a Primary inbox that learns from every correction and Promotions, Social and Updates
           kept apart. Writing covers everything from Send Later and Undo Send to follow-up reminders, and
@@ -24,8 +24,9 @@ export function NowPage() {
         </p>
         <p>
           Corres now reads deadlines, receipts,
-          deliveries and questions in all nine languages it speaks, follows your region&rsquo;s weekend,
-          and offers an optional Brief of what&rsquo;s due today. Its main screens were checked with
+          deliveries and questions in all nine languages it speaks, and follows your region&rsquo;s weekend.
+          Emails open with every picture their sender put in, and an optional Daily Brief reads a month of
+          mail for today&rsquo;s plans, bills, deliveries and the replies you owe. Its main screens were checked with
           Apple&rsquo;s own accessibility audit. Next come more testers, then the App Store.
         </p>
         <p>
@@ -48,7 +49,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated October 25, 2026 &middot;{' '}
+        Last updated November 2, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"

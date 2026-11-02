@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-02',
+    product: 'Corres',
+    title: 'Every picture, and a Brief that reads your month',
+    body:
+      'Emails now open the way their sender made them, with the pictures and text that Corres used to miss. The short line at the top of each email was rebuilt and checked against thousands of real emails, and the Daily Brief now reads a month of mail for today\u2019s plans, bills, deliveries and the replies you owe.',
+  },
+  {
     date: '2026-10-26',
     product: 'Artha',
     title: 'Money the way you write it',
