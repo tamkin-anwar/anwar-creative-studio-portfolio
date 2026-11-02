@@ -69,7 +69,7 @@ export function Footer() {
       </div>
       <div className="legal">
         <span>
-          &copy; {company.year} {company.name} &middot; {company.registered}
+          &copy; {company.year} {company.legalName} &middot; {company.registered}
         </span>
         <span>Looked for it. Didn&rsquo;t love it. Built it.</span>
       </div>

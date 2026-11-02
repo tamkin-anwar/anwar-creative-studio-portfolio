@@ -150,5 +150,8 @@ larger hit area so nothing looks different. Links inside sentences are left at t
 - No em dashes in anything a visitor reads.
 - Corres is an email app, never "a Gmail client".
 - Nothing personal on public pages: no home address, personal phone or personal email.
-- The LLC is being formed in California and isn't filed yet. Until it is, say "Anwar Creative
-  Studio", run by Tamkin Nurul Anwar, and never "LLC". `src/content/company.ts` holds the wording.
+- The legal name is Anwar Creative Studio LLC, a California limited liability company (filed
+  with the Secretary of State on October 26, 2026). Use it where a legal party is named: legal
+  pages, copyright lines, the press fact sheet. Everywhere else the studio is "Anwar Creative
+  Studio". `src/content/company.ts` holds the wording. The filed address is a home address and
+  stays off every public page.

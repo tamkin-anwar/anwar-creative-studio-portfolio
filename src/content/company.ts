@@ -2,11 +2,10 @@
 // pages and structured data, so it has to be true on the day it ships.
 export const company = {
   name: 'Anwar Creative Studio',
-  // Until the LLC is filed, the studio is run by its founder. When the
-  // California filing is done, legalName becomes 'Anwar Creative Studio
-  // LLC' and `entity` goes.
-  legalName: 'Tamkin Nurul Anwar',
-  entity: 'Anwar Creative Studio LLC is being formed in California',
+  // Filed with the California Secretary of State on October 26, 2026.
+  legalName: 'Anwar Creative Studio LLC',
+  entity: 'a California limited liability company',
+  founder: 'Tamkin Nurul Anwar',
   descriptor: 'An independent software company',
   registered: 'California, United States',
   year: 2026,

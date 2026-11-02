@@ -27,6 +27,8 @@ export function PressPage() {
         <dl className="detail-list">
           <dt>Name</dt>
           <dd>{company.name}</dd>
+          <dt>Legal name</dt>
+          <dd>{company.legalName}</dd>
           <dt>What it is</dt>
           <dd>An independent software company making apps for iPhone, iPad, Mac and Apple Watch</dd>
           <dt>Founder</dt>
