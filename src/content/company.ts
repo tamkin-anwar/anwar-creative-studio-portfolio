@@ -5,7 +5,7 @@ export const company = {
   // Filed with the California Secretary of State on October 26, 2026.
   legalName: 'Anwar Creative Studio LLC',
   entity: 'a California limited liability company',
-  founder: 'Tamkin Nurul Anwar',
+  founder: 'Tamkin Anwar',
   descriptor: 'An independent software company',
   registered: 'California, United States',
   year: 2026,
