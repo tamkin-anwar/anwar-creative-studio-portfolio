@@ -11,6 +11,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-02',
     product: 'Corres',
+    title: 'The Brief on your Home Screen and your wrist',
+    body:
+      'The Daily Brief is now a widget on the Home Screen and the Mac desktop, and sits at the top of Apple Watch and on the watch face. Its morning notification no longer skips a day. Dates are read the way the sender writes them, your own last message shows what you asked, and mail is sent over Apple\u2019s own secure connection.',
+  },
+  {
+    date: '2026-11-02',
+    product: 'Corres',
     title: 'Every picture, and a Brief that reads your month',
     body:
       'Emails now open the way their sender made them, with the pictures and text that Corres used to miss. The short line at the top of each email was rebuilt and checked against thousands of real emails, and the Daily Brief now reads a month of mail for today\u2019s plans, bills, deliveries and the replies you owe.',
