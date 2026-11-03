@@ -11,6 +11,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-03',
     product: 'Corres',
+    title: 'Right to left, and counting properly',
+    body:
+      'Corres now speaks Polish, Ukrainian, Czech, Romanian, Arabic and Hebrew, twenty-nine languages in all. Arabic and Hebrew read right to left, with swipes that follow your finger, and every language counts the way it should, from Polish few and many to the Arabic dual.',
+  },
+  {
+    date: '2026-11-03',
+    product: 'Corres',
     title: 'Twenty-three languages, and a cleaner inbox',
     body:
       'Corres now speaks Italian, Dutch, Swedish, Danish, Norwegian, Turkish, Vietnamese, Indonesian, Traditional Chinese, Canadian French, European Portuguese and British, Australian and Canadian English, and reads bills and deliveries written in them. You can also move everything from a sender to Trash or the archive in one go, with an undo, and sign your mail with your logo.',

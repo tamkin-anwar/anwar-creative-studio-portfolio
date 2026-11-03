@@ -15,7 +15,7 @@ export function NowPage() {
           Most of our time goes to Corres, the email app for iPhone, iPad, Mac and Apple Watch.
         </p>
         <p>
-          The beta is on TestFlight with early testers, fifty builds in, and we use it every
+          The beta is on TestFlight with early testers, fifty-two builds in, and we use it every
           day ourselves. Gmail, Outlook, iCloud Mail and other IMAP accounts share one inbox that opens on what needs you,
           with a Primary inbox that learns from every correction and Promotions, Social and Updates
           kept apart. Writing covers everything from Send Later and Undo Send to follow-up reminders, and
@@ -24,7 +24,7 @@ export function NowPage() {
         </p>
         <p>
           Corres now reads deadlines, receipts,
-          deliveries and questions in all twenty-three languages it speaks, and follows your region&rsquo;s weekend. You can clean up a sender&rsquo;s whole mailbox with an undo, sign mail with your logo, and choose which folders notify you.
+          deliveries and questions in all twenty-nine languages it speaks, Arabic and Hebrew right to left, and follows your region&rsquo;s weekend. You can clean up a sender&rsquo;s whole mailbox with an undo, sign mail with your logo, and choose which folders notify you.
           Emails open with every picture their sender put in, and an optional Daily Brief reads a month of
           mail for today&rsquo;s plans, bills, deliveries and the replies you owe, on the Home Screen and Apple Watch too. Its main screens were checked with
           Apple&rsquo;s own accessibility audit. Next come more testers, then the App Store.
