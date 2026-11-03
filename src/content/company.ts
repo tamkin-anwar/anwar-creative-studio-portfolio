@@ -2,7 +2,8 @@
 // pages and structured data, so it has to be true on the day it ships.
 export const company = {
   name: 'Anwar Creative Studio',
-  // Filed with the California Secretary of State on October 26, 2026.
+  // Filed with the California Secretary of State on October 26, 2026;
+  // approved October 31, 2026.
   legalName: 'Anwar Creative Studio LLC',
   entity: 'a California limited liability company',
   founder: 'Tamkin Anwar',
