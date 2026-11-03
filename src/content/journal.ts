@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-03',
+    product: 'Corres',
+    title: 'Twenty-three languages, and a cleaner inbox',
+    body:
+      'Corres now speaks Italian, Dutch, Swedish, Danish, Norwegian, Turkish, Vietnamese, Indonesian, Traditional Chinese, Canadian French, European Portuguese and British, Australian and Canadian English, and reads bills and deliveries written in them. You can also move everything from a sender to Trash or the archive in one go, with an undo, and sign your mail with your logo.',
+  },
+  {
     date: '2026-11-02',
     product: 'Corres',
     title: 'The Brief on your Home Screen and your wrist',
