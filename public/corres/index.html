@@ -159,6 +159,16 @@
     .devices-stage .watch { width: 11%; right: -1%; bottom: -2%; }
   }
 
+  /* iPhone Duo: unfolded, with the folded phone in front at its right. */
+  .duo-stage { position: relative; max-width: 760px; margin: 8px auto 0; padding-bottom: 2%; }
+  .duo-stage .duo-open { width: 60%; margin: 0 0 0 9%; }
+  .duo-stage .duo-closed { position: absolute; z-index: 2; right: 6%; bottom: 0; width: 30%; margin: 0; }
+  @media (max-width: 560px) {
+    .duo-stage { padding-bottom: 8%; }
+    .duo-stage .duo-open { width: 68%; margin-left: 2%; }
+    .duo-stage .duo-closed { width: 36%; right: -1%; bottom: -2%; }
+  }
+
   /* Story rows */
   .story { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; padding: 56px 0; }
   .story + .story { border-top: 1px solid var(--line); }
@@ -378,6 +388,20 @@
         <picture class="device ipad"><source srcset="img/devices/ipad-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/ipad-dark.webp" width="1000" height="1305" loading="lazy" alt="Corres on iPad Pro: the sidebar with each account, Needs You, and an open email."></picture>
         <picture class="device iphone"><source srcset="img/devices/iphone-primary-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/iphone-primary-dark.webp" width="640" height="1309" loading="lazy" alt="Corres on iPhone: the mail list."></picture>
         <picture class="device watch"><source srcset="img/devices/watch-needs-you-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/watch-needs-you-dark.webp" width="320" height="503" loading="lazy" alt="Corres on Apple Watch: Needs You."></picture>
+      </div>
+    </div>
+  </section>
+
+  <section id="iphone-duo" style="padding-top:0; overflow-x: clip" aria-labelledby="duo-title">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">iPhone Duo</p>
+        <h2 id="duo-title">Made for iPhone Duo from the first day.</h2>
+        <p>Unfold it and your mail list and the email you&rsquo;re reading sit side by side. Fold it and Corres keeps your place, with Needs You still first.</p>
+      </div>
+      <div class="duo-stage reveal">
+        <picture class="device duo-open"><source srcset="img/devices/duo-open-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/duo-open-dark.webp" width="900" height="1239" loading="lazy" alt="Corres on iPhone Duo, unfolded: Needs You on one side and Maya Chen's email open on the other, with its summary and why it needs you."></picture>
+        <picture class="device duo-closed"><source srcset="img/devices/duo-closed-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/duo-closed-dark.webp" width="560" height="781" loading="lazy" alt="Corres on iPhone Duo, folded: Needs You on the outer display, with Oliver Grant, Atelier Supply and Maya Chen."></picture>
       </div>
     </div>
   </section>
