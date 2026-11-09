@@ -33,8 +33,8 @@ export function NowPage() {
           Artha is going through its biggest change since it began. It was rebuilt around
           one number, what&rsquo;s safe to spend, and a native app for iPhone, iPad, Mac and Apple Watch is in
           beta on TestFlight, sharing one design language with the website. It works with any of about 160
-          currencies, grows with your text size, and lets VoiceOver play its charts as sound. Next
-          comes the App Store.
+          currencies, grows with your text size, lets VoiceOver play its charts as sound, works
+          without a connection, and is made for iPhone Duo. Next comes the App Store.
         </p>
         <p>
           After that, it&rsquo;s Jotfield: smoothing the rough edges we find using it every day.

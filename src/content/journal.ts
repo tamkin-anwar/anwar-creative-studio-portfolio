@@ -16,6 +16,20 @@ export const journal: JournalEntry[] = [
       'The build we plan to send to the App Store as 1.0 is with testers. On iPhone Duo, Corres keeps the email\u2019s buttons on the side bar when it\u2019s closed, and puts your mail and the open email either side of the fold when it\u2019s open. Emails have more room to read, tapping a reason in Needs You opens the email with its sentence marked, and trackers stay blocked even after you show images.',
   },
   {
+    date: '2026-11-09',
+    product: 'Artha',
+    title: 'The basics, before anyone has to ask',
+    body:
+      'Artha now works without a connection, and a purchase you add offline, Apple Pay ones included, goes through once you\u2019re back. Money moving between your own accounts can be marked as a transfer, changing your email waits for a link sent to the new address, and you can sign out of every other device. An evening reminder to log and a Sunday summary are there if you want them.',
+  },
+  {
+    date: '2026-11-08',
+    product: 'Artha',
+    title: 'Made for iPhone Duo, and your own categories',
+    body:
+      'Unfolded, iPhone Duo shows Artha with a sidebar like an iPad, and any iPhone now turns sideways. Make categories of your own with an emoji, hide every amount with one tap, import several statements at once with an account made from each, and choose light or dark for Artha alone.',
+  },
+  {
     date: '2026-11-03',
     product: 'Corres',
     title: 'Right to left, and counting properly',
