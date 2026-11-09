@@ -28,6 +28,6 @@ React 19, TypeScript, Vite and Tailwind CSS v4. Every page is prerendered to HTM
 - `public/og-image.png`: the card shown when a link to the site is shared.
 - `design/`: the design record, every homepage concept and the logo study. Not deployed.
 
-Corres also has a copy of its site at anwarcreativestudio.com/corres/ (static, `public/corres/`), with privacy and terms. `scripts/publish-corres-app.sh` publishes the same files to corres.app.
+Corres also has a copy of its site at anwarcreativestudio.com/corres/ (static, `public/corres/`), with its iPhone Duo section, support, terms and the privacy policy (what each service sees, how long each record is kept, and how to delete it). `scripts/publish-corres-app.sh` publishes the same files to corres.app; edit them here, never in corres-site. Keep `public/google3cee5c276a72f1e6.html`: it proves the domain to Google.
 
 Built by Anwar Creative Studio.

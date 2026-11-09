@@ -13,7 +13,7 @@ export const journal: JournalEntry[] = [
     product: 'Corres',
     title: 'Ready for 1.0, and made for iPhone Duo',
     body:
-      'The build we plan to send to the App Store as 1.0 is with testers. On iPhone Duo, Corres keeps the email\u2019s buttons on the side bar when it\u2019s closed, and puts your mail and the open email either side of the fold when it\u2019s open. Emails have more room to read, tapping a reason in Needs You opens the email with its sentence marked, and trackers stay blocked even after you show images.',
+      'The build we plan to send to the App Store as 1.0 is with testers. On iPhone Duo, Corres keeps the email\u2019s buttons on the side bar when it\u2019s closed, and puts your mail and the open email either side of the fold when it\u2019s open. Emails have more room to read, tapping a reason in Needs You opens the email with its sentence marked, and trackers stay blocked even after you show images. Its privacy policy now says how long every record is kept and every way to delete it, and a new switch erases Corres\u2019s choices from your iCloud.',
   },
   {
     date: '2026-11-09',
