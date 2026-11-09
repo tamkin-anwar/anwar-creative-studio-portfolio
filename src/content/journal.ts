@@ -20,7 +20,7 @@ export const journal: JournalEntry[] = [
     product: 'Artha',
     title: 'The basics, before anyone has to ask',
     body:
-      'Artha now works without a connection, and a purchase you add offline, Apple Pay ones included, goes through once you\u2019re back. Money moving between your own accounts can be marked as a transfer, changing your email waits for a link sent to the new address, and you can sign out of every other device. An evening reminder to log and a Sunday summary are there if you want them.',
+      'Artha now works without a connection, and a purchase you add offline, Apple Pay ones included, goes through once you\u2019re back. Money moving between your own accounts can be marked as a transfer, changing your email waits for a link sent to the new address, and you can sign out of every other device. An evening reminder to log and a Sunday summary are there if you want them. Credits on a card statement now count as money back, the assistant answers from whole months of totals, and the icons and labels read more clearly.',
   },
   {
     date: '2026-11-08',
