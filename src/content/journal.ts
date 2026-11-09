@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-09',
+    product: 'Corres',
+    title: 'Ready for 1.0, and made for iPhone Duo',
+    body:
+      'The build we plan to send to the App Store as 1.0 is with testers. On iPhone Duo, Corres keeps the email\u2019s buttons on the side bar when it\u2019s closed, and puts your mail and the open email either side of the fold when it\u2019s open. Emails have more room to read, tapping a reason in Needs You opens the email with its sentence marked, and trackers stay blocked even after you show images.',
+  },
+  {
     date: '2026-11-03',
     product: 'Corres',
     title: 'Right to left, and counting properly',

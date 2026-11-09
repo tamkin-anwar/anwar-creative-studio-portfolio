@@ -15,7 +15,7 @@ export function NowPage() {
           Most of our time goes to Corres, the email app for iPhone, iPad, Mac and Apple Watch.
         </p>
         <p>
-          The beta is on TestFlight with early testers, fifty-two builds in, and we use it every
+          The beta is on TestFlight with early testers, fifty-six builds in, and we use it every
           day ourselves. Gmail, Outlook, iCloud Mail and other IMAP accounts share one inbox that opens on what needs you,
           with a Primary inbox that learns from every correction and Promotions, Social and Updates
           kept apart. Writing covers everything from Send Later and Undo Send to follow-up reminders, and
@@ -27,7 +27,7 @@ export function NowPage() {
           deliveries and questions in all twenty-nine languages it speaks, Arabic and Hebrew right to left, and follows your region&rsquo;s weekend. You can clean up a sender&rsquo;s whole mailbox with an undo, sign mail with your logo, and choose which folders notify you.
           Emails open with every picture their sender put in, and an optional Daily Brief reads a month of
           mail for today&rsquo;s plans, bills, deliveries and the replies you owe, on the Home Screen and Apple Watch too. Its main screens were checked with
-          Apple&rsquo;s own accessibility audit. Next come more testers, then the App Store.
+          Apple&rsquo;s own accessibility audit. It&rsquo;s made for iPhone Duo too, with your mail and the open email either side of the fold, and the build we plan to send to the App Store as 1.0 is with testers now.
         </p>
         <p>
           Artha is going through its biggest change since it began. It was rebuilt around
@@ -49,7 +49,7 @@ export function NowPage() {
         className="font-mono"
         style={{ fontSize: 'var(--text-label)', color: 'var(--ink-faint)' }}
       >
-        Last updated November 2, 2026 &middot;{' '}
+        Last updated November 9, 2026 &middot;{' '}
         <a
           href="https://nownownow.com/about"
           target="_blank"
