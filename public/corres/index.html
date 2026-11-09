@@ -159,14 +159,15 @@
     .devices-stage .watch { width: 11%; right: -1%; bottom: -2%; }
   }
 
-  /* iPhone Duo: unfolded, with the folded phone in front at its right. */
-  .duo-stage { position: relative; max-width: 760px; margin: 8px auto 0; padding-bottom: 2%; }
-  .duo-stage .duo-open { width: 60%; margin: 0 0 0 9%; }
-  .duo-stage .duo-closed { position: absolute; z-index: 2; right: 6%; bottom: 0; width: 30%; margin: 0; }
-  @media (max-width: 560px) {
-    .duo-stage { padding-bottom: 8%; }
-    .duo-stage .duo-open { width: 68%; margin-left: 2%; }
-    .duo-stage .duo-closed { width: 36%; right: -1%; bottom: -2%; }
+  /* iPhone Duo: unfolded like a book (landscape, the fold down the
+     middle), with the folded phone in front at its right. */
+  .duo-stage { position: relative; max-width: 1040px; margin: 24px auto 0; padding-bottom: 4%; }
+  .duo-stage .duo-open { width: 84%; margin: 0; }
+  .duo-stage .duo-closed { position: absolute; z-index: 2; right: 0; bottom: 0; width: 27%; margin: 0; }
+  @media (max-width: 760px) {
+    .duo-stage { padding-bottom: 14%; }
+    .duo-stage .duo-open { width: 92%; }
+    .duo-stage .duo-closed { width: 34%; right: -2%; bottom: -6%; }
   }
 
   /* Story rows */
@@ -400,7 +401,7 @@
         <p>Unfold it and your mail list and the email you&rsquo;re reading sit side by side. Fold it and Corres keeps your place, with Needs You still first.</p>
       </div>
       <div class="duo-stage reveal">
-        <picture class="device duo-open"><source srcset="img/devices/duo-open-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/duo-open-dark.webp" width="900" height="1239" loading="lazy" alt="Corres on iPhone Duo, unfolded: Needs You on one side and Maya Chen's email open on the other, with its summary and why it needs you."></picture>
+        <picture class="device duo-open"><source srcset="img/devices/duo-open-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/duo-open-dark.webp" width="1400" height="1018" loading="lazy" alt="Corres on iPhone Duo, unfolded: Needs You on one side and Maya Chen's email open on the other, with its summary and why it needs you."></picture>
         <picture class="device duo-closed"><source srcset="img/devices/duo-closed-light.webp" media="(prefers-color-scheme: light)"><img src="img/devices/duo-closed-dark.webp" width="560" height="781" loading="lazy" alt="Corres on iPhone Duo, folded: Needs You on the outer display, with Oliver Grant, Atelier Supply and Maya Chen."></picture>
       </div>
     </div>
