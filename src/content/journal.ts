@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-09',
+    product: 'Corres',
+    title: 'The first five minutes, and a sharper Needs You',
+    body:
+      'Starting Corres now shows instead of tells. Choose your email service, watch Corres read your newest mail on your iPhone, see what needs you with the reason for each, then clear a practice email with your own swipe. Notifications are asked for only after that. Needs You was checked against thousands of real emails and retuned, so receipts, codes and support desks stay out and bills, signature requests and deadlines come in. Pinned mail now sits in a section you can fold, so it never pushes new mail down.',
+  },
+  {
+    date: '2026-11-09',
     product: 'Artha',
     title: 'Your real number in about a minute',
     body:
