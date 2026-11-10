@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-09',
+    product: 'Artha',
+    title: 'Your real number in about a minute',
+    body:
+      'Starting Artha no longer means a blank screen. Three quick questions, what you get paid, the bills that repeat and how much you want to keep, and you see what\u2019s safe to spend for the rest of the month, with no bank login. Every question can be skipped, and a Getting started card on Today keeps the rest until it\u2019s done: a first purchase, a statement or Apple Pay, a reminder, an account.',
+  },
+  {
+    date: '2026-11-09',
     product: 'Corres',
     title: 'Ready for 1.0, and made for iPhone Duo',
     body:
