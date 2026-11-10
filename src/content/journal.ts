@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-10',
+    product: 'Artha',
+    title: 'Start from a bank statement',
+    body:
+      'Getting started with Artha now asks its three questions before the account, and the account only needs a name, an email and a password. Or drop in up to three bank statements and Artha fills in your pay and bills and brings the transactions in, still with no bank login. You add a first purchase and watch your number move, the first week brings one small thing a day, and a streak of days on pace can be shared as a picture with no amounts on it.',
+  },
+  {
     date: '2026-11-09',
     product: 'Corres',
     title: 'The first five minutes, and a sharper Needs You',
