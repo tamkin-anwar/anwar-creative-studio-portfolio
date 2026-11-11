@@ -209,24 +209,6 @@ export function startMacTour(root: HTMLElement): Cleanup {
   return () => { stop(); stopFit(); stopClose() }
 }
 
-export function startCorresPhone(root: HTMLElement): Cleanup {
-  const phone = root.querySelector<HTMLElement>('.cphone')!
-  const replay = root.querySelector<HTMLButtonElement>('[data-replay]')
-  const t = timers()
-  const arrive = () => {
-    t.stop()
-    phone.classList.remove('notifying', 'arrived')
-    if (reduce()) { phone.classList.add('arrived'); return }
-    t.later(() => phone.classList.add('notifying'), 500)
-    t.later(() => { phone.classList.remove('notifying'); phone.classList.add('arrived') }, 2600)
-  }
-  let done = false
-  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !done) { done = true; arrive() } }), { threshold: 0.5 })
-  io.observe(phone)
-  replay?.addEventListener('click', arrive)
-  return () => { io.disconnect(); t.stop(); replay?.removeEventListener('click', arrive) }
-}
-
 export function startArthaTour(root: HTMLElement): Cleanup {
   const phone = root.querySelector<HTMLElement>('#artha-phone')!
   const digits = [...phone.querySelectorAll<HTMLElement>('.digit')]

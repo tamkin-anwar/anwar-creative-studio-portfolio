@@ -19,7 +19,7 @@ export function PressPage() {
         </p>
         <p>
           <a href={`${BASE}press/anwar-creative-studio-press-kit.zip`} className="btn">
-            Download the press kit (zip, 3 MB)
+            Download the press kit (zip, 4 MB)
           </a>
         </p>
 
@@ -78,9 +78,9 @@ export function PressPage() {
           <p>
             <strong>Email, considered.</strong> Corres opens on the emails that ask something of you, with the
             reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
-            iPhone, iPad, Mac and Apple Watch, in nine languages. It reads and sorts mail on the device, and
+            iPhone, iPad, Mac and Apple Watch, in 29 languages. It reads and sorts mail on the device, and
             summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight. Mail is free; Corres Pro adds Needs You, Waiting,
-            answers in Search, summaries and suggested replies, at $14.99 a month or $149.99 a year.{' '}
+            answers in Search, summaries and suggested replies, at $14.99 a month or $149.99 a year, after a two-week free trial.{' '}
             <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
           </p>
         </div>
@@ -94,11 +94,17 @@ export function PressPage() {
           <img src={`${BASE}press/artha-icon.webp`} alt="The Artha app icon" width={96} height={96} />
           <p>
             <strong>Know what&rsquo;s safe to spend.</strong> Artha opens on one number: what&rsquo;s safe to spend
-            for the rest of the month, with the bills still to come already counted. On the web, with an app for iPhone, iPad, Mac and Apple Watch in beta. No
-            bank login, no ads, no tracking. Safe to spend is free; Artha Pro adds the assistant, receipts and scans read
-            for you, scenarios and longer reports, at $9.99 a month or $79.99 a year.{' '}
+            for the rest of the month, with the bills still to come already counted. Free on the web, with an app for iPhone, iPad, Mac
+            and Apple Watch in beta on TestFlight, on one account. No bank login, no ads, no tracking, and about 160
+            currencies. Safe to spend is free; Artha Pro adds the assistant, receipts and scans read for you, scenarios
+            and longer reports, at $9.99 a month or $79.99 a year, after a one-month free trial.{' '}
             <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
           </p>
+        </div>
+
+        <div className="press-shots bare">
+          <img src={`${BASE}press/artha-iphone.webp`} alt="Artha on iPhone, showing what’s safe to spend with sample figures" width={700} height={1429} loading="lazy" />
+          <img src={`${BASE}press/artha-mac.webp`} alt="Artha on Mac, showing Today with sample figures" width={1600} height={1053} loading="lazy" />
         </div>
 
         <h2>In the zip</h2>
@@ -107,6 +113,7 @@ export function PressPage() {
           <li>The logo and the hanging a, with how to use them</li>
           <li>Corres and Artha app icons at 1024 &times; 1024</li>
           <li>Corres screenshots on iPhone, iPad and Mac, made with sample mail</li>
+          <li>Artha on iPhone and Mac, made with sample figures</li>
         </ul>
         <p>
           Recent news is in the <a href={`${BASE}journal/`}>journal</a>.

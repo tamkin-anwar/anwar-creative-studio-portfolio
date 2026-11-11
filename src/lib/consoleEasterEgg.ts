@@ -23,7 +23,7 @@ export function printConsoleEasterEgg() {
     `${bg}${ink}${serif}font-size:14px;padding:0 12px 8px;`,
   )
   console.log(
-    '%cAn independent software company. Corres is in beta; Artha is live on the web.',
+    '%cAn independent software company. Corres and Artha are in beta; Artha is free on the web.',
     `${bg}${dim}${mono}font-size:12px;padding:0 12px 6px;`,
   )
   console.log(

@@ -11,22 +11,23 @@ export function AboutPage() {
           An independent software company.
         </h1>
         <p>
-          Anwar Creative Studio makes apps for iPhone, iPad, Mac and Apple Watch. We make a few things, take
-          our time with them, and keep them for the long run. We don&rsquo;t take on client work; everything
-          we build is our own.
+          Anwar Creative Studio makes apps for iPhone, iPad, Mac and Apple Watch. We make a few apps and keep
+          working on them for years. We don&rsquo;t take on client work; everything we build is our own.
         </p>
 
         <h2>What we make</h2>
         <p>
           <strong>Corres</strong> is an email app that opens on what needs you: the emails that ask
-          something of you, with the reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
-          iPhone, iPad, Mac and Apple Watch. It&rsquo;s in beta on TestFlight and coming to the App Store.{' '}
+          something of you, with the reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP
+          accounts share one inbox, on iPhone, iPad, Mac and Apple Watch, in 29 languages. It&rsquo;s in beta
+          on TestFlight, on its way to the App Store.{' '}
           <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
         </p>
         <p>
-          <strong>Artha</strong> tells you what&rsquo;s safe to spend: what&rsquo;s left for the month once the
-          bills still to come are counted, and what that comes to each day. It&rsquo;s live on the web, with an app for iPhone, iPad, Mac
-          and Apple Watch in beta.{' '}
+          <strong>Artha</strong> opens on what&rsquo;s safe to spend: what&rsquo;s left for the month once the
+          bills still to come are counted, and what that comes to each day. It never asks for a bank login.
+          It&rsquo;s free on the web, and the app for iPhone, iPad, Mac and Apple Watch is in beta on
+          TestFlight, on its way to the App Store.{' '}
           <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
         </p>
         <p>
@@ -38,8 +39,8 @@ export function AboutPage() {
         <p>
           The studio started with a habit: looking for an app, not loving any of the ones out there, and
           building the one we wanted. Corres began because no email app answered the first question of the
-          morning, which of these need me. Artha began because budgeting apps showed every number except
-          the one that matters, what you can safely spend.
+          morning: which of these need me? Artha began because budgeting apps showed every number except
+          how much you can safely spend.
         </p>
         <p>
           We&rsquo;re independent and self-funded. There are no investors to answer to and no advertisers

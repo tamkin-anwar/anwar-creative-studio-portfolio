@@ -16,6 +16,7 @@ const routes = [
       { label: 'Help with Artha on the web or in the apps', email: links.arthaSupport },
       { label: 'Privacy and your data', email: links.arthaPrivacy },
     ],
+    more: { label: 'Artha support and FAQ', href: 'https://arthaapp.com/support' },
   },
   {
     title: 'Everything else',
@@ -58,10 +59,12 @@ export function ContactPage() {
           </section>
         ))}
 
-        <h2>Try Corres early</h2>
+        <h2>Try the betas</h2>
         <p>
-          Corres is in beta on TestFlight, open to anyone.{' '}
-          <a href={links.corresBeta} target="_blank" rel="noreferrer">Join the beta</a>.
+          Corres and Artha are both in beta on TestFlight, and anyone can join:{' '}
+          <a href={links.corresBeta} target="_blank" rel="noreferrer">the Corres beta</a> and{' '}
+          <a href={links.arthaBeta} target="_blank" rel="noreferrer">the Artha beta</a>. Artha is also free
+          on the web at <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>.
         </p>
         <p>We don&rsquo;t take on client or agency work.</p>
       </div>

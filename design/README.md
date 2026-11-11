@@ -126,9 +126,16 @@ HTML entry so apps fetch the new one.
 The homepage shows why each app is different instead of what it looks like. Code:
 `src/lib/tours.ts`.
 
+Corres and Artha are equal flagships (decided November 11, 2026). The hero introduces the studio in
+one sentence, then shows the two apps as identical cards side by side, Flexibits-style: icon, name,
+tagline, one line, one detail, the same two links, a status line. Neither app owns the hero. Each
+then gets one section built the same way (an intro with the heading and lead on the left, three
+facts and links on the right) and one live four-chapter tour. Corres is shown on the Mac and Artha
+on the iPhone, so between them the page covers both form factors. The closing, the promises, About,
+Now, Contact and Press all name both apps.
+
 - **Corres on Mac**, four chapters: Sort (Needs You fills from the inbox), Ask (a question answered
   from mail), Reply (a draft written in your voice), Private (it all happens on the device).
-- **Corres on iPhone**: a notification arrives and the email lands in Due soon with its reason.
 - **Artha on iPhone**, four chapters: Today (the safe-to-spend number), Assistant (an expense
   proposed, confirmed, added), Plan, Import (a statement reviewed before saving).
 

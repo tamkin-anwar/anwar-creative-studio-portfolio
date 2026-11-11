@@ -16,21 +16,21 @@ export const principles = [
   {
     statement: 'Your data isn’t the product.',
     support:
-      'No ads, no trackers, and nothing sold. We’d rather charge for what we make than make money from what you do in it.',
+      'We don’t show ads, run trackers or sell what you do in our apps. We charge for the apps instead.',
   },
   {
     statement: 'Private where it counts.',
     support:
-      'Corres reads and sorts your mail on your own device, using Apple Intelligence where your device has it, so your mail is never sent to us or to an AI company.',
+      'Corres reads your mail on your own device, so it’s never sent to us or to an AI company. Artha never asks for a bank login, and a statement you import is read once and never kept.',
   },
   {
-    statement: 'Nothing fails silently.',
+    statement: 'Nothing changes behind your back.',
     support:
-      'If something doesn’t go through, you’ll know. An email sent with no signal waits and goes by itself once you’re back online, and Corres checks every summary against the email before you see it.',
+      'Corres checks every summary against the email before you see it, and never sends a reply you haven’t approved. Artha’s assistant suggests changes, and only your tap saves them. If something doesn’t go through, you’ll know.',
   },
   {
     statement: 'Native, down to the details.',
     support:
-      'The Corres and Artha apps are written in SwiftUI, follow your text size and are built for VoiceOver. The everyday parts get the most care.',
+      'Both apps are written in SwiftUI. They follow your text size, keep working without a connection and work with VoiceOver. The everyday parts get the most care.',
   },
 ]
