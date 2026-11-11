@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-11',
+    product: 'Corres',
+    title: 'Rewrites on the Mac, in your own voice',
+    body:
+      'Corres for Mac can now rewrite what you wrote: shorter, warmer, more formal or proofread, on your Mac, from the toolbar or the Format menu. It only touches your own words, never the email you\u2019re answering or your signature, and one Undo takes it back. Shorter and warmer keep how you write, on the iPhone too. In older plain-text emails whose lines were cut at a fixed width, the sentence behind a reason in Needs You now comes back whole, in Japanese and Chinese as well as English. In the beta now.',
+  },
+  {
+    date: '2026-11-11',
     product: 'Artha',
     title: 'A month in review, a debt plan and your subscriptions',
     body:
