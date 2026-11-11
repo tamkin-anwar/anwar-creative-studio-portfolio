@@ -6,7 +6,6 @@ import { ArthaSection } from './components/sections/ArthaSection'
 import { CorresSection } from './components/sections/CorresSection'
 import { Recently } from './components/sections/Recently'
 import { Principles } from './components/sections/Principles'
-import { Workshop } from './components/sections/Workshop'
 import { Closing } from './components/sections/Closing'
 import { Footer } from './components/sections/Footer'
 
@@ -35,7 +34,6 @@ function App() {
         <CorresSection />
         <Recently />
         <Principles />
-        <Workshop />
         <Closing />
       </main>
       <Footer />

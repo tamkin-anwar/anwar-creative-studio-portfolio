@@ -7,7 +7,7 @@
 
 .wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); box-sizing: content-box; }
 
-#corres, #artha, #recently, #workshop, #principles { scroll-margin-top: 84px; }
+#corres, #artha, #recently, #principles { scroll-margin-top: 84px; }
 
 /* header: the lockup and five links; Menu opens the command palette (also ⌘K) */
 

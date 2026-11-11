@@ -10,16 +10,14 @@ const columns = [
     items: [
       { label: 'Artha', href: links.artha },
       { label: 'Corres', href: links.corres },
-      { label: 'Workshop', href: `${BASE}#workshop` },
     ],
   },
   {
     title: 'Company',
     items: [
       { label: 'About', href: `${BASE}about/` },
-      { label: 'Journal', href: `${BASE}journal/` },
+      { label: 'Newsroom', href: `${BASE}journal/` },
       { label: 'Press kit', href: `${BASE}press/` },
-      { label: 'Now', href: `${BASE}now/` },
     ],
   },
   {
@@ -35,7 +33,7 @@ const columns = [
     items: [
       { label: 'Privacy', href: `${BASE}privacy/` },
       { label: 'Terms', href: `${BASE}terms/` },
-      { label: 'Colophon', href: `${BASE}colophon/` },
+      { label: 'About this site', href: `${BASE}colophon/` },
     ],
   },
 ]

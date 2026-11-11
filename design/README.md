@@ -54,7 +54,7 @@ a divider or decoration.
 **"a."** is the a with its gold point, set in Fraunces. Research on studio marks said a second
 logo would compete with the lockup, so "a." isn't a logo. It is the studio's sign-off:
 
-- the end mark of long-form writing: the last line of About and of the Journal intro;
+- the end mark of long-form writing: the last line of About and of the Newsroom;
 - the 404 page, set large above "Looked for it. Didn't find it.";
 - never near the hanging a. It doesn't appear in the header or footer.
 
@@ -132,7 +132,13 @@ tagline, one line, one detail, the same two links, a status line. Neither app ow
 then gets one section built the same way (an intro with the heading and lead on the left, three
 facts and links on the right) and one live four-chapter tour. Artha is shown on the iPhone and Corres
 on the Mac, so between them the page covers both form factors. The closing, the promises, About,
-Now, Contact and Press all name both apps.
+Contact and Press all name both apps.
+
+The site speaks as a company (decided November 11, 2026), modeled on Apple, Google, Meta, Panic and
+Linear: "we" throughout, no first names in links or calls to action, the founder named once under
+Leadership on About (and in the press facts), news under "Newsroom". Personal-site conventions were
+removed: the /now/ page, the side projects on personal GitHub Pages, personal GitHub links and the
+colophon's anecdote. Stay truthful: never imply a team, offices, customers or numbers that don't exist.
 
 - **Artha on iPhone**, four chapters: Today (the safe-to-spend number), Assistant (an expense
   proposed, confirmed, added), Plan, Import (a statement reviewed before saving).

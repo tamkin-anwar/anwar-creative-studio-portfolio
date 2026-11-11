@@ -11,8 +11,9 @@ export function AboutPage() {
           An independent software company.
         </h1>
         <p>
-          Anwar Creative Studio makes apps for iPhone, iPad, Mac and Apple Watch. We make a few apps and plan to
-          look after them for years. We don&rsquo;t take on client work; everything we build is our own.
+          Anwar Creative Studio makes software for iPhone, iPad, Mac, Apple Watch and the web. Our apps open
+          on the answer you came for: what&rsquo;s safe to spend, or which emails need you. We build our own
+          products, support them for the long term, and don&rsquo;t take on client work.
         </p>
 
         <h2>What we make</h2>
@@ -30,10 +31,6 @@ export function AboutPage() {
           on TestFlight, on its way to the App Store.{' '}
           <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
         </p>
-        <p>
-          Smaller things we made along the way live in{' '}
-          <a href={`${import.meta.env.BASE_URL}#workshop`}>the workshop</a>: Tether, Jotfield and Doorsong.
-        </p>
 
         <h2>Why we started</h2>
         <p>
@@ -47,14 +44,13 @@ export function AboutPage() {
           to please, so the apps answer only to the people who use them.
         </p>
 
-        <h2>Who builds it</h2>
+        <h2>Leadership</h2>
         <p>
-          Anwar Creative Studio was founded by Tamkin Anwar, who designs and builds every product, from the
-          first sketch to the code that ships. Write to the studio at{' '}
-          <a href={`mailto:${links.email}`}>{links.email}</a> and Tamkin will read it.&nbsp;<EndMark />
+          Anwar Creative Studio was founded by Tamkin Anwar, who leads the company&rsquo;s product, design and
+          engineering. Everything we ship is designed, built and supported in-house.&nbsp;<EndMark />
         </p>
 
-        <h2>What we hold to</h2>
+        <h2>Our commitments</h2>
         <ul>
           {principles.map((p) => (
             <li key={p.statement}>

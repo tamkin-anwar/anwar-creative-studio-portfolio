@@ -12,7 +12,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolvePath('./index.html'),
-        now: resolvePath('./now/index.html'),
         colophon: resolvePath('./colophon/index.html'),
         about: resolvePath('./about/index.html'),
         contact: resolvePath('./contact/index.html'),

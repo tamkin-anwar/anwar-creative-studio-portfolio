@@ -116,7 +116,7 @@ export function PressPage() {
           <li>Corres screenshots on iPhone, iPad and Mac, made with sample mail</li>
         </ul>
         <p>
-          Recent news is in the <a href={`${BASE}journal/`}>journal</a>.
+          Recent news is in the <a href={`${BASE}journal/`}>Newsroom</a>.
         </p>
       </div>
     </PageShell>

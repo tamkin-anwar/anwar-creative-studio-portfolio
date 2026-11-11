@@ -18,7 +18,7 @@ export function NotFoundPage() {
         </p>
         <p className="close-links">
           <a className="tlink" href={BASE}>Go home →</a>
-          <a className="tlink" href={`${BASE}journal/`}>See what&rsquo;s new →</a>
+          <a className="tlink" href={`${BASE}journal/`}>Read the latest news →</a>
         </p>
       </div>
     </PageShell>

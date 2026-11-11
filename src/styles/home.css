@@ -266,15 +266,10 @@
 
 @media (max-width: 760px) { .principles { grid-template-columns: 1fr; } }
 
-.work { margin-top: 32px; border-top: 1px solid var(--line); }
 
-.work a { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
 
-.work b { font-weight: 500; margin-right: 12px; }
 
-.work span { color: var(--ink-2); }
 
-.work small { color: var(--ink-3); font-size: 14px; }
 
 .close { padding-block: 128px 0; }
 

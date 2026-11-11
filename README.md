@@ -1,6 +1,6 @@
 # Anwar Creative Studio
 
-Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). The company website of Anwar Creative Studio, an independent software company. Artha and Corres are the flagships; Tether, Jotfield and Doorsong sit in "From the workshop".
+Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). The company website of Anwar Creative Studio, an independent software company. Artha and Corres are its two flagship apps, and the site presents the company the way Apple or Panic present theirs: in the company's own voice, with the founder named once, under Leadership on About.
 
 Contact: contact@anwarcreativestudio.com
 
@@ -22,8 +22,8 @@ React 19, TypeScript, Vite and Tailwind CSS v4. Every page is prerendered to HTM
 - `src/components/identity/Lockup.tsx`: the hanging a, the "Anwar." lockup and the "a." end mark.
 - `src/components/devices/Bezels.tsx`: Apple's Product Bezels around the live screens.
 - `src/styles/site.css`: shared design (header, footer, inner pages). `src/styles/home.css`: the homepage only, loaded by `src/main.tsx`. Tokens for light and dark are in `src/styles/theme.css`.
-- `src/content/`: company facts, the journal and links.
-- `src/pages/`: About, Journal, Now, Press, Contact, Colophon, Privacy, Terms and the 404 page.
+- `src/content/`: company facts, the Newsroom entries (`journal.ts`) and links.
+- `src/pages/`: About, Newsroom (at /journal/), Press, Contact, About this site (at /colophon/), Privacy, Terms and the 404 page. /now/ forwards to the Newsroom (`public/now/index.html`).
 - `src/components/CommandPalette.tsx`: the Menu button and ⌘K navigation.
 - `public/og-image.png`: the card shown when a link to the site is shared.
 - `design/`: the design record, every homepage concept and the logo study. Not deployed.

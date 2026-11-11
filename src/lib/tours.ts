@@ -161,7 +161,7 @@ export function startMacTour(root: HTMLElement): Cleanup {
   const maya = root.querySelector<HTMLElement>('[data-maya]')!
   const sofia = root.querySelector<HTMLElement>('[data-sofia]')!
   const Q = 'When is my flight to Lisbon?'
-  const DRAFT = 'Hi Maya,\n\nApproved. This is the one, and thank you for taking the time with it. See you at tomorrow’s review.\n\nBest,\nTamkin'
+  const DRAFT = 'Hi Maya,\n\nApproved. This is the one, and thank you for taking the time with it. See you at tomorrow’s review.\n\nBest,\nSam'
   const t = timers()
   const sel = (which: string) => win.querySelectorAll<HTMLElement>('.sitem').forEach((s) => s.classList.toggle('on', s.dataset.s === which))
   const count = (to: number) => { let n = 0; const step = () => { needN.textContent = String(n); if (n++ < to) t.later(step, 90) }; step() }

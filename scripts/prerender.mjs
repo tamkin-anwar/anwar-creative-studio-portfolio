@@ -8,7 +8,6 @@ const { render } = await import(pathToFileURL(join(root, 'dist-ssr/entry-server.
 
 const pages = {
   'index.html': 'home',
-  'now/index.html': 'now',
   'colophon/index.html': 'colophon',
   '404.html': 'notFound',
   'about/index.html': 'about',

@@ -28,7 +28,7 @@
   top: var(--space-3);
 }
 
-/* cross-document view transitions between / , /now/, and /colophon/:
+/* cross-document view transitions between / and /colophon/:
    pure progressive enhancement, Firefox just ignores the at-rule and
    keeps the current hard-navigation behavior */
 @media (prefers-reduced-motion: no-preference) {

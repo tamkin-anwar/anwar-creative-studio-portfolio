@@ -32,12 +32,7 @@ export function printConsoleEasterEgg() {
     `${bg}${link}${mono}font-size:12px;padding-right:12px;`,
   )
   console.log(
-    `%cWhat's active now  →  %c${site}now/`,
-    `${bg}${ink}${mono}font-size:12px;padding-left:12px;`,
-    `${bg}${link}${mono}font-size:12px;padding-right:12px;`,
-  )
-  console.log(
-    `%cSource             →  %chttps://github.com/tamkin-anwar/anwar-creative-studio-portfolio`,
+    `%cLatest news        →  %c${site}journal/`,
     `${bg}${ink}${mono}font-size:12px;padding-left:12px;`,
     `${bg}${link}${mono}font-size:12px;padding-right:12px;`,
   )

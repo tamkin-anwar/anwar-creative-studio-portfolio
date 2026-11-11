@@ -7,10 +7,10 @@ const format = (iso: string) =>
 
 export function JournalPage() {
   return (
-    <PageShell eyebrow="Journal">
+    <PageShell eyebrow="Newsroom">
       <div className="prose-page flex flex-col gap-[var(--space-3)]">
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
-          What&rsquo;s new at the studio.
+          News from Anwar Creative Studio.
         </h1>
         <p>Releases and milestones from Anwar Creative Studio, newest first.</p>
         <ol className="journal-list">
@@ -33,7 +33,7 @@ export function JournalPage() {
           ))}
         </ol>
         <p>
-          For a running note on what&rsquo;s in progress, see <a href={`${import.meta.env.BASE_URL}now/`}>Now</a>.&nbsp;<EndMark />
+          Logos, screenshots and the fact sheet are in the <a href={`${import.meta.env.BASE_URL}press/`}>press kit</a>.&nbsp;<EndMark />
         </p>
       </div>
     </PageShell>

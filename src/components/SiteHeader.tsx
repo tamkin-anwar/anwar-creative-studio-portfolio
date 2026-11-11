@@ -7,7 +7,7 @@ const nav = [
   { label: 'Artha', href: `${BASE}#artha` },
   { label: 'Corres', href: `${BASE}#corres` },
   { label: 'About', href: `${BASE}about/` },
-  { label: 'Journal', href: `${BASE}journal/` },
+  { label: 'Newsroom', href: `${BASE}journal/` },
   { label: 'Contact', href: `${BASE}contact/` },
 ]
 

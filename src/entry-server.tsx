@@ -1,7 +1,6 @@
 import { StrictMode, type ComponentType } from 'react'
 import { renderToString } from 'react-dom/server'
 import App from './App.tsx'
-import { NowPage } from './pages/NowPage.tsx'
 import { ColophonPage } from './pages/ColophonPage.tsx'
 import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import { AboutPage } from './pages/AboutPage.tsx'
@@ -15,7 +14,6 @@ import { PressPage } from './pages/PressPage.tsx'
 // HTML for search engines and link previews; the browser then hydrates it.
 const pages: Record<string, ComponentType> = {
   home: App,
-  now: NowPage,
   colophon: ColophonPage,
   notFound: NotFoundPage,
   about: AboutPage,
