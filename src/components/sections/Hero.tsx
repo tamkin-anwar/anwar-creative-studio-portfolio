@@ -33,7 +33,7 @@ export function Hero() {
   return (
     <section className="hero">
       <h1><span className="sr-only">Anwar Creative Studio. Looked for it. Didn&rsquo;t love it. Built it.</span><span className="ln" aria-hidden="true"><span>Looked for it.</span></span><span className="ln" aria-hidden="true"><span>Didn&rsquo;t love it.</span></span><span className="ln" aria-hidden="true"><span>Built it<span className="gp">.</span></span></span></h1>
-      <p className="lede">Anwar Creative Studio is an independent software company. We make two apps for iPhone, iPad, Mac and Apple Watch: Corres for your email, and Artha for your money.</p>
+      <p className="lede">Anwar Creative Studio is an independent software company making apps for iPhone, iPad, Mac and Apple Watch. Each one began as an app we wanted and couldn&rsquo;t find.</p>
       <div className="flagships">
         {flagships.map((app) => (
           <article key={app.id} className="flag" aria-labelledby={`flag-${app.id}`}>
