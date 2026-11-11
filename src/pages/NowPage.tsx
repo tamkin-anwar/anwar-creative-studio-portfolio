@@ -24,7 +24,7 @@ export function NowPage() {
           languages and handles about 160 currencies.
         </p>
         <p>
-          Corres is on build 62, and the build we plan to send to the App Store as 1.0 is with testers.
+          Corres is on build 64, and the build we plan to send to the App Store as 1.0 is with testers.
           Gmail, Outlook, iCloud Mail and other IMAP accounts share one inbox that opens on what needs you.
           This month Needs You was checked against thousands of real emails and retuned, and it now reads
           mail in all 29 languages Corres speaks, so a signature request or a bill due comes first whatever

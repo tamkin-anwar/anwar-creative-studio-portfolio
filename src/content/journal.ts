@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-11',
+    product: 'Corres',
+    title: 'Starting on the Mac, and names that read right',
+    body:
+      'Corres for Mac now starts the way the iPhone does: choose your email service, see what Google will show before you sign in, and watch Corres read your newest mail, then see what needs you. Over the first week, one small card a day helps you set it up. Without Pro, Needs You shows how many emails need you and why the first few do. Tap a reason and its sentence is marked in Japanese, Chinese, Korean, Arabic, Hebrew, Bengali and Ukrainian mail too, and mail sent without a name now shows who it\u2019s from, Erie County Water Authority rather than \u201cEcwa\u201d.',
+  },
+  {
+    date: '2026-11-11',
     product: 'Artha',
     title: 'Purchases from your bank\u2019s texts',
     body:
