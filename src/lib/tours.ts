@@ -230,14 +230,14 @@ export function startArthaTour(root: HTMLElement): Cleanup {
   const show = (ch: string, still: boolean) => {
     phone.dataset.ch = ch
     phone.classList.remove('drawn', 'logged', 'typed', 'proposed', 'added', 'filled', 'listed', 'saved')
-    sent.textContent = '$64 a day for 7 days'
+    sent.textContent = '$103 a day for 20 days'
     me.textContent = ''
     if (ch === 'today') {
       showNumber(0)
-      if (still) { phone.classList.add('drawn'); showNumber(448) }
-      else { t.later(() => phone.classList.add('drawn'), 200); t.later(() => showNumber(448), 1050) }
+      if (still) { phone.classList.add('drawn'); showNumber(2070) }
+      else { t.later(() => phone.classList.add('drawn'), 200); t.later(() => showNumber(2070), 1050) }
     } else if (ch === 'assist') {
-      showNumber(448)
+      showNumber(2070)
       if (still) { me.textContent = ME; phone.classList.add('typed', 'proposed', 'added') }
       else t.later(() => {
         phone.classList.add('typed')

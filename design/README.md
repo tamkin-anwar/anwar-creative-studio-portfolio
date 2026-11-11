@@ -151,6 +151,14 @@ Budarina's doors of the world idea), link. Its copy lives at /experiments/doorso
 - **Corres on Mac**, four chapters: Sort (Needs You fills from the inbox), Ask (a question answered
   from mail), Reply (a draft written in your voice), Private (it all happens on the device).
 
+Every clock in the demos and screenshots reads 9:57 (the founder's own easter egg), and every email
+in them arrives before it. The Corres press screenshots are the current App Store ones, also at 9:57.
+
+The Artha figures are a working household's month, sized from the BLS Consumer Expenditure Survey
+for 2024 (average spending $78,535 a year, about $6,545 a month; food at home about $519 a month,
+food away about $330, transportation about $1,110): a $6,500 month, $3,250 of bills, $1,180 of
+everyday spending by November 11, $2,070 safe to spend, $103 a day for 20 days.
+
 Rules: a tour starts when its device scrolls into view, pauses when it leaves, plays once and
 stops. Tabs jump to any chapter; Pause holds it. With Reduce Motion each chapter shows its end
 state. All mail and money in them is sample data with made-up people.

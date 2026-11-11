@@ -316,6 +316,73 @@
 
 @media (max-width: 600px) { .more a { grid-template-columns: 40px minmax(0, 1fr); align-items: start; } .more small { grid-column: 2; } }
 
+/* footnote marks, Apple style: small, linked, never in the way */
+
+.fn { font-size: .62em; line-height: 0; margin-left: 1px; font-variant-numeric: lining-nums; }
+
+.fn a { color: var(--ink-3); text-decoration: none; padding: 0 1px; }
+
+.fn a:hover, .fn a:focus-visible { color: var(--link); }
+
+/* privacy, app by app */
+
+.ptable { width: 100%; border-collapse: collapse; margin-top: 40px; font-size: 15.5px; }
+
+.ptable th, .ptable td { text-align: left; vertical-align: top; padding: 16px 20px 16px 0; border-top: 1px solid var(--line); }
+
+.ptable thead th { border-top: 0; font-family: var(--font-display); font-weight: 400; font-size: 1.35rem; letter-spacing: -0.01em; padding-bottom: 12px; }
+
+.ptable tbody th { width: 22%; font-weight: 500; color: var(--ink); }
+
+.ptable td { width: 39%; color: var(--ink-2); }
+
+@media (max-width: 760px) {
+  .ptable thead { display: none; }
+  .ptable, .ptable tbody, .ptable tr, .ptable th, .ptable td { display: block; width: auto; }
+  .ptable tr { border-top: 1px solid var(--line); padding: 14px 0 6px; }
+  .ptable tbody th, .ptable td { border-top: 0; padding: 0 0 10px; width: auto; }
+  .ptable tbody th { font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; }
+  .ptable td::before { content: attr(data-app); display: block; font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+}
+
+/* questions, per app */
+
+.faq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 56px; margin-top: 40px; }
+
+@media (max-width: 760px) { .faq { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
+
+.faq h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.35rem; letter-spacing: -0.01em; margin: 0 0 8px; }
+
+.faq details { border-top: 1px solid var(--line); }
+
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; font-weight: 500; color: var(--ink); }
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after { content: "+"; color: var(--ink-3); font-weight: 400; transition: transform .2s var(--ease-out); }
+
+.faq details[open] summary::after { transform: rotate(45deg); }
+
+.faq summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 4px; }
+
+.faq details p { margin: 0 0 16px; color: var(--ink-2); max-width: 60ch; }
+
+/* footnotes, above the footer */
+
+.footnotes { margin-top: 96px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 12.5px; line-height: 1.55; color: var(--ink-3); }
+
+.footnotes ol { margin: 0; padding-left: 1.4em; list-style: decimal; display: flex; flex-direction: column; gap: 6px; }
+
+.footnotes li::marker { font-variant-numeric: tabular-nums; }
+
+.footnotes li { padding-left: 4px; max-width: 90ch; }
+
+.footnotes li:target { color: var(--ink); }
+
+.footnotes p { margin: 12px 0 0; max-width: 90ch; }
+
 .close { padding-block: 128px 0; }
 
 .close p { font-family: var(--font-display); font-weight: 350; font-size: clamp(1.6rem, 3.4vw, 2.5rem); letter-spacing: -0.025em; line-height: 1.2; font-variation-settings: "opsz" 96, "SOFT" 40; margin: 0; max-width: 24ch; }

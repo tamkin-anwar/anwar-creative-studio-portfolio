@@ -1,5 +1,6 @@
 import { links } from '../../content/links'
 import { HeroPhones } from './HeroPhones'
+import { Fn } from './Footnotes'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -14,6 +15,7 @@ const flagships = [
     line: 'Budgeting that opens on what’s safe to spend.',
     detail: 'What’s left for the month once the bills still to come are counted, and what that comes to each day, with no bank login.',
     status: 'Apps for iPhone, iPad, Mac and Apple Watch in beta',
+    notes: [1, 2],
     action: { label: 'Open Artha on the web', href: links.artha },
     more: { label: 'Join the beta', href: links.arthaBeta },
   },
@@ -25,6 +27,7 @@ const flagships = [
     line: 'Email that opens on what needs you.',
     detail: 'Gmail, Outlook, iCloud and other accounts in one inbox, with the emails that ask something of you first and the reason each one is there.',
     status: 'Free during the beta, on iPhone, iPad, Mac and Apple Watch',
+    notes: [1, 3],
     action: { label: 'Join the Corres beta', href: links.corresBeta },
     more: { label: 'corres.app', href: links.corres },
   },
@@ -53,7 +56,7 @@ export function Hero() {
               <a className="btn" href={app.action.href}>{app.action.label}</a>
               <a className="tlink" href={`#${app.id}`}>See it work &darr;</a>
             </div>
-            <p className="flag-meta">{app.status} &middot; <a href={app.more.href}>{app.more.label}</a></p>
+            <p className="flag-meta">{app.status}{app.notes.map((n) => <Fn key={n} n={n} />)} &middot; <a href={app.more.href}>{app.more.label}</a></p>
           </article>
         ))}
       </div>

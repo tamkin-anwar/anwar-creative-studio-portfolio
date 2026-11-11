@@ -8,6 +8,9 @@ import { MoreProducts } from './components/sections/MoreProducts'
 import { Recently } from './components/sections/Recently'
 import { Principles } from './components/sections/Principles'
 import { Closing } from './components/sections/Closing'
+import { Privacy } from './components/sections/Privacy'
+import { Faq } from './components/sections/Faq'
+import { Footnotes } from './components/sections/Footnotes'
 import { Footer } from './components/sections/Footer'
 
 function App() {
@@ -36,7 +39,10 @@ function App() {
         <MoreProducts />
         <Recently />
         <Principles />
+        <Privacy />
+        <Faq />
         <Closing />
+        <Footnotes />
       </main>
       <Footer />
     </>

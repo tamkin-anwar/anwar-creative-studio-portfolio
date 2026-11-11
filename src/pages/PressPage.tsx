@@ -104,7 +104,7 @@ export function PressPage() {
         </div>
         <div className="press-shots">
           <img src={`${BASE}press/corres-iphone.jpg`} alt="Corres on iPhone, showing Needs You with sample mail" width={414} height={900} loading="lazy" />
-          <img src={`${BASE}press/corres-mac.jpg`} alt="Corres on Mac, showing a suggested reply with sample mail" width={1400} height={875} loading="lazy" />
+          <img src={`${BASE}press/corres-mac.jpg`} alt="Corres on Mac, showing Needs You and an invitation with sample mail" width={1400} height={875} loading="lazy" />
         </div>
 
         <h2>In the zip</h2>
