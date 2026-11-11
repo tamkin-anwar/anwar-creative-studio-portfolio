@@ -137,8 +137,9 @@ Contact and Press all name both apps.
 The site speaks as a company (decided November 11, 2026), modeled on Apple, Google, Meta, Panic and
 Linear: "we" throughout, no first names in links or calls to action, the founder named once under
 Leadership on About (and in the press facts), news under "Newsroom". Personal-site conventions were
-removed: the /now/ page, the side projects on personal GitHub Pages, personal GitHub links and the
-colophon's anecdote. Stay truthful: never imply a team, offices, customers or numbers that don't exist.
+removed: the /now/ page, personal GitHub links and the colophon's anecdote. Every shipped product is
+listed, the way Panic and Rogue Amoeba list theirs: Tether (Chrome Web Store) sits under "Also from
+Anwar Creative Studio" after the two flagships. Jotfield and Doorsong stay off until they're ready. Stay truthful: never imply a team, offices, customers or numbers that don't exist.
 
 - **Artha on iPhone**, four chapters: Today (the safe-to-spend number), Assistant (an expense
   proposed, confirmed, added), Plan, Import (a statement reviewed before saving).

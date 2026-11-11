@@ -32,6 +32,12 @@ export function AboutPage() {
           <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
         </p>
 
+        <p>
+          We also make <strong>Tether</strong>, a Chrome extension for watching shows and movies in sync with
+          someone far away.{' '}
+          <a href={links.tether} target="_blank" rel="noreferrer">Chrome Web Store</a>
+        </p>
+
         <h2>Why we started</h2>
         <p>
           The studio started with a habit: looking for an app, not loving any of the ones out there, and

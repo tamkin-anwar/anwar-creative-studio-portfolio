@@ -6,10 +6,11 @@ const BASE = import.meta.env.BASE_URL
 
 const columns = [
   {
-    title: 'Apps',
+    title: 'Products',
     items: [
       { label: 'Artha', href: links.artha },
       { label: 'Corres', href: links.corres },
+      { label: 'Tether', href: links.tether },
     ],
   },
   {

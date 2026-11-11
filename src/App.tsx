@@ -4,6 +4,7 @@ import { SiteHeader } from './components/SiteHeader'
 import { Hero } from './components/sections/Hero'
 import { ArthaSection } from './components/sections/ArthaSection'
 import { CorresSection } from './components/sections/CorresSection'
+import { MoreProducts } from './components/sections/MoreProducts'
 import { Recently } from './components/sections/Recently'
 import { Principles } from './components/sections/Principles'
 import { Closing } from './components/sections/Closing'
@@ -32,6 +33,7 @@ function App() {
         <Hero />
         <ArthaSection />
         <CorresSection />
+        <MoreProducts />
         <Recently />
         <Principles />
         <Closing />
