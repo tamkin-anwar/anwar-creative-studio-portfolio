@@ -56,7 +56,7 @@ export function Hero() {
               <a className="btn" href={app.action.href}>{app.action.label}</a>
               <a className="tlink" href={`#${app.id}`}>See it work &darr;</a>
             </div>
-            <p className="flag-meta">{app.status}{app.notes.map((n) => <Fn key={n} n={n} />)} &middot; <a href={app.more.href}>{app.more.label}</a></p>
+            <p className="flag-meta">{app.status}<Fn n={app.notes} /> &middot; <a href={app.more.href}>{app.more.label}</a></p>
           </article>
         ))}
       </div>

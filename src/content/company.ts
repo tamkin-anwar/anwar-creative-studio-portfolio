@@ -16,7 +16,7 @@ export const principles = [
   {
     statement: 'Your data isn’t the product.',
     support:
-      'We don’t show ads, run trackers or sell what you do in our apps. We charge for the apps instead.',
+      'We don’t show ads, run trackers or sell what you do in our apps. They’re paid for by the people who use them, through Artha Pro and Corres Pro.',
   },
   {
     statement: 'Private where it counts.',

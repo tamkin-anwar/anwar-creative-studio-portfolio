@@ -80,7 +80,8 @@ export function PressPage() {
             for the rest of the month, with the bills still to come already counted. Free on the web, with an app for iPhone, iPad, Mac
             and Apple Watch in beta on TestFlight, on one account. It speaks 18 languages and handles about 160
             currencies, with no bank login, ads or tracking. Safe to spend is free; Artha Pro adds the assistant, receipts and scans read for you, scenarios
-            and longer reports, at $9.99 a month or $79.99 a year, after a one-month free trial.{' '}
+            and longer reports, at $9.99 a month or $79.99 a year after a one-month free trial, once it goes on sale.
+            Until then everyone in the beta has Pro free.{' '}
             <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
           </p>
         </div>
@@ -97,7 +98,7 @@ export function PressPage() {
             <strong>Email, considered.</strong> Corres opens on the emails that ask something of you, with the
             reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
             iPhone, iPad, Mac and Apple Watch, in 29 languages. It reads and sorts mail on the device, and
-            summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight. Mail is free; Corres Pro adds Needs You, Waiting,
+            summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight, where Pro is free. Mail is free; Corres Pro adds Needs You, Waiting,
             answers in Search, summaries and suggested replies, at $14.99 a month or $149.99 a year, after a two-week free trial.{' '}
             <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
           </p>

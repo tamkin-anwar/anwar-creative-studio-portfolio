@@ -8,10 +8,15 @@ const notes = [
   'Until Google finishes reviewing Corres, Gmail works in the beta only for addresses added to Google’s test list, and Google asks testers to sign in again every seven days. Outlook, iCloud and other email work right away.',
 ]
 
-export function Fn({ n }: { n: number }) {
+// One mark per qualifier; several notes on one word are listed as 1, 2
+// so they never read as a single number.
+export function Fn({ n }: { n: number | number[] }) {
+  const ns = Array.isArray(n) ? n : [n]
   return (
     <sup className="fn">
-      <a href={`#fn-${n}`} aria-label={`Footnote ${n}`}>{n}</a>
+      {ns.map((k, i) => (
+        <span key={k}>{i > 0 ? ', ' : ''}<a href={`#fn-${k}`} aria-label={`Footnote ${k}`}>{k}</a></span>
+      ))}
     </sup>
   )
 }
