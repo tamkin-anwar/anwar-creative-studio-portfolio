@@ -11,6 +11,7 @@ const columns = [
       { label: 'Artha', href: links.artha },
       { label: 'Corres', href: links.corres },
       { label: 'Tether', href: links.tether },
+      { label: 'Experiments', href: `${BASE}experiments/` },
     ],
   },
   {

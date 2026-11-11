@@ -37,6 +37,10 @@ export function AboutPage() {
           someone far away.{' '}
           <a href={links.tether} target="_blank" rel="noreferrer">Chrome Web Store</a>
         </p>
+        <p>
+          Smaller pieces we make to try out an idea, like Doorsong, are on the{' '}
+          <a href={`${import.meta.env.BASE_URL}experiments/`}>Experiments</a> page.
+        </p>
 
         <h2>Why we started</h2>
         <p>

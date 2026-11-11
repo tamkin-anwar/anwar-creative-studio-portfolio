@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 680" role="img">
+<title>Doorsong</title>
+<desc>A single flowing gradient stroke, indigo into coral, filling the frame edge to edge with no background.</desc>
+<defs>
+<linearGradient id="stroke" x1="10%" y1="90%" x2="90%" y2="10%">
+<stop offset="0%" stop-color="#372a6e"/>
+<stop offset="55%" stop-color="#9c3f6e"/>
+<stop offset="100%" stop-color="#f2703f"/>
+</linearGradient>
+<filter id="lift" x="-60%" y="-60%" width="220%" height="220%">
+<feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#1a1030" flood-opacity="0.35"/>
+</filter>
+</defs>
+<path d="M 51 561 C 187 561, 187 340, 340 340 C 493 340, 493 119, 629 119" fill="none" stroke="url(#stroke)" stroke-width="92" stroke-linecap="round" filter="url(#lift)"/>
+</svg>

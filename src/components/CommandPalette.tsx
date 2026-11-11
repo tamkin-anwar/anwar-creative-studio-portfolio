@@ -17,6 +17,7 @@ const ITEMS: Item[] = [
   { group: 'Products', label: 'Artha', description: 'Know what’s safe to spend. On the web, and in beta on iPhone, iPad, Mac and Apple Watch.', href: links.artha, external: true },
   { group: 'Products', label: 'Corres', description: 'Email, considered. In beta on iPhone, iPad, Mac and Apple Watch.', href: links.corres, external: true },
   { group: 'Products', label: 'Tether', description: 'Watch shows and movies in sync with someone far away. A Chrome extension.', href: links.tether, external: true },
+  { group: 'Products', label: 'Experiments', description: 'Small pieces made to try out an idea, like Doorsong', href: `${BASE}experiments/` },
   { group: 'Company', label: 'Home', href: BASE },
   { group: 'Company', label: 'About', href: `${BASE}about/` },
   { group: 'Company', label: 'Newsroom', description: 'Releases and announcements', href: `${BASE}journal/` },

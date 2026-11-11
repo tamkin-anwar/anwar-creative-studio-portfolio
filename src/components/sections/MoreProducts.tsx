@@ -31,6 +31,7 @@ export function MoreProducts() {
           </a>
         ))}
       </div>
+      <a className="tlink more-link" href={`${BASE}experiments/`}>Experiments →</a>
     </section>
   )
 }

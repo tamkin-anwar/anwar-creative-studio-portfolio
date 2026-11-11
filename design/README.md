@@ -139,7 +139,9 @@ Linear: "we" throughout, no first names in links or calls to action, the founder
 Leadership on About (and in the press facts), news under "Newsroom". Personal-site conventions were
 removed: the /now/ page, personal GitHub links and the colophon's anecdote. Every shipped product is
 listed, the way Panic and Rogue Amoeba list theirs: Tether (Chrome Web Store) sits under "Also from
-Anwar Creative Studio" after the two flagships. Jotfield and Doorsong stay off until they're ready. Stay truthful: never imply a team, offices, customers or numbers that don't exist.
+Anwar Creative Studio" after the two flagships. Jotfield stays off until it's ready. Doorsong is on its own Experiments page (/experiments/), kept
+apart from the products the way "Experiments with Google" is: title, kind, one line, credit (Marina
+Budarina's doors of the world idea), link. Its copy lives at /experiments/doorsong/. Stay truthful: never imply a team, offices, customers or numbers that don't exist.
 
 - **Artha on iPhone**, four chapters: Today (the safe-to-spend number), Assistant (an expense
   proposed, confirmed, added), Plan, Import (a statement reviewed before saving).

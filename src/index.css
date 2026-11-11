@@ -137,6 +137,9 @@ a {
 .press-product { display: flex; gap: var(--space-3); align-items: flex-start; }
 .press-product img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
 .press-shots { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: var(--space-2); align-items: start; }
+.experiment { display: flex; flex-direction: column; gap: 6px; padding: var(--space-3) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.experiment-shot img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); margin-bottom: var(--space-1); }
+.experiment-credit, .experiment-note { color: var(--ink-faint); font-size: var(--text-caption); }
 .press-shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
 .press-shots.bare { align-items: end; }
 .press-shots.bare img { border: 0; border-radius: 0; }

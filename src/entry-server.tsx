@@ -9,6 +9,7 @@ import { PrivacyPage } from './pages/PrivacyPage.tsx'
 import { TermsPage } from './pages/TermsPage.tsx'
 import { JournalPage } from './pages/JournalPage.tsx'
 import { PressPage } from './pages/PressPage.tsx'
+import { ExperimentsPage } from './pages/ExperimentsPage.tsx'
 
 // Used only at build time (scripts/prerender.mjs) so every page ships real
 // HTML for search engines and link previews; the browser then hydrates it.
@@ -22,6 +23,7 @@ const pages: Record<string, ComponentType> = {
   terms: TermsPage,
   journal: JournalPage,
   press: PressPage,
+  experiments: ExperimentsPage,
 }
 
 export function render(page: string) {

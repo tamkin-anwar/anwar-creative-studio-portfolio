@@ -7,6 +7,7 @@ import { PrivacyPage } from './pages/PrivacyPage.tsx'
 import { TermsPage } from './pages/TermsPage.tsx'
 import { JournalPage } from './pages/JournalPage.tsx'
 import { PressPage } from './pages/PressPage.tsx'
+import { ExperimentsPage } from './pages/ExperimentsPage.tsx'
 
 // One entry for the plain company pages; each HTML file names its page.
 const pages: Record<string, ComponentType> = {
@@ -16,6 +17,7 @@ const pages: Record<string, ComponentType> = {
   terms: TermsPage,
   journal: JournalPage,
   press: PressPage,
+  experiments: ExperimentsPage,
 }
 
 const root = document.getElementById('root')!

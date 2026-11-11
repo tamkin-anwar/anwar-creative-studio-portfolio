@@ -9,7 +9,7 @@ export function PrivacyPage() {
         <h1 className="leading-[1.1]" style={{ fontSize: 'var(--text-display)' }}>
           Privacy on this website.
         </h1>
-        <p className="font-mono" style={{ fontSize: 'var(--text-label)' }}>Effective November 1, 2026</p>
+        <p className="font-mono" style={{ fontSize: 'var(--text-label)' }}>Effective November 11, 2026</p>
         <p>
           This policy covers anwarcreativestudio.com, run by {company.legalName}, {company.entity} (&ldquo;we&rdquo;). Our
           apps have their own policies, linked at the end, which apply when you use them.
@@ -20,7 +20,7 @@ export function PrivacyPage() {
           Nothing that identifies you. There are no cookies, no advertising and no tracking across sites.
           To count visits, we use Cloudflare Web Analytics, which doesn&rsquo;t use cookies or fingerprinting
           and doesn&rsquo;t track individual visitors; it tells us totals such as page views, pages visited
-          and countries. Fonts and images are served from this site itself.
+          and countries. Fonts and images are served from this site itself, with one exception: the Doorsong experiment loads its fonts from Google Fonts, so Google receives your IP address when you open it.
         </p>
         <p>
           The site is hosted on GitHub Pages. Like any web host, GitHub receives technical information

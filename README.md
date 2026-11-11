@@ -23,7 +23,7 @@ React 19, TypeScript, Vite and Tailwind CSS v4. Every page is prerendered to HTM
 - `src/components/devices/Bezels.tsx`: Apple's Product Bezels around the live screens.
 - `src/styles/site.css`: shared design (header, footer, inner pages). `src/styles/home.css`: the homepage only, loaded by `src/main.tsx`. Tokens for light and dark are in `src/styles/theme.css`.
 - `src/content/`: company facts, the Newsroom entries (`journal.ts`) and links.
-- `src/pages/`: About, Newsroom (at /journal/), Press, Contact, About this site (at /colophon/), Privacy, Terms and the 404 page. /now/ forwards to the Newsroom (`public/now/index.html`).
+- `src/pages/`: About, Newsroom (at /journal/), Press, Contact, About this site (at /colophon/), Privacy, Terms and the 404 page. /now/ forwards to the Newsroom (`public/now/index.html`). Experiments (`src/pages/ExperimentsPage.tsx`) lists small pieces that aren't products; Doorsong's hosted copy is `public/experiments/doorsong/` (from the Doorsong repo, with no em dashes, company links and its own preview image).
 - `src/components/CommandPalette.tsx`: the Menu button and ⌘K navigation.
 - `public/og-image.png`: the card shown when a link to the site is shared.
 - `design/`: the design record, every homepage concept and the logo study. Not deployed.

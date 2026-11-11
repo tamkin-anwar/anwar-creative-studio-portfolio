@@ -16,6 +16,7 @@ const pages = {
   'terms/index.html': 'terms',
   'journal/index.html': 'journal',
   'press/index.html': 'press',
+  'experiments/index.html': 'experiments',
 }
 
 for (const [file, page] of Object.entries(pages)) {

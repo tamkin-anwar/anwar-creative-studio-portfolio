@@ -19,6 +19,7 @@ export default defineConfig({
         terms: resolvePath('./terms/index.html'),
         journal: resolvePath('./journal/index.html'),
         press: resolvePath('./press/index.html'),
+        experiments: resolvePath('./experiments/index.html'),
         notFound: resolvePath('./404.html'),
       },
     },
