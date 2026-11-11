@@ -126,7 +126,10 @@ HTML entry so apps fetch the new one.
 The homepage shows why each app is different instead of what it looks like. Code:
 `src/lib/tours.ts`.
 
-Artha and Corres are equal flagships (decided November 11, 2026), always in that order: Artha came first. The hero introduces the studio in
+Artha and Corres are equal flagships (decided November 11, 2026), always in that order: Artha came first. The hero shows both apps beside the headline (November 11, 2026): two iPhones in Apple's bezel,
+Artha then Corres, each on the screen it opens on (safe to spend, Needs You). They are still pictures,
+never tilted or animated, laid out at 300 pt and scaled with `zoom` per breakpoint
+(`src/components/sections/HeroPhones.tsx`). The hero introduces the studio in
 one sentence, then shows the two apps as identical cards side by side, Flexibits-style: icon, name,
 tagline, one line, one detail, the same two links, a status line. Neither app owns the hero. Each
 then gets one section built the same way (an intro with the heading and lead on the left, three

@@ -22,6 +22,31 @@
 
 .hero p.lede { font-size: 1.22rem; line-height: 1.5; color: var(--ink-2); max-width: 34rem; margin: 30px 0 0; animation: fade .8s .35s var(--ease-out) both; }
 
+/* the hero's two phones, Artha then Corres, each on the screen it opens on */
+
+.hero-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px 56px; align-items: center; }
+
+.hero-phones { display: flex; gap: 28px; align-items: flex-start; zoom: .86; }
+
+.hero-phones > .dev:nth-child(2) { margin-top: 64px; }
+
+.hero-aview { display: flex; flex-direction: column; gap: 10px; }
+
+@media (max-width: 1240px) { .hero-phones { zoom: .74; } }
+
+@media (max-width: 1060px) { .hero-phones { zoom: .64; } }
+
+@media (max-width: 920px) {
+  .hero-top { grid-template-columns: minmax(0, 1fr); }
+  .hero-phones { justify-content: center; zoom: .7; gap: 20px; }
+}
+
+@media (max-width: 560px) { .hero-phones { zoom: .54; } }
+
+@media (max-width: 400px) { .hero-phones { zoom: .5; } }
+
+@media (max-width: 350px) { .hero-phones { zoom: .43; } }
+
 /* the two flagships, as equals: same card, same parts, same order */
 
 .flagships { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 52px; animation: fade .8s .45s var(--ease-out) both; }
@@ -597,6 +622,55 @@
   .chapters { flex-direction: column; gap: 18px; }
   .ch-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 }
+
+/* Corres on iPhone in the hero, laid out in points */
+
+.cphone { background: var(--c-bg); color: var(--c-ink); font-family: var(--font-app); padding: calc(58 * var(--pt)) calc(16 * var(--pt)) 0; display: flex; flex-direction: column; gap: calc(6 * var(--pt)); --sbar-ink: var(--c-ink); --home-ink: var(--c-ink); }
+
+.cphone svg { display: block; }
+
+.cp-top { display: flex; align-items: center; gap: calc(8 * var(--pt)); margin-top: calc(4 * var(--pt)); }
+
+.cp-btn { width: calc(40 * var(--pt)); height: calc(40 * var(--pt)); border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--c-ink) 7%, transparent); }
+
+.cp-btn svg { width: calc(20 * var(--pt)); }
+
+.cp-pill { height: calc(40 * var(--pt)); padding: 0 calc(16 * var(--pt)); border-radius: 999px; display: grid; place-items: center; background: color-mix(in srgb, var(--c-ink) 7%, transparent); font-size: calc(15 * var(--pt)); font-weight: 500; }
+
+.cp-av { width: calc(34 * var(--pt)); height: calc(34 * var(--pt)); border-radius: 50%; background: linear-gradient(135deg, #8fb4e8, #2f5d9e); }
+
+.cp-title { font-family: var(--font-app-serif); font-size: calc(34 * var(--pt)); font-weight: 500; line-height: 1.1; margin-top: calc(10 * var(--pt)); letter-spacing: -0.01em; }
+
+.cp-sub { font-size: calc(13 * var(--pt)); color: var(--c-sec); margin-top: calc(-4 * var(--pt)); }
+
+.cp-tabs { display: flex; gap: calc(16 * var(--pt)); font-size: calc(14 * var(--pt)); color: var(--c-sec); border-bottom: 1px solid var(--c-line); padding: calc(6 * var(--pt)) 0 calc(8 * var(--pt)); white-space: nowrap; overflow: hidden; }
+
+.cp-tabs b { color: var(--c-ink); font-weight: 600; box-shadow: 0 calc(9 * var(--pt)) 0 calc(-7 * var(--pt)) var(--c-ink); }
+
+.cp-wait { display: flex; justify-content: space-between; font-size: calc(13 * var(--pt)); color: var(--c-sec); border: 1px solid var(--c-line); border-radius: calc(12 * var(--pt)); padding: calc(9 * var(--pt)) calc(12 * var(--pt)); margin-top: calc(4 * var(--pt)); }
+
+.cp-wait b { color: var(--c-ink); font-weight: 500; }
+
+.cp-g { font-size: calc(11 * var(--pt)); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--c-ter); margin-top: calc(8 * var(--pt)); }
+
+.cp-row { display: grid; grid-template-columns: calc(34 * var(--pt)) minmax(0, 1fr); gap: calc(10 * var(--pt)); padding: calc(6 * var(--pt)) 0; font-size: calc(14 * var(--pt)); line-height: 1.3; }
+
+.cp-row .av { width: calc(34 * var(--pt)); height: calc(34 * var(--pt)); border-radius: 50%; display: grid; place-items: center; font-size: calc(12 * var(--pt)); font-weight: 600; background: var(--c-side); color: var(--c-sec); border: 1px solid var(--c-line); }
+
+.cp-row .t { display: flex; justify-content: space-between; }
+
+.cp-row .t span { color: var(--c-ter); font-size: calc(12 * var(--pt)); }
+
+.cp-row .s, .cp-row .w { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.cp-row .w { color: var(--c-accent); font-size: calc(13 * var(--pt)); }
+
+
+
+
+.cp-search { position: absolute; left: calc(16 * var(--pt)); right: calc(16 * var(--pt)); bottom: calc(30 * var(--pt)); height: calc(48 * var(--pt)); border-radius: 999px; display: flex; align-items: center; gap: calc(8 * var(--pt)); padding: 0 calc(16 * var(--pt)); font-size: calc(15 * var(--pt)); color: var(--c-ter); background: color-mix(in srgb, var(--c-surface) 82%, transparent); backdrop-filter: blur(18px); box-shadow: 0 0 0 .5px var(--c-line), 0 calc(8 * var(--pt)) calc(24 * var(--pt)) rgba(0,0,0,.12); }
+
+.cp-search svg { width: calc(18 * var(--pt)); }
 
 /* Artha inside a real iPhone */
 

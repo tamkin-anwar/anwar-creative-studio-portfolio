@@ -1,4 +1,5 @@
 import { links } from '../../content/links'
+import { HeroPhones } from './HeroPhones'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -12,9 +13,9 @@ const flagships = [
     icon: `${BASE}press/artha-icon.webp`,
     line: 'Budgeting that opens on what’s safe to spend.',
     detail: 'What’s left for the month once the bills still to come are counted, and what that comes to each day, with no bank login.',
-    status: 'Free on the web, with the apps in beta on TestFlight',
-    beta: links.arthaBeta,
-    site: { label: 'arthaapp.com', href: links.artha },
+    status: 'Apps for iPhone, iPad, Mac and Apple Watch in beta',
+    action: { label: 'Open Artha on the web', href: links.artha },
+    more: { label: 'Join the beta', href: links.arthaBeta },
   },
   {
     id: 'corres',
@@ -23,17 +24,22 @@ const flagships = [
     icon: `${BASE}press/corres-icon.webp`,
     line: 'Email that opens on what needs you.',
     detail: 'Gmail, Outlook, iCloud and other accounts in one inbox, with the emails that ask something of you first and the reason each one is there.',
-    status: 'In beta on TestFlight, free during the beta',
-    beta: links.corresBeta,
-    site: { label: 'corres.app', href: links.corres },
+    status: 'Free during the beta, on iPhone, iPad, Mac and Apple Watch',
+    action: { label: 'Join the Corres beta', href: links.corresBeta },
+    more: { label: 'corres.app', href: links.corres },
   },
 ]
 
 export function Hero() {
   return (
     <section className="hero">
+      <div className="hero-top">
+      <div>
       <h1><span className="sr-only">Anwar Creative Studio. Looked for it. Didn&rsquo;t love it. Built it.</span><span className="ln" aria-hidden="true"><span>Looked for it.</span></span><span className="ln" aria-hidden="true"><span>Didn&rsquo;t love it.</span></span><span className="ln" aria-hidden="true"><span>Built it<span className="gp">.</span></span></span></h1>
       <p className="lede">Anwar Creative Studio is an independent software company making apps for iPhone, iPad, Mac and Apple Watch. Each one began as an app we wanted and couldn&rsquo;t find.</p>
+      </div>
+      <HeroPhones />
+      </div>
       <div className="flagships">
         {flagships.map((app) => (
           <article key={app.id} className="flag" aria-labelledby={`flag-${app.id}`}>
@@ -44,10 +50,10 @@ export function Hero() {
             <p className="flag-q">{app.line}</p>
             <p className="flag-a">{app.detail}</p>
             <div className="flag-links">
-              <a className="btn" href={app.beta}>Join the {app.name} beta</a>
+              <a className="btn" href={app.action.href}>{app.action.label}</a>
               <a className="tlink" href={`#${app.id}`}>See it work &darr;</a>
             </div>
-            <p className="flag-meta">{app.status} &middot; <a href={app.site.href}>{app.site.label}</a></p>
+            <p className="flag-meta">{app.status} &middot; <a href={app.more.href}>{app.more.label}</a></p>
           </article>
         ))}
       </div>

@@ -157,3 +157,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
 }
+
+/* typographic details, after Vercel, iA and Linear: no one-word last lines,
+   punctuation hung in the margin where Safari supports it, and figures that
+   line up in tables of dates and prices */
+p, li, dd { text-wrap: pretty; }
+
+h1, h2, h3 { text-wrap: balance; }
+
+@supports (hanging-punctuation: first) {
+  .prose-page p, .hero .lede, .close p { hanging-punctuation: first; }
+}
+
+time, .journal-meta { font-variant-numeric: tabular-nums; }
