@@ -11,14 +11,14 @@ export function AboutPage() {
           An independent software company.
         </h1>
         <p>
-          Anwar Creative Studio makes apps for iPhone, iPad, Mac and Apple Watch. We make a few apps and keep
-          working on them for years. We don&rsquo;t take on client work; everything we build is our own.
+          Anwar Creative Studio makes apps for iPhone, iPad, Mac and Apple Watch. We make a few apps and plan to
+          look after them for years. We don&rsquo;t take on client work; everything we build is our own.
         </p>
 
         <h2>What we make</h2>
         <p>
           <strong>Artha</strong> opens on what&rsquo;s safe to spend: what&rsquo;s left for the month once the
-          bills still to come are counted, and what that comes to each day. It never asks for a bank login.
+          bills still to come are counted, and what that comes to each day. It never asks for a bank login, and it speaks 18 languages.
           It&rsquo;s free on the web, and the app for iPhone, iPad, Mac and Apple Watch is in beta on
           TestFlight, on its way to the App Store.{' '}
           <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>

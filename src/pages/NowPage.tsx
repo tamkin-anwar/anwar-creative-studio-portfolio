@@ -19,8 +19,9 @@ export function NowPage() {
           Artha&rsquo;s app for iPhone, iPad, Mac and Apple Watch shares one account with the website,
           which anyone can use for free today. Getting started now takes about a minute: three questions, or up to three bank
           statements, and you see what&rsquo;s safe to spend, still with no bank login. On iOS 27 it hands you
-          a ready-made shortcut that logs every Apple Pay purchase, it works without a connection, and it
-          handles any of about 160 currencies.
+          a ready-made shortcut that logs every Apple Pay purchase, and the beta can now log purchases from
+          your bank&rsquo;s texts too, with bank alert emails next. It works without a connection, speaks 18
+          languages and handles about 160 currencies.
         </p>
         <p>
           Corres is on build 62, and the build we plan to send to the App Store as 1.0 is with testers.

@@ -78,8 +78,8 @@ export function PressPage() {
           <p>
             <strong>Know what&rsquo;s safe to spend.</strong> Artha opens on one number: what&rsquo;s safe to spend
             for the rest of the month, with the bills still to come already counted. Free on the web, with an app for iPhone, iPad, Mac
-            and Apple Watch in beta on TestFlight, on one account. No bank login, no ads, no tracking, and about 160
-            currencies. Safe to spend is free; Artha Pro adds the assistant, receipts and scans read for you, scenarios
+            and Apple Watch in beta on TestFlight, on one account. It speaks 18 languages and handles about 160
+            currencies, with no bank login, ads or tracking. Safe to spend is free; Artha Pro adds the assistant, receipts and scans read for you, scenarios
             and longer reports, at $9.99 a month or $79.99 a year, after a one-month free trial.{' '}
             <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
           </p>

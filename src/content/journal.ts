@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-11',
+    product: 'Artha',
+    title: 'Purchases from your bank\u2019s texts',
+    body:
+      'Artha can now log a purchase from the text your bank sends, with no bank login and no service in between. A Shortcuts automation hands each text to Artha, and your iPhone checks it first, so anything that isn\u2019t a bank alert never leaves the phone. One shared shortcut works for any bank, including the banks in Bangladesh and India that text every card purchase, and only the purchase is saved, never the message. Logging from bank alert emails is coming next. Stopping a bill in Plan now clears its upcoming copies, renaming one keeps it a single bill, and when Artha asks to use AI it now says Allow or Don\u2019t Allow and names Anthropic\u2019s Claude. In the beta now.',
+  },
+  {
+    date: '2026-11-11',
     product: 'Corres',
     title: 'Needs You in every language',
     body:
