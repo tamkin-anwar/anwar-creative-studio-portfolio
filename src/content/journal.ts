@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-11',
+    product: 'Corres',
+    title: 'Needs You in every language',
+    body:
+      'The sharper Needs You now reads mail in all 29 languages Corres speaks, so a signature request, a failed payment or a bill due comes first whichever language it\u2019s written in, and codes and support replies stay out. Pinned mail on the Mac now sits in its own section that folds away, and a crash some testers saw on opening Corres is fixed.',
+  },
+  {
     date: '2026-11-10',
     product: 'Artha',
     title: 'Apple Pay logging in a few taps',
