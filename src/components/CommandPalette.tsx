@@ -14,8 +14,8 @@ type Item = {
 }
 
 const ITEMS: Item[] = [
-  { group: 'Products', label: 'Corres', description: 'Email, considered. In beta on iPhone, iPad, Mac and Apple Watch.', href: links.corres, external: true },
   { group: 'Products', label: 'Artha', description: 'Know what’s safe to spend. On the web, and in beta on iPhone, iPad, Mac and Apple Watch.', href: links.artha, external: true },
+  { group: 'Products', label: 'Corres', description: 'Email, considered. In beta on iPhone, iPad, Mac and Apple Watch.', href: links.corres, external: true },
   { group: 'Company', label: 'Home', href: BASE },
   { group: 'Company', label: 'About', href: `${BASE}about/` },
   { group: 'Company', label: 'Journal', description: 'Releases and milestones', href: `${BASE}journal/` },
@@ -25,8 +25,8 @@ const ITEMS: Item[] = [
   { group: 'Company', label: 'Colophon', description: 'How this site is built', href: `${BASE}colophon/` },
   { group: 'Company', label: 'Privacy', href: `${BASE}privacy/` },
   { group: 'Company', label: 'Terms', href: `${BASE}terms/` },
-  { group: 'Jump to', label: 'Corres, the tour', description: 'Corres on the Mac', href: `${BASE}#corres` },
   { group: 'Jump to', label: 'Artha, the tour', description: 'Artha on the iPhone', href: `${BASE}#artha` },
+  { group: 'Jump to', label: 'Corres, the tour', description: 'Corres on the Mac', href: `${BASE}#corres` },
   { group: 'Jump to', label: 'Recently', href: `${BASE}#recently` },
   { group: 'Jump to', label: 'Principles', href: `${BASE}#principles` },
   { group: 'Jump to', label: 'From the workshop', href: `${BASE}#workshop` },

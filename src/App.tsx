@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import { CommandPalette } from './components/CommandPalette'
 import { SiteHeader } from './components/SiteHeader'
 import { Hero } from './components/sections/Hero'
-import { CorresSection } from './components/sections/CorresSection'
 import { ArthaSection } from './components/sections/ArthaSection'
+import { CorresSection } from './components/sections/CorresSection'
 import { Recently } from './components/sections/Recently'
 import { Principles } from './components/sections/Principles'
 import { Workshop } from './components/sections/Workshop'
@@ -31,8 +31,8 @@ function App() {
       <CommandPalette />
       <main id="main-content" className="wrap">
         <Hero />
-        <CorresSection />
         <ArthaSection />
+        <CorresSection />
         <Recently />
         <Principles />
         <Workshop />

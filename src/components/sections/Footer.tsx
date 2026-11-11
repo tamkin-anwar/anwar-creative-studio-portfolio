@@ -8,8 +8,8 @@ const columns = [
   {
     title: 'Apps',
     items: [
-      { label: 'Corres', href: links.corres },
       { label: 'Artha', href: links.artha },
+      { label: 'Corres', href: links.corres },
       { label: 'Workshop', href: `${BASE}#workshop` },
     ],
   },
@@ -25,8 +25,8 @@ const columns = [
   {
     title: 'Support',
     items: [
+      { label: 'Artha', href: 'https://arthaapp.com/support' },
       { label: 'Corres', href: 'https://corres.app/support/' },
-      { label: 'Artha', href: `mailto:${links.arthaSupport}` },
       { label: 'Contact', href: `${BASE}contact/` },
     ],
   },

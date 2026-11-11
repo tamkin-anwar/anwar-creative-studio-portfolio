@@ -6,17 +6,6 @@ const BASE = import.meta.env.BASE_URL
 // same parts in the same order. The sections below show each one working.
 const flagships = [
   {
-    id: 'corres',
-    name: 'Corres',
-    tagline: 'Email, considered.',
-    icon: `${BASE}press/corres-icon.webp`,
-    line: 'Email that opens on what needs you.',
-    detail: 'Gmail, Outlook, iCloud and other accounts in one inbox, with the emails that ask something of you first and the reason each one is there.',
-    status: 'In beta on TestFlight, free during the beta',
-    beta: links.corresBeta,
-    site: { label: 'corres.app', href: links.corres },
-  },
-  {
     id: 'artha',
     name: 'Artha',
     tagline: 'Know what’s safe to spend.',
@@ -26,6 +15,17 @@ const flagships = [
     status: 'Free on the web, with the apps in beta on TestFlight',
     beta: links.arthaBeta,
     site: { label: 'arthaapp.com', href: links.artha },
+  },
+  {
+    id: 'corres',
+    name: 'Corres',
+    tagline: 'Email, considered.',
+    icon: `${BASE}press/corres-icon.webp`,
+    line: 'Email that opens on what needs you.',
+    detail: 'Gmail, Outlook, iCloud and other accounts in one inbox, with the emails that ask something of you first and the reason each one is there.',
+    status: 'In beta on TestFlight, free during the beta',
+    beta: links.corresBeta,
+    site: { label: 'corres.app', href: links.corres },
   },
 ]
 

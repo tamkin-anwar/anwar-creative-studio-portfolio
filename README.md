@@ -1,6 +1,6 @@
 # Anwar Creative Studio
 
-Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). The company website of Anwar Creative Studio, an independent software company. Corres and Artha are the flagships; Tether, Jotfield and Doorsong sit in "From the workshop".
+Live at [anwarcreativestudio.com](https://anwarcreativestudio.com). The company website of Anwar Creative Studio, an independent software company. Artha and Corres are the flagships; Tether, Jotfield and Doorsong sit in "From the workshop".
 
 Contact: contact@anwarcreativestudio.com
 
@@ -18,7 +18,7 @@ React 19, TypeScript, Vite and Tailwind CSS v4. Every page is prerendered to HTM
 ## Where things live
 
 - `src/components/sections/`: the homepage, from the hero to the footer.
-- `src/lib/tours.ts`: the Corres and Artha tours on the homepage.
+- `src/lib/tours.ts`: the Artha and Corres tours on the homepage.
 - `src/components/identity/Lockup.tsx`: the hanging a, the "Anwar." lockup and the "a." end mark.
 - `src/components/devices/Bezels.tsx`: Apple's Product Bezels around the live screens.
 - `src/styles/site.css`: shared design (header, footer, inner pages). `src/styles/home.css`: the homepage only, loaded by `src/main.tsx`. Tokens for light and dark are in `src/styles/theme.css`.

@@ -12,8 +12,15 @@ export function NowPage() {
         style={{ color: 'var(--ink-dim)', fontSize: 'var(--text-body)' }}
       >
         <p>
-          Our time is split between our two apps, Corres and Artha. Both are in beta on TestFlight, we use
+          Our time is split between our two apps, Artha and Corres. Both are in beta on TestFlight, we use
           both every day ourselves, and both go to the App Store next.
+        </p>
+        <p>
+          Artha&rsquo;s app for iPhone, iPad, Mac and Apple Watch shares one account with the website,
+          which anyone can use for free today. Getting started now takes about a minute: three questions, or up to three bank
+          statements, and you see what&rsquo;s safe to spend, still with no bank login. On iOS 27 it hands you
+          a ready-made shortcut that logs every Apple Pay purchase, it works without a connection, and it
+          handles any of about 160 currencies.
         </p>
         <p>
           Corres is on build 62, and the build we plan to send to the App Store as 1.0 is with testers.
@@ -25,21 +32,14 @@ export function NowPage() {
           fold.
         </p>
         <p>
-          Artha&rsquo;s app for iPhone, iPad, Mac and Apple Watch shares one account with the website,
-          which anyone can use for free today. Getting started now takes about a minute: three questions, or up to three bank
-          statements, and you see what&rsquo;s safe to spend, still with no bank login. On iOS 27 it hands you
-          a ready-made shortcut that logs every Apple Pay purchase, it works without a connection, and it
-          handles any of about 160 currencies.
-        </p>
-        <p>
           After that, it&rsquo;s Jotfield: smoothing the rough edges we find using it every day.
           Doorsong and Tether are live and stable, with fixes as they come up. Ranna, an app for
           keeping a family&rsquo;s handwritten recipes for the next generation, is planned but not
           started yet.
         </p>
         <p className="flex flex-wrap gap-x-6 gap-y-2">
-          <a className="hit" href="https://corres.app" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>corres.app ↗</a>
           <a className="hit" href="https://arthaapp.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>arthaapp.com ↗</a>
+          <a className="hit" href="https://corres.app" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-warm)' }}>corres.app ↗</a>
         </p>
       </div>
 

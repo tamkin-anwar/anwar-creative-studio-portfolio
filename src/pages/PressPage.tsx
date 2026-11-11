@@ -13,7 +13,7 @@ export function PressPage() {
           Press kit.
         </h1>
         <p>
-          Everything you need to write about Anwar Creative Studio, Corres or Artha. Use any of it freely
+          Everything you need to write about Anwar Creative Studio, Artha or Corres. Use any of it freely
           in coverage. For anything else, including interviews or beta access for review, write to{' '}
           <a href={`mailto:${links.email}?subject=Press`}>{links.email}</a>.
         </p>
@@ -72,23 +72,6 @@ export function PressPage() {
           <a href={`${BASE}press/identity/USING-THE-LOGO.txt`}>How to use the logo (text)</a>
         </p>
 
-        <h2>Corres</h2>
-        <div className="press-product">
-          <img src={`${BASE}press/corres-icon.webp`} alt="The Corres app icon" width={96} height={96} />
-          <p>
-            <strong>Email, considered.</strong> Corres opens on the emails that ask something of you, with the
-            reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
-            iPhone, iPad, Mac and Apple Watch, in 29 languages. It reads and sorts mail on the device, and
-            summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight. Mail is free; Corres Pro adds Needs You, Waiting,
-            answers in Search, summaries and suggested replies, at $14.99 a month or $149.99 a year, after a two-week free trial.{' '}
-            <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
-          </p>
-        </div>
-        <div className="press-shots">
-          <img src={`${BASE}press/corres-iphone.jpg`} alt="Corres on iPhone, showing Needs You with sample mail" width={414} height={900} loading="lazy" />
-          <img src={`${BASE}press/corres-mac.jpg`} alt="Corres on Mac, showing a suggested reply with sample mail" width={1400} height={875} loading="lazy" />
-        </div>
-
         <h2>Artha</h2>
         <div className="press-product">
           <img src={`${BASE}press/artha-icon.webp`} alt="The Artha app icon" width={96} height={96} />
@@ -107,13 +90,30 @@ export function PressPage() {
           <img src={`${BASE}press/artha-mac.webp`} alt="Artha on Mac, showing Today with sample figures" width={1600} height={1053} loading="lazy" />
         </div>
 
+        <h2>Corres</h2>
+        <div className="press-product">
+          <img src={`${BASE}press/corres-icon.webp`} alt="The Corres app icon" width={96} height={96} />
+          <p>
+            <strong>Email, considered.</strong> Corres opens on the emails that ask something of you, with the
+            reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
+            iPhone, iPad, Mac and Apple Watch, in 29 languages. It reads and sorts mail on the device, and
+            summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight. Mail is free; Corres Pro adds Needs You, Waiting,
+            answers in Search, summaries and suggested replies, at $14.99 a month or $149.99 a year, after a two-week free trial.{' '}
+            <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
+          </p>
+        </div>
+        <div className="press-shots">
+          <img src={`${BASE}press/corres-iphone.jpg`} alt="Corres on iPhone, showing Needs You with sample mail" width={414} height={900} loading="lazy" />
+          <img src={`${BASE}press/corres-mac.jpg`} alt="Corres on Mac, showing a suggested reply with sample mail" width={1400} height={875} loading="lazy" />
+        </div>
+
         <h2>In the zip</h2>
         <ul>
           <li>A one-page fact sheet</li>
           <li>The logo and the hanging a, with how to use them</li>
-          <li>Corres and Artha app icons at 1024 &times; 1024</li>
-          <li>Corres screenshots on iPhone, iPad and Mac, made with sample mail</li>
+          <li>Artha and Corres app icons at 1024 &times; 1024</li>
           <li>Artha on iPhone and Mac, made with sample figures</li>
+          <li>Corres screenshots on iPhone, iPad and Mac, made with sample mail</li>
         </ul>
         <p>
           Recent news is in the <a href={`${BASE}journal/`}>journal</a>.

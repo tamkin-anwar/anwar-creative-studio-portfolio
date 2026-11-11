@@ -3,20 +3,20 @@ import { links } from '../content/links'
 
 const routes = [
   {
-    title: 'Corres',
-    lines: [
-      { label: 'Help with the app or the beta', email: links.corresSupport },
-      { label: 'Privacy and your data', email: links.corresPrivacy },
-    ],
-    more: { label: 'Corres support and FAQ', href: 'https://corres.app/support/' },
-  },
-  {
     title: 'Artha',
     lines: [
       { label: 'Help with Artha on the web or in the apps', email: links.arthaSupport },
       { label: 'Privacy and your data', email: links.arthaPrivacy },
     ],
     more: { label: 'Artha support and FAQ', href: 'https://arthaapp.com/support' },
+  },
+  {
+    title: 'Corres',
+    lines: [
+      { label: 'Help with the app or the beta', email: links.corresSupport },
+      { label: 'Privacy and your data', email: links.corresPrivacy },
+    ],
+    more: { label: 'Corres support and FAQ', href: 'https://corres.app/support/' },
   },
   {
     title: 'Everything else',
@@ -61,9 +61,9 @@ export function ContactPage() {
 
         <h2>Try the betas</h2>
         <p>
-          Corres and Artha are both in beta on TestFlight, and anyone can join:{' '}
-          <a href={links.corresBeta} target="_blank" rel="noreferrer">the Corres beta</a> and{' '}
-          <a href={links.arthaBeta} target="_blank" rel="noreferrer">the Artha beta</a>. Artha is also free
+          Artha and Corres are both in beta on TestFlight, and anyone can join:{' '}
+          <a href={links.arthaBeta} target="_blank" rel="noreferrer">the Artha beta</a> and{' '}
+          <a href={links.corresBeta} target="_blank" rel="noreferrer">the Corres beta</a>. Artha is also free
           on the web at <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>.
         </p>
         <p>We don&rsquo;t take on client or agency work.</p>

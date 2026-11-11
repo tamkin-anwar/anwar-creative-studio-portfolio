@@ -40,7 +40,7 @@ const entries: { term: string; detail: ReactNode }[] = [
   {
     term: 'The demos',
     detail:
-      'Corres and Artha on the homepage are not videos or screenshots. Each screen is live HTML, drawn at the size the real app is laid out at and scaled to fit, and a short script plays it one chapter at a time once it scrolls into view. It plays once and stops, pauses when you scroll away, and with Reduce Motion each chapter shows how it ends. The people in the mail and the figures in Artha are made up.',
+      'Artha and Corres on the homepage are not videos or screenshots. Each screen is live HTML, drawn at the size the real app is laid out at and scaled to fit, and a short script plays it one chapter at a time once it scrolls into view. It plays once and stops, pauses when you scroll away, and with Reduce Motion each chapter shows how it ends. The people in the mail and the figures in Artha are made up.',
   },
   {
     term: 'Devices',

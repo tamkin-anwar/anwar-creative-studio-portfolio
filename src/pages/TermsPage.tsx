@@ -25,7 +25,7 @@ export function TermsPage() {
 
         <h2>Names and marks</h2>
         <p>
-          Anwar Creative Studio, Corres, Artha and their logos and icons belong to {company.legalName}. The
+          Anwar Creative Studio, Artha, Corres and their logos and icons belong to {company.legalName}. The
           text, images and design of this site are ours unless credited otherwise. Apple, iPhone, iPad,
           Mac and Apple Watch are trademarks of Apple Inc. Other names belong to their owners.
         </p>

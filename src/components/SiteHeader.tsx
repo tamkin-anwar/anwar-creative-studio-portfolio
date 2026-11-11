@@ -4,8 +4,8 @@ import { openCommandPalette } from '../lib/commandPalette'
 const BASE = import.meta.env.BASE_URL
 
 const nav = [
-  { label: 'Corres', href: `${BASE}#corres` },
   { label: 'Artha', href: `${BASE}#artha` },
+  { label: 'Corres', href: `${BASE}#corres` },
   { label: 'About', href: `${BASE}about/` },
   { label: 'Journal', href: `${BASE}journal/` },
   { label: 'Contact', href: `${BASE}contact/` },

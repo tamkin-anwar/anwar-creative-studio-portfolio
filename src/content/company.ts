@@ -21,12 +21,12 @@ export const principles = [
   {
     statement: 'Private where it counts.',
     support:
-      'Corres reads your mail on your own device, so it’s never sent to us or to an AI company. Artha never asks for a bank login, and a statement you import is read once and never kept.',
+      'Artha never asks for a bank login, and a statement you import is read once and never kept. Corres reads your mail on your own device, so it’s never sent to us or to an AI company.',
   },
   {
     statement: 'Nothing changes behind your back.',
     support:
-      'Corres checks every summary against the email before you see it, and never sends a reply you haven’t approved. Artha’s assistant suggests changes, and only your tap saves them. If something doesn’t go through, you’ll know.',
+      'Artha’s assistant suggests changes, and only your tap saves them. Corres checks every summary against the email before you see it, and never sends a reply you haven’t approved. If something doesn’t go through, you’ll know.',
   },
   {
     statement: 'Native, down to the details.',
