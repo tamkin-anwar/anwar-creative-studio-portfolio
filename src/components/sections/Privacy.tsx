@@ -26,7 +26,7 @@ const rows = [
   },
   {
     label: 'Never kept',
-    artha: 'Statement files. They’re read in memory and never saved.',
+    artha: 'Statement files and bank texts. They’re read once and never saved.',
     corres: 'Read receipts and tracking pixels. They’re blocked until you choose to show images.',
   },
   {

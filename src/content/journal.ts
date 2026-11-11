@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-11',
+    product: 'Artha',
+    title: 'A month in review, a debt plan and your subscriptions',
+    body:
+      'At the start of each month Artha now offers a look back: what you spent and kept, how it compared with your budget and a usual month, and where most of it went, with a picture to share that carries no amounts. Plan can now map a way out of debt, highest rate first or smallest balance first, with a slider that shows how much sooner an extra payment gets you there. It also lists your subscriptions with what each costs a year and links to the official page for cancelling the common ones. Wealth now holds the shares, funds and crypto you own, at prices you enter. On the website now, and in the beta apps.',
+  },
+  {
+    date: '2026-11-11',
     product: 'Corres',
     title: 'Starting on the Mac, and names that read right',
     body:
