@@ -80,7 +80,7 @@ export function PressPage() {
             reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
             iPhone, iPad, Mac and Apple Watch, in nine languages. It reads and sorts mail on the device, and
             summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight. Mail is free; Corres Pro adds Needs You, Waiting,
-            answers in Search, summaries and suggested replies, at $20 a month or $200 a year.{' '}
+            answers in Search, summaries and suggested replies, at $14.99 a month or $149.99 a year.{' '}
             <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
           </p>
         </div>
