@@ -16,6 +16,20 @@ export const journal: JournalEntry[] = [
       'Corres for Mac now works with Proton Mail through Proton Mail Bridge, and asks you to confirm Bridge\u2019s certificate rather than trusting anything blindly. Signed work email shows who signed it once Corres has checked the signature and the sender, on your device. Settings were regrouped so the Daily Brief, rules and snooze times are where you would look for them, and a full review of the app fixed some eighty smaller things, from drafts keeping their attachments to long tables of numbers never slowing Corres down. In the beta now.',
   },
   {
+    date: '2026-11-12',
+    product: 'Artha',
+    title: 'A month that starts on payday',
+    body:
+      'If you\u2019re paid once a month, Artha can now start your month on payday instead of the 1st: a date you choose, or the last or second-to-last working day, moved earlier when it lands on a weekend, Friday and Saturday weekends included. What\u2019s safe to spend, the pace chart, Plan and the widgets then count to your next payday, while Reports and the month in review stay on calendar months. It\u2019s offered once, only to people it fits, and the switch is in Settings. On the website now, and in the next beta build of the apps.',
+  },
+  {
+    date: '2026-11-11',
+    product: 'Artha',
+    title: 'Money set aside for the bills that come once a year',
+    body:
+      'A bill can now repeat every three or six months, once a year or on any cycle up to twelve months, and Artha puts a share of it aside each month, so the month it\u2019s due doesn\u2019t knock your number down. A savings goal can come out of what\u2019s safe to spend the same way. Today now shows one card at a time instead of a stack, Reports has its own tab, and Activity can show the month as a calendar, each day shaded by how it went against an even pace. Money a friend pays back counts against what you spent on them, a #tag in a note gathers a trip or a project, and every way to log spending on its own now sits in one place, with the best one for where you live first. On the website now, and in the next beta build of the apps.',
+  },
+  {
     date: '2026-11-11',
     product: 'Corres',
     title: 'Go through what needs you, with a reply ready',
@@ -48,7 +62,7 @@ export const journal: JournalEntry[] = [
     product: 'Artha',
     title: 'Purchases from your bank\u2019s texts',
     body:
-      'Artha can now log a purchase from the text your bank sends, with no bank login and no service in between. A Shortcuts automation hands each text to Artha, and your iPhone checks it first, so anything that isn\u2019t a bank alert never leaves the phone. One shared shortcut works for any bank, including the banks in Bangladesh and India that text every card purchase, and only the purchase is saved, never the message. Logging from bank alert emails is coming next. Stopping a bill in Plan now clears its upcoming copies, renaming one keeps it a single bill, and when Artha asks to use AI it now says Allow or Don\u2019t Allow and names Anthropic\u2019s Claude. In the beta now.',
+      'Artha can now log a purchase from the text your bank sends, with no bank login and no service in between. A Shortcuts automation hands each text to Artha, and your iPhone checks it first, so anything that isn\u2019t a bank alert never leaves the phone. It works with any bank, including the banks in Bangladesh and India that text every card purchase, set up once on a word your bank\u2019s purchase texts always use, and only the purchase is saved, never the message. Your bank\u2019s alert emails can log purchases too, forwarded to a private Artha address. Stopping a bill in Plan now clears its upcoming copies, renaming one keeps it a single bill, and when Artha asks to use AI it now says Allow or Don\u2019t Allow and names Anthropic\u2019s Claude. In the beta now.',
   },
   {
     date: '2026-11-11',
