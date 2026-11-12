@@ -455,10 +455,10 @@
   .footer-credit a { color: inherit; text-underline-offset: 3px; }
   .footer-credit {
     margin-top: 34px;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.04em;
     color: var(--ink-soft);
-    opacity: 0.7;
+    opacity: 0.85;
     transition: color 0.6s ease;
   }
 
@@ -478,6 +478,8 @@
 
   @media (hover: none) and (pointer: coarse) {
     .strands { cursor: default; }
+    /* the two links home are small type; give a finger a full-size target */
+    .footer-credit a { display: inline-block; padding: 12px 2px; margin: -12px 0; }
   }
 </style>
 </head>

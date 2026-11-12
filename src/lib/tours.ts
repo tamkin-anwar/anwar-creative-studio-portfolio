@@ -235,7 +235,8 @@ export function startArthaTour(root: HTMLElement): Cleanup {
     if (ch === 'today') {
       showNumber(0)
       if (still) { phone.classList.add('drawn'); showNumber(2070) }
-      else { t.later(() => phone.classList.add('drawn'), 200); t.later(() => showNumber(2070), 1050) }
+      // the number starts rolling as soon as the phone is in view, so nobody is left reading "$0,000"
+      else { t.later(() => phone.classList.add('drawn'), 200); t.later(() => showNumber(2070), 250) }
     } else if (ch === 'assist') {
       showNumber(2070)
       if (still) { me.textContent = ME; phone.classList.add('typed', 'proposed', 'added') }

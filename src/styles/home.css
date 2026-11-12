@@ -225,9 +225,10 @@
 
 .ticks { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-direction: column; gap: 9px; color: var(--ink-2); }
 
-.ticks li { display: flex; gap: 12px; align-items: baseline; }
+/* Block, not flex: a footnote mark has to stay with the last word, not become its own column. */
+.ticks li { position: relative; padding-left: 24px; }
 
-.ticks li::before { content: ""; flex: none; width: 12px; height: 1px; background: var(--ink-3); transform: translateY(-4px); }
+.ticks li::before { content: ""; position: absolute; left: 0; top: .72em; top: calc(.5lh - .5px); width: 12px; height: 1px; background: var(--ink-3); }
 
 .links { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: 22px; }
 
@@ -318,7 +319,7 @@
 
 /* footnote marks, Apple style: small, linked, never in the way */
 
-.fn { font-size: .62em; line-height: 0; margin-left: 1px; font-variant-numeric: lining-nums; }
+.fn { font-size: .62em; line-height: 0; margin-left: 1px; font-variant-numeric: lining-nums; white-space: nowrap; }
 
 .fn a { color: var(--ink-3); text-decoration: none; padding: 0 1px; }
 

@@ -69,7 +69,9 @@ export function Footer() {
       </div>
       <div className="legal">
         <span>
-          &copy; {company.year} {company.legalName} &middot; {company.registered}
+          {/* each half stays whole, so a phone breaks the line at the dot, not inside "United States" */}
+          <span className="whitespace-nowrap">&copy; {company.year} {company.legalName}</span> &middot;{' '}
+          <span className="whitespace-nowrap">{company.registered}</span>
         </span>
         <span>Looked for it. Didn&rsquo;t love it. Built it.</span>
       </div>

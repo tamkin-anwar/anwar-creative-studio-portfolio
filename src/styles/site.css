@@ -91,6 +91,9 @@
 
 a { color: inherit; text-decoration: none; }
 
+/* An email address is one long word; on a folded phone it has to be allowed to break. */
+a[href^="mailto:"] { overflow-wrap: anywhere; }
+
 button { font: inherit; color: inherit; }
 
 a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 6px; }
