@@ -98,7 +98,7 @@ export function PressPage() {
             <strong>Email, considered.</strong> Corres opens on the emails that ask something of you, with the
             reason each one is there. Gmail, Outlook, iCloud Mail and other IMAP accounts in one inbox, on
             iPhone, iPad, Mac and Apple Watch, in 29 languages. It reads and sorts mail on the device, and
-            summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight, where Pro is free. Mail is free; Corres Pro adds Needs You, Waiting,
+            summarizes and drafts replies with Apple Intelligence where the device has it. In beta on TestFlight, where Pro is free. Mail is free, with a count of what needs you; Corres Pro adds all of Needs You, Waiting,
             answers in Search, summaries and suggested replies, at $14.99 a month or $149.99 a year, after a two-week free trial.{' '}
             <a href={links.corres} target="_blank" rel="noreferrer">corres.app</a>
           </p>

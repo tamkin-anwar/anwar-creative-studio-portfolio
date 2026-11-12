@@ -17,9 +17,9 @@ const faq = [
   {
     app: 'Corres',
     items: [
-      { q: 'Is Corres free?', a: 'Mail is free: every account, reading, writing, search and organizing. Corres Pro adds Needs You, Waiting, answers in Search, summaries and suggested replies. Everyone on the TestFlight beta gets Pro free.' },
+      { q: 'Is Corres free?', a: 'Mail is free: every account, reading, writing, search and organizing, and how many emails need you, with the reasons for the first three. Corres Pro adds all of Needs You, Waiting, answers in Search, summaries and suggested replies. Everyone on the TestFlight beta gets Pro free.' },
       { q: 'Which devices does it work on?', a: 'iPhone, iPad, Mac and Apple Watch. One Corres Pro covers all of them, and the accounts you add follow you through iCloud Keychain.' },
-      { q: 'Which email accounts work?', a: 'Gmail, Google Workspace, Outlook, Microsoft 365, iCloud Mail and almost any other email with IMAP, such as Yahoo or Fastmail, together in one inbox.' },
+      { q: 'Which email accounts work?', a: 'Gmail, Google Workspace, Outlook, Microsoft 365, iCloud Mail and almost any other email with IMAP, such as Yahoo or Fastmail, together in one inbox. On the Mac, Proton Mail works through Proton Mail Bridge.' },
       { q: 'Where is my email?', a: 'On your devices. Corres downloads it from your email provider and sorts it on your iPhone, iPad or Mac. Our servers never receive it.' },
       { q: 'When does the beta end?', a: 'When Corres is on the App Store. There’s no date yet. The build planned as 1.0 is with testers now.' },
     ],

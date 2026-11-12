@@ -17,7 +17,7 @@ const rows = [
   {
     label: 'What our servers see',
     artha: 'What you enter, kept to your account alone. You can export all of it at any time.',
-    corres: 'Never your email. Only what notifications need: your device’s token and your account addresses.',
+    corres: 'Never your email. Your device’s token and account addresses for notifications, the web domain a logo comes from, and a sealed iCloud password only if you turn on Instant Notifications.',
   },
   {
     label: 'AI',
