@@ -11,6 +11,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-12',
     product: 'Corres',
+    title: 'A calmer mailbox',
+    body:
+      'After looking closely at how Gmail, Outlook, Fastmail and Spark lay out a mailbox, Corres stopped repeating itself. Pinned mail now sits only at the top of Primary, and other mailboxes keep your pins in place by date. Needs You leads each email with why it needs you, then the subject. On the Mac, section headings stay at the top as you scroll, and a pinned email always keeps its own row, so clearing out a sender never sweeps it away. In the beta now.',
+  },
+  {
+    date: '2026-11-12',
+    product: 'Corres',
     title: 'Proton Mail on the Mac, signed mail you can trust, and calmer settings',
     body:
       'Corres for Mac now works with Proton Mail through Proton Mail Bridge, and asks you to confirm Bridge\u2019s certificate rather than trusting anything blindly. Signed work email shows who signed it once Corres has checked the signature and the sender, on your device. Settings were regrouped so the Daily Brief, rules and snooze times are where you would look for them, and a full review of the app fixed some eighty smaller things, from drafts keeping their attachments to long tables of numbers never slowing Corres down. In the beta now.',
