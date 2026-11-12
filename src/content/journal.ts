@@ -11,6 +11,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-11',
     product: 'Corres',
+    title: 'Go through what needs you, with a reply ready',
+    body:
+      'Corres can now take you through Needs You one email at a time: reply, mark it handled, snooze or archive it, and the next one opens, until everything is clear. When an email asks you something, a reply in your own style is waiting in it, written on your device and never sent or saved without you. Search understands from:, subject:, before: and the other filters people know from Gmail, and can stay inside the mailbox you are in. Promotions and Updates show one row per sender, and every notification setting now lives on one page. In the beta now.',
+  },
+  {
+    date: '2026-11-11',
+    product: 'Corres',
     title: 'Rewrites on the Mac, in your own voice',
     body:
       'Corres for Mac can now rewrite what you wrote: shorter, warmer, more formal or proofread, on your Mac, from the toolbar or the Format menu. It only touches your own words, never the email you\u2019re answering or your signature, and one Undo takes it back. Shorter and warmer keep how you write, on the iPhone too. In older plain-text emails whose lines were cut at a fixed width, the sentence behind a reason in Needs You now comes back whole, in Japanese and Chinese as well as English. In the beta now.',
