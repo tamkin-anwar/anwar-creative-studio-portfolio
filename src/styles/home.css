@@ -26,26 +26,32 @@
 
 .hero-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px 56px; align-items: center; }
 
-.hero-phones { display: flex; gap: 28px; align-items: flex-start; zoom: .86; }
+/* The pair is laid out once at full size (two 300 pt phones, 28 px apart, the second 64 px lower:
+   628 x 678) and scaled as one picture with a transform. Not `zoom`: Safari zooms the frames but
+   not the text inside them, so on an iPhone the screens overflowed. --hz is the scale; the outer
+   box takes the scaled size so the layout around it stays right. */
+.hero-phones { --hz: .86; width: calc(628px * var(--hz)); height: calc(678px * var(--hz)); }
 
-.hero-phones > .dev:nth-child(2) { margin-top: 64px; }
+.hero-phones-in { display: flex; gap: 28px; align-items: flex-start; width: 628px; transform: scale(var(--hz)); transform-origin: 0 0; }
+
+.hero-phones-in > .dev:nth-child(2) { margin-top: 64px; }
 
 .hero-aview { display: flex; flex-direction: column; gap: 10px; }
 
-@media (max-width: 1240px) { .hero-phones { zoom: .74; } }
+@media (max-width: 1240px) { .hero-phones { --hz: .74; } }
 
-@media (max-width: 1060px) { .hero-phones { zoom: .64; } }
+@media (max-width: 1060px) { .hero-phones { --hz: .64; } }
 
 @media (max-width: 920px) {
   .hero-top { grid-template-columns: minmax(0, 1fr); }
-  .hero-phones { justify-content: center; zoom: .7; gap: 20px; }
+  .hero-phones { justify-self: center; --hz: .7; }
 }
 
-@media (max-width: 560px) { .hero-phones { zoom: .54; } }
+@media (max-width: 560px) { .hero-phones { --hz: .54; } }
 
-@media (max-width: 400px) { .hero-phones { zoom: .5; } }
+@media (max-width: 400px) { .hero-phones { --hz: .5; } }
 
-@media (max-width: 350px) { .hero-phones { zoom: .43; } }
+@media (max-width: 350px) { .hero-phones { --hz: .43; } }
 
 /* the two flagships, as equals: same card, same parts, same order */
 

@@ -4,7 +4,7 @@ import { IPhoneBezel } from '../devices/Bezels'
 // Both apps, side by side in the hero, each on the screen it opens on:
 // Artha on what's safe to spend, Corres on what needs you. Still pictures in
 // Apple's iPhone bezel (used as provided: never tilted or animated), laid
-// out at 300 pt like the tours below and scaled as one piece with `zoom`.
+// out at 300 pt like the tours below and scaled as one piece with a transform (see home.css).
 const W = { '--ip-w': '300px' } as CSSProperties
 
 function Sbar() {
@@ -15,7 +15,7 @@ function Sbar() {
 
 export function HeroPhones() {
   return (
-    <div className="hero-phones">
+    <div className="hero-phones"><div className="hero-phones-in">
       <div className="dev iphone aphone" style={W} role="img" aria-label="Artha on iPhone, opening on what's safe to spend: $2,070 for the rest of the month, $103 a day for 20 days, on pace.">
         <div className="screen"><div className="ascreen"><Sbar />
           <div className="hero-aview">
@@ -63,6 +63,6 @@ export function HeroPhones() {
         </div>
         <IPhoneBezel />
       </div>
-    </div>
+    </div></div>
   )
 }
