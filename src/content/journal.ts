@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-12',
+    product: 'Corres',
+    title: 'Proton Mail on the Mac, signed mail you can trust, and calmer settings',
+    body:
+      'Corres for Mac now works with Proton Mail through Proton Mail Bridge, and asks you to confirm Bridge\u2019s certificate rather than trusting anything blindly. Signed work email shows who signed it once Corres has checked the signature and the sender, on your device. Settings were regrouped so the Daily Brief, rules and snooze times are where you would look for them, and a full review of the app fixed some eighty smaller things, from drafts keeping their attachments to long tables of numbers never slowing Corres down. In the beta now.',
+  },
+  {
     date: '2026-11-11',
     product: 'Corres',
     title: 'Go through what needs you, with a reply ready',
