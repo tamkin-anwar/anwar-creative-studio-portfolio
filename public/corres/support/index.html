@@ -33,6 +33,10 @@
   strong { color: var(--ink); font-weight: 600; }
   ul { padding-left: 1.2em; }
   a { color: var(--accent); }
+  /* Phones: long addresses wrap instead of widening the page, and the
+     small links get a finger-sized target without moving anything. */
+  p, li { overflow-wrap: break-word; }
+  .back, .foot a { display: inline-block; padding: 12px 2px; margin: -12px -2px; }
   .eyebrow { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--ter); }
   .lede { font-size: 20px; color: var(--ink); }
   hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 24px; }
@@ -85,7 +89,7 @@
   <details><summary>How do I delete my data?</summary><p>Remove your accounts in Settings and delete the app. Removing an account also deletes its notification records from our servers. Your mail itself was never kept anywhere else. Questions about privacy: <a href="mailto:privacy@corres.app">privacy@corres.app</a>.</p></details>
 
   <hr>
-  <p style="font-size:14px"><a href="../">Corres</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="https://anwarcreativestudio.com/">Anwar Creative Studio</a></p>
+  <p class="foot" style="font-size:14px"><a href="../">Corres</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="https://anwarcreativestudio.com/">Anwar Creative Studio</a></p>
 </main>
 </body>
 </html>

@@ -93,6 +93,8 @@
   .brand span { font-family: var(--serif); font-size: 21px; letter-spacing: -.01em; }
   .nav { display: flex; align-items: center; gap: 26px; font-size: 14.5px; color: var(--sec); }
   .nav a { text-decoration: none; }
+  /* A finger-sized target on phones, without moving the bar's layout. */
+  :where(.nav a:not(.btn)) { display: inline-block; padding: 12px 4px; margin: -12px -4px; }
   .nav a:hover { color: var(--ink); }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 22px; border-radius: 999px;
          font: 600 15px/1 var(--sans); text-decoration: none; transition: transform .2s ease, background .2s ease; white-space: nowrap; }
@@ -204,8 +206,9 @@
   .plan { border: 1px solid var(--line-2); border-radius: 24px; padding: 32px; background: var(--surface); }
   .plan.pro { border-color: color-mix(in srgb, var(--accent) 55%, transparent); box-shadow: 0 30px 80px -50px var(--glow); }
   .plan h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; margin: 0; }
-  .price { font-family: var(--serif); font-size: 46px; letter-spacing: -.02em; margin: 14px 0 2px; }
-  .price small { font-family: var(--sans); font-size: 15px; color: var(--ter); letter-spacing: 0; }
+  .price { font-family: var(--serif); font-size: 46px; line-height: 1.1; letter-spacing: -.02em; margin: 14px 0 2px; }
+  /* Wraps as one piece under the price on a narrow phone, at its own line height. */
+  .price small { display: inline-block; line-height: 1.4; font-family: var(--sans); font-size: 15px; color: var(--ter); letter-spacing: 0; }
   .plan .sub { color: var(--ter); font-size: 14px; margin: 0 0 22px; }
 
   /* FAQ */
@@ -238,6 +241,7 @@
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 32px; }
   footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
   footer a { text-decoration: none; color: var(--sec); }
+  footer nav a, footer .mail a { display: inline-block; padding: 12px 2px; margin: -12px -2px; }
   footer a:hover { color: var(--ink); }
   footer .from a { font-family: var(--serif); font-size: 17px; letter-spacing: -.01em; color: var(--ink); }
   footer .from .pt { display: inline-block; width: .11em; height: .11em; border-radius: 50%; background: #e2ac5f; margin-left: .03em; }
@@ -261,6 +265,7 @@
     section { padding: 88px 0; }
   }
   @media (max-width: 560px) {
+    .price small { display: block; margin-top: 6px; }
     :root { --page: calc(100% - 32px); }
     .grid { grid-template-columns: 1fr; }
     .nav { gap: 16px; }
