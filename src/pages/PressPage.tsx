@@ -81,7 +81,7 @@ export function PressPage() {
             and Apple Watch in beta on TestFlight, on one account. It speaks 18 languages and handles about 160
             currencies, with no bank login, ads or tracking. Safe to spend is free; Artha Pro adds the assistant, receipts and scans read for you, scenarios
             and longer reports, at $9.99 a month or $79.99 a year after a one-month free trial, once it goes on sale.
-            Until then everyone in the beta has Pro free.{' '}
+            Until then everyone in the beta has Pro free, and anyone with an account by November 12, 2026, or who uses the apps on TestFlight before the sale, keeps it free for good.{' '}
             <a href={links.artha} target="_blank" rel="noreferrer">arthaapp.com</a>
           </p>
         </div>

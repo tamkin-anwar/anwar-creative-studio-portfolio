@@ -53,11 +53,11 @@ export function HeroPhones() {
           <div className="cp-tabs"><b>Needs You</b><span>Primary</span><span>Everything</span><span>Unread</span></div>
           <div className="cp-wait"><span>Waiting on <b>2 replies</b></span><span>Longest 5 days ›</span></div>
           <div className="cp-g">Due soon</div>
-          <div className="cp-row"><span className="av">JO</span><div><div className="t"><b>James Okafor</b><span>9:50</span></div><div className="s">Partnership proposal</div><div className="w">↳ James asked for the revised scope by Friday</div></div></div>
-          <div className="cp-row"><span className="av">SL</span><div><div className="t"><b>Sofia Laurent</b><span>9:31</span></div><div className="s">A place at the table</div><div className="w">↳ Sofia asked you to confirm Thursday</div></div></div>
-          <div className="cp-row"><span className="av">MC</span><div><div className="t"><b>Maya Chen</b><span>8:45</span></div><div className="s">The next chapter</div><div className="w">↳ Maya asked you to approve the creative direction</div></div></div>
+          <div className="cp-row"><span className="av">JO</span><div><div className="t"><b>James Okafor</b><span>9:50</span></div><div className="w">↳ James asked for the revised scope by Friday</div><div className="s">Partnership proposal</div></div></div>
+          <div className="cp-row"><span className="av">SL</span><div><div className="t"><b>Sofia Laurent</b><span>9:31</span></div><div className="w">↳ Sofia asked you to confirm Thursday</div><div className="s">A place at the table</div></div></div>
+          <div className="cp-row"><span className="av">MC</span><div><div className="t"><b>Maya Chen</b><span>8:45</span></div><div className="w">↳ Maya asked you to approve the creative direction</div><div className="s">The next chapter</div></div></div>
           <div className="cp-g">When you can</div>
-          <div className="cp-row"><span className="av">OG</span><div><div className="t"><b>Oliver Grant</b><span>8:27</span></div><div className="s">A moment before we move forward</div><div className="w">↳ Oliver is waiting for your choice between two options</div></div></div>
+          <div className="cp-row"><span className="av">OG</span><div><div className="t"><b>Oliver Grant</b><span>8:27</span></div><div className="w">↳ Oliver is waiting for your choice between two options</div><div className="s">A moment before we move forward</div></div></div>
           <div className="cp-search" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="9" cy="9" r="5" stroke="currentColor" strokeWidth="1.8" fill="none"/><path d="m13 13 3.5 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg>Search, or ask a question</div>
           <span className="homebar"></span>
         </div>

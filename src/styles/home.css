@@ -161,6 +161,11 @@
 
 .sorted .row .why { grid-template-rows: 1fr; opacity: 1; transition-delay: var(--d, .25s); }
 
+/* Needs You rows, as in the app: sender and time, the reason, then the subject, with no preview. */
+.row:has(.why) .prev { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .5s var(--ease-out), opacity .4s var(--ease-out); }
+.row:has(.why) .prev > span { overflow: hidden; min-height: 0; white-space: nowrap; text-overflow: ellipsis; display: block; }
+.sorted .row:has(.why) .prev { grid-template-rows: 0fr; opacity: 0; transition-delay: var(--d, .25s); }
+
 .row .chip { font-size: 10px; font-weight: 600; color: var(--c-due); border: 1px solid currentColor; border-radius: 999px; padding: 0 6px; margin-left: 6px; opacity: 0; transition: opacity .4s; }
 
 .sorted .row .chip { opacity: 1; }
