@@ -1,8 +1,811 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://corres.app/</loc>
     <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/ja/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/zh-hans/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/zh-hant/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/ko/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/de/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/fr/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/fr-ca/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/es/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/pt-br/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/pt-pt/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/it/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/nl/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/sv/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/da/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/nb/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/pl/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/cs/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/ro/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/uk/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/tr/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/ar/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/he/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/vi/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/id/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
+  </url>
+  <url>
+    <loc>https://corres.app/bn/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://corres.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corres.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://corres.app/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://corres.app/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://corres.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://corres.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corres.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://corres.app/fr-ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corres.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://corres.app/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://corres.app/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://corres.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://corres.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://corres.app/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://corres.app/da/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://corres.app/nb/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://corres.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://corres.app/cs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://corres.app/ro/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://corres.app/uk/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://corres.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corres.app/ar/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://corres.app/he/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://corres.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://corres.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://corres.app/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corres.app/"/>
   </url>
   <url>
     <loc>https://corres.app/privacy/</loc>

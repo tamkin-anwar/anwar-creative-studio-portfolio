@@ -1,0 +1,899 @@
+{
+ "units": [
+  {
+   "id": "u001",
+   "where": "<title>",
+   "en": "Corres · Email, considered. For iPhone, iPad, Mac and Apple Watch"
+  },
+  {
+   "id": "u002",
+   "where": "content@meta",
+   "en": "Corres is an email app for iPhone, iPad, Mac and Apple Watch. Gmail, Outlook, iCloud Mail and other email in one inbox, opening on the emails that need you, each with the reason. Your mail is read on your own devices. Free beta on TestFlight."
+  },
+  {
+   "id": "u003",
+   "where": "content@meta",
+   "en": "Corres · Email, considered."
+  },
+  {
+   "id": "u004",
+   "where": "content@meta",
+   "en": "What needs you, first. Gmail, Outlook, iCloud and other email in one inbox, read and sorted on your iPhone, iPad and Mac."
+  },
+  {
+   "id": "u005",
+   "where": "content@meta",
+   "en": "The Corres app icon above the words Email, considered."
+  },
+  {
+   "id": "u006",
+   "where": "content@meta",
+   "en": "Corres · Email, considered."
+  },
+  {
+   "id": "u007",
+   "where": "content@meta",
+   "en": "What needs you, first. Gmail, Outlook, iCloud and other email in one inbox, read and sorted on your iPhone, iPad and Mac."
+  },
+  {
+   "id": "u008",
+   "where": "content@meta",
+   "en": "The Corres app icon above the words Email, considered."
+  },
+  {
+   "id": "u009",
+   "where": "<body>",
+   "en": "<a class=\"skip\" href=\"#content\">Skip to content</a>"
+  },
+  {
+   "id": "u010",
+   "where": "aria-label@a",
+   "en": "Corres home"
+  },
+  {
+   "id": "u011",
+   "where": "<span>",
+   "en": "corres"
+  },
+  {
+   "id": "u012",
+   "where": "aria-label@nav",
+   "en": "Main"
+  },
+  {
+   "id": "u013",
+   "where": "<nav class=\"nav\" aria-label=\"Main\">",
+   "en": "<a class=\"hide-s\" href=\"#features\">Features</a>\n      <a class=\"hide-s\" href=\"#privacy\">Privacy</a>\n      <a href=\"#pricing\">Pricing</a>\n      <a class=\"btn small primary\" href=\"https://testflight.apple.com/join/ntjvUNCR\">Join the beta</a>"
+  },
+  {
+   "id": "u014",
+   "where": "<p class=\"eyebrow\">",
+   "en": "Email for iPhone, iPad, Mac and Apple Watch"
+  },
+  {
+   "id": "u015",
+   "where": "<h1>",
+   "en": "Email,<br><em>considered.</em>"
+  },
+  {
+   "id": "u016",
+   "where": "<p class=\"lede\">",
+   "en": "Corres opens on <strong>what needs you</strong>: every email that asks something of you, with the reason. The rest of your mail is one tap away. All of it is read and sorted on your own devices."
+  },
+  {
+   "id": "u017",
+   "where": "<div class=\"cta\">",
+   "en": "<a class=\"btn primary\" href=\"https://testflight.apple.com/join/ntjvUNCR\">Join the beta on TestFlight</a>\n          <a class=\"btn ghost\" href=\"#privacy\">How it stays private</a>"
+  },
+  {
+   "id": "u018",
+   "where": "<p class=\"cta-note\">",
+   "en": "Free to try while in beta, on iPhone, iPad, Mac and Apple Watch. Not on the App Store yet."
+  },
+  {
+   "id": "u019",
+   "where": "alt@img",
+   "en": "Corres on iPhone, open on Needs You: emails from Sofia, Maya and Oliver, each with the reason it needs you and when it's due, and a row for the two replies you're waiting on."
+  },
+  {
+   "id": "u020",
+   "where": "</i>",
+   "en": "Gmail &amp; Google Workspace"
+  },
+  {
+   "id": "u021",
+   "where": "</i>",
+   "en": "Outlook &amp; Microsoft 365"
+  },
+  {
+   "id": "u022",
+   "where": "</i>",
+   "en": "iCloud Mail"
+  },
+  {
+   "id": "u023",
+   "where": "</i>",
+   "en": "Yahoo, Fastmail, Naver, QQ and other email"
+  },
+  {
+   "id": "u024",
+   "where": "<p class=\"eyebrow\">",
+   "en": "How Corres reads your mail"
+  },
+  {
+   "id": "u025",
+   "where": "<h2>",
+   "en": "The emails that ask something of you, first."
+  },
+  {
+   "id": "u026",
+   "where": "<p>",
+   "en": "Most email asks nothing of you. Corres finds the emails that do and tells you why."
+  },
+  {
+   "id": "u027",
+   "where": "<p class=\"eyebrow\">",
+   "en": "Needs You"
+  },
+  {
+   "id": "u028",
+   "where": "<h3>",
+   "en": "Opens on what needs you."
+  },
+  {
+   "id": "u029",
+   "where": "<p>",
+   "en": "The emails that ask something of you come first, each with the reason it&rsquo;s there. Who still owes you a reply sits one row above. Everything else waits in Primary until you get to it."
+  },
+  {
+   "id": "u030",
+   "where": "</svg>",
+   "en": "Needs You: only mail that asks something of you, with the reason"
+  },
+  {
+   "id": "u031",
+   "where": "</svg>",
+   "en": "Waiting: replies you&rsquo;re owed, with what you asked them and a nudge when they&rsquo;re late"
+  },
+  {
+   "id": "u032",
+   "where": "</svg>",
+   "en": "Daily Brief, if you want it: today&rsquo;s plans, bills, deliveries and the replies you owe, on one card, a widget and your watch"
+  },
+  {
+   "id": "u033",
+   "where": "alt@img",
+   "en": "An email from Maya Chen open in Corres: a short summary, why it's in Needs You with a Handled button, and two suggested replies."
+  },
+  {
+   "id": "u034",
+   "where": "<p class=\"eyebrow\">",
+   "en": "Mail"
+  },
+  {
+   "id": "u035",
+   "where": "<h3>",
+   "en": "Primary is people and what&rsquo;s urgent."
+  },
+  {
+   "id": "u036",
+   "where": "<p>",
+   "en": "Everything, Promotions, Social and Updates beside it, sorted by Corres&rsquo;s own rules for every account you add. Promotions and Updates show one row per sender, and one swipe clears everything from them. Move one email, or everything from a sender, and Corres learns from it. Settings shows everything it has learned."
+  },
+  {
+   "id": "u037",
+   "where": "</svg>",
+   "en": "A security code or an appointment never hides in Updates"
+  },
+  {
+   "id": "u038",
+   "where": "</svg>",
+   "en": "First emails from new senders can wait for your yes"
+  },
+  {
+   "id": "u039",
+   "where": "</svg>",
+   "en": "Swipes, lists and the toolbar under an email are yours to set"
+  },
+  {
+   "id": "u040",
+   "where": "alt@img",
+   "en": "The Corres mail list on iPhone, open on Primary, with Needs You, Everything, Promotions and Social beside it, and a colored dot for each email's account."
+  },
+  {
+   "id": "u041",
+   "where": "<p class=\"eyebrow\">",
+   "en": "Notifications"
+  },
+  {
+   "id": "u042",
+   "where": "<h3>",
+   "en": "Only the notifications you want."
+  },
+  {
+   "id": "u043",
+   "where": "<p>",
+   "en": "New Outlook mail notifies within seconds, even with Corres closed. iCloud can too, once you turn on Instant Notifications for that account. You choose, per account and all on one page, whether that&rsquo;s all new mail, people and time-sensitive mail, or only what needs you."
+  },
+  {
+   "id": "u044",
+   "where": "</svg>",
+   "en": "Archive, mark read or reply right from the notification"
+  },
+  {
+   "id": "u045",
+   "where": "</svg>",
+   "en": "Newsletters can arrive silently, and VIPs always come through"
+  },
+  {
+   "id": "u046",
+   "where": "</svg>",
+   "en": "A Daily Brief notification at the time you pick, skipped on days with nothing in it"
+  },
+  {
+   "id": "u047",
+   "where": "alt@img",
+   "en": "An iPhone Lock Screen at 9:57 with Corres notifications from Maya Chen, Sofia Laurent and James Okafor, each with the subject and opening words."
+  },
+  {
+   "id": "u048",
+   "where": "<p class=\"eyebrow\">",
+   "en": "Accounts"
+  },
+  {
+   "id": "u049",
+   "where": "<h3>",
+   "en": "Every account, one inbox."
+  },
+  {
+   "id": "u050",
+   "where": "<p>",
+   "en": "Gmail, Google Workspace, Outlook, Microsoft 365 and iCloud Mail, plus Yahoo, Fastmail, Yahoo! JAPAN, Naver, QQ, 163 and almost any other email with your address and its password or an app password. On the Mac, Proton Mail works through Proton Mail Bridge. Each keeps its own name, color, notifications and signatures. Tap your photo to see just one."
+  },
+  {
+   "id": "u051",
+   "where": "</svg>",
+   "en": "Colors you already know: Gmail red, Outlook blue, or your own"
+  },
+  {
+   "id": "u052",
+   "where": "</svg>",
+   "en": "Signatures with bold, links and your logo, a full one for new mail and a short one for replies"
+  },
+  {
+   "id": "u053",
+   "where": "</svg>",
+   "en": "Add an account once and it&rsquo;s on your other devices too"
+  },
+  {
+   "id": "u054",
+   "where": "alt@img",
+   "en": "The Corres account switcher: All Inboxes, then Gmail, Outlook and iCloud accounts, each ringed in its own color."
+  },
+  {
+   "id": "u055",
+   "where": "<p class=\"eyebrow\">",
+   "en": "iPhone, iPad, Mac and Apple Watch"
+  },
+  {
+   "id": "u056",
+   "where": "<h2>",
+   "en": "The same Corres on every device."
+  },
+  {
+   "id": "u057",
+   "where": "<p>",
+   "en": "The same Needs You, the same sorting and the same accounts everywhere. Add an account once and it&rsquo;s on your other devices through iCloud Keychain. On the Mac, a native app with Mail&rsquo;s shortcuts and Gmail&rsquo;s. On Apple Watch, what needs you and today&rsquo;s Brief, on your wrist and your watch face."
+  },
+  {
+   "id": "u058",
+   "where": "alt@img",
+   "en": "Corres on a MacBook Pro: the sidebar, Needs You with the reason for each email, and Maya Chen's email open with its summary."
+  },
+  {
+   "id": "u059",
+   "where": "alt@img",
+   "en": "Corres on iPad Pro: the sidebar with each account, Needs You, and an open email."
+  },
+  {
+   "id": "u060",
+   "where": "alt@img",
+   "en": "Corres on iPhone: the mail list."
+  },
+  {
+   "id": "u061",
+   "where": "alt@img",
+   "en": "Corres on Apple Watch: Needs You."
+  },
+  {
+   "id": "u062",
+   "where": "<p class=\"eyebrow\">",
+   "en": "iPhone Duo"
+  },
+  {
+   "id": "u063",
+   "where": "<h2 id=\"duo-title\">",
+   "en": "Made for iPhone Duo from the first day."
+  },
+  {
+   "id": "u064",
+   "where": "<p>",
+   "en": "Unfold it and your mail list and the email you&rsquo;re reading sit side by side. Fold it and Corres keeps your place, with Needs You still first."
+  },
+  {
+   "id": "u065",
+   "where": "alt@img",
+   "en": "Corres on iPhone Duo, unfolded: Needs You on one side and Maya Chen's email open on the other, with its summary and why it needs you."
+  },
+  {
+   "id": "u066",
+   "where": "alt@img",
+   "en": "Corres on iPhone Duo, folded: Needs You on the outer display, with Oliver Grant, Atelier Supply and Maya Chen."
+  },
+  {
+   "id": "u067",
+   "where": "<p class=\"eyebrow\">",
+   "en": "The details"
+  },
+  {
+   "id": "u068",
+   "where": "<h2 id=\"details-title\">",
+   "en": "Everything else you&rsquo;d expect."
+  },
+  {
+   "id": "u069",
+   "where": "<h3>",
+   "en": "Built on Postwright"
+  },
+  {
+   "id": "u070",
+   "where": "<p>",
+   "en": "Corres runs on its own mail engine, on your device. Archive and delete happen the moment you swipe, even with no signal, and an email you send offline goes by itself once you&rsquo;re back. What you do on the web or another device shows up here."
+  },
+  {
+   "id": "u071",
+   "where": "<h3>",
+   "en": "Writing"
+  },
+  {
+   "id": "u072",
+   "where": "<p>",
+   "en": "Drafts that wait for you, bold, lists and links, sending from your other addresses, templates, and a check for a forgotten attachment. On the Mac with Apple Intelligence, Rewrite makes your words shorter, warmer or more formal, or proofreads them."
+  },
+  {
+   "id": "u073",
+   "where": "<h3>",
+   "en": "Send Later &amp; Undo Send"
+  },
+  {
+   "id": "u074",
+   "where": "<p>",
+   "en": "Schedule an email, get a reminder if nobody replies, and take back what you just sent, on iPhone, iPad and Mac."
+  },
+  {
+   "id": "u075",
+   "where": "<h3>",
+   "en": "Summaries &amp; replies"
+  },
+  {
+   "id": "u076",
+   "where": "<p>",
+   "en": "With Apple Intelligence, Corres summarizes long threads, checks each summary against the email, and has a reply ready in your own style for emails that ask you something, all on your device and never sent without you. Without it, Needs You, its reasons and In Short still work."
+  },
+  {
+   "id": "u077",
+   "where": "<h3>",
+   "en": "Search, or ask"
+  },
+  {
+   "id": "u078",
+   "where": "<p>",
+   "en": "Search every account at once, archived mail included, with filters like from:, subject:, before: and in:, offered as you type, in the mailbox you&rsquo;re in or all your mail. Or ask, &ldquo;When is my flight?&rdquo;, and get the answer from your own email, with the messages it came from."
+  },
+  {
+   "id": "u079",
+   "where": "<h3>",
+   "en": "New senders"
+  },
+  {
+   "id": "u080",
+   "where": "<p>",
+   "en": "Choose how first emails arrive: review everyone, review only companies, mark them new, or let everyone in. Blocking hides them in Corres and never changes your account."
+  },
+  {
+   "id": "u081",
+   "where": "<h3>",
+   "en": "Go Through"
+  },
+  {
+   "id": "u082",
+   "where": "<p>",
+   "en": "Work through what needs you one email at a time: reply, mark it handled, snooze or archive, and the next one opens, until you&rsquo;re all clear."
+  },
+  {
+   "id": "u083",
+   "where": "<h3>",
+   "en": "Signed email"
+  },
+  {
+   "id": "u084",
+   "where": "<p>",
+   "en": "Work email with a digital signature shows who signed it, and Verified only once Corres has checked the signature and the sender on your device."
+  },
+  {
+   "id": "u085",
+   "where": "<h3>",
+   "en": "Invitations &amp; Out of Office"
+  },
+  {
+   "id": "u086",
+   "where": "<p>",
+   "en": "See when it is in your time zone, where, the call to join and whether you&rsquo;re free. Accept, Maybe or Decline right in the email, and turn your automatic reply on without leaving Corres."
+  },
+  {
+   "id": "u087",
+   "where": "<h3>",
+   "en": "Rules &amp; mute"
+  },
+  {
+   "id": "u088",
+   "where": "<p>",
+   "en": "Sort mail as it arrives. Rules can also run inside Gmail and Outlook, so they work with Corres closed. Mute a conversation so new replies stay quiet."
+  },
+  {
+   "id": "u089",
+   "where": "<h3>",
+   "en": "In Short, at the top"
+  },
+  {
+   "id": "u090",
+   "where": "<p>",
+   "en": "A bill&rsquo;s amount, a delivery&rsquo;s date, a deposit, or what a person asks of you in their own words, read from the email and shown at the top. No Apple Intelligence needed."
+  },
+  {
+   "id": "u091",
+   "where": "<h3>",
+   "en": "No tracking pixels"
+  },
+  {
+   "id": "u092",
+   "where": "<p>",
+   "en": "Remote images and read-receipt trackers are blocked until you choose to show them. Unsubscribe is one tap."
+  },
+  {
+   "id": "u093",
+   "where": "<h3>",
+   "en": "Company logos"
+  },
+  {
+   "id": "u094",
+   "where": "<p>",
+   "en": "The logo a company publishes for email, shown only when a certificate backs it, and fetched by our server so no company learns when you read."
+  },
+  {
+   "id": "u095",
+   "where": "<h3>",
+   "en": "Siri, Shortcuts &amp; widgets"
+  },
+  {
+   "id": "u096",
+   "where": "<p>",
+   "en": "Ask Siri to write, send or find an email. Needs You and the Daily Brief in widgets, Control Center and on your watch face, and deliveries on the Lock Screen."
+  },
+  {
+   "id": "u097",
+   "where": "<h3>",
+   "en": "29 languages"
+  },
+  {
+   "id": "u098",
+   "where": "<p>",
+   "en": "English (US, UK, Australia and Canada), Japanese, Chinese (Simplified and Traditional), Korean, German, French (France and Canada), Spanish, Portuguese (Brazil and Portugal), Italian, Dutch, Swedish, Danish, Norwegian, Polish, Czech, Romanian, Ukrainian, Turkish, Arabic, Hebrew, Vietnamese, Indonesian and Bengali, with Arabic and Hebrew right to left. Deadlines, bills and deliveries are read in mail written in each, and weekends follow your region."
+  },
+  {
+   "id": "u099",
+   "where": "<h3>",
+   "en": "Accessibility"
+  },
+  {
+   "id": "u100",
+   "where": "<p>",
+   "en": "Checked with Apple&rsquo;s accessibility audit. VoiceOver says what just happened, Voice Control answers to the words people say, so &ldquo;Tap Delete&rdquo; works for Trash, and text grows to the largest sizes on iPhone and iPad, and to twice the size on the Mac."
+  },
+  {
+   "id": "u101",
+   "where": "<h3>",
+   "en": "Replies that sound like you"
+  },
+  {
+   "id": "u102",
+   "where": "<p>",
+   "en": "Suggested replies use the greeting, sign-off and length you use, learned on your device from email you&rsquo;ve sent."
+  },
+  {
+   "id": "u103",
+   "where": "<h3>",
+   "en": "Remind Me"
+  },
+  {
+   "id": "u104",
+   "where": "<p>",
+   "en": "Add any email to Reminders for this evening, tomorrow morning or when it&rsquo;s due, with a link straight back to it."
+  },
+  {
+   "id": "u105",
+   "where": "<h3>",
+   "en": "Share to Corres"
+  },
+  {
+   "id": "u106",
+   "where": "<p>",
+   "en": "Share a page or photos from any app and write the email right in the Share sheet."
+  },
+  {
+   "id": "u107",
+   "where": "<h3>",
+   "en": "On Apple Watch"
+  },
+  {
+   "id": "u108",
+   "where": "<p>",
+   "en": "What needs you, today&rsquo;s Brief, and the start of each email. Reply by voice, Scribble or a ready answer, or mark it handled."
+  },
+  {
+   "id": "u109",
+   "where": "<h3>",
+   "en": "Fast with a big mailbox"
+  },
+  {
+   "id": "u110",
+   "where": "<p>",
+   "en": "Corres opens on your newest mail right away, even with thousands of conversations, and pull to refresh finishes in seconds."
+  },
+  {
+   "id": "u111",
+   "where": "<p class=\"eyebrow reveal\">",
+   "en": "Privacy"
+  },
+  {
+   "id": "u112",
+   "where": "<h2 class=\"promise reveal\" id=\"privacy-title\">",
+   "en": "Your email is read on your own devices. <em>Not on our servers, and never by an AI company.</em>"
+  },
+  {
+   "id": "u113",
+   "where": "<h3>",
+   "en": "Stored on your device"
+  },
+  {
+   "id": "u114",
+   "where": "<p>",
+   "en": "Mail comes straight from your email provider to your iPhone, iPad or Mac and stays there, protected by Apple&rsquo;s built-in encryption. Corres&rsquo;s servers never receive it."
+  },
+  {
+   "id": "u115",
+   "where": "<h3>",
+   "en": "Sorted on your device"
+  },
+  {
+   "id": "u116",
+   "where": "<p>",
+   "en": "Needs You, summaries, suggested replies and answers in Search all run on your device. Nothing is sent to an AI service or used to train one."
+  },
+  {
+   "id": "u117",
+   "where": "<h3>",
+   "en": "Nothing to sell"
+  },
+  {
+   "id": "u118",
+   "where": "<p>",
+   "en": "No ads, no analytics, no tracking, no read receipts. Corres is paid for by the people who use it."
+  },
+  {
+   "id": "u119",
+   "where": "<p class=\"fine reveal\">",
+   "en": "Three small servers help, and none of them reads your email: a notification relay that learns only that a mailbox changed; a logo server that sees only the sender&rsquo;s web domain; and, only if you turn on Instant Notifications for iCloud or another account that signs in with a password, a mail watcher that keeps an encrypted copy of that password and watches only for new mail. The <a href=\"privacy/\">privacy policy</a> lists exactly what each one keeps. Corres&rsquo;s use and transfer of information received from Google APIs adheres to the <a href=\"https://developers.google.com/terms/api-services-user-data-policy\">Google API Services User Data Policy</a>, including the Limited Use requirements."
+  },
+  {
+   "id": "u120",
+   "where": "<p class=\"eyebrow\">",
+   "en": "Pricing"
+  },
+  {
+   "id": "u121",
+   "where": "<h2>",
+   "en": "Mail is free."
+  },
+  {
+   "id": "u122",
+   "where": "<p>",
+   "en": "Every account and every mail feature, free. Corres Pro adds the parts that read your mail for you."
+  },
+  {
+   "id": "u123",
+   "where": "<h3>",
+   "en": "Corres"
+  },
+  {
+   "id": "u124",
+   "where": "<div class=\"price\">",
+   "en": "Free"
+  },
+  {
+   "id": "u125",
+   "where": "<p class=\"sub\">",
+   "en": "Every account, no time limit"
+  },
+  {
+   "id": "u126",
+   "where": "</svg>",
+   "en": "Read, write, search and organize"
+  },
+  {
+   "id": "u127",
+   "where": "</svg>",
+   "en": "How many emails need you, and why the first three do"
+  },
+  {
+   "id": "u128",
+   "where": "</svg>",
+   "en": "Every account in one inbox"
+  },
+  {
+   "id": "u129",
+   "where": "</svg>",
+   "en": "Notifications, rules, Send Later, signatures"
+  },
+  {
+   "id": "u130",
+   "where": "<h3>",
+   "en": "Corres Pro"
+  },
+  {
+   "id": "u131",
+   "where": "<div class=\"price\">",
+   "en": "$14.99 <small>a month, or $149.99 a year</small>"
+  },
+  {
+   "id": "u132",
+   "where": "<p class=\"sub\">",
+   "en": "Starts with a two-week free trial. US prices; the App Store shows yours."
+  },
+  {
+   "id": "u133",
+   "where": "</svg>",
+   "en": "Needs You and Waiting in full, with the reason for each"
+  },
+  {
+   "id": "u134",
+   "where": "</svg>",
+   "en": "Summaries, replies in your voice, and answers from your mail"
+  },
+  {
+   "id": "u135",
+   "where": "</svg>",
+   "en": "Everything in the free plan, on iPhone, iPad and Mac"
+  },
+  {
+   "id": "u136",
+   "where": "<p class=\"cta-note center reveal\" style=\"text-align:center;m",
+   "en": "During the beta, everyone on TestFlight gets Corres Pro free."
+  },
+  {
+   "id": "u137",
+   "where": "<h2 id=\"faq-title\">",
+   "en": "Questions"
+  },
+  {
+   "id": "u138",
+   "where": "<summary>",
+   "en": "Which email accounts work with Corres?"
+  },
+  {
+   "id": "u139",
+   "where": "<p>",
+   "en": "Gmail and Google Workspace, Outlook.com, Hotmail and Live, work or school Microsoft 365, iCloud Mail, and almost any other email that offers IMAP: Yahoo, AOL, Fastmail, Zoho, GMX, Yahoo! JAPAN, Naver, QQ, 163 and more. Add as many as you like; they share one inbox. iCloud and most others ask for an app password instead of your main password, and Corres walks you through making one."
+  },
+  {
+   "id": "u140",
+   "where": "<summary>",
+   "en": "Can I use my Gmail account in the beta?"
+  },
+  {
+   "id": "u141",
+   "where": "<p>",
+   "en": "Yes, once we add you. Until Google finishes reviewing Corres, Gmail sign-in works only for addresses on Google&rsquo;s test list, and Google asks you to sign in again every seven days. <a class=\"text-link\" href=\"mailto:support@corres.app?subject=Add%20my%20Gmail%20to%20the%20Corres%20beta\">Email us</a> the Gmail address you&rsquo;d like to use. Outlook, iCloud and other email work right away."
+  },
+  {
+   "id": "u142",
+   "where": "<summary>",
+   "en": "Does Corres read my email on its servers?"
+  },
+  {
+   "id": "u143",
+   "where": "<p>",
+   "en": "No. Your mail is downloaded from your email provider directly to your iPhone, iPad or Mac and processed there. A notification relay learns only that your mailbox changed, never what&rsquo;s in it. The <a class=\"text-link\" href=\"privacy/\">privacy policy</a> has the details."
+  },
+  {
+   "id": "u144",
+   "where": "<summary>",
+   "en": "Do I need Apple Intelligence?"
+  },
+  {
+   "id": "u145",
+   "where": "<p>",
+   "en": "No. Needs You, Waiting, sorting and In Short work on every supported iPhone, iPad and Mac. Summaries and drafted replies use Apple Intelligence where your device has it, on the device itself."
+  },
+  {
+   "id": "u146",
+   "where": "<summary>",
+   "en": "Is there an iPad, Mac or Apple Watch version?"
+  },
+  {
+   "id": "u147",
+   "where": "<p>",
+   "en": "Yes. Three columns on iPad, a native Mac app with its own windows, menus and keyboard shortcuts, and on Apple Watch what needs you, with replies by voice. One Corres Pro covers iPhone, iPad and Mac, and the accounts you add follow you through iCloud Keychain."
+  },
+  {
+   "id": "u148",
+   "where": "<summary>",
+   "en": "Does it work without a signal?"
+  },
+  {
+   "id": "u149",
+   "where": "<p>",
+   "en": "Yes. Your mail is on your device, so it reads offline. What you archive, delete, flag or send goes through by itself once you&rsquo;re back online."
+  },
+  {
+   "id": "u150",
+   "where": "<summary>",
+   "en": "What is Postwright?"
+  },
+  {
+   "id": "u151",
+   "where": "<p>",
+   "en": "Postwright is the mail engine we built for Corres. It runs on your device and talks to Gmail, Outlook, iCloud and other mail servers each in its own way, so your actions are instant and every account stays in step with the web. It&rsquo;s why Corres doesn&rsquo;t need a server of its own to hold your mail."
+  },
+  {
+   "id": "u152",
+   "where": "<summary>",
+   "en": "How do I get it?"
+  },
+  {
+   "id": "u153",
+   "where": "<p>",
+   "en": "Install Apple&rsquo;s TestFlight app, then open the <a class=\"text-link\" href=\"https://testflight.apple.com/join/ntjvUNCR\">Corres beta link</a> on your iPhone, iPad or Mac. You can explore every screen with sample mail before adding an account. It&rsquo;s coming to the App Store."
+  },
+  {
+   "id": "u154",
+   "where": "<summary>",
+   "en": "Who makes Corres?"
+  },
+  {
+   "id": "u155",
+   "where": "<p>",
+   "en": "Anwar Creative Studio, an independent software company in California that also makes <a class=\"text-link\" href=\"https://arthaapp.com\">Artha</a>, for knowing what&rsquo;s safe to spend. Write to <a class=\"text-link\" href=\"mailto:support@corres.app\">support@corres.app</a> and we&rsquo;ll reply by email."
+  },
+  {
+   "id": "u156",
+   "where": "<h2 id=\"closing-title\">",
+   "en": "Email, considered."
+  },
+  {
+   "id": "u157",
+   "where": "<p>",
+   "en": "Try Corres in three steps."
+  },
+  {
+   "id": "u158",
+   "where": "<li>",
+   "en": "<b>Get TestFlight</b>"
+  },
+  {
+   "id": "u159",
+   "where": "<span>",
+   "en": "Apple&rsquo;s free app for trying apps before they reach the App Store."
+  },
+  {
+   "id": "u160",
+   "where": "<li>",
+   "en": "<b>Join the beta</b>"
+  },
+  {
+   "id": "u161",
+   "where": "<span>",
+   "en": "Open the Corres link on your iPhone, iPad or Mac and tap Install."
+  },
+  {
+   "id": "u162",
+   "where": "<li>",
+   "en": "<b>Add your accounts</b>"
+  },
+  {
+   "id": "u163",
+   "where": "<span>",
+   "en": "Or explore with sample mail first. Corres opens on what needs you."
+  },
+  {
+   "id": "u164",
+   "where": "<div class=\"cta\">",
+   "en": "<a class=\"btn primary\" href=\"https://testflight.apple.com/join/ntjvUNCR\">Join the beta on TestFlight</a>"
+  },
+  {
+   "id": "u165",
+   "where": "<p class=\"cta-note\">",
+   "en": "Questions or feedback: <a href=\"mailto:support@corres.app\">support@corres.app</a>. We read every email."
+  },
+  {
+   "id": "u166",
+   "where": "aria-label@a",
+   "en": "Anwar Creative Studio"
+  },
+  {
+   "id": "u167",
+   "where": "<span class=\"from\">",
+   "en": "Corres, from <a href=\"https://anwarcreativestudio.com/\" aria-label=\"Anwar Creative Studio\">Anwar"
+  },
+  {
+   "id": "u168",
+   "where": "aria-label@nav",
+   "en": "Footer"
+  },
+  {
+   "id": "u169",
+   "where": "<nav aria-label=\"Footer\">",
+   "en": "<a href=\"support/\">Support</a>\n      <a href=\"privacy/\">Privacy</a>\n      <a href=\"terms/\">Terms</a>\n      <a href=\"https://anwarcreativestudio.com/press/\">Press</a>\n      <a href=\"mailto:support@corres.app\">support@corres.app</a>"
+  },
+  {
+   "id": "u170",
+   "where": "<p class=\"legal\">",
+   "en": "Corres&rsquo;s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. Gmail and Google Workspace are trademarks of Google LLC. Outlook and Microsoft 365 are trademarks of Microsoft Corporation. Apple, Apple Intelligence, Apple Watch, iCloud, iPad, iPhone, Mac, Siri and TestFlight are trademarks of Apple Inc., registered in the U.S. and other countries. Other names are trademarks of their owners. © 2026 Anwar Creative Studio LLC."
+  },
+  {
+   "id": "ld-description",
+   "where": "search engine description of the app",
+   "en": "An email app for iPhone, iPad, Mac and Apple Watch that opens on the emails that need you, with the reason for each. Gmail, Outlook, iCloud Mail and other email in one inbox, read and sorted on your own devices."
+  },
+  {
+   "id": "ld-feature-1",
+   "where": "search engine feature list",
+   "en": "Needs You: the emails that ask something of you, with the reason"
+  },
+  {
+   "id": "ld-feature-2",
+   "where": "search engine feature list",
+   "en": "Waiting: replies you're owed"
+  },
+  {
+   "id": "ld-feature-3",
+   "where": "search engine feature list",
+   "en": "Gmail, Outlook, iCloud Mail and IMAP accounts in one inbox"
+  },
+  {
+   "id": "ld-feature-4",
+   "where": "search engine feature list",
+   "en": "Mail read and sorted on your own devices"
+  },
+  {
+   "id": "ld-feature-5",
+   "where": "search engine feature list",
+   "en": "Summaries and replies with Apple Intelligence, on the device"
+  },
+  {
+   "id": "ld-feature-6",
+   "where": "search engine feature list",
+   "en": "Daily Brief"
+  },
+  {
+   "id": "ld-feature-7",
+   "where": "search engine feature list",
+   "en": "Native apps for iPhone, iPad, Mac and Apple Watch"
+  },
+  {
+   "id": "langs-label",
+   "where": "aria-label of the footer list of languages",
+   "en": "Languages"
+  }
+ ]
+}
