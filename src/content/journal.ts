@@ -11,6 +11,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-12',
     product: 'Corres',
+    title: 'Pins you can always spot',
+    body:
+      'A tester told us they could not tell where their pinned mail ended. So every pinned email now carries its pin and a soft tint wherever it appears, and the rest of Primary starts under its own Everything Else heading. Fold the Pinned section and its heading still says who is in it, on iPhone, iPad and Mac. In the beta now.',
+  },
+  {
+    date: '2026-11-12',
+    product: 'Corres',
     title: 'A calmer mailbox',
     body:
       'After looking closely at how Gmail, Outlook, Fastmail and Spark lay out a mailbox, Corres stopped repeating itself. Pinned mail now sits only at the top of Primary, and other mailboxes keep your pins in place by date. Needs You leads each email with why it needs you, then the subject. On the Mac, section headings stay at the top as you scroll, and a pinned email always keeps its own row, so clearing out a sender never sweeps it away. In the beta now.',
