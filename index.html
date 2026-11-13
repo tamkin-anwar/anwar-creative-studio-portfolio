@@ -36,21 +36,40 @@
          to wait on before first paint -->
     <link rel="preload" href="/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
-    <title>Anwar Creative Studio</title>
+    <title>Anwar Creative Studio · Makers of Artha and Corres</title>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "WebSite",
+            "@id": "https://anwarcreativestudio.com/#website",
+            "name": "Anwar Creative Studio",
+            "alternateName": ["Anwar", "anwarcreativestudio.com"],
+            "url": "https://anwarcreativestudio.com/",
+            "inLanguage": "en-US",
+            "publisher": {
+              "@id": "https://anwarcreativestudio.com/#organization"
+            }
+          },
+          {
             "@type": "Organization",
             "@id": "https://anwarcreativestudio.com/#organization",
             "name": "Anwar Creative Studio",
+            "alternateName": "Anwar",
             "legalName": "Anwar Creative Studio LLC",
             "url": "https://anwarcreativestudio.com/",
-            "logo": "https://anwarcreativestudio.com/icon-512.png",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://anwarcreativestudio.com/icon-512.png",
+              "width": 512,
+              "height": 512
+            },
+            "image": "https://anwarcreativestudio.com/og-image.png?v=4",
             "email": "contact@anwarcreativestudio.com",
-            "description": "An independent, self-funded software company making apps for iPhone, iPad, Mac and Apple Watch.",
+            "description": "An independent, self-funded software company in California making apps for iPhone, iPad, Mac and Apple Watch: Artha, for knowing what's safe to spend, and Corres, an email app that opens on what needs you.",
+            "foundingDate": "2026",
             "founder": {
               "@type": "Person",
               "name": "Tamkin Anwar"
@@ -59,14 +78,40 @@
               "@type": "PostalAddress",
               "addressRegion": "CA",
               "addressCountry": "US"
-            }
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "support@arthaapp.com",
+                "url": "https://arthaapp.com/support",
+                "name": "Artha support"
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "support@corres.app",
+                "url": "https://corres.app/support/",
+                "name": "Corres support"
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "press",
+                "email": "contact@anwarcreativestudio.com",
+                "url": "https://anwarcreativestudio.com/press/"
+              }
+            ],
+            "knowsAbout": ["Personal finance software", "Email software", "iOS apps", "macOS apps", "Apple Watch apps"]
           },
           {
             "@type": "SoftwareApplication",
+            "@id": "https://arthaapp.com/#app",
             "name": "Artha",
+            "description": "Personal finance that opens on what's safe to spend for the rest of the month, with the bills still to come already counted. No bank login, ads or tracking.",
             "applicationCategory": "FinanceApplication",
             "operatingSystem": "Web, iOS, iPadOS, macOS, watchOS",
-            "url": "https://arthaapp.com",
+            "url": "https://arthaapp.com/",
+            "image": "https://anwarcreativestudio.com/press/artha-icon.png",
             "publisher": {
               "@id": "https://anwarcreativestudio.com/#organization"
             },
@@ -78,10 +123,14 @@
           },
           {
             "@type": "SoftwareApplication",
+            "@id": "https://corres.app/#app",
             "name": "Corres",
-            "applicationCategory": "CommunicationApplication",
+            "description": "An email app for iPhone, iPad, Mac and Apple Watch that opens on the emails that need you, with the reason for each. Gmail, Outlook, iCloud Mail and other email in one inbox, read and sorted on your own devices.",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "Email",
             "operatingSystem": "iOS, iPadOS, macOS, watchOS",
-            "url": "https://corres.app",
+            "url": "https://corres.app/",
+            "image": "https://anwarcreativestudio.com/press/corres-icon.png",
             "publisher": {
               "@id": "https://anwarcreativestudio.com/#organization"
             },
@@ -94,6 +143,7 @@
           {
             "@type": "SoftwareApplication",
             "name": "Tether",
+            "description": "A Chrome extension for watching shows and movies in sync with someone far away, with chat on the video.",
             "applicationCategory": "BrowserApplication",
             "operatingSystem": "Chrome",
             "url": "https://chromewebstore.google.com/detail/tether-watch-together/hbdlgagknjnijflkgjdelehjibapehpi",

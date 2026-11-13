@@ -28,27 +28,44 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Corres",
-  "url": "https://corres.app/",
-  "description": "An email app for iPhone, iPad, Mac and Apple Watch that opens on what needs you. Gmail, Outlook, iCloud Mail and other email in one inbox, read and sorted on your own devices.",
-  "applicationCategory": "BusinessApplication",
-  "applicationSubCategory": "Email",
-  "operatingSystem": "iOS, iPadOS, macOS, watchOS",
-  "image": "https://corres.app/img/share.jpg",
-  "screenshot": "https://corres.app/img/devices/iphone-needs-you-dark.webp",
-  "inLanguage": ["en", "ja", "zh-Hans", "de", "ko", "fr", "es", "pt-BR", "bn"],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Anwar Creative Studio",
-    "legalName": "Anwar Creative Studio LLC",
-    "url": "https://anwarcreativestudio.com/"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://corres.app/#website",
+      "name": "Corres",
+      "alternateName": ["corres.app"],
+      "url": "https://corres.app/",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://anwarcreativestudio.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://corres.app/#app",
+      "name": "Corres",
+      "url": "https://corres.app/",
+      "description": "An email app for iPhone, iPad, Mac and Apple Watch that opens on the emails that need you, with the reason for each. Gmail, Outlook, iCloud Mail and other email in one inbox, read and sorted on your own devices.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Email",
+      "operatingSystem": "iOS 17, iPadOS 17, macOS 15, watchOS 10 or later",
+      "image": "https://corres.app/img/share.jpg",
+      "screenshot": "https://corres.app/img/devices/iphone-needs-you-dark.webp",
+      "featureList": ["Needs You: the emails that ask something of you, with the reason", "Waiting: replies you're owed", "Gmail, Outlook, iCloud Mail and IMAP accounts in one inbox", "Mail read and sorted on your own devices", "Summaries and replies with Apple Intelligence, on the device", "Daily Brief", "Native apps for iPhone, iPad, Mac and Apple Watch"],
+      "inLanguage": ["en-US", "en-GB", "en-AU", "en-CA", "ja", "zh-Hans", "zh-Hant", "de", "ko", "fr-FR", "fr-CA", "es", "pt-BR", "pt-PT", "bn", "it", "nl", "sv", "da", "nb", "tr", "vi", "id", "pl", "uk", "cs", "ro", "ar", "he"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://anwarcreativestudio.com/#organization",
+        "name": "Anwar Creative Studio",
+        "legalName": "Anwar Creative Studio LLC",
+        "url": "https://anwarcreativestudio.com/",
+        "logo": "https://anwarcreativestudio.com/icon-512.png"
+      }
+    }
+  ]
 }
 </script>
 <script>document.documentElement.classList.add('js')</script>
