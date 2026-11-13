@@ -21,7 +21,7 @@ export function ArthaSection() {
             <p className="lead">Artha opens on what&rsquo;s safe to spend for the rest of the month, with the bills still to come already counted, and what that comes to each day. No bank login, ever.</p>
           </div>
           <div>
-            <ul className="ticks"><li>One account on the web, iPhone, iPad, Mac and Apple Watch<Fn n={4} /></li><li>Spending comes in from statements you check, Apple Pay, your bank&rsquo;s texts or your watch</li><li>18 languages and about 160 currencies, with no ads or tracking</li></ul>
+            <ul className="ticks"><li>One account on the web, iPhone, iPad, Mac and Apple Watch<Fn n={4} /></li><li>Spending comes in from statements you check, Apple Pay, your bank&rsquo;s texts and emails, or your watch</li><li>18 languages and about 160 currencies, with no ads or tracking</li></ul>
             <div className="links"><a className="tlink" href={links.artha}>arthaapp.com &rarr;</a><a className="tlink" href={links.arthaBeta}>Join the beta &rarr;</a></div>
           </div>
         </div>

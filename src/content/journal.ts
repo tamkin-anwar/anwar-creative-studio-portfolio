@@ -25,6 +25,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-12',
     product: 'Artha',
+    title: 'Reports that count what has happened',
+    body:
+      'Artha’s Reports now stop at today, so a bill due later in the month isn’t counted as spent before it is, and it shows on its own line as still to come. Today’s spent figure works the same way. Income shows who paid you when it’s all in one category, Spending tells you when much of it isn’t sorted yet and offers a quick way to sort it, and Cash flow shows how your net worth moved over the same stretch. The forecast now sets aside the same monthly share as what’s safe to spend, and budget alerts, reminders and emails arrive in the language you use Artha in. On the website now, and in the next beta build of the apps.',
+  },
+  {
+    date: '2026-11-12',
+    product: 'Artha',
     title: 'A month that starts on payday',
     body:
       'If you\u2019re paid once a month, Artha can now start your month on payday instead of the 1st: a date you choose, or the last or second-to-last working day, moved earlier when it lands on a weekend, Friday and Saturday weekends included. What\u2019s safe to spend, the pace chart, Plan and the widgets then count to your next payday, while Reports and the month in review stay on calendar months. It\u2019s offered once, only to people it fits, and the switch is in Settings. On the website now, and in the next beta build of the apps.',

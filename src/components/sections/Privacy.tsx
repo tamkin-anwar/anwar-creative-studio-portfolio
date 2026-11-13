@@ -11,7 +11,7 @@ const rows = [
   },
   {
     label: 'Signing in',
-    artha: 'Artha never asks for a bank login. Spending comes from you, your statements, Apple Pay or your bank’s texts.',
+    artha: 'Artha never asks for a bank login. Spending comes from you, your statements, Apple Pay or your bank’s texts and emails.',
     corres: 'You sign in with Google or Microsoft directly, so Corres never sees those passwords.',
   },
   {
@@ -26,7 +26,7 @@ const rows = [
   },
   {
     label: 'Never kept',
-    artha: 'Statement files and bank texts. They’re read once and never saved.',
+    artha: 'Statement files, bank texts and emails. They’re read once and never saved.',
     corres: 'Read receipts and tracking pixels. They’re blocked until you choose to show images.',
   },
   {
