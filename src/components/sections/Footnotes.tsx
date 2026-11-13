@@ -2,7 +2,7 @@
 // at the foot of their pages. Numbers match the superscripts above.
 const notes = [
   'Betas are installed with Apple’s free TestFlight app. Each beta build works for up to 90 days, and a newer build replaces it before then.',
-  'Artha Pro isn’t on sale yet. During the beta everyone has it free. Then it’s $9.99 a month or $79.99 a year in the US after a one-month free trial; Artha itself stays free.',
+  'Artha Pro isn’t on sale yet. During the beta everyone has it free, and anyone who tests the apps on TestFlight before then keeps it free for good. Then it’s $9.99 a month or $79.99 a year in the US after a one-month free trial; Artha itself stays free.',
   'Corres Pro is included free in the TestFlight beta. After launch it’s $14.99 a month or $149.99 a year in the US after a two-week free trial; mail stays free.',
   'Artha needs iOS, iPadOS, macOS or watchOS 26 or later, or a current web browser. Corres needs iOS or iPadOS 17, macOS 15 or watchOS 10 or later. Corres summaries, rewrites and replies written in your own style need a device with Apple Intelligence.',
   'Until Google finishes reviewing Corres, Gmail works in the beta only for addresses added to Google’s test list, and Google asks testers to sign in again every seven days. Outlook, iCloud and other email work right away.',

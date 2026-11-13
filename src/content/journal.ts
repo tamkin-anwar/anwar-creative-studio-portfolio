@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-12',
+    product: 'Artha',
+    title: 'Never the same money twice',
+    body:
+      'We found a whole day of purchases in Artha twice. The cause was a slow connection: an import reached Artha, the answer never came back, and pressing Import again saved everything again. Now every statement line keeps a fingerprint, so importing a statement again, or sending it twice, adds nothing, even after you rename or recategorize the first copy, while two real purchases on the same day still both come in. Adding something that looks like one already there asks first, and a Possible duplicates card on Activity finds older doubles for you to remove or keep. Statement import gained Select All, and everyone testing the apps on TestFlight now keeps Artha Pro free for good. On the website now, and in the newest beta build of the apps.',
+  },
+  {
+    date: '2026-11-12',
     product: 'Corres',
     title: 'Pins you can always spot',
     body:
