@@ -213,17 +213,17 @@
   {
    "id": "u043",
    "where": "<p>",
-   "en": "New Outlook mail notifies within seconds, even with Corres closed. iCloud can too, once you turn on Instant Notifications for that account. You choose, per account and all on one page, whether that&rsquo;s all new mail, people and time-sensitive mail, or only what needs you."
+   "en": "New Outlook mail notifies within seconds, even with Corres closed. iCloud can too, once you turn on Instant Notifications for that account. Each one shows who wrote it, with their photo from your Contacts, the company&rsquo;s verified logo, or their initials. You choose, per account and all on one page, whether that&rsquo;s all new mail, people and time-sensitive mail, or only what needs you."
   },
   {
    "id": "u044",
    "where": "</svg>",
-   "en": "Archive, mark read or reply right from the notification"
+   "en": "Archive (or Move to Trash, your choice), Mark as Read, Reply and Snooze Until Tomorrow right from the notification, and Copy Code on sign-in codes"
   },
   {
    "id": "u045",
    "where": "</svg>",
-   "en": "Newsletters can arrive silently, and VIPs always come through"
+   "en": "Newsletters can arrive silently, while VIPs, sign-in codes, conversations you follow and snoozed mail coming back arrive as Time Sensitive"
   },
   {
    "id": "u046",
@@ -358,7 +358,7 @@
   {
    "id": "u072",
    "where": "<p>",
-   "en": "Drafts that wait for you, bold, lists and links, sending from your other addresses, templates, and a check for a forgotten attachment. On the Mac with Apple Intelligence, Rewrite makes your words shorter, warmer or more formal, or proofreads them."
+   "en": "Drafts that wait for you, bold, lists and links, sending from your other addresses with a signature for each, templates, and a check for a forgotten attachment. Replies and forwards keep the original&rsquo;s formatting and pictures. On the Mac with Apple Intelligence, Rewrite makes your words shorter, warmer or more formal, or proofreads them."
   },
   {
    "id": "u073",
@@ -388,7 +388,7 @@
   {
    "id": "u078",
    "where": "<p>",
-   "en": "Search every account at once, archived mail included, with filters like from:, subject:, before: and in:, offered as you type, in the mailbox you&rsquo;re in or all your mail. Or ask, &ldquo;When is my flight?&rdquo;, and get the answer from your own email, with the messages it came from."
+   "en": "Search every account at once, archived mail included, with filters like from:, subject:, filename:, before: and in:, offered as you type. Your recent searches are waiting when you open it, and on iPhone and iPad the words you searched are marked in the email you open. Or ask, &ldquo;When is my flight?&rdquo;, and get the answer from your own email, with the messages it came from."
   },
   {
    "id": "u079",
@@ -398,7 +398,7 @@
   {
    "id": "u080",
    "where": "<p>",
-   "en": "Choose how first emails arrive: review everyone, review only companies, mark them new, or let everyone in. Blocking hides them in Corres and never changes your account."
+   "en": "Choose how first emails arrive: review everyone, review only companies, mark them new, or let everyone in. Blocking a sender hides them in Corres. For Gmail and Outlook, Block Everywhere also keeps them out of the inbox in the account itself, so other apps match."
   },
   {
    "id": "u081",
@@ -433,12 +433,12 @@
   {
    "id": "u087",
    "where": "<h3>",
-   "en": "Rules &amp; mute"
+   "en": "Rules, labels &amp; mute"
   },
   {
    "id": "u088",
    "where": "<p>",
-   "en": "Sort mail as it arrives. Rules can also run inside Gmail and Outlook, so they work with Corres closed. Mute a conversation so new replies stay quiet."
+   "en": "Sort mail as it arrives. Rules can also run inside Gmail and Outlook, so they work with Corres closed. Make, rename and delete labels and folders in the account itself, with unread counts on each. Mute a conversation so new replies stay quiet."
   },
   {
    "id": "u089",
@@ -478,7 +478,7 @@
   {
    "id": "u096",
    "where": "<p>",
-   "en": "Ask Siri to write, send or find an email. Needs You and the Daily Brief in widgets, Control Center and on your watch face, and deliveries on the Lock Screen."
+   "en": "Ask Siri to write, send or find an email, or use Find Emails, Snooze Email and Count Unread Emails in Shortcuts. The Inbox widget shows unread or flagged mail, from every account or one. Needs You and the Daily Brief in widgets, Control Center and on your watch face, deliveries on the Lock Screen, and a Focus filter that shows only the accounts you pick."
   },
   {
    "id": "u097",
@@ -513,12 +513,12 @@
   {
    "id": "u103",
    "where": "<h3>",
-   "en": "Remind Me"
+   "en": "Snooze &amp; Remind Me"
   },
   {
    "id": "u104",
    "where": "<p>",
-   "en": "Add any email to Reminders for this evening, tomorrow morning or when it&rsquo;s due, with a link straight back to it."
+   "en": "A snoozed email leaves every inbox tab and comes back at the top when it&rsquo;s due, with a notification. A short swipe right snoozes. In Gmail and Outlook it waits in a Snoozed in Corres label or folder, so their own apps match, unless you turn that off. Or add any email to Reminders, with a link straight back to it."
   },
   {
    "id": "u105",
@@ -538,7 +538,7 @@
   {
    "id": "u108",
    "where": "<p>",
-   "en": "What needs you, today&rsquo;s Brief, and the start of each email. Reply by voice, Scribble or a ready answer, or mark it handled."
+   "en": "What needs you, your unread mail, today&rsquo;s Brief and the start of each email. Reply by voice, Scribble or a ready answer, mark it handled, or snooze, flag or trash it."
   },
   {
    "id": "u109",

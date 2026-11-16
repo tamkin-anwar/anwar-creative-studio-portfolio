@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-16',
+    product: 'Corres',
+    title: 'No reason to open Gmail or Outlook',
+    body:
+      'We went through everything people still open Gmail or Outlook for, and brought it into Corres. Snooze now works the way Gmail’s does: the email leaves every tab and comes back at the top when it’s due, and Gmail and Outlook hide it too until then. Replies and forwards keep the original’s formatting and pictures, Find in Email searches inside a long message, and labels and folders can be made, renamed and deleted in Corres. Notifications show who wrote, with their photo from your Contacts or the company’s verified logo, and the ones that matter come through as Time Sensitive. Blocking a sender can now reach into Gmail and Outlook too. There is a new Inbox widget, Shortcuts that find, snooze and count mail, and an Unread list on Apple Watch. In the beta now.',
+  },
+  {
     date: '2026-11-12',
     product: 'Artha',
     title: 'Never the same money twice',
