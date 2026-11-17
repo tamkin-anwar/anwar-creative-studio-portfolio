@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-17',
+    product: 'Artha',
+    title: 'Where the money went, at a glance',
+    body:
+      'Cash flow in Artha now draws where the month’s money went: from who paid you, into bills, each kind of spending, your goals and what you kept, with every purchase counted once. Tap a band to see the purchases behind it. On iPhone, a trip can sit on the Lock Screen and in the Dynamic Island while it runs, showing what’s left for today, and Siri can now tell you what a category cost this month, what’s due this week and what’s left for a trip, or split a bill so everyone else’s share is owed to you. Today also remembers which number you like to see first. The flow chart is on the website now, and the rest comes in the apps’ first update after launch.',
+  },
+  {
     date: '2026-11-16',
     product: 'Artha',
     title: 'Goals that fill themselves',
