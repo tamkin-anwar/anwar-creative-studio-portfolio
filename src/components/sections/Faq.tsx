@@ -7,7 +7,7 @@ const faq = [
   {
     app: 'Artha',
     items: [
-      { q: 'Is Artha free?', a: 'Yes. Safe to spend, budgets, bills, accounts, receipts and statement files are free with no time limit. Artha Pro adds the assistant, receipts and scans read for you, scenarios and longer reports. Pro isn’t on sale yet: during the beta everyone has it free, and anyone with an account by November 12, 2026, or who uses the apps on TestFlight before the sale, keeps it free for good.' },
+      { q: 'Is Artha free?', a: 'Yes. Safe to spend, budgets, bills, accounts, receipts and statement files are free with no time limit. Artha Pro adds Artha AI, receipts and scans read for you, scenarios and longer reports. Pro isn’t on sale yet: during the beta everyone has it free, and anyone with an account by November 12, 2026, or who uses the apps on TestFlight before the sale, keeps it free for good.' },
       { q: 'Which devices does it work on?', a: 'Any current web browser, and the apps for iPhone, iPad, Mac and Apple Watch, all on one account.' },
       { q: 'Does it connect to my bank?', a: 'No, and it never will ask for a bank login. You add spending yourself, import a statement you check row by row, or let Apple Pay and your bank’s texts and emails log purchases for you.' },
       { q: 'Where is my data?', a: 'In one database used only by Artha. It’s yours alone, you can export all of it at any time, and deleting your account erases it.' },

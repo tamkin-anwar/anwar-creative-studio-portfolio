@@ -27,7 +27,7 @@ export function ArthaSection() {
         </div>
         <div className="duo flip ademo">
           <div>
-            <div className="dev iphone aphone" style={{ '--ip-w': 'min(300px, 100vw - 56px)', margin: '0 auto' } as CSSProperties} id="artha-phone" data-ch="today" role="img" aria-label="A tour of Artha on iPhone with sample figures: $2,070 safe to spend, $103 a day for 20 days, on pace; the assistant proposes adding a $32 lunch and waits for confirmation, leaving $2,038; the month's plan: a $6,500 budget, $3,250 of bills, $1,180 of everyday spending and $2,070 left; and a card statement whose rows are reviewed before saving.">
+            <div className="dev iphone aphone" style={{ '--ip-w': 'min(300px, 100vw - 56px)', margin: '0 auto' } as CSSProperties} id="artha-phone" data-ch="today" role="img" aria-label="A tour of Artha on iPhone with sample figures: $2,070 safe to spend, $103 a day for 20 days, on pace; Artha AI proposes adding a $32 lunch and waits for confirmation, leaving $2,038; the month's plan: a $6,500 budget, $3,250 of bills, $1,180 of everyday spending and $2,070 left; and a card statement whose rows are reviewed before saving.">
               <div className="screen"><div className="ascreen"><div className="sbar"><span>9:57</span><span className="icons"><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1" fill="currentColor"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="currentColor"/><rect x="10" y="3" width="3" height="9" rx="1" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="1" fill="currentColor"/></svg><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.6 10.4 9a3.4 3.4 0 0 0-4.8 0L8 11.6Zm-4.3-4.6 1.4 1.5a4.2 4.2 0 0 1 5.8 0l1.4-1.5a6.2 6.2 0 0 0-8.6 0ZM.8 4l1.4 1.5a8.3 8.3 0 0 1 11.6 0L15.2 4A10.3 10.3 0 0 0 .8 4Z" fill="currentColor"/></svg><svg viewBox="0 0 27 12" aria-hidden="true"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="18" height="8" rx="2" fill="currentColor"/><path d="M25 4v4a2 2 0 0 0 0-4Z" fill="currentColor" opacity=".45"/></svg></span></div>
                 <div className="aviews">
                   <div className="aview av-today">
@@ -54,7 +54,7 @@ export function ArthaSection() {
                     </div>
                   </div>
                   <div className="aview av-assist">
-                    <div className="ahead">Assistant</div>
+                    <div className="ahead">Artha AI</div>
                     <div className="bub me" data-me></div>
                     <div className="bub it">I&rsquo;ll add <b>$32.00</b> to <b>Eating out</b> for today. That leaves <b>$2,038</b> safe to spend this month.
                       <div className="aconfirm"><span className="add">Add it</span><span>Change</span></div>
@@ -92,7 +92,7 @@ export function ArthaSection() {
           <div>
             <div className="tour" id="artha-tour">
               <button type="button" className="tour-item on" data-ch="today"><span className="bar"><i></i></span><b>Safe to spend</b><span>What&rsquo;s left for the month once the bills still to come are counted, and what that comes to each day.</span></button>
-              <button type="button" className="tour-item" data-ch="assist"><span className="bar"><i></i></span><b>Asks before it saves</b><span>Tell the assistant about a purchase; nothing is saved until you say so.</span></button>
+              <button type="button" className="tour-item" data-ch="assist"><span className="bar"><i></i></span><b>Asks before it saves</b><span>Tell Artha AI about a purchase; nothing is saved until you say so.</span></button>
               <button type="button" className="tour-item" data-ch="plan"><span className="bar"><i></i></span><b>A plan for the month</b><span>Bills, everyday spending and what&rsquo;s left, with limits from your own spending.</span></button>
               <button type="button" className="tour-item" data-ch="import"><span className="bar"><i></i></span><b>Statements you review</b><span>Every row checked by you before it&rsquo;s saved. The file is never kept.</span></button>
             </div>

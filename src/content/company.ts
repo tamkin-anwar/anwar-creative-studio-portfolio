@@ -26,7 +26,7 @@ export const principles = [
   {
     statement: 'Nothing changes behind your back.',
     support:
-      'Artha’s assistant suggests changes, and only your tap saves them. Corres checks every summary against the email before you see it, and never sends a reply you haven’t approved. If something doesn’t go through, you’ll know.',
+      'Artha AI suggests changes, and only your tap saves them. Corres checks every summary against the email before you see it, and never sends a reply you haven’t approved. If something doesn’t go through, you’ll know.',
   },
   {
     statement: 'Native, down to the details.',

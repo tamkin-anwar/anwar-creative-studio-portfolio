@@ -11,6 +11,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-17',
     product: 'Artha',
+    title: 'Meet Artha AI',
+    body:
+      'Artha’s assistant has a name now, Artha AI, and it opens with questions from your own month instead of the same four for everyone: a category you’re spending more on than last month, a bill that’s due soon, a goal you’re saving for or the trip you’re on. Nothing is sent until you tap one, and it still runs on Anthropic’s Claude and asks before it saves anything. Repayments can be typed in one line too, like “rahim paid me 300”, Activity can be filtered by category, and the screens got calmer: one switch per report, category icons instead of initials, and plainer words throughout. On the website now, and in the apps’ first update after launch.',
+  },
+  {
+    date: '2026-11-17',
+    product: 'Artha',
     title: 'Where the money went, at a glance',
     body:
       'Cash flow in Artha now draws where the month’s money went: from who paid you, into bills, each kind of spending, your goals and what you kept, with every purchase counted once. Tap a band to see the purchases behind it. On iPhone, a trip can sit on the Lock Screen and in the Dynamic Island while it runs, showing what’s left for today, and Siri can now tell you what a category cost this month, what’s due this week and what’s left for a trip, or split a bill so everyone else’s share is owed to you. Today also remembers which number you like to see first. The flow chart is on the website now, and the rest comes in the apps’ first update after launch.',
