@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-16',
+    product: 'Artha',
+    title: 'Just type it',
+    body:
+      'Adding a purchase in Artha is now one line. Type “uber 12.50 yesterday” or “৳1,250 shwapno” and Artha fills in the amount, the day, the shop and the category as you type, in every language it speaks, with Bengali, Hindi and Arabic digits too, and no AI. On Android, where most of our users in South Asia are, the installed website now shows up in the Share menu: share a bank text and it opens ready to check and add. After a break of ten days or more, Today offers one way to catch up and then gets out of the way, and Wealth now says how long your cash would last at your usual spending. On the website now, and in the apps’ first update after launch.',
+  },
+  {
+    date: '2026-11-16',
     product: 'Corres',
     title: 'No reason to open Gmail or Outlook',
     body:
