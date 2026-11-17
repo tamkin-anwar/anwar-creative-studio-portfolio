@@ -11,6 +11,13 @@ export const journal: JournalEntry[] = [
   {
     date: '2026-11-16',
     product: 'Artha',
+    title: 'Goals that fill themselves',
+    body:
+      'A savings goal in Artha can now fill on its own. Point it at the transfers you already make to savings, or at a tag like #lisbon, and every matching transfer counts toward it, however it arrived. Artha offers this once, when it sees the same transfer twice. A trip or an event is a goal with an end date: while it runs, Plan shows what’s left and a daily allowance, and its spending comes out of the trip instead of what’s safe to spend this month. And money lent or borrowed, so common over bKash and Nagad, now has a home: type “lent rahim 5000”, and repayments count down what’s left. On the website now, and in the apps’ first update after launch.',
+  },
+  {
+    date: '2026-11-16',
+    product: 'Artha',
     title: 'Just type it',
     body:
       'Adding a purchase in Artha is now one line. Type “uber 12.50 yesterday” or “৳1,250 shwapno” and Artha fills in the amount, the day, the shop and the category as you type, in every language it speaks, with Bengali, Hindi and Arabic digits too, and no AI. On Android, where most of our users in South Asia are, the installed website now shows up in the Share menu: share a bank text and it opens ready to check and add. After a break of ten days or more, Today offers one way to catch up and then gets out of the way, and Wealth now says how long your cash would last at your usual spending. On the website now, and in the apps’ first update after launch.',
