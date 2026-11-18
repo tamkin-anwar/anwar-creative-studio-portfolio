@@ -10,6 +10,13 @@ export type JournalEntry = {
 export const journal: JournalEntry[] = [
   {
     date: '2026-11-17',
+    product: 'Corres',
+    title: 'A verified publisher at Microsoft',
+    body:
+      'Microsoft has verified Anwar Creative Studio LLC as the publisher of Corres. When you add an Outlook, Hotmail or Microsoft 365 account, Microsoft\u2019s sign-in screen now shows its blue verified badge with the studio\u2019s name, and organizations that only allow apps from verified publishers can add Corres without an exception.',
+  },
+  {
+    date: '2026-11-17',
     product: 'Artha',
     title: 'Meet Artha AI',
     body:
