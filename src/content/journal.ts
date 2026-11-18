@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-18',
+    product: 'Corres',
+    title: 'Empty Trash, and rules that file and forward',
+    body:
+      'Corres can now delete mail forever and empty Trash or Spam for Outlook, iCloud and other accounts, after asking first. Gmail empties both itself after 30 days. You can select several emails in Trash, Spam, Sent and your labels, with the actions each one calls for. Rules can file mail into a label or folder and forward it from Gmail or Outlook, and the Rules screen lists the filters you already made there. Outlook accounts gain due dates on flags, category colors, Report Spam that reaches Microsoft, and Send Later sent by Outlook itself. In the beta now.',
+  },
+  {
     date: '2026-11-17',
     product: 'Corres',
     title: 'A verified publisher at Microsoft',
