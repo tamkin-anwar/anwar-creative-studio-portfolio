@@ -388,7 +388,7 @@
   {
    "id": "u078",
    "where": "<p>",
-   "en": "Search every account at once, archived mail included, with filters like from:, subject:, filename:, before: and in:, offered as you type. Your recent searches are waiting when you open it, and on iPhone and iPad the words you searched are marked in the email you open. Or ask, &ldquo;When is my flight?&rdquo;, and get the answer from your own email, with the messages it came from."
+   "en": "Search every account at once, archived mail included, with filters like from:, subject:, filename:, before: and in:, offered as you type. Your recent searches are waiting when you open it, and the words you searched are marked in the email you open. Or ask, &ldquo;When is my flight?&rdquo;, and get the answer from your own email, with the messages it came from."
   },
   {
    "id": "u079",
@@ -438,7 +438,7 @@
   {
    "id": "u088",
    "where": "<p>",
-   "en": "Sort mail as it arrives. Rules can also run inside Gmail and Outlook, so they work with Corres closed. Make, rename and delete labels and folders in the account itself, with unread counts on each. Mute a conversation so new replies stay quiet."
+   "en": "Sort mail as it arrives. Rules can also run inside Gmail and Outlook, so they work with Corres closed. They can file mail into a label or folder, or forward it from Gmail or Outlook. Make, rename and delete labels and folders in the account itself, with unread counts on each. Mute a conversation so new replies stay quiet."
   },
   {
    "id": "u089",
