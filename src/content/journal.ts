@@ -9,6 +9,13 @@ export type JournalEntry = {
 
 export const journal: JournalEntry[] = [
   {
+    date: '2026-11-19',
+    product: 'Artha',
+    title: 'Bills opened up, and every purchase on your own day',
+    body:
+      'Artha’s Cash flow chart now opens bills into the biggest ones, says how much came in, and shows each part’s share, with a tap to focus any band. Plan’s forecast counts whole months, so a month no longer looks tight just because payday has passed, and Scenarios start from the same number. Apple Pay setup now matches iOS 27, says what to check if nothing has arrived, and a purchase paid abroad keeps the local currency and asks once. A purchase logged late in the evening now always counts on your own day. On the website now, and in the next beta build of the apps.',
+  },
+  {
     date: '2026-11-18',
     product: 'Corres',
     title: 'Empty Trash, and rules that file and forward',
